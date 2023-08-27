@@ -314,7 +314,8 @@ const faqs = [
 			</div>
 		</div>
 
-		<div class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
+		<div
+			class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
 			<h2 class="text-2xl font-bold leading-10 tracking-tight text-white">
 				Frequently asked questions
 			</h2>
@@ -332,12 +333,14 @@ const faqs = [
 								faq.question
 							}}</span>
 							<span class="ml-6 flex h-7 items-center">
-								<Icon name="tabler:plus"
+								<Icon
 									v-if="!open"
+									name="tabler:plus"
 									class="h-6 w-6"
 									aria-hidden="true" />
-								<Icon name="tabler:minus"
+								<Icon
 									v-else
+									name="tabler:minus"
 									class="h-6 w-6"
 									aria-hidden="true" />
 							</span>

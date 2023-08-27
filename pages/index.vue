@@ -184,7 +184,7 @@ const features = [
 								class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
 								<iframe
 									src="https://mastodon.de/@ErikUden/110944073939853113/embed"
-									class="aspect-[4/5] md:w-[26rem] max-w-none rounded-2xl object-cover"
+									class="aspect-[4/4.6] md:w-[26rem] max-w-none rounded-2xl object-cover"
 									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
 									allowfullscreen></iframe>
 							</div>

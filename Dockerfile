@@ -2,8 +2,8 @@ FROM docker.io/oven/bun AS builder
 
 COPY . /app
 
-RUN cd ./app && bun install
-RUN cd ./app && bun run build
+RUN cd /app && bun install
+RUN cd /app && bun run build
 
 FROM docker.io/oven/bun
 
@@ -17,4 +17,4 @@ LABEL org.opencontainers.image.licenses "GPL-3.0"
 LABEL org.opencontainers.image.title "Join-Mastodon.de"
 LABEL org.opencontainers.image.description ""
 
-CMD ["/app/server/index.mjs"]
+CMD ["bun", "/app/server/index.mjs"]

@@ -1,0 +1,60 @@
+{
+  "name": "joinmastodon",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .js,.ts . --ignore-path ./.gitignore",
+    "lint-fix": "eslint --ext .js,.ts . --ignore-path ./.gitignore --fix",
+    "format": "prettier --write components/ pages/ styles utils/ templates/ server/ plugins/ middleware/ layouts/ db/"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/node": "^20.5.6",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@unocss/nuxt": "^0.55.3",
+    "@vueuse/core": "^10.4.0",
+    "@vueuse/nuxt": "^10.4.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "nuxt": "^3.6.2",
+    "nuxt-headlessui": "^1.1.4",
+    "nuxt-rate-limit": "^1.1.0",
+    "nuxt-security": "^0.14.4",
+    "prettier": "^3.0.2",
+    "typescript": "^5.2.2",
+    "vite-plugin-node-polyfills": "^0.11.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.400.0",
+    "@julr/unocss-preset-forms": "^0.0.5",
+    "@nuxtjs/robots": "^3.0.0",
+    "emailjs": "^4.0.2",
+    "highlight.js": "^11.8.0",
+    "isomorphic-dompurify": "^1.8.0",
+    "jsonwebtoken": "^9.0.1",
+    "jwks-rsa": "^3.0.1",
+    "marked": "^7.0.4",
+    "marked-highlight": "^2.0.4",
+    "nanoid": "^4.0.2",
+    "nuxt-icon": "^0.5.0",
+    "oidc-client-ts": "^2.2.5",
+    "openai": "4.2.0",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.1.13",
+    "smol-toml": "^1.1.2",
+    "stripe": "^13.3.0",
+    "stripe-event-types": "^2.4.0",
+    "typeorm": "0.3.17",
+    "uuid": "^9.0.0",
+    "webp-converter-browser": "^1.0.4"
+  },
+  "overrides": {
+    "rollup": "3.20.3-0"
+  }
+}

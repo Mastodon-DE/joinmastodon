@@ -1,0 +1,14 @@
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+web.sqlite
+node_modules
+*.sqlite-journal
+.unlighthouse
+config/config.toml
+config/workers.toml

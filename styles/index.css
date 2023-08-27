@@ -1,0 +1,111 @@
+/* Import fonts */
+@import "inter.css";
+@import "poppins.css";
+
+.font-poppins {
+	font-family: "Poppins";
+}
+
+.font-inter {
+	font-family: "Inter";
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
+}
+
+html {
+	width: 100%;
+	min-height: 100vh;
+}
+body,
+#app {
+	width: inherit;
+	min-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+.bg-gradient-light {
+	background: linear-gradient(
+		115deg,
+		transparent 0,
+		transparent 20%,
+		rgba(176, 148, 88, 0.03) 35%,
+		rgba(230, 153, 9, 0.03) 70%,
+		transparent 80%,
+		transparent 100%
+	);
+}
+
+.dark .bg-gradient-light {
+	background: linear-gradient(
+		115deg,
+		rgba(0, 0, 0, 0) 0px,
+		rgba(0, 0, 0, 0) 20%,
+		rgba(101, 84, 48, 0.1) 35%,
+		rgba(184, 122, 7, 0.1) 70%,
+		rgba(0, 0, 0, 0) 80%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+}
+
+.no-bad-scale {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1, 1);
+	transform: translateZ(0);
+}
+
+.bg-dark-gradient-vertical {
+	background-image: linear-gradient(180deg, rgba(53, 55, 64, 0), #353740 58.85%);
+}
+
+.gradient-shadow-red-orange:before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(-35deg, #f89b29 9%, #ff0f7b 100%);
+	transform: translate3d(0px, 20px, 0) scale(1.00);
+	filter: blur(59px);
+	opacity: var(0.7);
+	transition: opacity 0.3s;
+	border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.gradient-shadow-red-orange::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: inherit;
+	border-radius: inherit;
+}

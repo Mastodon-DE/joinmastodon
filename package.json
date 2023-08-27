@@ -39,7 +39,7 @@
     "isomorphic-dompurify": "^1.8.0",
     "jsonwebtoken": "^9.0.1",
     "jwks-rsa": "^3.0.1",
-    "marked": "^7.0.4",
+    "marked": "^7.0.5",
     "marked-highlight": "^2.0.4",
     "nanoid": "^4.0.2",
     "nuxt-icon": "^0.5.0",

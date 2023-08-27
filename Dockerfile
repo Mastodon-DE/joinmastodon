@@ -1,7 +1,8 @@
-FROM docker.io/oven/bun AS builder
+FROM docker.io/node:18-alpine AS builder
 
 COPY . /app
 
+RUN cd /app && npm install -g bun
 RUN cd /app && bun install
 RUN cd /app && bun run build
 

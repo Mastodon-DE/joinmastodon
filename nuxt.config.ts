@@ -1,7 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { nodePolyfills } from "vite-plugin-node-polyfills";
-import "reflect-metadata";
-
 export default defineNuxtConfig({
 	modules: [
 		"@nuxtjs/robots",
@@ -22,7 +19,6 @@ export default defineNuxtConfig({
 			htmlAttrs: { lang: "en-us" },
 		},
 	},
-	ssr: false,
 	nitro: {
 		compressPublicAssets: true,
 		routeRules: {

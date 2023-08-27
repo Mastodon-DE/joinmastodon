@@ -5,6 +5,9 @@ COPY . /app
 RUN apk add --no-cache bash curl
 
 RUN curl -fsSL https://bun.sh/install | bash
+RUN export BUN_INSTALL="$HOME/.bun"
+RUN export PATH="$BUN_INSTALL/bin:$PATH"
+
 RUN cd /app && bun install
 RUN cd /app && bun run build
 

@@ -1,14 +1,17 @@
-FROM docker.io/node:18-alpine AS builder
+FROM docker.io/oven/bun AS builder
 
 COPY . /app
 
-RUN apk add --no-cache bash curl
+ENV NODE_VERSION=18.17.1
+RUN apt update && apt install -y curl
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
-RUN curl -fsSL https://bun.sh/install | bash
-RUN export BUN_INSTALL="$HOME/.bun"
-RUN export PATH="$BUN_INSTALL/bin:$PATH"
-
-RUN cd /app && bun install
+RUN cd /app && bun --bun install
 RUN cd /app && bun run build
 
 FROM docker.io/oven/bun

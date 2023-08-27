@@ -2,7 +2,9 @@ FROM docker.io/node:18-alpine AS builder
 
 COPY . /app
 
-RUN cd /app && npm install -g bun
+RUN apk add --no-cache bash
+
+RUN curl -fsSL https://bun.sh/install | bash
 RUN cd /app && bun install
 RUN cd /app && bun run build
 

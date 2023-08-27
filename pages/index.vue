@@ -355,4 +355,6 @@ const faqs = [
 			</dl>
 		</div>
 	</div>
+
+	<FootersFooter />
 </template>

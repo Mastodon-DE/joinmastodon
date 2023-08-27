@@ -19,6 +19,13 @@ export default defineConfig({
 		presetWebFonts(),
 		presetForms(),
 	],
+	rules: [
+		// UnoCSS Rule for stroke-dashoffset
+		[
+			/^stroke-dashoffset-([.\d]+)$/,
+			([_, num]) => ({ "stroke-dashoffset": num }),
+		],
+	],
 	theme: {
 		colors: {
 			gray: {

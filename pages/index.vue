@@ -36,6 +36,13 @@ const features = [
 		icon: "tabler:road",
 	},
 ];
+
+const faqs = [
+	{
+		question: "What's the best thing about Switzerland?",
+		answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+	},
+];
 </script>
 
 <template>
@@ -87,9 +94,9 @@ const features = [
 					>
 					<a
 						href="#"
-						class="text-sm font-semibold leading-6 text-gray-100"
-						>Learn more <span aria-hidden="true">→</span></a
-					>
+						class="text-sm group font-semibold leading-6 text-gray-100"
+						>Learn more <ButtonsAnimatedArrow
+					/></a>
 				</div>
 			</div>
 			<div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
@@ -146,10 +153,10 @@ const features = [
 						<div class="mt-10 flex">
 							<a
 								href="#"
-								class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+								class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
 								>Sign Up
-								<span aria-hidden="true">&rarr;</span></a
-							>
+								<ButtonsAnimatedArrow />
+							</a>
 						</div>
 					</div>
 					<div
@@ -215,7 +222,7 @@ const features = [
 						:key="person.name"
 						class="flex flex-col gap-6 xl:flex-row">
 						<img
-							class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+							class="aspect-[4/5] w-52 flex-none rounded-xl object-cover"
 							:src="person.imageUrl"
 							alt="" />
 						<div class="flex-auto">
@@ -305,6 +312,44 @@ const features = [
 						);
 					" />
 			</div>
+		</div>
+
+		<div class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
+			<h2 class="text-2xl font-bold leading-10 tracking-tight text-white">
+				Frequently asked questions
+			</h2>
+			<dl class="mt-10 space-y-6 divide-y divide-white/10">
+				<HeadlessDisclosure
+					v-for="faq in faqs"
+					:key="faq.question"
+					v-slot="{ open }"
+					as="div"
+					class="pt-6">
+					<dt>
+						<HeadlessDisclosureButton
+							class="flex w-full items-start justify-between text-left text-white">
+							<span class="text-base font-semibold leading-7">{{
+								faq.question
+							}}</span>
+							<span class="ml-6 flex h-7 items-center">
+								<Icon name="tabler:plus"
+									v-if="!open"
+									class="h-6 w-6"
+									aria-hidden="true" />
+								<Icon name="tabler:minus"
+									v-else
+									class="h-6 w-6"
+									aria-hidden="true" />
+							</span>
+						</HeadlessDisclosureButton>
+					</dt>
+					<HeadlessDisclosurePanel as="dd" class="mt-2 pr-12">
+						<p class="text-base leading-7 text-gray-300">
+							{{ faq.answer }}
+						</p>
+					</HeadlessDisclosurePanel>
+				</HeadlessDisclosure>
+			</dl>
 		</div>
 	</div>
 </template>

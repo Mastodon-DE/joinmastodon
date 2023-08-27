@@ -124,9 +124,11 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 				>
 			</HeadlessPopoverGroup>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Log in <span aria-hidden="true">&rarr;</span></a
-				>
+				<a
+					href="#"
+					class="text-sm group font-semibold leading-6 text-gray-50"
+					>Log in <ButtonsAnimatedArrow
+				/></a>
 			</div>
 		</nav>
 		<HeadlessTransitionRoot appear :show="mobileMenuOpen" as="template">

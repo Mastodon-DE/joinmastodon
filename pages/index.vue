@@ -1,4 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const people = [
+	{
+		name: "Erik Uden",
+		role: "CEO, Uden AI",
+		imageUrl: "https://avatars.githubusercontent.com/u/52011431?v=4",
+		bio: "Erik Uden is the leader of mastodon.de and CEO of Uden AI. He started working on mastodon.de in November 2022, and made it what it is now.",
+	},
+	{
+		name: "Joe Biden",
+		role: "President of the United States",
+		imageUrl:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg",
+		bio: "Joe Biden is the current president of the United States and has been an instrumental part in creating this community.",
+	},
+	// More people...
+];
+</script>
 
 <template>
 	<HeadersNavbar />
@@ -45,11 +62,11 @@
 					<a
 						href="#"
 						class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-						>Get started</a
+						>Sign Up</a
 					>
 					<a
 						href="#"
-						class="text-sm font-semibold leading-6 text-gray-900"
+						class="text-sm font-semibold leading-6 text-gray-100"
 						>Learn more <span aria-hidden="true">→</span></a
 					>
 				</div>
@@ -81,6 +98,119 @@
 							alt="" />
 					</foreignObject>
 				</svg>
+			</div>
+		</div>
+	</div>
+
+	<div class="mx-auto max-w-7xl px-6 pb-24 sm:pb-32">
+		<div class="py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+				<div
+					class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+					<div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+						<h2
+							class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
+							Community Spaces
+						</h2>
+						<p class="mt-6 text-xl leading-8 text-gray-300">
+							Mastodon.de is dedicated to providing its users with
+							a community experience, where likes, followers or
+							boosts don't mean anything
+						</p>
+						<p class="mt-6 text-base leading-7 text-gray-300">
+							Since there is no algorithm that decides what posts
+							are shown in your feed, you can just relax and post
+							for fun!
+						</p>
+						<div class="mt-10 flex">
+							<a
+								href="#"
+								class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+								>Sign Up
+								<span aria-hidden="true">&rarr;</span></a
+							>
+						</div>
+					</div>
+					<div
+						class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents w-full">
+						<div
+							class="flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+							<iframe
+								src="https://mastodon.de/@ErikUden/110951792713928937/embed"
+								class="md:aspect-[7/6.2] md:w-[32rem] max-w-none rounded-2xl object-cover"
+								allowfullscreen
+								sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+						</div>
+						<div
+							class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end w-full justify-center lg:gap-x-8 flex-col md:flex-row">
+							<div
+								class="order-first flex w-full flex-none justify-end self-start lg:w-auto">
+								<iframe
+									src="https://sauropods.win/@futurebird/110954249572809982/embed"
+									class="aspect-[4/3.7] md:w-[24rem] max-w-none flex-none rounded-2xl object-cover"
+									allowfullscreen
+									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+							</div>
+							<div
+								class="flex w-full flex-auto justify-end lg:w-auto lg:flex-none">
+								<iframe
+									src="https://infosec.exchange/@AnthonyCollette/110957221963719882/embed"
+									class="aspect-[7/7.3] md:w-[37rem] max-w-none flex-none rounded-2xl object-cover"
+									allowfullscreen
+									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
+							</div>
+							<div
+								class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+								<iframe
+									src="https://mastodon.de/@ErikUden/110944073939853113/embed"
+									class="aspect-[4/5] md:w-[26rem] max-w-none rounded-2xl object-cover"
+									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
+									allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-2xl sm:text-center">
+					<h2
+						class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
+						Meet our team
+					</h2>
+					<p class="mt-6 text-lg leading-8 text-gray-300">
+						We are a dynamic group of individuals who are passionate
+						about what we do and dedicated to proving a great
+						experience to our community!
+					</p>
+				</div>
+				<ul
+					role="list"
+					class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
+					<li
+						v-for="person in people"
+						:key="person.name"
+						class="flex flex-col gap-6 xl:flex-row">
+						<img
+							class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+							:src="person.imageUrl"
+							alt="" />
+						<div class="flex-auto">
+							<h3
+								class="text-lg font-semibold leading-8 tracking-tight text-gray-50">
+								{{ person.name }}
+							</h3>
+							<p class="text-base leading-7 text-gray-300">
+								{{ person.role }}
+							</p>
+							<p class="mt-6 text-base leading-7 text-gray-300">
+								{{ person.bio }}
+							</p>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

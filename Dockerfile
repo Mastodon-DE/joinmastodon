@@ -1,16 +1,11 @@
-FROM docker.io/node:18-alpine AS builder
-
-RUN apk add --update \
-  git
-
-RUN npm install --global pnpm
+FROM docker.io/oven/bun AS builder
 
 COPY . /app
 
-RUN cd ./app && pnpm install
-RUN cd ./app && pnpm build
+RUN cd ./app && bun install
+RUN cd ./app && bun run build
 
-FROM docker.io/node:18-alpine
+FROM docker.io/oven/bun
 
 COPY --from=builder /app/.output/ /app
 COPY --from=builder /app/nuxt.config.ts /nuxt.config.ts

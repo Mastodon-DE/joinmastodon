@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ["@unocss/nuxt", "nuxt-headlessui", "nuxt-icon", "@vueuse/nuxt"],
-	extends: ["nuxt-seo-kit"],
+	modules: [
+		"@unocss/nuxt",
+		"nuxt-headlessui",
+		"nuxt-icon",
+		"@vueuse/nuxt",
+		"@nuxtseo/module",
+	],
 	app: {
 		head: {
 			link: [

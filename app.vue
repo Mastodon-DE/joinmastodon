@@ -18,7 +18,6 @@ useSchemaOrg([
 </script>
 
 <template>
-	<SeoKit />
 	<OgImageScreenshot />
 	<OgImageStatic />
 	<NuxtLayout>

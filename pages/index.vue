@@ -1,9 +1,15 @@
 <script setup lang="ts">
+useServerSeoMeta({
+	title: "Social Networking That's Not For Sale",
+	ogImage: "/images/screenshots/desktop1-resized.webp",
+	ogImageAlt: "Screenshot of the Mastodon.de public timeline",
+});
+
 const people = [
 	{
 		name: "Erik Uden",
 		role: "CEO, Uden AI",
-		imageUrl: "https://avatars.githubusercontent.com/u/52011431?v=4",
+		imageUrl: "/images/people/erikuden-resized.webp",
 		bio: "Erik Uden is the leader of mastodon.de and CEO of Uden AI. He started working on mastodon.de in November 2022, and made it what it is now.",
 	},
 	{
@@ -122,7 +128,7 @@ const faqs = [
 						transform="translate(24 24)"
 						clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)">
 						<img
-							src="/images/screenshots/phone-homepage.webp"
+							src="/images/screenshots/phone-homepage-resized.webp"
 							alt="" />
 					</foreignObject>
 				</svg>
@@ -164,6 +170,7 @@ const faqs = [
 						<div
 							class="flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
 							<iframe
+								title="Mastodon.de post by @ErikUden about visiting a Soviet submarine"
 								src="https://mastodon.de/@ErikUden/110951792713928937/embed"
 								class="md:aspect-[7/6.2] md:w-[32rem] max-w-none rounded-2xl object-cover"
 								allowfullscreen
@@ -174,6 +181,7 @@ const faqs = [
 							<div
 								class="order-first flex w-full flex-none justify-end self-start lg:w-auto">
 								<iframe
+									title="Post by @futurebird about black hole horizons"
 									src="https://sauropods.win/@futurebird/110954249572809982/embed"
 									class="aspect-[4/3.7] md:w-[24rem] max-w-none flex-none rounded-2xl object-cover"
 									allowfullscreen
@@ -182,14 +190,16 @@ const faqs = [
 							<div
 								class="flex w-full flex-auto justify-end lg:w-auto lg:flex-none">
 								<iframe
-									src="https://infosec.exchange/@AnthonyCollette/110957221963719882/embed"
-									class="aspect-[7/7.3] md:w-[37rem] max-w-none flex-none rounded-2xl object-cover"
+									title="Post by @KittyPictures about cats and sunlight"
+									src="https://mastodon.de/@KittyPictures/110846921993091882/embed"
+									class="aspect-[7/6] md:w-[37rem] max-w-none flex-none rounded-2xl object-cover"
 									allowfullscreen
 									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
 							</div>
 							<div
 								class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
 								<iframe
+									title="Poll by @ErikUden about East Germany vs West Germany"
 									src="https://mastodon.de/@ErikUden/110944073939853113/embed"
 									class="aspect-[4/4.6] md:w-[26rem] max-w-none rounded-2xl object-cover"
 									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
@@ -259,7 +269,7 @@ const faqs = [
 					</p>
 				</div>
 				<img
-					src="/images/screenshots/desktop1.webp"
+					src="/images/screenshots/desktop1-resized.webp"
 					alt="Product screenshot"
 					class="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
 					width="2432"

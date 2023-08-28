@@ -1,12 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: [
-		"@nuxtjs/robots",
-		"@unocss/nuxt",
-		"nuxt-headlessui",
-		"nuxt-icon",
-		"@vueuse/nuxt",
-	],
+	modules: ["@unocss/nuxt", "nuxt-headlessui", "nuxt-icon", "@vueuse/nuxt"],
+	extends: ["nuxt-seo-kit"],
 	app: {
 		head: {
 			link: [
@@ -33,10 +28,13 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
-			siteName: "",
-			siteDescription: "",
+			siteName: "Mastodon.de",
+			siteUrl: "https://join-mastodon.de",
+			siteDescription:
+				"Join Mastodon.de, a free and open-source social network.",
 			language: "en-US", // prefer more explicit language codes like `en-AU` over `en`,
 			titleSeparator: "·",
+			trailingSlash: true,
 		},
 	},
 });

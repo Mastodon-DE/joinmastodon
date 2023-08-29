@@ -26,6 +26,11 @@ export default defineNuxtConfig({
 		strategy: "prefix_and_default",
 		defaultLocale: "en",
 		trailingSlash: true,
+		detectBrowserLanguage: {
+			alwaysRedirect: true,
+			fallbackLocale: "en",
+			redirectOn: "root",
+		},
 		locales: [
 			{
 				code: "en",

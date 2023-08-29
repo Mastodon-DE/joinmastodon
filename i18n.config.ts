@@ -1,8 +1,5 @@
 export default defineI18nConfig(() => ({
 	legacy: false,
-	locale: "en-US",
-	availableLocales: ["en-US", "fr-FR", "de-DE"],
-	fallbackLocale: "en-US",
 	messages: {
 		en: {
 			// Navbar

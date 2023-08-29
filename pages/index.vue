@@ -84,7 +84,7 @@ const faqs = [
 			class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
 			<div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
 				<h1
-					class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-50 sm:text-6xl">
+					class="mt-10 max-w-[35rem] text-4xl font-bold tracking-tight text-gray-50 sm:text-6xl">
 					{{ $t("tagline") }}
 				</h1>
 				<p class="mt-6 text-lg leading-8 text-gray-300">

@@ -22,7 +22,24 @@ export default defineNuxtConfig({
 	},
 	i18n: {
 		vueI18n: "./i18n.config.ts",
-		locales: ["en-US", "fr-FR", "de-DE"],
+		baseUrl: "https://join-mastodon.de",
+		strategy: "prefix_and_default",
+		defaultLocale: "en",
+		trailingSlash: true,
+		locales: [
+			{
+				code: "en",
+				iso: "en-US",
+			},
+			{
+				code: "fr",
+				iso: "fr-FR",
+			},
+			{
+				code: "de",
+				iso: "de-DE",
+			},
+		],
 	},
 	nitro: {
 		compressPublicAssets: true,

@@ -42,7 +42,7 @@ export default defineI18nConfig(() => ({
 			// Features section
 			featuresTitle: "Federated, open network",
 			featuresSubText:
-				"Mastodon.de is connected to a gigantic federated network of millions of users, the Fediverse.\nIt's like email, where everybody has an address in the format name\\@site.com !",
+				"Mastodon.de is connected to a gigantic federated network of millions of users, the Fediverse.\nIt's like email, where everybody has an address in the format name{'@'}site.com !",
 
 			feature1Title: "Powerful moderation tools",
 			feature1SubText:
@@ -94,7 +94,7 @@ export default defineI18nConfig(() => ({
 			// Section des fonctionnalités
 			featuresTitle: "Réseau fédératif et ouvert",
 			featuresSubText:
-				"Mastodon.de est connecté à un gigantesque réseau fédératif de millions d'utilisateurs, le Fediverse.\nC'est comme le courrier électronique, où tout le monde a une adresse au format nom\\@site.com",
+				"Mastodon.de est connecté à un gigantesque réseau fédératif de millions d'utilisateurs, le Fediverse.\nC'est comme le courrier électronique, où tout le monde a une adresse au format nom{'@'}site.com",
 
 			feature1Title: "Puissants outils de modération",
 			feature1SubText:
@@ -146,7 +146,7 @@ export default defineI18nConfig(() => ({
 			// Funktionsbereich
 			featuresTitle: "Föderiertes, offenes Netzwerk",
 			featuresSubText:
-				"Mastodon.de ist mit einem gigantischen föderierten Netzwerk von Millionen von Benutzern verbunden, dem Fediverse.\nEs ist wie E-Mail, bei der jeder eine Adresse im Format name\\@site.com hat!",
+				"Mastodon.de ist mit einem gigantischen föderierten Netzwerk von Millionen von Benutzern verbunden, dem Fediverse.\nEs ist wie E-Mail, bei der jeder eine Adresse im Format name{'@'}site.com hat!",
 
 			feature1Title: "Leistungsstarke Moderationstools",
 			feature1SubText:

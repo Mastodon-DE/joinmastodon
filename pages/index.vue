@@ -3,14 +3,17 @@ useServerSeoMeta({
 	title: "Social Networking That's Not For Sale",
 	ogImage: "/images/screenshots/desktop1-resized.webp",
 	ogImageAlt: "Screenshot of the Mastodon.de public timeline",
+	description:
+		"Mastodon.de is a decentralized, community-focused social network created by Erik Uden",
+	author: "Erik Uden",
 });
 
 const people = [
 	{
 		name: "Erik Uden",
-		role: "CEO, Uden AI",
+		role: "teamMemberErikPosition",
 		imageUrl: "/images/people/erikuden-resized.webp",
-		bio: "Erik Uden is the leader of mastodon.de and CEO of Uden AI. He started working on mastodon.de in November 2022, and made it what it is now.",
+		bio: "teamMemberErikDescription",
 	},
 	{
 		name: "Joe Biden",
@@ -24,21 +27,18 @@ const people = [
 
 const features = [
 	{
-		name: "Powerful moderation tools",
-		description:
-			"Block any keyword from appearing in your timelines with filters",
+		name: "feature1Title",
+		description: "feature1SubText",
 		icon: "tabler:hammer",
 	},
 	{
-		name: "Make your own feeds",
-		description:
-			"You alone should decide what should show up in your feeds. Mastodon.de lets you curate your own feeds without a predetermined algorithm",
+		name: "feature2Title",
+		description: "feature2SubText",
 		icon: "tabler:timeline",
 	},
 	{
-		name: "Account portability",
-		description:
-			"If you want to change Fediverse servers, you can easily switch and keep all your followers from mastodon.de!",
+		name: "feature3Title",
+		description: "feature3SubText",
 		icon: "tabler:road",
 	},
 ];
@@ -85,23 +85,21 @@ const faqs = [
 			<div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
 				<h1
 					class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-50 sm:text-6xl">
-					Social networking that's not for sale
+					{{ $t("tagline") }}
 				</h1>
 				<p class="mt-6 text-lg leading-8 text-gray-300">
-					Mastodon.de is a truly open social network. No ads, no
-					tracking, no data mining, no algorithms! The network is run
-					by the community for the community.
+					{{ $t("taglineSubText") }}
 				</p>
 				<div class="mt-10 flex items-center gap-x-6">
 					<a
 						href="#"
 						class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-						>Sign Up</a
+						>{{ $t("signUpButton") }}</a
 					>
 					<a
 						href="#"
 						class="text-sm group font-semibold leading-6 text-gray-100"
-						>Learn more <ButtonsAnimatedArrow
+						>{{ $t("learnMoreButton") }} <ButtonsAnimatedArrow
 					/></a>
 				</div>
 			</div>
@@ -144,23 +142,19 @@ const faqs = [
 					<div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
 						<h2
 							class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-							Community Spaces
+							{{ $t("embedsGridTitle") }}
 						</h2>
 						<p class="mt-6 text-xl leading-8 text-gray-300">
-							Mastodon.de is dedicated to providing its users with
-							a community experience, where likes, followers or
-							boosts don't mean anything
+							{{ $t("embedsGridSubText1") }}
 						</p>
 						<p class="mt-6 text-base leading-7 text-gray-300">
-							Since there is no algorithm that decides what posts
-							are shown in your feed, you can just relax and post
-							for fun!
+							{{ $t("embedsGridSubText2") }}
 						</p>
 						<div class="mt-10 flex">
 							<a
 								href="#"
 								class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-								>Sign Up
+								>{{ $t("signUpButton") }}
 								<ButtonsAnimatedArrow />
 							</a>
 						</div>
@@ -216,12 +210,10 @@ const faqs = [
 				<div class="mx-auto max-w-2xl sm:text-center">
 					<h2
 						class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-						Meet our team
+						{{ $t("teamTitle") }}
 					</h2>
 					<p class="mt-6 text-lg leading-8 text-gray-300">
-						We are a dynamic group of individuals who are passionate
-						about what we do and dedicated to proving a great
-						experience to our community!
+						{{ $t("teamSubText") }}
 					</p>
 				</div>
 				<ul
@@ -241,10 +233,10 @@ const faqs = [
 								{{ person.name }}
 							</h3>
 							<p class="text-base leading-7 text-gray-300">
-								{{ person.role }}
+								{{ $t(person.role) }}
 							</p>
 							<p class="mt-6 text-base leading-7 text-gray-300">
-								{{ person.bio }}
+								{{ $t(person.bio) }}
 							</p>
 						</div>
 					</li>
@@ -259,13 +251,10 @@ const faqs = [
 				<div class="lg:row-start-2 lg:max-w-md">
 					<h2
 						class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-						Federated, open network
+						{{ $t("featuresTitle") }}
 					</h2>
 					<p class="mt-6 text-lg leading-8 text-gray-300">
-						Mastodon.de is connected to a gigantic federated network
-						of millions of users, the Fediverse.<br />
-						It's like email, where everybody has an address like
-						name@site.com !
+						{{ $t("featuresSubText") }}
 					</p>
 				</div>
 				<img
@@ -288,10 +277,12 @@ const faqs = [
 									:name="feature.icon"
 									class="absolute left-1 top-1 h-5 w-5 text-red-500"
 									aria-hidden="true" />
-								{{ feature.name }}
+								{{ $t(feature.name) }}
 							</dt>
 							{{ " " }}
-							<dd class="inline">{{ feature.description }}</dd>
+							<dd class="inline">
+								{{ $t(feature.description) }}
+							</dd>
 						</div>
 					</dl>
 				</div>

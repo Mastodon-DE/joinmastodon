@@ -2,13 +2,13 @@
 const products = [
 	{
 		name: "Uden AI",
-		description: "About Uden AI and what we do",
+		description: "aboutUdenAi",
 		href: "#",
 		icon: "tabler:server-2",
 	},
 ];
 const callsToAction = [
-	{ name: "Contact us", href: "#", icon: "tabler:mail" },
+	{ name: "contactUs", href: "#", icon: "tabler:mail" },
 	{ name: "mastodon.de", href: "#", icon: "tabler:brand-mastodon" },
 ];
 
@@ -54,7 +54,7 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 				<HeadlessPopover class="relative">
 					<HeadlessPopoverButton
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-50">
-						About Us
+						{{ $t("aboutUs") }}
 						<Icon
 							name="tabler:chevron-down"
 							class="h-5 w-5 flex-none text-gray-500"
@@ -86,11 +86,11 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 										<a
 											:href="item.href"
 											class="block font-semibold text-gray-50">
-											{{ item.name }}
+											{{ $t(item.name) }}
 											<span class="absolute inset-0" />
 										</a>
 										<p class="mt-1 text-gray-300">
-											{{ item.description }}
+											{{ $t(item.description) }}
 										</p>
 									</div>
 								</div>
@@ -106,28 +106,34 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 										:name="item.icon"
 										class="h-5 w-5 flex-none text-gray-500"
 										aria-hidden="true" />
-									{{ item.name }}
+									{{ $t(item.name) }}
 								</a>
 							</div>
 						</HeadlessPopoverPanel>
 					</transition>
 				</HeadlessPopover>
 
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Mastodon</a
+				<a
+					href="#"
+					class="text-sm font-semibold leading-6 text-gray-50"
+					>{{ $t("mastodon") }}</a
 				>
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Clients</a
+				<a
+					href="#"
+					class="text-sm font-semibold leading-6 text-gray-50"
+					>{{ $t("clients") }}</a
 				>
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Attributions</a
+				<a
+					href="#"
+					class="text-sm font-semibold leading-6 text-gray-50"
+					>{{ $t("attributions") }}</a
 				>
 			</HeadlessPopoverGroup>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 				<a
 					href="#"
 					class="text-sm group font-semibold leading-6 text-gray-50"
-					>Log in <ButtonsAnimatedArrow
+					>{{ $t("logIn") }} <ButtonsAnimatedArrow
 				/></a>
 			</div>
 		</nav>
@@ -176,7 +182,7 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 										class="-mx-3">
 										<HeadlessDisclosureButton
 											class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300">
-											About Us
+											{{ $t("aboutUs") }}
 											<Icon
 												name="tabler:chevron-down"
 												:class="[
@@ -205,24 +211,24 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Mastodon</a
+										>{{ $t("mastodon") }}</a
 									>
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Clients</a
+										>{{ $t("clients") }}</a
 									>
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Attributions</a
+										>{{ $t("attributions") }}</a
 									>
 								</div>
 								<div class="py-6">
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Log in</a
+										>{{ $t("logIn") }}</a
 									>
 								</div>
 							</div>

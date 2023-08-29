@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 		"nuxt-icon",
 		"@vueuse/nuxt",
 		"@nuxtseo/module",
+		"@nuxtjs/i18n",
 	],
 	app: {
 		head: {
@@ -18,6 +19,10 @@ export default defineNuxtConfig({
 			],
 			htmlAttrs: { lang: "en-us" },
 		},
+	},
+	i18n: {
+		vueI18n: "./i18n.config.ts",
+		locales: ["en-US", "fr-FR", "de-DE"],
 	},
 	nitro: {
 		compressPublicAssets: true,

@@ -128,6 +128,14 @@ const faqs = [
 		</div>
 
 		<GridsEmbedGrid />
+	</div>
+
+	<div class="pb-24 sm:pb-32">
+		<GridsSlidingAccounts />
+	</div>
+
+	<div class="mx-auto max-w-7xl pb-24 sm:pb-32">
+		<GridsTeamGrid />
 
 		<div
 			class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
@@ -169,10 +177,6 @@ const faqs = [
 				</HeadlessDisclosure>
 			</dl>
 		</div>
-	</div>
-
-	<div class="pb-24 sm:pb-32">
-		<GridsSlidingAccounts />
 	</div>
 
 	<FootersFooter />

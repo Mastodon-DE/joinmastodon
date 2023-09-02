@@ -22,7 +22,7 @@ export default defineI18nConfig(() => ({
 			// Embeds grid
 			embedsGridTitle: "Community Spaces",
 			embedsGridSubText1:
-				"Mastodon.de is dedicated to providing its users with a community experience, where likes, followers or boosts don't mean anything",
+				"Unlike all other social networks, we have no shareholders and don't care about profit!",
 			embedsGridSubText2:
 				"Since there is no algorithm that decides what posts are shown in your feed, you can just relax and post for fun!",
 

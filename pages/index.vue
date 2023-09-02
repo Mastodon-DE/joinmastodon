@@ -8,41 +8,6 @@ useServerSeoMeta({
 	author: "Erik Uden",
 });
 
-const people = [
-	{
-		name: "Erik Uden",
-		role: "teamMemberErikPosition",
-		imageUrl: "/images/people/erikuden-resized.webp",
-		bio: "teamMemberErikDescription",
-	},
-	{
-		name: "Joe Biden",
-		role: "President of the United States",
-		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg",
-		bio: "Joe Biden is the current president of the United States and has been an instrumental part in creating this community.",
-	},
-	// More people...
-];
-
-const features = [
-	{
-		name: "feature1Title",
-		description: "feature1SubText",
-		icon: "tabler:hammer",
-	},
-	{
-		name: "feature2Title",
-		description: "feature2SubText",
-		icon: "tabler:timeline",
-	},
-	{
-		name: "feature3Title",
-		description: "feature3SubText",
-		icon: "tabler:road",
-	},
-];
-
 const faqs = [
 	{
 		question: "What's the best thing about Switzerland?",
@@ -135,185 +100,34 @@ const faqs = [
 	</div>
 
 	<div class="mx-auto max-w-7xl pb-24 sm:pb-32">
-		<div class="py-32 px-6">
-			<div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-				<div
-					class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-					<div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-						<h2
-							class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-							{{ $t("embedsGridTitle") }}
-						</h2>
-						<p class="mt-6 text-xl leading-8 text-gray-300">
-							{{ $t("embedsGridSubText1") }}
-						</p>
-						<p class="mt-6 text-base leading-7 text-gray-300">
-							{{ $t("embedsGridSubText2") }}
-						</p>
-						<div class="mt-10 flex">
-							<a
-								href="#"
-								class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-								>{{ $t("signUpButton") }}
-								<ButtonsAnimatedArrow />
-							</a>
-						</div>
-					</div>
-					<div
-						class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents w-full">
-						<div
-							class="flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-							<iframe
-								title="Mastodon.de post by @ErikUden about visiting a Soviet submarine"
-								src="https://mastodon.de/@ErikUden/110951792713928937/embed"
-								class="md:aspect-[7/6.2] md:w-[32rem] max-w-none rounded-2xl object-cover"
-								allowfullscreen
-								sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
-						</div>
-						<div
-							class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end w-full justify-center lg:gap-x-8 flex-col md:flex-row">
-							<div
-								class="order-first flex w-full flex-none justify-end self-start lg:w-auto">
-								<iframe
-									title="Post by @futurebird about black hole horizons"
-									src="https://sauropods.win/@futurebird/110954249572809982/embed"
-									class="aspect-[4/3.7] md:w-[24rem] max-w-none flex-none rounded-2xl object-cover"
-									allowfullscreen
-									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
-							</div>
-							<div
-								class="flex w-full flex-auto justify-end lg:w-auto lg:flex-none">
-								<iframe
-									title="Post by @KittyPictures about cats and sunlight"
-									src="https://mastodon.de/@KittyPictures/110846921993091882/embed"
-									class="aspect-[7/6] md:w-[37rem] max-w-none flex-none rounded-2xl object-cover"
-									allowfullscreen
-									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
-							</div>
-							<div
-								class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-								<iframe
-									title="Poll by @ErikUden about East Germany vs West Germany"
-									src="https://mastodon.de/@ErikUden/110944073939853113/embed"
-									class="aspect-[4/4.6] md:w-[26rem] max-w-none rounded-2xl object-cover"
-									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
-									allowfullscreen></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<FeaturesWhatIsMastodon />
 
-		<div class="py-24 sm:py-32 px-6">
-			<div class="mx-auto max-w-7xl px-6 lg:px-8">
-				<div class="mx-auto max-w-2xl sm:text-center">
-					<h2
-						class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-						{{ $t("teamTitle") }}
-					</h2>
-					<p class="mt-6 text-lg leading-8 text-gray-300">
-						{{ $t("teamSubText") }}
-					</p>
-				</div>
-				<ul
-					role="list"
-					class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
-					<li
-						v-for="person in people"
-						:key="person.name"
-						class="flex flex-col gap-6 xl:flex-row">
-						<img
-							class="aspect-[4/5] w-52 flex-none rounded-xl object-cover"
-							:src="person.imageUrl"
-							alt="" />
-						<div class="flex-auto">
-							<h3
-								class="text-lg font-semibold leading-8 tracking-tight text-gray-50">
-								{{ person.name }}
-							</h3>
-							<p class="text-base leading-7 text-gray-300">
-								{{ $t(person.role) }}
-							</p>
-							<p class="mt-6 text-base leading-7 text-gray-300">
-								{{ $t(person.bio) }}
-							</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<FeaturesWithImage />
 
 		<div
-			class="relative isolate overflow-hidden bg-dark-950 px-6 py-20 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24">
+			class="px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+			<h2
+				class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
+				Like our service?<br />
+				Any dollar helps!
+			</h2>
 			<div
-				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
-				<div class="lg:row-start-2 lg:max-w-md">
-					<h2
-						class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-						{{ $t("featuresTitle") }}
-					</h2>
-					<p class="mt-6 text-lg leading-8 text-gray-300">
-						{{ $t("featuresSubText") }}
-					</p>
+				class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+				<div class="inline-flex flex-row flex-wrap gap-4 text-white">
+					<Icon name="logos:paypal" class="w-6 h-6" />
+					<Icon name="logos:patreon" class="w-6 h-6" />
+					<Icon name="cib:ko-fi" class="w-6 h-6" />
+					<Icon name="cib:liberapay" class="w-6 h-6" />
 				</div>
-				<img
-					src="/images/screenshots/desktop1-resized.webp"
-					alt="Product screenshot"
-					class="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
-					width="2432"
-					height="1442" />
-				<div
-					class="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-white/10 lg:pt-10">
-					<dl
-						class="max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none">
-						<div
-							v-for="feature in features"
-							:key="feature.name"
-							class="relative">
-							<dt
-								class="ml-9 inline-block font-semibold text-white">
-								<Icon
-									:name="feature.icon"
-									class="absolute left-1 top-1 h-5 w-5 text-red-500"
-									aria-hidden="true" />
-								{{ $t(feature.name) }}
-							</dt>
-							{{ " " }}
-							<dd class="inline">
-								{{ $t(feature.description) }}
-							</dd>
-						</div>
-					</dl>
-				</div>
-			</div>
-			<div
-				class="pointer-events-none absolute left-12 top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-3xl lg:bottom-[-12rem] lg:top-auto lg:translate-y-0 lg:transform-gpu"
-				aria-hidden="true">
-				<div
-					class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-rose-400 to-red-700 opacity-25"
-					style="
-						clip-path: polygon(
-							74.1% 44.1%,
-							100% 61.6%,
-							97.5% 26.9%,
-							85.5% 0.1%,
-							80.7% 2%,
-							72.5% 32.5%,
-							60.2% 62.4%,
-							52.4% 68.1%,
-							47.5% 58.3%,
-							45.2% 34.5%,
-							27.5% 76.7%,
-							0.1% 64.9%,
-							17.9% 100%,
-							27.6% 76.8%,
-							76.1% 97.7%,
-							74.1% 44.1%
-						);
-					" />
+				<NuxtLink
+					to="/donate"
+					class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+					>Donate<ButtonsAnimatedArrow
+				/></NuxtLink>
 			</div>
 		</div>
+
+		<GridsEmbedGrid />
 
 		<div
 			class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
@@ -355,6 +169,10 @@ const faqs = [
 				</HeadlessDisclosure>
 			</dl>
 		</div>
+	</div>
+
+	<div class="pb-24 sm:pb-32">
+		<GridsSlidingAccounts />
 	</div>
 
 	<FootersFooter />

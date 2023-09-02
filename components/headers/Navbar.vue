@@ -1,15 +1,17 @@
 <script setup lang="ts">
-const products = [
+const aboutUs = [
 	{
-		name: "Uden AI",
-		description: "aboutUdenAi",
+		name: "Team",
 		href: "#",
-		icon: "tabler:server-2",
 	},
-];
-const callsToAction = [
-	{ name: "contactUs", href: "#", icon: "tabler:mail" },
-	{ name: "mastodon.de", href: "#", icon: "tabler:brand-mastodon" },
+	{
+		name: "History",
+		href: "#",
+	},
+	{
+		name: "More Accounts",
+		href: "#",
+	},
 ];
 
 const { y: scrollY } = useWindowScroll();
@@ -30,13 +32,13 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 			class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
 			aria-label="Global">
 			<div class="flex lg:flex-1">
-				<a href="#" class="-m-1.5 p-1.5">
+				<NuxtLink to="/" class="-m-1.5 p-1.5">
 					<span class="sr-only">Uden AI</span>
 					<img
 						class="h-8 w-auto"
 						src="/images/icons/logo.svg"
 						alt="" />
-				</a>
+				</NuxtLink>
 			</div>
 			<div class="flex lg:hidden">
 				<button
@@ -69,64 +71,27 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 						leave-from-class="opacity-100 translate-y-0"
 						leave-to-class="opacity-0 translate-y-1">
 						<HeadlessPopoverPanel
-							class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-dark-200 shadow-lg ring-1 ring-gray-900/5">
-							<div class="p-4">
-								<div
-									v-for="item in products"
-									:key="item.name"
-									class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-dark-400 duration-200">
-									<div
-										class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-dark-300 group-hover:bg-dark-200">
-										<Icon
-											:name="item.icon"
-											class="h-6 w-6 text-gray-300 group-hover:text-red-300"
-											aria-hidden="true" />
-									</div>
-									<div class="flex-auto">
-										<a
-											:href="item.href"
-											class="block font-semibold text-gray-50">
-											{{ $t(item.name) }}
-											<span class="absolute inset-0" />
-										</a>
-										<p class="mt-1 text-gray-300">
-											{{ $t(item.description) }}
-										</p>
-									</div>
-								</div>
-							</div>
-							<div
-								class="grid grid-cols-2 divide-x divide-gray-900/5 bg-dark-100">
-								<a
-									v-for="item in callsToAction"
-									:key="item.name"
-									:href="item.href"
-									class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-50 hover:bg-dark-400">
-									<Icon
-										:name="item.icon"
-										class="h-5 w-5 flex-none text-gray-500"
-										aria-hidden="true" />
-									{{ $t(item.name) }}
-								</a>
-							</div>
+							class="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-dark-300 p-2 shadow-lg ring-1 ring-gray-900/5">
+							<a
+								v-for="item in aboutUs"
+								:key="item.name"
+								:href="item.href"
+								class="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-gray-50 hover:bg-dark-400 duration-100"
+								>{{ item.name }}</a
+							>
 						</HeadlessPopoverPanel>
 					</transition>
 				</HeadlessPopover>
 
-				<a
-					href="#"
-					class="text-sm font-semibold leading-6 text-gray-50"
-					>{{ $t("mastodon") }}</a
+				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
+					>Apps</a
 				>
-				<a
-					href="#"
-					class="text-sm font-semibold leading-6 text-gray-50"
-					>{{ $t("clients") }}</a
+
+				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
+					>Sponsors</a
 				>
-				<a
-					href="#"
-					class="text-sm font-semibold leading-6 text-gray-50"
-					>{{ $t("attributions") }}</a
+				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
+					>Contact</a
 				>
 			</HeadlessPopoverGroup>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -155,13 +120,13 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 					<HeadlessDialogPanel
 						class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-dark-700 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
 						<div class="flex items-center justify-between">
-							<a href="#" class="-m-1.5 p-1.5">
+							<NuxtLink to="/" class="-m-1.5 p-1.5">
 								<span class="sr-only">Uden AI</span>
 								<img
 									class="h-8 w-auto"
 									src="/images/icons/logo.svg"
 									alt="" />
-							</a>
+							</NuxtLink>
 							<button
 								type="button"
 								class="-m-2.5 rounded-md p-2.5 text-gray-200"
@@ -194,10 +159,7 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 										<HeadlessDisclosurePanel
 											class="mt-2 space-y-2">
 											<HeadlessDisclosureButton
-												v-for="item in [
-													...products,
-													...callsToAction,
-												]"
+												v-for="item in aboutUs"
 												:key="item.name"
 												as="a"
 												:href="item.href"
@@ -211,17 +173,17 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>{{ $t("mastodon") }}</a
+										>Apps</a
 									>
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>{{ $t("clients") }}</a
+										>Sponsors</a
 									>
 									<a
 										href="#"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>{{ $t("attributions") }}</a
+										>Contact</a
 									>
 								</div>
 								<div class="py-6">

@@ -5,7 +5,25 @@ const footerNavigation = {
 		{ name: "AIP", href: "#" },
 	],
 	support: [{ name: "Contact", href: "#" }],
-	company: [{ name: "Website", href: "#" }],
+	donate: [
+		{ name: "LiberaPay", href: "#" },
+		{
+			name: "Ko-Fi",
+			href: "#",
+		},
+		{
+			name: "Patreon",
+			href: "#",
+		},
+		{
+			name: "PayPal",
+			href: "#",
+		},
+		{
+			name: "IBAN",
+			href: "#",
+		},
+	],
 	legal: [
 		{ name: "Privacy", href: "#" },
 		{ name: "Terms", href: "#" },
@@ -110,11 +128,11 @@ const footerNavigation = {
 						<div>
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
-								Company
+								Donate
 							</h3>
 							<ul role="list" class="mt-6 space-y-4">
 								<li
-									v-for="item in footerNavigation.company"
+									v-for="item in footerNavigation.donate"
 									:key="item.name">
 									<a
 										:href="item.href"
@@ -147,7 +165,7 @@ const footerNavigation = {
 			<div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
 				<p class="text-xs leading-5 text-gray-400">
 					&copy; {{ new Date().getFullYear() }} Uden AI. Licensed
-					under GPLv3
+					under AGPLv3
 				</p>
 			</div>
 		</div>
@@ -155,9 +173,10 @@ const footerNavigation = {
 			href="https://cpluspatch.com"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="px-4 py-4 text-gray-100 text-sm block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+			class="px-4 py-4 text-gray-100 text-sm group block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
 			<div class="mx-auto max-w-7xl text-center w-full">
-				A site by <strong class="font-semibold">CPlusPatch</strong>
+				A site by <strong class="font-semibold">CPlusPatch</strong
+				><ButtonsAnimatedArrow />
 			</div>
 		</a>
 	</footer>

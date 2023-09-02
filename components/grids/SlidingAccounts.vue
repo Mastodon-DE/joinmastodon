@@ -72,7 +72,7 @@ const accounts = [
 		<swiper-slide
 			v-for="person in accounts"
 			:key="person.handle"
-			class="p-1 max w-fit min-w-0">
+			class="p-1 max min-w-0s w-fit">
 			<NuxtLink
 				:to="person.href"
 				class="rounded items-center w-full bg-dark-400 ring-dark-200 ring-1 duration-200 hover:ring-2 hover:ring-red-500 flex flex-row p-2 gap-2">
@@ -83,12 +83,11 @@ const accounts = [
 						class="h-full w-full object-cover" />
 				</div>
 				<div
-					class="flex flex-col gap-2 justify-center text-sm text-left">
+					class="flex flex-col gap-2 justify-center text-sm text-left max-w-50 text-ellipsis pr-2">
 					<h3 class="font-semibold text-gray-50">
 						{{ person.name }}
 					</h3>
-					<p
-						class="text-gray-300 line-clamp-1 overflow-hidden text-ellipsis pr-2">
+					<p class="text-gray-300 overflow-hidden text-ellipsis">
 						{{ person.handle }}
 					</p>
 				</div>

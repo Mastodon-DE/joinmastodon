@@ -21,11 +21,13 @@ try {
 		class="mx-auto max-w-7xl pb-24 sm:pb-32 px-6 lg:px-8 pt-30">
 		<div class="mx-auto max-w-2xl text-center mt-40">
 			<h1
+				v-if="post.title"
 				class="text-4xl font-bold tracking-tight text-gray-50 sm:text-5xl">
 				{{ post.title }}
 			</h1>
 		</div>
 		<img
+			v-if="post.image"
 			:src="post.image"
 			alt=""
 			class="aspect-[16/9] mt-30 w-full max-w-3xl mx-auto rounded-2xl bg-dark-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />

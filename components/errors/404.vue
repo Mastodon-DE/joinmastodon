@@ -11,11 +11,11 @@
 				Sorry, we couldn’t find the page you’re looking for.
 			</p>
 			<div class="mt-10 flex items-center justify-center gap-x-6">
-				<a
-					href="#"
+				<NuxtLink
+					to="/"
 					class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
 					>Go back home <ButtonsAnimatedArrow />
-				</a>
+				</NuxtLink>
 			</div>
 		</div>
 	</main>

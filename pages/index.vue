@@ -137,6 +137,8 @@ const faqs = [
 	<div class="mx-auto max-w-7xl pb-24 sm:pb-32">
 		<GridsTeamGrid />
 
+		<BlogPresentation />
+
 		<div
 			class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
 			<h2 class="text-2xl font-bold leading-10 tracking-tight text-white">

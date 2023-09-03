@@ -13,6 +13,7 @@
     "format": "prettier --write components/ pages/ styles utils/ templates/ server/ plugins/ middleware/ layouts/ db/"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.8.2",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/i18n": "next",
     "@nuxtseo/module": "^2.0.0-beta.15",

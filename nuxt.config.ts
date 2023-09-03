@@ -8,6 +8,7 @@ export default defineNuxtConfig({
 		"@nuxtseo/module",
 		"@nuxtjs/i18n",
 		"nuxt-swiper",
+		"@nuxt/content",
 	],
 	app: {
 		head: {

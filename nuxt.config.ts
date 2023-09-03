@@ -22,6 +22,10 @@ export default defineNuxtConfig({
 			htmlAttrs: { lang: "en-us" },
 		},
 	},
+	content: {
+		locales: ["en", "fr", "de"],
+		defaultLocale: "en",
+	},
 	i18n: {
 		vueI18n: "./i18n.config.ts",
 		baseUrl: "https://join-mastodon.de",

@@ -1,11 +1,24 @@
 <script setup lang="ts">
-const post = await queryContent(useRoute().path).findOne();
+import { ParsedContent } from "@nuxt/content/dist/runtime/types";
+
+const { locale } = useI18n();
+
+let post: ParsedContent | null;
+try {
+	post = await queryContent(`/blog/${useRoute().params.path ?? ""}`)
+		.locale(locale.value)
+		.findOne();
+} catch {
+	post = null;
+}
 </script>
 
 <template>
 	<HeadersNavbar />
 
-	<div class="mx-auto max-w-7xl pb-24 sm:pb-32 px-6 lg:px-8 pt-30">
+	<div
+		v-if="post"
+		class="mx-auto max-w-7xl pb-24 sm:pb-32 px-6 lg:px-8 pt-30">
 		<div class="mx-auto max-w-2xl text-center mt-40">
 			<h1
 				class="text-4xl font-bold tracking-tight text-gray-50 sm:text-5xl">
@@ -21,4 +34,5 @@ const post = await queryContent(useRoute().path).findOne();
 			<ContentRenderer :value="post" />
 		</div>
 	</div>
+	<Errors404 v-else />
 </template>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const posts = await queryContent("/blog/").find();
+const { locale } = useI18n();
+
+const posts = await queryContent("/blog/").locale(locale.value).find();
 </script>
 
 <template>
@@ -19,7 +21,7 @@ const posts = await queryContent("/blog/").find();
 			<article v-for="post in posts" :key="post._id">
 				<NuxtLink
 					class="flex flex-col items-start justify-between"
-					:to="post._path">
+					:to="post._path?.split('.')[0]">
 					<div class="relative w-full">
 						<img
 							:src="post.image"

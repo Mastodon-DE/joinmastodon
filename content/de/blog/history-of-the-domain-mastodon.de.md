@@ -16,8 +16,22 @@ Our story was indirectly covered by [The Guardian]([https://www.theguardian.com/
 
 ...with all that done, let us commence forth to the *story of mastodon.de*
 
+.
+
+.
+
+.
+
 # The Beginning - 40.000 years ago
 
-During the *Last Glacial Period*, also known as the ***Ice Age***, around what archeologists estimate to have happened ~40.000 years ago, roughly during the *Upper Paleolithic era* of human history, **a mammoth named Oscar roamed the land** of a region that would later be defined as central Europe. This would be the day that Oscar dies. The exact conditions of how this monolith of a mammoth, which is among the [**largest and oldest mammoths that ever walked the earth**](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/mammut-oscar-bestimmt-einen-lebensweg), are unclear but there are reasons to believe Oscar may have fought with a mountain lion which lead to his death.
+During the *Last Glacial Period*, also known as the ***Ice Age***, around what archeologists estimate to have happened ~40.000 years ago, roughly during the *Upper Paleolithic era* of human history, **a ~100 years old mammoth named Oscar roamed the land** of a region that would later be defined as central Europe. This would be the day that Oscar dies. The exact conditions of how this monolith of a mammoth, which is among the [**largest and oldest mammoths that ever walked the earth**](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/mammut-oscar-bestimmt-einen-lebensweg), are unclear but there are reasons to believe Oscar may have fought with a mountain lion which lead to his death.
 
-Frozen cold under layers of snow and ice, over the course of Millenia, above Oscar's grave, there were fought countless wars, cultures emancipated and exterminated, societies rose from ashes and fell from grace; **Oscar existed before the Germanic people**, **before even the remote concept of a "European" continent** and will still be there when those perish. Yet, surprisingly, after his death Oscar was first seen again in Siegsdorf, a southern German village in central Europe, on a [Saturday in October 1975](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/ein-junge-verwirklicht-einen-traum). A 16 year old German boy discovered and named Oscar. That boy's name was **Bernard von Bredow** who will become the **center piece of this story**. 
+Frozen cold under layers of snow and ice, over the course of Millenia, above Oscar's grave, there were fought countless wars, cultures emancipated and exterminated, societies rose from ashes and fell from grace; **Oscar existed before the Germanic people**, **before even the remote concept of a "European" continent** and will still be there when those perish. Yet, surprisingly, after his death Oscar was first seen again in Siegsdorf (*Chiemgau*), a southern German village in central Europe, on an eventful [Saturday in October 1975](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/ein-junge-verwirklicht-einen-traum). A 16 year old German boy, out to find rare metals, through pure chance discovered and later named Oscar. That boy's name was **Bernard Raymond von Bredow** who will become the **center piece of this story**. 
+
+.
+
+.
+
+.
+
+Uncoordinated as it can get, young Bernard 

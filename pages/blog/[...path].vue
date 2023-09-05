@@ -13,6 +13,24 @@ try {
 } catch {
 	post = null;
 }
+
+useSchemaOrg([
+	defineArticle({
+		author: post?.author,
+		datePublished: post?.created_at,
+		image: post?.title,
+		description: post?.description,
+		inLanguage: locale.value,
+		thumbnailUrl: post?.image,
+	}),
+]);
+
+useServerSeoMeta({
+	title: post?.title,
+	description: post?.description,
+	ogImage: post?.image,
+	twitterCard: "summary_large_image",
+});
 </script>
 
 <template>

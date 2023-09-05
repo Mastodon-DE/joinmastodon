@@ -57,3 +57,7 @@ This must've been among the most exciting times in Bernard's life, *so far*. As 
 
 
 Suddenly, that skepticism turned into excitement and Bernard's findings were praised in the entire city. 
+
+
+
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG">

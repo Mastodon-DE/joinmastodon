@@ -1,4 +1,13 @@
-<h><center>The Incredible Story of the Domain mastodon.de</center></h>
+---
+title: 'The Incredible Story of the Domain mastodon.de'
+created_at: 1693915804000
+image: /images/blog/2023-09-05-history-of-domain-mastodon.de/edited/the-incredible-story-of-the-domain-mastodon.de.webp
+description: 'Erik Uden explains the entire sequence of events of how mastodon.de both came into existence and his posession starting from the ice age to today'
+author: Erik Uden
+author_image: /images/people/erikuden-resized.webp
+author_handle: '@ErikUden@mastodon.de'
+
+---
 
 # Prologue
 
@@ -22,11 +31,11 @@ Our story was indirectly covered by [The Guardian]([https://www.theguardian.com/
 
 .
 
-# The Beginning - 40.000 years ago
+# The Beginning - 44,500 years ago
 
-During the *Last Glacial Period*, also known as the ***Ice Age***, around what archeologists estimate to have happened ~40.000 years ago, roughly during the *Upper Paleolithic era* of human history, **a ~100 years old mammoth named Oscar roamed the land** of a region that would later be defined as central Europe. This would be the day that Oscar dies. The exact conditions of how this monolith of a mammoth, which is among the [**largest and oldest mammoths that ever walked the earth**](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/mammut-oscar-bestimmt-einen-lebensweg), are unclear but there are reasons to believe Oscar may have fought with a mountain lion which lead to his death.
+During the *Last Glacial Period*, also known as the ***Ice Age***, around what archeologists estimate to have happened [~44,500 years ago](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2), roughly during the *Upper Paleolithic era* of human history, **a ~100 years old mammoth named Oscar roamed the land** of a region that would later be defined as central Europe. This would be the day that Oscar dies. The exact conditions of how this monolith of a mammoth, which is among the [**largest and oldest mammoths that ever walked the earth**](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/mammut-oscar-bestimmt-einen-lebensweg), passed away, are unclear but there are reasons to believe Oscar may have fought with a mountain lion which lead to his death.
 
-Frozen cold under layers of snow and ice, over the course of Millenia, above Oscar's grave, there were fought countless wars, cultures emancipated and exterminated, societies rose from ashes and fell from grace; **Oscar existed before the Germanic people**, **before even the remote concept of a "European" continent** and will still be there when those perish. Yet, surprisingly, after his death Oscar was first seen again in Siegsdorf (*Chiemgau*), a southern German village in central Europe, on an eventful [Saturday in October 1975](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/ein-junge-verwirklicht-einen-traum). A 16 year old German boy, out to find rare metals, through pure chance discovered and later named Oscar. That boy's name was **Bernard Raymond von Bredow** who will become the **center piece of this story**. 
+Frozen cold under layers of snow and ice, over the course of Millenia, above Oscar's grave, there were fought countless wars, cultures emancipated and exterminated, societies rose from ashes and fell from grace; **Oscar existed before the Germanic people**, **before even the remote concept of a "European" continent** and will still be there when those perish. Yet, surprisingly, after his death, Oscar was first seen again in Siegsdorf (*Chiemgau*), a southern German village in central Europe, on an eventful [Saturday in October 1975](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/ein-junge-verwirklicht-einen-traum). A 16 year old German boy, out to find rare metals, through pure chance discovered and later named Oscar. That boy's name was **Bernard Raymond von Bredow** who will become the **center piece of this story**. 
 
 .
 

@@ -15,11 +15,11 @@ There are multiple perspectives to this story, and it is hard to come up with th
 
 This story will focus on the registration of the domain itself, as it required a multi-month operation during the beginning of 2023 (*January to March*) having at some point dozens of people across all timezones working on it for everything to go just ***right***. If you're interested in the story about building the social network behind mastodon.de, click [here](https://join-mastodon.de).  
 
-</br>
+<br/>
 
-</br>
+<br/>
 
-</br>
+<br/>
 
 #### Content Warning and Notes
 
@@ -30,6 +30,12 @@ Our story was indirectly covered by [The Guardian]([https://www.theguardian.com/
 *Every link has archived versions at the bottom of the page*
 
 ...with all that done, let us commence forth to the *story of mastodon.de*  
+
+<br/>
+
+<br/>
+
+<br/>
 
 # The Beginning - 44,500 years ago
 

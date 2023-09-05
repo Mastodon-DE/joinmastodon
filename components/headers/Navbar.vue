@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { locale } = useI18n();
 const aboutUs = [
 	{
 		name: "Team",
@@ -6,7 +7,7 @@ const aboutUs = [
 	},
 	{
 		name: "History",
-		href: "#",
+		href: `/${locale.value}/blog/history-of-the-domain-mastodon.de`,
 	},
 	{
 		name: "More Accounts",

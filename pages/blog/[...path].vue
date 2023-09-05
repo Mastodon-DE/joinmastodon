@@ -5,7 +5,9 @@ const { locale } = useI18n();
 
 let post: ParsedContent | null;
 try {
-	post = await queryContent(`/blog/${useRoute().params.path ?? ""}`)
+	post = await queryContent(
+		`/blog/${(useRoute().params.path as string[]).join("/") ?? ""}`
+	)
 		.locale(locale.value)
 		.findOne();
 } catch {

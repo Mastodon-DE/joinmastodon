@@ -60,38 +60,28 @@ const accounts = [
 </script>
 
 <template>
-	<swiper
-		:slides-per-view="'auto'"
-		:space-between="30"
-		:autoplay="{
-			delay: 100,
-			disableOnInteraction: false,
-		}"
-		:loop="true"
-		class="mySwiper">
-		<swiper-slide
+	<div
+		class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 max-w-7xl mx-auto flex-wrap px-4 md:px-6">
+		<NuxtLink
 			v-for="person in accounts"
-			:key="person.handle"
-			class="p-1 max min-w-0s w-fit">
-			<NuxtLink
-				:to="person.href"
-				class="rounded items-center w-full bg-dark-400 ring-dark-200 ring-1 duration-200 hover:ring-2 hover:ring-red-500 flex flex-row p-2 gap-2">
-				<div
-					class="h-15 w-15 rounded overflow-hidden flex items-center justify-center shrink-0">
-					<img
-						:src="person.avatarUrl"
-						class="h-full w-full object-cover" />
-				</div>
-				<div
-					class="flex flex-col gap-2 justify-center text-sm text-left max-w-50 text-ellipsis pr-2">
-					<h3 class="font-semibold text-gray-50">
-						{{ person.name }}
-					</h3>
-					<p class="text-gray-300 overflow-hidden text-ellipsis">
-						{{ person.handle }}
-					</p>
-				</div>
-			</NuxtLink>
-		</swiper-slide>
-	</swiper>
+			:key="person.href"
+			:to="person.href"
+			class="rounded items-center w-full bg-dark-400 ring-dark-200 ring-1 duration-200 hover:ring-2 hover:ring-red-500 flex flex-row p-2 gap-2">
+			<div
+				class="h-15 w-15 rounded overflow-hidden flex items-center justify-center shrink-0">
+				<img
+					:src="person.avatarUrl"
+					class="h-full w-full object-cover" />
+			</div>
+			<div
+				class="flex flex-col gap-2 justify-center text-sm text-left max-w-50 text-ellipsis pr-2">
+				<h3 class="font-semibold text-gray-50">
+					{{ person.name }}
+				</h3>
+				<p class="text-gray-300 overflow-hidden text-ellipsis">
+					{{ person.handle }}
+				</p>
+			</div>
+		</NuxtLink>
+	</div>
 </template>

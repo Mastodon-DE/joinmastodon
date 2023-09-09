@@ -3,7 +3,7 @@ const { locale } = useI18n();
 const aboutUs = [
 	{
 		name: "Team",
-		href: "#",
+		href: "/#team",
 	},
 	{
 		name: "History",
@@ -88,8 +88,10 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 					>Apps</a
 				>
 
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Sponsors</a
+				<a
+					href="/#sponsors"
+					class="text-sm font-semibold leading-6 text-gray-50"
+					>Donate</a
 				>
 				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
 					>Contact</a

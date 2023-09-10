@@ -1,58 +1,46 @@
 <script setup lang="ts">
 const footerNavigation = {
-	solutions: [
-		{ name: "Mastodon.de", href: "#" },
-		{ name: "AIP", href: "#" },
-	],
+	solutions: [{ name: "Mastodon.de", href: "#" }],
 	support: [{ name: "Contact", href: "#" }],
-	donate: [
-		{ name: "LiberaPay", href: "#" },
-		{
-			name: "Ko-Fi",
-			href: "#",
-		},
-		{
-			name: "Patreon",
-			href: "#",
-		},
-		{
-			name: "PayPal",
-			href: "#",
-		},
-		{
-			name: "IBAN",
-			href: "#",
-		},
-	],
 	legal: [
 		{ name: "Privacy", href: "#" },
 		{ name: "Terms", href: "#" },
 	],
 	social: [
 		{
-			name: "Facebook",
-			href: "#",
-			icon: "tabler:brand-facebook",
-		},
-		{
-			name: "Instagram",
-			href: "#",
-			icon: "tabler:brand-instagram",
-		},
-		{
-			name: "Twitter",
-			href: "#",
-			icon: "tabler:brand-twitter",
+			name: "Mastodon",
+			href: "https://mastodon.de/@UdenAI",
+			icon: "tabler:brand-mastodon",
 		},
 		{
 			name: "GitHub",
-			href: "#",
+			href: "https://github.com/uden-AI/",
 			icon: "tabler:brand-github",
 		},
 		{
 			name: "YouTube",
-			href: "#",
+			href: "https://www.youtube.com/@Mastodon_DE",
 			icon: "tabler:brand-youtube",
+		},
+		{
+			name: "Signal",
+			href: "https://signal.group/#CjQKIFMct-WMIEFeKGHvSBUwi4geZr_cXltR1NnY88vP9kdGEhAr6CRNfqONvZB_kngJmLRw",
+			icon: "tabler:message-circle",
+		},
+		{
+			name: "Telegram",
+			href: "https://t.me/mastodon_de",
+			icon: "tabler:brand-telegram",
+		},
+		{
+			name: "Twitch",
+			href: "https://www.twitch.tv/Mastodon_DE",
+			icon: "tabler:brand-twitch",
+		},
+		{
+			name: "E-Main",
+			href: "mailto:info@mastodon.de",
+			icon: "tabler:mail",
 		},
 	],
 };
@@ -69,7 +57,7 @@ const showBankInfo = ref(false);
 				<div class="space-y-8">
 					<img
 						class="h-7"
-						src="/images/icons/logo.svg"
+						src="/images/icons/uden-logo.svg"
 						alt="Company name" />
 					<p class="text-sm leading-6 text-gray-300">
 						Constructing sites, apps and communities through open
@@ -90,7 +78,7 @@ const showBankInfo = ref(false);
 					</div>
 				</div>
 				<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-					<div class="md:grid md:grid-cols-2 md:gap-8">
+					<div class="md:grid md:grid-cols-2 md:gap-8 ml-auto">
 						<div>
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
@@ -108,6 +96,8 @@ const showBankInfo = ref(false);
 								</li>
 							</ul>
 						</div>
+					</div>
+					<div class="md:grid md:grid-cols-2 md:gap-8">
 						<div class="mt-10 md:mt-0">
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
@@ -125,8 +115,6 @@ const showBankInfo = ref(false);
 								</li>
 							</ul>
 						</div>
-					</div>
-					<div class="md:grid md:grid-cols-2 md:gap-8">
 						<div class="mt-10 md:mt-0">
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
@@ -160,11 +148,12 @@ const showBankInfo = ref(false);
 					<Icon name="simple-icons:liberapay" />
 					LiberaPay
 				</a>
-				<button
+				<a
+					href="https://patreon.com/MastodonDE"
 					class="bg-rose-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm">
 					<Icon name="simple-icons:patreon" />
 					Patreon
-				</button>
+				</a>
 				<a
 					href="https://ko-fi.com/mastodonde/"
 					class="bg-green-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm">

@@ -61,6 +61,7 @@ const accounts = [
 
 <template>
 	<div
+		id="accounts"
 		class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 max-w-7xl mx-auto flex-wrap px-4 md:px-6">
 		<NuxtLink
 			v-for="person in accounts"

@@ -11,7 +11,7 @@ const aboutUs = [
 	},
 	{
 		name: "More Accounts",
-		href: "#",
+		href: "#accounts",
 	},
 ];
 
@@ -19,7 +19,7 @@ const { y: scrollY } = useWindowScroll();
 
 const mobileMenuOpen = ref(false);
 
-const scrolledBackground = computed(() => scrollY.value > 100);
+const scrolledBackground = computed(() => scrollY.value > 2);
 </script>
 <template>
 	<header
@@ -33,12 +33,9 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 			class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
 			aria-label="Global">
 			<div class="flex lg:flex-1">
-				<NuxtLink to="/" class="-m-1.5 p-1.5">
+				<NuxtLink to="/" class="p-1.5 -m-1.5">
 					<span class="sr-only">Uden AI</span>
-					<img
-						class="h-8 w-auto"
-						src="/images/icons/logo.svg"
-						alt="" />
+					<img class="h-8 w-35" src="/images/icons/logo.svg" alt="" />
 				</NuxtLink>
 			</div>
 			<div class="flex lg:hidden">
@@ -84,8 +81,10 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 					</transition>
 				</HeadlessPopover>
 
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Apps</a
+				<a
+					href="https://status.mastodon.de"
+					class="text-sm font-semibold leading-6 text-gray-50"
+					>Status</a
 				>
 
 				<a
@@ -99,9 +98,9 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 			</HeadlessPopoverGroup>
 			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 				<a
-					href="#"
+					href="https://mastodon.de"
 					class="text-sm group font-semibold leading-6 text-gray-50"
-					>{{ $t("logIn") }} <ButtonsAnimatedArrow
+					>Explore <ButtonsAnimatedArrow
 				/></a>
 			</div>
 		</nav>
@@ -191,9 +190,9 @@ const scrolledBackground = computed(() => scrollY.value > 100);
 								</div>
 								<div class="py-6">
 									<a
-										href="#"
+										href="https://mastodon.de/"
 										class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>{{ $t("logIn") }}</a
+										>Explore</a
 									>
 								</div>
 							</div>

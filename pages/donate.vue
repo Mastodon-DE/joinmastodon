@@ -1,13 +1,4 @@
-<script setup lang="ts">
-const sponsors = [
-	{
-		name: "Banana.com",
-		imageUrl: "/images/sponsors/banana.svg",
-		href: "https://banana.com",
-		description: "Banana.com is a company that sells bananas.",
-	},
-];
-</script>
+<script setup lang="ts"></script>
 <template>
 	<HeadersNavbar />
 
@@ -24,5 +15,16 @@ const sponsors = [
 				</p>
 			</div>
 		</div>
+
+		<div>
+			<iframe
+				src="https://mastodon.de/@MastodonDE/110808633497349326/embed"
+				class="mastodon-embed mr-auto w-full max-w-[40rem] rounded-2xl aspect-[1/1]"
+				allowfullscreen></iframe>
+		</div>
+		<Component
+			:is="'script'"
+			src="https://mastodon.de/embed.js"
+			async="async"></Component>
 	</div>
 </template>

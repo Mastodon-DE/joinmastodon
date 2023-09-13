@@ -49,7 +49,7 @@ Frozen cold under layers of snow and ice, over the course of Millenia, above Osc
 
 # Best Friends Forever
 
-As uncoordinated as it can get, young Bernard excavated most of Oscar's bones over the course of the following three weeks from the clay he found them in, and then [stored them in his mother's attic without telling a soul](https://www.samerbergernachrichten.de/224720-2/). However, the following Winter in 1975 would distract young Bernard from his shared path with Oscar the Mammoth for over a decade, as his family inherited a farm in New Zealand, to which Bernard moved in an act of self-discovery to become:
+As uncoordinated as it can get, young Bernard excavated most of Oscar's bones over the course of the following three weeks from the clay he found them in, and then [stored them in his mother's attic without telling a soul](https://www.samerbergernachrichten.de/224720-2/). For this operation he would call in sick to school, later even claim [he suffered from "Mammotheritis"](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3) (*Mammugitis*). However, the following Winter in 1975 would distract young Bernard from his shared path with Oscar the Mammoth for over a decade, as his family inherited a farm in New Zealand, to which Bernard moved in an act of self-discovery to become:
 
 - substitute laborer
 - piano tuner
@@ -99,7 +99,7 @@ Yes, you read that right *mammoths*, plural! The initial findings and this ackno
 
 <br/>
 
-Sadly, **this would be Bernard Raymond von Bredow's fall from grace**. Scientists (*outside of Russia*) no longer supported him due to the commercialization of their findings, he'd more and more deeply go into "experimental archeology" and begin believing in conspiratorial myths [losing all support from local politicians](https://www.samerbergernachrichten.de/224720-2/), *but not the local population entirely*. As has been said, his exhibits were widely visited, even the first one that was just Oscar in a gym hall in Siegsdorf in 1987 had [2000 visitors in just 2 weeks](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&limitstart=). 
+Sadly, **this would be Bernard Raymond von Bredow's fall from grace**. Bernard had extravagant plans for the Mammutheum including a [video spectacle, light/laser shows, and animations](https://www.samerbergernachrichten.de/224720-2/) (*as odd as it may seem, this is something he seemed to have* [*planned and executed in the exhibition in Stockholm*](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2) *as well*). Still, because of this, many scientists (*outside of Russia*) no longer supported him due to the commercialization of their findings, he'd more and more deeply go into "experimental archeology" and begin believing in conspiratorial myths [losing all support from local politicians](https://www.samerbergernachrichten.de/224720-2/), *but not the local population entirely*. As has been said, his exhibits were widely visited, even the first one that was just Oscar in a gym hall in Siegsdorf in 1987 had [2000 visitors in just 2 weeks](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&limitstart=). 
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oscar_in_voller_pracht.jpg">
 
@@ -107,13 +107,13 @@ The city of Siegsdorf, now being aware of the archeologic treasures surrounding 
 
 <br/>
 
-Bernard was a local legend, and he wasn't willing to give up the fight. When the Internet came around he was willing to experiment with new ways of *marketing*. The exact moment when **it** happened aren't clear, but it must've been in the *earliest of days of the web*, as our historic WHOIS records can only trace it back until 2005. 
+Bernard was a local legend, and he wasn't willing to give up the fight. Due to his status with local politicians and his conspiracies, **the Mammutheum never got any legitimization**. It never became an official museum as the local authorities wanted to hear nothing of it. Maybe because of this, as well as many other factors, when the Internet came around he was willing to experiment with new ways of *marketing*. The exact moment when **it** happened isn't clear, but it must've been in the *earliest days of the web*, as our historic WHOIS records can only trace **it** back until 2005. 
 
-What had happened is that Bernard Raymond von Bredow registered two domains, both for his Mammutheum. One, quite obviously, *mammutheum.de*, and **the other named after the specific species of Oscar the Mammoth**. 
+What had happened is that Bernard Raymond von Bredow planned to advertise his Mammutheum online, for which he registered two domains: One, quite obviously, *mammutheum.de*, and **the other named after the specific species of Oscar the Mammoth**. 
 
 ### Oscar the Mammoth was a Mastodon.
 
-... this is when and why Bernard Raymond von Bredow first registered mastodon.de.
+**...this is when and why Bernard Raymond von Bredow first registered mastodon.de**.
 
 <br/>
 
@@ -123,7 +123,9 @@ What had happened is that Bernard Raymond von Bredow registered two domains, bot
 
 # The Mammutheum - 1991 to 2017
 
-Honestly, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
+If you can speak German or have no problem with the auto-translated subtitles, you can watch **a documentary by Bernard Raymond von Bredow about the Mammutheum** [**here on his personal YouTube channel**](https://www.youtube.com/watch?v=iQaMkd7kG5g) titled "The Mammoth Project - It Started with a Bone" which I highly recommend (*also look around for other things on his channel*). This is a reupload of a documentary by Ulrich Weißbach for the Baverian Radio (*Bayerischer Rundfunk*) from 1993. 
+
+But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
 
 Especially fascinating I find this interview he had with Bayern Alpha in 2004: [Bayern Alpha Interview](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/vortraege-und-hoerfunkbeitraege?showall=&start=1), as it is just Bernard answering so many questions about himself! 
 
@@ -131,12 +133,17 @@ Another interesting tidbit may be that Oscar the Mammoth was used as [promotiona
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG">
 
-Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. 
+Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Barnard was good friends with Roland Emmerich and just thought this would be funny. 
 
-There are terabytes of images on here and it tells a great story of what rich archeologic history such a small space had to offer, as well as how many visitors it must've fascinated in a year. I highly recommend you do this before continuing to the following, **rather morbid** sections. 
+There are terabytes of images and texts on this website and they tell a great story of what rich archeologic history such a small space had to offer, as well as how many visitors it must've fascinated in a year. I highly recommend you do this before continuing to the following, **rather morbid** sections.
 
 One way or the other, thanks to Bernard Raymond von Bredow, Oscar got his fair share on the big screen.
+
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_7580.JPG">
+
+
+
+Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending, there were just a few losses on the way*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were sort-of plotting against Bernard with their own museum? Yup, obviously a non-existent / state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family, 
 
 <br/>
 
@@ -146,35 +153,48 @@ One way or the other, thanks to Bernard Raymond von Bredow, Oscar got his fair s
 
 # Paraguay, a Murder, and a Domain long Forgotten - 2017 to 2021
 
-**Side note**: To this very point, the domain mastodon.de has never been utilized and also will not be utilized for another 6 years. Not once. I mean you can [check the Internet Archive yourself](https://web.archive.org/web/20230000000000*/mastodon.de), there was a long time where the domain showed nothing and never a singular moment where any 404, access forbidden, or domain parking site revealed any information about its owner that isn't already revealed by WHOIS / BIND9 dig DNS lookups.
+**Side note:** To this very point, the domain mastodon.de (*remember? That is why you're here, I've tricked you into reading the personal biography of this man when in reality this will somehow be about the domain mastodon.de*) has never been utilized and also will not be utilized for *another 6 years*. Not once. I mean you can [check the Internet Archive yourself](https://web.archive.org/web/20230000000000*/mastodon.de), there was a long time where the domain showed nothing and there was never a singular moment where any 404, access forbidden, or domain parking site revealed any information about its owner that isn't already revealed by WHOIS / BIND9 dig DNS lookups (*more on that later*).
 
 <br/>
 
-The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both kind of faded away by the year of 2017, which is why then and there Bernard and his then 10 year old daughter Loreena moved to Paraguay to begin a new chapter of their lives. It isn't known much about him during this time, but the Mammutheum continued running through family members and he sustained his living by building violins. 
+**Side note 2:** Yes, he has been a skilled (*antique*) violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article.
+
+<br/>
+
+**Now back to the story:** 
+
+## Paraguay
+
+The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both kind of faded away by the year of 2017, which is why then and there Bernard and his then 10 year old daughter Loreena moved to Paraguay to begin a new chapter of their lives. It isn't known much about them during this time, but the Mammutheum continued running through family members and he sustained his living by building violins. At this point he is in the [possession of four antique violins believed to have been made by the revered Italian luthier Antonio Stradivari](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) which were worth [multiple millions of Euros](https://www.theguardian.com/science/2018/may/21/scientists-find-secret-behind-sweet-sound-of-stradivarius-violins) ([*maybe even each*](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article)).
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/bernard mit andrea amati 801x534.jpg">
 
-Yes, he has been a skilled antique violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article. 
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/stradivaris werkstatt 801x557.jpg">
 
 <br/>
 
-**Back to the story**: By October of 2021, precisely 46 years after first finding Oscar the Mammoth, Bernard Raymond von Bredow was 62 years and his daughter 14 years old. He was in [possession of four antique violins believed to have been made by the revered Italian luthier Antonio Stradivari](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) which were worth [multiple millions of Euros](https://www.theguardian.com/science/2018/may/21/scientists-find-secret-behind-sweet-sound-of-stradivarius-violins). 
+By October of 2021, 4 years after moving here, 46 years after first finding Oscar the Mammoth, Bernard Raymond von Bredow, at 62 years old, and his daughter, at 14 years old, were found dead in their apartment in Paraguay. **How on god's green earth did this happen?**
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/stradivaris werkstatt 801x557.jpg">
+<br/>
 
-Here is a report by a local TV station (*ABC TV Paraguay*) which shows the police investigation as it happened:
+## A Murder
 
-<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Detienen a un alemán por crimen en Areguá<br><br>"Allanamos tres casas de ciudadanos alemanes, conocidos del fallecido. Incautamos varios elementos", crio. Hugo Grance, Dpto. de Homicidios<a href="https://twitter.com/hashtag/ABCTVPy?src=hash&ref_src=twsrc%5Etfw">#ABCTVPy</a> 🔗<a href="https://t.co/ZvwJlbwdHn">https://t.co/ZvwJlbwdHn</a> <a href="https://t.co/7w2a3whped">pic.twitter.com/7w2a3whped</a></p>— ABC TV Paraguay (@ABCTVpy) <a href="https://twitter.com/ABCTVpy/status/1458420657948176390?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+On the 22nd of October 2021 both **Bernard Raymond von Bredow and his daughter Loreena were found dead in their homes with the reason of death being murder**. 
+
+Here is a report by a local TV station (*ABC TV Paraguay*) which shows the police investigation trying to initially figure out what they could:
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Detienen a un alemán por crimen en Areguá<br><br>"Allanamos tres casas de ciudadanos alemanes, conocidos del fallecido. Incautamos varios elementos", crio. Hugo Grance, Dpto. de Homicidios<a href="https://twitter.com/hashtag/ABCTVPy?src=hash&ref_src=twsrc%5Etfw">#ABCTVPy</a> 🔗<a href="https://t.co/ZvwJlbwdHn">https://t.co/ZvwJlbwdHn</a> <a href="https://t.co/7w2a3whped">pic.twitter.com/7w2a3whped</a></p>— ABC TV Paraguay (@ABCTVpy) <a href="https://twitter.com/ABCTVpy/status/1458420657948176390?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
 
 <br>
 
-What precisely had happened and by whom is unknown to this day, yet this is the official story:
+What precisely had happened and by whom is unknown to this day, yet **this is the official story and what is believed to have happened**:
 
 <br>
 
-Bernard Raymond von Bredow and his 14 year old (*sometimes said to be 15 years old*) daughter Loreena (*sometimes called "Lydia" in news reports*) **were found murdered on the 22nd of October 2021 in their house in Patiño, Itauguá** in the South-West of Paraguay. The [crime report by Hugo Grance](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), the chief investigator of the local police, notes that **Bredow's body showed signs of torture**. 
+Bernard Raymond von Bredow and his 14 year old (*sometimes said to be 15 years old*) daughter Loreena (*sometimes called "Lydia" in news reports*) **were found murdered on the 22nd of October 2021 in their house in Patiño, Itauguá** in the South-West of Paraguay. The [crime report by Hugo Grance](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), the chief investigator of the local police, notes that **Bredow's body showed** [**signs of torture**](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34) and was killed with a "[great caliber weapon](https://wochenblatt.cc/noch-keine-festnahmen-nach-doppelmord-an-deutschen-nahe-aregua/)". It is believed that at least two people were involved in the material execution of this murder. 
 
-The main motive for this murder is believed to be the four four Stradivarius violins, built in the 16th/17th century, Bredow had posessed, worth multiple millions of Euros. After the murder they were no longer present in Bredow's home yet [found in the posession of **Volker Grannas**](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), a 58 year-old German who not only lived near Bredow's residence, but also was a good friend of his. 
+The main motive for this murder is believed to be the four **four Stradivarius violins**, built in the 17th/18th century, Bredow had possessed, worth [multiple tens of millions of Euros](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article). After the murder they were no longer present in Bredow's home yet [found in the posession of **Volker Grannas**](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), a 58 year-old German who not only lived near Bredow's residence, but also was [a good friend of his](https://twitter.com/MinPublicoPy/status/1458385860240494600). 
 
 In the light of this murder, the following people were arrested:
 
@@ -184,17 +204,17 @@ In the light of this murder, the following people were arrested:
 
 - Stephen Jorg Messing Dachinger, 51
 
-Now, Volker Grannas claims the violins had been in his possession for a longer time as Bredow gave them into his custody when he travelled back to Germany for a summer, yet then lied to Bredow [claiming they were destroyed in a fire](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), when in reality as revealed through this investigation, they were in his possession the whole time. 
+<br/>
+
+Now, Volker Grannas claims the violins had been in his possession for a longer time as Bredow gave them into his custody when he travelled back to Germany for a summer, yet then lied to Bredow [claiming they were destroyed in a fire](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), when in reality as revealed through this investigation, they were in his possession the whole time. Ironic for Bredow to give the violins to his friend in order to prevent them from being stolen only for them to then be stolen and the aftermath of that most likely leading to his death. 
 
 <br/>
 
-So, why then kill a guy and his daughter when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case, claims to have been the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that.
+So, why then kill a guy and his daughter when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case, sees as the principal hypothesis for the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that.
 
 <br/>
 
 The Bredow residence was left in such disarray and so full of blood stains that it became obvious both Bernard and Loreena von Bredow were murdered somewhere else on the property and then dragged into the positions they were found in. 
-
-
 
 # An Exciting Evening in November 2022
 

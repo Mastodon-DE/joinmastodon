@@ -2,15 +2,15 @@
 const { locale } = useI18n();
 const aboutUs = [
 	{
-		name: "Team",
+		name: "navbar.aboutUs.team",
 		href: "/#team",
 	},
 	{
-		name: "History",
+		name: "navbar.aboutUs.history",
 		href: `/${locale.value}/blog/2023/09/history-of-the-domain-mastodon.de`,
 	},
 	{
-		name: "More Accounts",
+		name: "navbar.aboutUs.moreAccounts",
 		href: "#accounts",
 	},
 ];
@@ -47,7 +47,7 @@ const switchLocalePath = useSwitchLocalePath();
 			aria-label="Global">
 			<div class="flex lg:flex-1">
 				<NuxtLink to="/" class="p-1.5 -m-1.5">
-					<span class="sr-only">Uden AI</span>
+					<span class="sr-only">mastodon.de</span>
 					<img class="h-8 w-35" src="/images/icons/logo.svg" alt="" />
 				</NuxtLink>
 			</div>
@@ -67,7 +67,7 @@ const switchLocalePath = useSwitchLocalePath();
 				<HeadlessPopover class="relative">
 					<HeadlessPopoverButton
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-50">
-						{{ $t("aboutUs") }}
+						{{ $t("navbar.aboutUs") }}
 						<Icon
 							name="tabler:chevron-down"
 							class="h-5 w-5 flex-none text-gray-500"
@@ -88,7 +88,7 @@ const switchLocalePath = useSwitchLocalePath();
 								:key="item.name"
 								:href="item.href"
 								class="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-gray-50 hover:bg-dark-400 duration-100"
-								>{{ item.name }}</a
+								>{{ $t(item.name) }}</a
 							>
 						</HeadlessPopoverPanel>
 					</transition>
@@ -97,16 +97,18 @@ const switchLocalePath = useSwitchLocalePath();
 				<a
 					href="https://status.mastodon.de"
 					class="text-sm font-semibold leading-6 text-gray-50"
-					>Status</a
+					>{{ $t("navbar.status") }}</a
 				>
 
 				<a
 					href="/#sponsors"
 					class="text-sm font-semibold leading-6 text-gray-50"
-					>Donate</a
+					>{{ $t("navbar.donate") }}</a
 				>
-				<a href="#" class="text-sm font-semibold leading-6 text-gray-50"
-					>Contact</a
+				<NuxtLink
+					href="/contact"
+					class="text-sm font-semibold leading-6 text-gray-50"
+					>{{ $t("navbar.contact") }}</NuxtLink
 				>
 			</HeadlessPopoverGroup>
 			<div
@@ -150,7 +152,7 @@ const switchLocalePath = useSwitchLocalePath();
 				<a
 					href="https://mastodon.de"
 					class="text-sm group font-semibold leading-6 text-gray-50"
-					>Explore <ButtonsAnimatedArrow
+					>{{ $t("navbar.explore") }} <ButtonsAnimatedArrow
 				/></a>
 			</div>
 		</nav>
@@ -223,26 +225,26 @@ const switchLocalePath = useSwitchLocalePath();
 										</HeadlessDisclosurePanel>
 									</HeadlessDisclosure>
 									<a
-										href="#"
+										href="https://status.mastodon.de"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Apps</a
+										>{{ $t("navbar.status") }}</a
 									>
 									<a
-										href="#"
+										href="#sponsors"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Sponsors</a
+										>{{ $t("navbar.donate") }}</a
 									>
-									<a
-										href="#"
+									<NuxtLink
+										href="/contact"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Contact</a
+										>{{ $t("navbar.contact") }}</NuxtLink
 									>
 								</div>
 								<div class="py-6">
 									<a
 										href="https://mastodon.de/"
 										class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>Explore</a
+										>{{ $t("navbar.explore") }}</a
 									>
 								</div>
 							</div>

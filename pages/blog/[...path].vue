@@ -52,7 +52,7 @@ useServerSeoMeta({
 			alt=""
 			class="aspect-[16/9] mt-30 w-full max-w-3xl mx-auto rounded-2xl bg-dark-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />
 		<div
-			class="mx-auto max-w-3xl prose prose-invert prose-truegray pb-24 sm:pb-32 mt-15 [&_figcaption]:mt-4 [&_h1,&_h2,&_h3,&_h4]:tracking-tight [&_p]:!leading-8 [&_ul]:max-w-xl [&_ul]:space-y-4 [&_p]:!mt-6 [&_img]:aspect-video [&_img]:rounded-xl">
+			class="mx-auto max-w-3xl prose prose-invert prose-truegray pb-24 sm:pb-32 mt-15 [&_figcaption]:mt-4 [&_h1,&_h2,&_h3,&_h4]:tracking-tight [&_p]:!leading-8 [&_ul]:max-w-xl [&_ul]:space-y-4 [&_p]:!mt-6 [&_img]:mt-6 [&_img]:rounded-xl">
 			<ContentRenderer :value="post" />
 		</div>
 	</div>

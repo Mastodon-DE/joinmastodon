@@ -7,11 +7,22 @@ const aboutUs = [
 	},
 	{
 		name: "History",
-		href: `/${locale.value}/blog/history-of-the-domain-mastodon.de`,
+		href: `/${locale.value}/blog/2023/09/history-of-the-domain-mastodon.de`,
 	},
 	{
 		name: "More Accounts",
 		href: "#accounts",
+	},
+];
+
+const languages = [
+	{
+		name: "Deutsch",
+		lang: "de",
+	},
+	{
+		name: "English",
+		lang: "en",
 	},
 ];
 
@@ -20,6 +31,8 @@ const { y: scrollY } = useWindowScroll();
 const mobileMenuOpen = ref(false);
 
 const scrolledBackground = computed(() => scrollY.value > 2);
+
+const switchLocalePath = useSwitchLocalePath();
 </script>
 <template>
 	<header
@@ -96,7 +109,44 @@ const scrolledBackground = computed(() => scrollY.value > 2);
 					>Contact</a
 				>
 			</HeadlessPopoverGroup>
-			<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+			<div
+				class="hidden lg:flex lg:flex-1 lg:justify-end gap-4 lg:items-center">
+				<HeadlessMenu as="div" class="relative inline-block text-left">
+					<div>
+						<HeadlessMenuButton
+							class="rounded-md group font-semibold leading-6 text-white">
+							<Icon name="tabler:world" class="h-6 w-6" />
+						</HeadlessMenuButton>
+					</div>
+
+					<transition
+						enter-active-class="transition ease-out duration-100"
+						enter-from-class="transform opacity-0 scale-95"
+						enter-to-class="transform opacity-100 scale-100"
+						leave-active-class="transition ease-in duration-75"
+						leave-from-class="transform opacity-100 scale-100"
+						leave-to-class="transform opacity-0 scale-95">
+						<HeadlessMenuItems
+							class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-dark-300 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+							<div class="py-1">
+								<HeadlessMenuItem
+									v-for="language in languages"
+									:key="language.name">
+									<NuxtLink
+										:class="[
+											'text-gray-200 group block px-4 py-2 text-sm flex flex-row items-center gap-4 font-semibold hover:bg-dark-100',
+										]"
+										:to="switchLocalePath(language.lang)">
+										{{ language.name
+										}}<span class="ml-auto"
+											><ButtonsAnimatedArrow
+										/></span>
+									</NuxtLink>
+								</HeadlessMenuItem>
+							</div>
+						</HeadlessMenuItems>
+					</transition>
+				</HeadlessMenu>
 				<a
 					href="https://mastodon.de"
 					class="text-sm group font-semibold leading-6 text-gray-50"

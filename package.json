@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.2",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/i18n": "next",
     "@nuxtseo/module": "^2.0.0-beta.15",
     "@types/node": "^20.5.6",

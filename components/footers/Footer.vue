@@ -9,12 +9,12 @@ const footerNavigation = {
 	social: [
 		{
 			name: "Mastodon",
-			href: "https://mastodon.de/@UdenAI",
+			href: "https://mastodon.de/@MastodonDE",
 			icon: "tabler:brand-mastodon",
 		},
 		{
 			name: "GitHub",
-			href: "https://github.com/uden-AI/",
+			href: "https://github.com/Mastodon-DE/",
 			icon: "tabler:brand-github",
 		},
 		{

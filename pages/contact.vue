@@ -2,14 +2,14 @@
 const socials = [
 	{
 		name: "Mastodon",
-		href: "https://mastodon.de/@UdenAI",
+		href: "https://mastodon.de/@MastodonDE",
 		icon: "tabler:brand-mastodon",
 		description:
 			"Mastodon.de is a free and open source social network server based on ActivityPub.",
 	},
 	{
 		name: "GitHub",
-		href: "https://github.com/uden-AI/",
+		href: "https://github.com/Mastodon-DE/",
 		icon: "tabler:brand-github",
 	},
 	{

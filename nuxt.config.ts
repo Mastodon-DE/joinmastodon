@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 		vueI18n: "./i18n.config.ts",
 		baseUrl: "https://join-mastodon.de",
 		strategy: "prefix_and_default",
-		defaultLocale: "en",
+		defaultLocale: "de",
 		trailingSlash: true,
 		detectBrowserLanguage: {
 			alwaysRedirect: true,

@@ -56,20 +56,29 @@ export default defineI18nConfig(() => ({
 		},
 		de: {
 			// Navigationsleiste
+			"navbar.aboutUs": "Über uns",
+			"navbar.status": "Status",
+			"navbar.donate": "Spenden",
+			"navbar.contact": "Kontakt",
+			"navbar.explore": "Entdecken",
+
+			"navbar.aboutUs.team": "Team",
+			"navbar.aboutUs.history": "Geschichte",
+			"navbar.aboutUs.moreAccounts": "Mehr Accounts",
 
 			// Haupt-Landingpage
-			tagline: "Soziales Netzwerk, das nicht verkauft wird",
+			tagline: "Soziales Netzwerk, für das Gemeinwohl",
 			taglineSubText:
-				"Mastodon.de ist ein wirklich offenes soziales Netzwerk. Keine Anzeigen, keine Verfolgung, keine Datensammlung, keine Algorithmen! Das Netzwerk wird von der Gemeinschaft für die Gemeinschaft betrieben.",
+				"Mastodon.de ist ein wahrlich offenes und soziales Netzwerk. Ohne Anzeigen, Tracking oder Algorithmen, die dir den Schlaf rauben. Von der Gemeinschaft für die Gemeinschaft bereitgestellt.",
 			signUpButton: "Registrieren",
 			learnMoreButton: "Erfahre mehr",
 
 			// Einbetten-Raster
-			embedsGridTitle: "Gemeinschaftsräume",
+			embedsGridTitle: "Raum für Gemeinschaft",
 			embedsGridSubText1:
-				"Mastodon.de widmet sich dem Angebot seiner Benutzerinnen und Benutzer eine Gemeinschaftserfahrung, in der Likes, Follower oder Boosts nichts bedeuten.",
+				"Das Ziel von Mastodon.de ist eine starke Gemeinschaft, unabhängig von Likes, Follower und Boosts - Du der Nutzer bist das was zählt! Also ein perfekter Ort für Communitys im Netz.",
 			embedsGridSubText2:
-				"Da es keinen Algorithmus gibt, der darüber entscheidet, welche Beiträge in deinem Feed angezeigt werden, kannst du dich einfach entspannen und Spaß beim Posten haben!",
+				"Ohne Algorithmus, der über gezeigte Inhalte entscheidet, kannst du dich mit Leichtigkeit in Diskussionen engagieren, neue Dinge entdecken oder Dinge aus deinem Leben teilen. Dein Account ist individuell, wie du selbst.",
 
 			// Team-Präsentation
 			teamTitle: "Lerne unser Team kennen",
@@ -84,19 +93,19 @@ export default defineI18nConfig(() => ({
 			// Funktionsbereich
 			featuresTitle: "Föderiertes, offenes Netzwerk",
 			featuresSubText:
-				"Mastodon.de ist mit einem gigantischen föderierten Netzwerk von Millionen von Benutzern verbunden, dem Fediverse.\nEs ist wie E-Mail, bei der jeder eine Adresse im Format name{'@'}site.com hat!",
+				"Mastodon.de ist Teil eines riesigen Netzwerkes namens Fediverse. Tausende Instanzen sprechen ein gemeinsames Protokoll, um eines der größten unabhängigen Netzwerke zu schaffen. Nutzernamen bestehen hierbei, wie bei einer Mailadresse, aus Nutzernamen und Serveradresse (username@example.com).",
 
 			feature1Title: "Leistungsstarke Moderationstools",
 			feature1SubText:
-				"Blockiere beliebige Schlüsselwörter, damit sie nicht in deinem Feed angezeigt werden, mithilfe von Filtern.",
+				"Mithilfe von Filtern können unerwünschte Schlüsselwörter, Nutzer und Instanzen aus dem eigenen Feed blockiert werden.",
 
-			feature2Title: "Erstelle deine eigenen Feeds",
+			feature2Title: "Individuelle Feeds",
 			feature2SubText:
-				"Du allein solltest entscheiden, was in deinen Feeds angezeigt wird. Mastodon.de ermöglicht es dir, deine eigenen Feeds ohne vordefinierten Algorithmus zu kuratieren.",
+				"Mastodon basiert auf chronologischen Feeds: Beiträge von Accounts denen du folgst werden dir chronologisch, ungefiltert und werbefrei angezeigt. Für bessere Organisation kannst du Listen mit deinen liebsten Accounts führen.",
 
 			feature3Title: "Kontoübertragbarkeit",
 			feature3SubText:
-				"Wenn du zu anderen Fediverse-Servern wechseln möchtest, kannst du problemlos wechseln und alle deine Follower von mastodon.de behalten!",
+				"Nutzerkonten im Fediverse sind nicht auf einen bestimmten Server gebunden - Dir gefällt die Instanz, die deinen Account beheimatet nicht? Kein Problem, suche dir einen anderen Server und behalte dabei deine Follower.",
 		},
 	},
 }));

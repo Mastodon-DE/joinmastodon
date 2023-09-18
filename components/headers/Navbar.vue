@@ -117,7 +117,7 @@ const switchLocalePath = useSwitchLocalePath();
 					<div>
 						<HeadlessMenuButton
 							class="rounded-md group font-semibold leading-6 text-white">
-							<Icon name="tabler:world" class="h-6 w-6" />
+							<Icon name="tabler:language" class="h-6 w-6" />
 						</HeadlessMenuButton>
 					</div>
 

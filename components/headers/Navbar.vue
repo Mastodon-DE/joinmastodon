@@ -101,7 +101,7 @@ const switchLocalePath = useSwitchLocalePath();
 				>
 
 				<a
-					href="/#sponsors"
+					href="/donate"
 					class="text-sm font-semibold leading-6 text-gray-50"
 					>{{ $t("navbar.donate") }}</a
 				>
@@ -230,7 +230,7 @@ const switchLocalePath = useSwitchLocalePath();
 										>{{ $t("navbar.status") }}</a
 									>
 									<a
-										href="#sponsors"
+										href="/donate"
 										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
 										>{{ $t("navbar.donate") }}</a
 									>

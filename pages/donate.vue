@@ -7,18 +7,17 @@
 			<div class="mx-auto max-w-2xl lg:mx-0">
 				<h2
 					class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-					Donate to us
+					{{ $t("donationheading") }}
 				</h2>
 				<p class="mt-6 text-lg leading-8 text-gray-300">
-					You make Mastodon.de possible. We wouldn't be here without
-					your generous contributions!
+					{{ $t("donationtext") }}
 				</p>
 			</div>
 		</div>
 
 		<div>
 			<iframe
-				src="https://mastodon.de/@MastodonDE/110808633497349326/embed"
+				src="https://mastodon.de/@MastodonDE/111080741382091815"
 				class="mastodon-embed mr-auto w-full max-w-[40rem] rounded-2xl aspect-[1/1]"
 				allowfullscreen></iframe>
 		</div>

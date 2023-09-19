@@ -4,8 +4,6 @@ const socials = [
 		name: "Mastodon",
 		href: "https://mastodon.de/@MastodonDE",
 		icon: "tabler:brand-mastodon",
-		description:
-			"Mastodon.de is a free and open source social network server based on ActivityPub.",
 	},
 	{
 		name: "GitHub",
@@ -33,7 +31,7 @@ const socials = [
 		icon: "tabler:brand-twitch",
 	},
 	{
-		name: "E-Main",
+		name: "E-Mail",
 		href: "mailto:info@mastodon.de",
 		icon: "tabler:mail",
 	},
@@ -47,10 +45,10 @@ const socials = [
 			<div class="mx-auto max-w-2xl lg:mx-0">
 				<h2
 					class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-					Contact
+					{{ $t("contactheading") }}
 				</h2>
 				<p class="mt-6 text-lg leading-8 text-gray-300">
-					add text here
+					{{ $t("contacttext") }}
 				</p>
 
 				<ul class="flex flex-col gap-4 mt-15">

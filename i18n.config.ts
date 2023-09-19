@@ -54,6 +54,7 @@ export default defineI18nConfig(() => ({
 			feature3SubText:
 				"If you want to change Fediverse servers, you can easily switch and keep all your followers from mastodon.de!",
 
+			// What is Mastodon Explaination Text
 			WhatisMastodonHeading: "What is Mastodon?",
 			WhatisMastodonExplaination: "Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.",
 			WhatisMastodonExplaination2: "Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.",
@@ -61,9 +62,27 @@ export default defineI18nConfig(() => ({
 			WhatisMastodonExplaination4: "Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
 			WhatisMastodonHeading2: "Thingy? Thingy.",
 
+
 			donate1: "Like our service?",
 			donate2: "Any dollar helps!",
 			faqheading: "Frequently asked questions",
+			fromblog: "From the Blog",
+			fromblogsubtext: "Free business advice from the most famous man in the world, Erik Uden",
+
+			// Contact Page
+			contactheading: "Contact",
+			contacttext: "If you wan't to contact us you can do so using this channels",
+			
+			// Donation Page
+			donationheading: "Donate",
+			donationtext: "You make Mastodon.de possible. We wouldn't be here without your generous contributions!",
+
+			// Footer Translation
+			footer1: "Services",
+			footer2: "Support",
+			footer3: "Legal",
+			footertext: "Constructing sites, apps and communities through open standards",
+
 		},
 		de: {
 			// Navigationsleiste
@@ -118,6 +137,7 @@ export default defineI18nConfig(() => ({
 			feature3SubText:
 				"Nutzerkonten im Fediverse sind nicht auf einen bestimmten Server gebunden - Dir gefällt die Instanz, die deinen Account beheimatet nicht? Kein Problem, suche dir einen anderen Server und behalte dabei deine Follower.",
 
+			// What is Mastodon Explaination Text
 			WhatisMastodonHeading: "Was ist eigentlich Mastodon?",
 			WhatisMastodonExplaination: "Mastodon ist ein dezentrales soziales Netzwerk, welches Nutzerrechte in den Vordergrund stellen möchte. ",
 			WhatisMastodonExplaination2: "Der Quellcode von Mastodon ist offen und jeder kann aufgrund dieser Tatsache seine eigene Instanz erstellen. Diese Instanzen stehen miteinander in Verbindung, weshalb sich Nutzer instanzübergreifend folgen, austauschen und in Kontakt stehen können.",
@@ -127,6 +147,24 @@ export default defineI18nConfig(() => ({
 
 			donate1: "Du hast Mastodon.de für dich gefunden?",
 			donate2: "Jeder Cent hilft uns beim Betrieb",
+			faqheading: "Häufig gestellte Fragen",
+			fromblog: "Neuste Blogbeiträge",
+			fromblogsubtext: "Free business advice from the most famous man in the world, Erik Uden",
+
+			// Contact Page
+			contactheading: "Kontakt",
+			contacttext: "Hier findest du alle Möglichkeiten, um Kontakt zu uns aufzubauen, sofern dies nötig ist. Außerdem siehst du hier wo wir im Internet vertreten sind.",
+
+			// Donation Page
+			donationheading: "Unterstütze uns",
+			donationtext: "Mastodon.de wird durch Spenden finanziert. Sofern dir unser Dienst gefällt kannst du gerne etwas zurückgeben, damit Mastodon.de leichter betrieben werden kann. Danke :D",
+			
+			// Footer Translation
+
+			footer1: "Dienste",
+			footer2: "Hilfe",
+			footer3: "Rechtliches",
+			footertext: "Seiten, Apps und Communitys basierend auf offenen Standards",
 		},
 	},
 }));

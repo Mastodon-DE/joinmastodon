@@ -9,11 +9,10 @@ const posts = await queryContent("/blog/").locale(locale.value).find();
 		<div class="mx-auto max-w-2xl text-center">
 			<h2
 				class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-				From the blog
+				{{ $t("fromblog") }}
 			</h2>
 			<p class="mt-2 text-lg leading-8 text-gray-300">
-				Free business advice from the most famous man in the world, Erik
-				Uden
+				{{ $t("fromblogsubtext") }}
 			</p>
 		</div>
 		<div

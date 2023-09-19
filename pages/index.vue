@@ -8,10 +8,68 @@ useServerSeoMeta({
 	author: "Erik Uden",
 });
 
+
 const faqs = [
 	{
 		question: "What's the best thing about Switzerland?",
 		answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+	},
+	{
+		question: "Unterstützt Mastodon Direktnachrichten?",
+		answer: "Ja, bei der Veröffentlichung eines Posts kannst du, durch Erwähnung, die Sichtbarkeit auf einen bestimmten Nutzer beschränken. Bitte beachte, dass diese DMs unverschlüsselt sind, weshalb für sensible Konversationen ein anderer weg in Betracht gezogen werden sollte.",
+	},
+	{
+		question: "Warum ist die Optik so mangelhaft?",
+		answer: "Sollte dir das Nutzerinterface nicht gefallen, kannst du einen von dutzenden Clients in betracht ziehen. Da ist bestimmt etwas für dich dabei.",
+
+	},
+	{
+		question: "Wer sieht was ich unter einem Hashtag poste? Wessen Posts sehe ich wenn ich einem Hashtag folge?",
+		answer: "Sofern dein Post öffentlich sichtbar ist, können deine Post von jedem gesehen werden, der sich auf einer Instanz befindet, die mit der eigenen im Kontakt steht. Das selbe gilt für das Folgen von Hashtags.",
+	},
+	{
+		question: "Teilen oder favorisieren - was sorgt für mehr Reichweite?",
+		answer: "Teilen, da der Inhalt hierdurch mit all deinen Followern geteilt wird. Favorisieren zeigt lediglich, dass dir ein Post gefällt.",
+	},
+	{
+		question: "Wie wechsel ich die Instanz?",
+		answer: "In den Einstellungen kannst du über den Reiter >>Konto<< das neue Konto konfigurieren. Dannach wiederholst du das auf dem neuen Konto, indem du dieses als neues Konto konfigurierst.",
+	},
+	{
+		question: "An wen kann ich mich wenden, wenn ich ein Problem habe?",
+		answer: "Du kannst auf der jeweiligen About Seite (z.B. https://mastodon.de/about eine Kontakt E-Mail finden). Eine andere Möglichkeit ist einen, an den Admin adressierten, Post zu veröffentlichen.",  
+	},
+	{
+		question: "Wie finde ich 'meine' Bubble?",
+		answer: "Du kannst über Hashtags, die lokale/föderierte Timeline oder die Suche nach Accounts suchen, die deine Interessen vertreten. Diesen kannst du dann folgen und mit der Zeit wächst dein Repertoire an Accounts.",
+	},
+	{
+		question: "Warum sind manche Tröts so viel länger als 500 Zeichen?",
+		answer: "Abhängig von der Instanz, ist das 500 Zeichen Limit erhöht (wie auf MastodonDE)",
+	},
+	{
+		question: "Kann ich Nutzer aus der Timeline in Listen verschieben? Ich möchte etwa professionelle Accounts auslagern.",
+		answer: "In den Einstellungen zur jeweiligen Liste, kannst du sie von deiner Timeline ausblenden",
+	},
+	{
+		question: "Wie funktioniert das mit der Interoperabilität zwischen Mastodon/Peertube/Pixelfed/Lemmy/etc?",
+		answer: "Alle diese Dienste sprechen ein einheitliches Protokoll (ActivityPub). Deshalb können Videos in Peertube zum Beispiel als Posts angezeigt werden, da die Daten im Code relativ gleich aussehen, nur die Ansicht anders ist.",
+	},
+	{
+		question: "Wie wird man verifizierter Nutzer?",
+		answer: "Die Verifizierung im Fediverse basiert auf dem verlinken der eigenen Website. Besitzt deine Website einen HTML Link zu Mastodon und du hast diese Website in deinem Profil verlinkt, dann wird sie mit einem grünen Haken versehen.",
+	},
+	{
+		question: "Da es mich gerade selbst beschäftigt hat: Kann man nach einem Umzug (bei mir wars troet.cafe zu literatur.social) den alten Account löschen?",
+		answer: "Natürlich, jedoch solltest du zumindest eine kurze Übergangsfrist einführen, da sonst Nutzer, die den alten Tag kennen, nicht mehr zu deinem Profil finden.",
+	},
+	{
+		question: "Warum unterscheiden sich die Followerzahlen eines Accounts - abhängig davon, von welchem Account oder von welcher Instanz ich draufsehe?",
+		answer: "Manche Instanzen stehen mit anderen nicht in Kontakt. Daher kann es hier zu Unstimmigkeiten bei Interaktionen von Nutzern kommen. Das ist normal.",
+	},
+	{
+		question: "Was muss ich tun, damit andere mit meinen Interessen mich finden?",
+		answer: "Das verwenden von Hastags macht auf dich Aufmerksam, weshalb du sie passend wählen solltest. Nebenbei lohnt sich eine gute Bio, damit jeder weiß, wer du bist und was dir wichtig ist. So findest du schnell neue Freunde.",
 	},
 ];
 </script>
@@ -142,7 +200,7 @@ const faqs = [
 		<div
 			class="mx-auto max-w-4xl py-24 sm:py-32 px-6 divide-y divide-white/10">
 			<h2 class="text-2xl font-bold leading-10 tracking-tight text-white">
-				Frequently asked questions
+				{{ $t("faqheading") }}
 			</h2>
 			<dl class="mt-10 space-y-6 divide-y divide-white/10">
 				<HeadlessDisclosure

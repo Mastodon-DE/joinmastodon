@@ -38,7 +38,7 @@ const footerNavigation = {
 			icon: "tabler:brand-twitch",
 		},
 		{
-			name: "E-Main",
+			name: "E-Mail",
 			href: "mailto:info@mastodon.de",
 			icon: "tabler:mail",
 		},
@@ -60,8 +60,7 @@ const showBankInfo = ref(false);
 						src="/images/icons/uden-logo.svg"
 						alt="Company name" />
 					<p class="text-sm leading-6 text-gray-300">
-						Constructing sites, apps and communities through open
-						standards
+						{{ $t("footertext") }}
 					</p>
 					<div class="flex space-x-6">
 						<a
@@ -82,7 +81,7 @@ const showBankInfo = ref(false);
 						<div>
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
-								Services
+								{{ $t("footer1") }}
 							</h3>
 							<ul role="list" class="mt-6 space-y-4">
 								<li
@@ -101,7 +100,7 @@ const showBankInfo = ref(false);
 						<div class="mt-10 md:mt-0">
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
-								Support
+								{{ $t("footer2") }}
 							</h3>
 							<ul role="list" class="mt-6 space-y-4">
 								<li
@@ -118,7 +117,7 @@ const showBankInfo = ref(false);
 						<div class="mt-10 md:mt-0">
 							<h3
 								class="text-sm font-semibold leading-6 text-white">
-								Legal
+								{{ $t("footer3") }}
 							</h3>
 							<ul role="list" class="mt-6 space-y-4">
 								<li

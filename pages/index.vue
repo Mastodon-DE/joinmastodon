@@ -57,12 +57,12 @@ const faqs = [
 				</p>
 				<div class="mt-10 flex items-center gap-x-6">
 					<a
-						href="#"
+						href="https://mastodon.de/auth/sign_up"
 						class="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
 						>{{ $t("signUpButton") }}</a
 					>
 					<a
-						href="#"
+						href="https://mastodon.de/about"
 						class="text-sm group font-semibold leading-6 text-gray-100"
 						>{{ $t("learnMoreButton") }} <ButtonsAnimatedArrow
 					/></a>
@@ -108,8 +108,8 @@ const faqs = [
 			class="px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
 			<h2
 				class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-				Like our service?<br />
-				Any dollar helps!
+				{{ $t("donate1") }}<br />
+				{{ $t("donate2") }}
 			</h2>
 			<div
 				class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">

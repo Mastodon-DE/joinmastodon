@@ -53,6 +53,17 @@ export default defineI18nConfig(() => ({
 			feature3Title: "Account portability",
 			feature3SubText:
 				"If you want to change Fediverse servers, you can easily switch and keep all your followers from mastodon.de!",
+
+			WhatisMastodonHeading: "What is Mastodon?",
+			WhatisMastodonExplaination: "Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.",
+			WhatisMastodonExplaination2: "Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.",
+			WhatisMastodonExplaination3: "Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.",
+			WhatisMastodonExplaination4: "Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
+			WhatisMastodonHeading2: "Thingy? Thingy.",
+
+			donate1: "Like our service?",
+			donate2: "Any dollar helps!",
+			faqheading: "Frequently asked questions",
 		},
 		de: {
 			// Navigationsleiste
@@ -106,6 +117,16 @@ export default defineI18nConfig(() => ({
 			feature3Title: "Kontoübertragbarkeit",
 			feature3SubText:
 				"Nutzerkonten im Fediverse sind nicht auf einen bestimmten Server gebunden - Dir gefällt die Instanz, die deinen Account beheimatet nicht? Kein Problem, suche dir einen anderen Server und behalte dabei deine Follower.",
+
+			WhatisMastodonHeading: "Was ist eigentlich Mastodon?",
+			WhatisMastodonExplaination: "Mastodon ist ein dezentrales soziales Netzwerk, welches Nutzerrechte in den Vordergrund stellen möchte. ",
+			WhatisMastodonExplaination2: "Der Quellcode von Mastodon ist offen und jeder kann aufgrund dieser Tatsache seine eigene Instanz erstellen. Diese Instanzen stehen miteinander in Verbindung, weshalb sich Nutzer instanzübergreifend folgen, austauschen und in Kontakt stehen können.",
+			WhatisMastodonExplaination3: "Mastodon verwendet dafür ein spezielles föderiertes Protokoll, welches ein einheitliches Format für den Austausch von Posts, Videos und anderen Daten darstellt. Somit kann man nicht nur mit Nutzern auf Mastodon, sondern auch von jedem anderen Dienst, der dieses Protokoll nutzt interagieren.",
+			WhatisMastodonExplaination4: "Wie in einem Universum mit tausenden Planeten existieren im sogenannten Fediverse (der Name dieses Konstrukts) also auch Tausende Instanzen mit insgesamt Millionen von Nutzern aus unterschiedlichen Interessensgebieten und Regionen der Welt. Jeder findet irgendwo im Fediverse Platz! Worauf wartest du? Trete dem sozialsten sozialen Netzwerk bei, welches nur für das öffentliche Wohl existiert.",
+			WhatisMastodonHeading2: "Die Magie des Fediverse",
+
+			donate1: "Du hast Mastodon.de für dich gefunden?",
+			donate2: "Jeder Cent hilft uns beim Betrieb",
 		},
 	},
 }));

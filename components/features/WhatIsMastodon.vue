@@ -9,12 +9,10 @@
 					<div class="lg:max-w-lg">
 						<h1
 							class="mt-2 text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
-							What is Mastodon?
+							{{ $t("WhatisMastodonHeading") }}
 						</h1>
 						<p class="mt-6 text-xl leading-8 text-gray-200">
-							Aliquet nec orci mattis amet quisque ullamcorper
-							neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-							eget aliquam. Quisque id at vitae feugiat egestas.
+							{{ $t("WhatisMastodonExplaination") }}
 						</p>
 					</div>
 				</div>
@@ -35,34 +33,17 @@
 					<div
 						class="max-w-xl text-base leading-7 text-gray-200 lg:max-w-lg">
 						<p>
-							Faucibus commodo massa rhoncus, volutpat. Dignissim
-							sed eget risus enim. Mattis mauris semper sed amet
-							vitae sed turpis id. Id dolor praesent donec est.
-							Odio penatibus risus viverra tellus varius sit neque
-							erat velit. Faucibus commodo massa rhoncus,
-							volutpat. Dignissim sed eget risus enim. Mattis
-							mauris semper sed amet vitae sed turpis id.
+							{{ $t("WhatisMastodonExplaination2") }}
 						</p>
 						<p class="mt-8">
-							Et vitae blandit facilisi magna lacus commodo. Vitae
-							sapien duis odio id et. Id blandit molestie auctor
-							fermentum dignissim. Lacus diam tincidunt ac cursus
-							in vel. Mauris varius vulputate et ultrices hac
-							adipiscing egestas. Iaculis convallis ac tempor et
-							ut. Ac lorem vel integer orci.
+							{{ $t("WhatisMastodonExplaination3") }}
 						</p>
 						<h2
 							class="mt-16 text-2xl font-bold tracking-tight text-gray-50">
-							Thingy? Thingy.
+							{{ $t("WhatisMastodonHeading2") }}
 						</h2>
 						<p class="mt-6">
-							Id orci tellus laoreet id ac. Dolor, aenean leo, ac
-							etiam consequat in. Convallis arcu ipsum urna nibh.
-							Pharetra, euismod vitae interdum mauris enim,
-							consequat vulputate nibh. Maecenas pellentesque id
-							sed tellus mauris, ultrices mauris. Tincidunt enim
-							cursus ridiculus mi. Pellentesque nam sed nullam sed
-							diam turpis ipsum eu a sed convallis diam.
+							{{ $t("WhatisMastodonExplaination4") }}
 						</p>
 					</div>
 				</div>

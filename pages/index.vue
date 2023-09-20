@@ -72,6 +72,20 @@ const faqs = [
 		answer: "Das verwenden von Hastags macht auf dich Aufmerksam, weshalb du sie passend wählen solltest. Nebenbei lohnt sich eine gute Bio, damit jeder weiß, wer du bist und was dir wichtig ist. So findest du schnell neue Freunde.",
 	},
 ];
+
+
+const languages = [
+	{
+		name: "Deutsch",
+		lang: "de",
+	},
+	{
+		name: "English",
+		lang: "en",
+	},
+];
+
+
 </script>
 
 <template>

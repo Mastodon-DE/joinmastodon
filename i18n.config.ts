@@ -60,16 +60,17 @@ export default defineI18nConfig(() => ({
 			teamMemberWalterPosition: "Finance & Legal",
 
 			// What is Mastodon Explaination Text
+			// What is Mastodon Explaination Text
 			WhatisMastodonHeading: "What is Mastodon?",
 			WhatisMastodonExplaination:
-				"Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.",
+				"Mastodon is a social network that respects your privacy and freedom. Unlike other platforms that are controlled by a single company, Mastodon is made up of many independent communities that can communicate with each other.",
 			WhatisMastodonExplaination2:
-				"Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.",
+				"Mastodon is based on open source software that anyone can use to create their own community, called an instance. Each instance has its own rules, themes, and features. You can join any instance you like, or even start your own.",
 			WhatisMastodonExplaination3:
-				"Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.",
+				"Mastodon uses a common protocol to exchange posts, videos, and other content between instances. This means you can follow and interact with people from different instances, as well as other services that use the same protocol. This network of interconnected instances is called the Fediverse.",
 			WhatisMastodonExplaination4:
-				"Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
-			WhatisMastodonHeading2: "Thingy? Thingy.",
+				"Mastodon is a diverse and vibrant network that welcomes people from all walks of life and interests. Whether you are into art, music, politics, gaming, or anything else, you can find your niche in the Fediverse. Mastodon is also a network that values your voice and your rights. You can choose who can see your posts, and you can avoid ads, trackers, and censorship. Mastodon is the most social social network that exists for the common good. What are you waiting for? Join Mastodon today!",
+			WhatisMastodonHeading2: "Why join Mastodon?",
 
 			donate1: "Like our service?",
 			donate2: "Any dollar helps!",

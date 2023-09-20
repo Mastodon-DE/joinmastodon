@@ -6,43 +6,52 @@ const people = [
 		imageUrl: "/images/people/erikuden-resized.webp",
 	},
 	{
-		name: "Joe Biden",
-		role: "President of the United States",
+		name: "Rodirick",
+		role: "teamMemberRodirikPosition",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg",
+			"https://media.mastodon.de/accounts/avatars/110/696/726/121/965/579/original/b8f1e64fce0c91ba.png",
 	},
 	{
-		name: "Erik Uden",
-		role: "teamMemberErikPosition",
-		imageUrl: "/images/people/erikuden-resized.webp",
-	},
-	{
-		name: "Joe Biden",
-		role: "President of the United States",
+		name: "Nick",
+		role: "teamMemberNickPosition",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg",
+			"https://media.mastodon.de/accounts/avatars/110/697/359/471/395/422/original/3fe84c0d34658f35.png",
 	},
 	{
-		name: "Erik Uden",
-		role: "teamMemberErikPosition",
-		imageUrl: "/images/people/erikuden-resized.webp",
-	},
-	{
-		name: "Joe Biden",
-		role: "President of the United States",
+		name: "Simen",
+		role: "teamMemberSimenPosition",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg",
+			"https://media.mastodon.de/accounts/avatars/110/708/949/322/652/956/original/64fbdf0c11828601.png",
 	},
 	{
-		name: "Erik Uden",
-		role: "teamMemberErikPosition",
-		imageUrl: "/images/people/erikuden-resized.webp",
-	},
-	{
-		name: "Joe Biden",
-		role: "President of the United States",
+		name: "Ivan",
+		role: "teamMemberIvanPosition",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg",
+			"https://media.mastodon.de/accounts/avatars/110/696/744/280/479/098/original/c94c48832cb7b9af.png",
+	},
+	{
+		name: "Emily",
+		role: "teamMemberEmilyPosition",
+		imageUrl:
+			"https://media.mastodon.de/accounts/avatars/110/696/739/299/965/692/original/4da2f06273a3e0ed.png",
+	},
+	{
+		name: "Niklas",
+		role: "teamMemberNiklasPosition",
+		imageUrl:
+			"https://media.mastodon.de/accounts/avatars/110/961/284/696/885/054/original/30302bd5153ebb84.png",
+	},
+	{
+		name: "Ebowski",
+		role: "teamMemberEbowskiPosition",
+		imageUrl:
+			"https://media.mastodon.de/accounts/avatars/110/696/723/858/822/953/original/a00bcaa62e194336.png",
+	},
+	{
+		name: "Walter Uden",
+		role: "teamMemberWalterPosition",
+		imageUrl:
+			"https://media.mastodon.de/accounts/avatars/110/696/833/299/709/033/original/2209f6209ff48d44.jpg",
 	},
 	// More people...
 ];

@@ -32,11 +32,6 @@ export default defineI18nConfig(() => ({
 			teamSubText:
 				"We are a dynamic group of individuals who are passionate about what we do and dedicated to proving a great experience to our community.",
 
-			// Team members
-			teamMemberErikPosition: "CEO, Uden AI",
-			teamMemberErikDescription:
-				"Erik Uden is the leader of mastodon.de and CEO of Uden AI. He started working on mastodon.de in November 2022, and made it what it is now.",
-
 			// Features section
 			featuresTitle: "Federated, open network",
 			featuresSubText:
@@ -54,35 +49,51 @@ export default defineI18nConfig(() => ({
 			feature3SubText:
 				"If you want to change Fediverse servers, you can easily switch and keep all your followers from mastodon.de!",
 
+			teamMemberErikPosition: "Leader",
+			teamMemberRodirikPosition: "DevOps",
+			teamMemberNickPosition: "DevOps",
+			teamMemberSimenPosition: "Design",
+			teamMemberIvanPosition: "Moderation & Public Relations",
+			teamMemberEmilyPosition: "Moderation & Public Relations",
+			teamMemberNiklasPosition: "Moderation & Public Relations",
+			teamMemberEbowskiPosition: "Moderation",
+			teamMemberWalterPosition: "Finance & Legal",
+
 			// What is Mastodon Explaination Text
 			WhatisMastodonHeading: "What is Mastodon?",
-			WhatisMastodonExplaination: "Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.",
-			WhatisMastodonExplaination2: "Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.",
-			WhatisMastodonExplaination3: "Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.",
-			WhatisMastodonExplaination4: "Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
+			WhatisMastodonExplaination:
+				"Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.",
+			WhatisMastodonExplaination2:
+				"Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.",
+			WhatisMastodonExplaination3:
+				"Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.",
+			WhatisMastodonExplaination4:
+				"Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.",
 			WhatisMastodonHeading2: "Thingy? Thingy.",
-
 
 			donate1: "Like our service?",
 			donate2: "Any dollar helps!",
 			faqheading: "Frequently asked questions",
 			fromblog: "From the Blog",
-			fromblogsubtext: "Free business advice from the most famous man in the world, Erik Uden",
+			fromblogsubtext:
+				"Free business advice from the most famous man in the world, Erik Uden",
 
 			// Contact Page
 			contactheading: "Contact",
-			contacttext: "If you wan't to contact us you can do so using this channels",
-			
+			contacttext:
+				"If you wan't to contact us you can do so using this channels",
+
 			// Donation Page
 			donationheading: "Donate",
-			donationtext: "You make Mastodon.de possible. We wouldn't be here without your generous contributions!",
+			donationtext:
+				"You make Mastodon.de possible. We wouldn't be here without your generous contributions!",
 
 			// Footer Translation
 			footer1: "Services",
 			footer2: "Support",
 			footer3: "Legal",
-			footertext: "Constructing sites, apps and communities through open standards",
-
+			footertext:
+				"Constructing sites, apps and communities through open standards",
 		},
 		de: {
 			// Navigationsleiste
@@ -115,11 +126,6 @@ export default defineI18nConfig(() => ({
 			teamSubText:
 				"Wir sind eine dynamische Gruppe von Individuen, die leidenschaftlich bei dem sind, was wir tun, und die sich dafür einsetzen, unserer Gemeinschaft eine großartige Erfahrung zu bieten.",
 
-			// Teammitglieder
-			teamMemberErikPosition: "CEO, Uden AI",
-			teamMemberErikDescription:
-				"Erik Uden ist der Leiter von mastodon.de und CEO von Uden AI. Er hat im November 2022 mit der Arbeit an mastodon.de begonnen und es zu dem gemacht, was es heute ist.",
-
 			// Funktionsbereich
 			featuresTitle: "Föderiertes, offenes Netzwerk",
 			featuresSubText:
@@ -137,34 +143,52 @@ export default defineI18nConfig(() => ({
 			feature3SubText:
 				"Nutzerkonten im Fediverse sind nicht auf einen bestimmten Server gebunden - Dir gefällt die Instanz, die deinen Account beheimatet nicht? Kein Problem, suche dir einen anderen Server und behalte dabei deine Follower.",
 
+			teamMemberErikPosition: "Leiter",
+			teamMemberRodirikPosition: "DevOps",
+			teamMemberNickPosition: "DevOps",
+			teamMemberSimenPosition: "Design",
+			teamMemberIvanPosition: "Moderation & Öffentlichkeitsarbeit",
+			teamMemberEmilyPosition: "Moderation & Öffentlichkeitsarbeit",
+			teamMemberNiklasPosition: "Moderation & Öffentlichkeitsarbeit",
+			teamMemberEbowskiPosition: "Moderation",
+			teamMemberWalterPosition: "Finanzen & Rechtliches",
+
 			// What is Mastodon Explaination Text
 			WhatisMastodonHeading: "Was ist eigentlich Mastodon?",
-			WhatisMastodonExplaination: "Mastodon ist ein dezentrales soziales Netzwerk, welches Nutzerrechte in den Vordergrund stellen möchte. ",
-			WhatisMastodonExplaination2: "Der Quellcode von Mastodon ist offen und jeder kann aufgrund dieser Tatsache seine eigene Instanz erstellen. Diese Instanzen stehen miteinander in Verbindung, weshalb sich Nutzer instanzübergreifend folgen, austauschen und in Kontakt stehen können.",
-			WhatisMastodonExplaination3: "Mastodon verwendet dafür ein spezielles föderiertes Protokoll, welches ein einheitliches Format für den Austausch von Posts, Videos und anderen Daten darstellt. Somit kann man nicht nur mit Nutzern auf Mastodon, sondern auch von jedem anderen Dienst, der dieses Protokoll nutzt interagieren.",
-			WhatisMastodonExplaination4: "Wie in einem Universum mit tausenden Planeten existieren im sogenannten Fediverse (der Name dieses Konstrukts) also auch Tausende Instanzen mit insgesamt Millionen von Nutzern aus unterschiedlichen Interessensgebieten und Regionen der Welt. Jeder findet irgendwo im Fediverse Platz! Worauf wartest du? Trete dem sozialsten sozialen Netzwerk bei, welches nur für das öffentliche Wohl existiert.",
+			WhatisMastodonExplaination:
+				"Mastodon ist ein dezentrales soziales Netzwerk, welches Nutzerrechte in den Vordergrund stellen möchte. ",
+			WhatisMastodonExplaination2:
+				"Der Quellcode von Mastodon ist offen und jeder kann aufgrund dieser Tatsache seine eigene Instanz erstellen. Diese Instanzen stehen miteinander in Verbindung, weshalb sich Nutzer instanzübergreifend folgen, austauschen und in Kontakt stehen können.",
+			WhatisMastodonExplaination3:
+				"Mastodon verwendet dafür ein spezielles föderiertes Protokoll, welches ein einheitliches Format für den Austausch von Posts, Videos und anderen Daten darstellt. Somit kann man nicht nur mit Nutzern auf Mastodon, sondern auch von jedem anderen Dienst, der dieses Protokoll nutzt interagieren.",
+			WhatisMastodonExplaination4:
+				"Wie in einem Universum mit tausenden Planeten existieren im sogenannten Fediverse (der Name dieses Konstrukts) also auch Tausende Instanzen mit insgesamt Millionen von Nutzern aus unterschiedlichen Interessensgebieten und Regionen der Welt. Jeder findet irgendwo im Fediverse Platz! Worauf wartest du? Trete dem sozialsten sozialen Netzwerk bei, welches nur für das öffentliche Wohl existiert.",
 			WhatisMastodonHeading2: "Die Magie des Fediverse",
 
 			donate1: "Du hast Mastodon.de für dich gefunden?",
 			donate2: "Jeder Cent hilft uns beim Betrieb",
 			faqheading: "Häufig gestellte Fragen",
 			fromblog: "Neuste Blogbeiträge",
-			fromblogsubtext: "Free business advice from the most famous man in the world, Erik Uden",
+			fromblogsubtext:
+				"Free business advice from the most famous man in the world, Erik Uden",
 
 			// Contact Page
 			contactheading: "Kontakt",
-			contacttext: "Hier findest du alle Möglichkeiten, um Kontakt zu uns aufzubauen, sofern dies nötig ist. Außerdem siehst du hier wo wir im Internet vertreten sind.",
+			contacttext:
+				"Hier findest du alle Möglichkeiten, um Kontakt zu uns aufzubauen, sofern dies nötig ist. Außerdem siehst du hier wo wir im Internet vertreten sind.",
 
 			// Donation Page
 			donationheading: "Unterstütze uns",
-			donationtext: "Mastodon.de wird durch Spenden finanziert. Sofern dir unser Dienst gefällt kannst du gerne etwas zurückgeben, damit Mastodon.de leichter betrieben werden kann. Danke :D",
-			
+			donationtext:
+				"Mastodon.de wird durch Spenden finanziert. Sofern dir unser Dienst gefällt kannst du gerne etwas zurückgeben, damit Mastodon.de leichter betrieben werden kann. Danke :D",
+
 			// Footer Translation
 
 			footer1: "Dienste",
 			footer2: "Hilfe",
 			footer3: "Rechtliches",
-			footertext: "Seiten, Apps und Communitys basierend auf offenen Standards",
+			footertext:
+				"Seiten, Apps und Communitys basierend auf offenen Standards",
 		},
 	},
 }));

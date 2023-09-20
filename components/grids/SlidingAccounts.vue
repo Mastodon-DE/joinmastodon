@@ -3,7 +3,7 @@ const accounts = [
 	{
 		name: "Daily Dose of Kitty",
 		avatarUrl:
-			"https://mastodon.de/system/accounts/avatars/110/718/480/989/497/647/original/6829b8f69ba0cbd3.jpg",
+			"https://media.mastodon.de/accounts/avatars/110/718/480/989/497/647/original/6829b8f69ba0cbd3.jpg",
 		handle: "@KittyPictures",
 		href: "https://mastodon.de/@KittyPictures",
 	},

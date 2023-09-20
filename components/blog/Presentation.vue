@@ -11,9 +11,6 @@ const posts = await queryContent("/blog/").locale(locale.value).find();
 				class="text-3xl font-bold tracking-tight text-gray-50 sm:text-4xl">
 				{{ $t("fromblog") }}
 			</h2>
-			<p class="mt-2 text-lg leading-8 text-gray-300">
-				{{ $t("fromblogsubtext") }}
-			</p>
 		</div>
 		<div
 			class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

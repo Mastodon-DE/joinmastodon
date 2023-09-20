@@ -8,12 +8,7 @@ useServerSeoMeta({
 	author: "Erik Uden",
 });
 
-
 const faqs = [
-	{
-		question: "What's the best thing about Switzerland?",
-		answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-	},
 	{
 		question: "Unterstützt Mastodon Direktnachrichten?",
 		answer: "Ja, bei der Veröffentlichung eines Posts kannst du, durch Erwähnung, die Sichtbarkeit auf einen bestimmten Nutzer beschränken. Bitte beachte, dass diese DMs unverschlüsselt sind, weshalb für sensible Konversationen ein anderer weg in Betracht gezogen werden sollte.",
@@ -21,10 +16,10 @@ const faqs = [
 	{
 		question: "Warum ist die Optik so mangelhaft?",
 		answer: "Sollte dir das Nutzerinterface nicht gefallen, kannst du einen von dutzenden Clients in betracht ziehen. Da ist bestimmt etwas für dich dabei.",
-
 	},
 	{
-		question: "Wer sieht was ich unter einem Hashtag poste? Wessen Posts sehe ich wenn ich einem Hashtag folge?",
+		question:
+			"Wer sieht was ich unter einem Hashtag poste? Wessen Posts sehe ich wenn ich einem Hashtag folge?",
 		answer: "Sofern dein Post öffentlich sichtbar ist, können deine Post von jedem gesehen werden, der sich auf einer Instanz befindet, die mit der eigenen im Kontakt steht. Das selbe gilt für das Folgen von Hashtags.",
 	},
 	{
@@ -37,7 +32,7 @@ const faqs = [
 	},
 	{
 		question: "An wen kann ich mich wenden, wenn ich ein Problem habe?",
-		answer: "Du kannst auf der jeweiligen About Seite (z.B. https://mastodon.de/about eine Kontakt E-Mail finden). Eine andere Möglichkeit ist einen, an den Admin adressierten, Post zu veröffentlichen.",  
+		answer: "Du kannst auf der jeweiligen About Seite (z.B. https://mastodon.de/about eine Kontakt E-Mail finden). Eine andere Möglichkeit ist einen, an den Admin adressierten, Post zu veröffentlichen.",
 	},
 	{
 		question: "Wie finde ich 'meine' Bubble?",
@@ -48,11 +43,13 @@ const faqs = [
 		answer: "Abhängig von der Instanz, ist das 500 Zeichen Limit erhöht (wie auf MastodonDE)",
 	},
 	{
-		question: "Kann ich Nutzer aus der Timeline in Listen verschieben? Ich möchte etwa professionelle Accounts auslagern.",
+		question:
+			"Kann ich Nutzer aus der Timeline in Listen verschieben? Ich möchte etwa professionelle Accounts auslagern.",
 		answer: "In den Einstellungen zur jeweiligen Liste, kannst du sie von deiner Timeline ausblenden",
 	},
 	{
-		question: "Wie funktioniert das mit der Interoperabilität zwischen Mastodon/Peertube/Pixelfed/Lemmy/etc?",
+		question:
+			"Wie funktioniert das mit der Interoperabilität zwischen Mastodon/Peertube/Pixelfed/Lemmy/etc?",
 		answer: "Alle diese Dienste sprechen ein einheitliches Protokoll (ActivityPub). Deshalb können Videos in Peertube zum Beispiel als Posts angezeigt werden, da die Daten im Code relativ gleich aussehen, nur die Ansicht anders ist.",
 	},
 	{
@@ -60,15 +57,18 @@ const faqs = [
 		answer: "Die Verifizierung im Fediverse basiert auf dem verlinken der eigenen Website. Besitzt deine Website einen HTML Link zu Mastodon und du hast diese Website in deinem Profil verlinkt, dann wird sie mit einem grünen Haken versehen.",
 	},
 	{
-		question: "Da es mich gerade selbst beschäftigt hat: Kann man nach einem Umzug (bei mir wars troet.cafe zu literatur.social) den alten Account löschen?",
+		question:
+			"Da es mich gerade selbst beschäftigt hat: Kann man nach einem Umzug (bei mir wars troet.cafe zu literatur.social) den alten Account löschen?",
 		answer: "Natürlich, jedoch solltest du zumindest eine kurze Übergangsfrist einführen, da sonst Nutzer, die den alten Tag kennen, nicht mehr zu deinem Profil finden.",
 	},
 	{
-		question: "Warum unterscheiden sich die Followerzahlen eines Accounts - abhängig davon, von welchem Account oder von welcher Instanz ich draufsehe?",
+		question:
+			"Warum unterscheiden sich die Followerzahlen eines Accounts - abhängig davon, von welchem Account oder von welcher Instanz ich draufsehe?",
 		answer: "Manche Instanzen stehen mit anderen nicht in Kontakt. Daher kann es hier zu Unstimmigkeiten bei Interaktionen von Nutzern kommen. Das ist normal.",
 	},
 	{
-		question: "Was muss ich tun, damit andere mit meinen Interessen mich finden?",
+		question:
+			"Was muss ich tun, damit andere mit meinen Interessen mich finden?",
 		answer: "Das verwenden von Hastags macht auf dich Aufmerksam, weshalb du sie passend wählen solltest. Nebenbei lohnt sich eine gute Bio, damit jeder weiß, wer du bist und was dir wichtig ist. So findest du schnell neue Freunde.",
 	},
 ];

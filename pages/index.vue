@@ -28,7 +28,7 @@ const faqs = [
 	},
 	{
 		question: "Wie wechsel ich die Instanz?",
-		answer: "In den Einstellungen kannst du über den Reiter >>Konto<< das neue Konto konfigurieren. Dannach wiederholst du das auf dem neuen Konto, indem du dieses als neues Konto konfigurierst.",
+		answer: "1) Erstelle ein Konto auf der Instanz deiner Wahl. 2) In den Einstellungen des neuen Accounts kannst du über den Reiter >> Konto << die Option >> Von einem Konto umziehen << auswählen. 3) Auf dem alten Konto musst du nun (ebenfalls im Konto Tab) die Option >> Umzug zu einem neuen Konto << wählen. 4) Du hast deinen Account erfolgreich umgezogen. Nun musst kannst du ihn wieder nach Belieben anpassen :D",
 	},
 	{
 		question: "An wen kann ich mich wenden, wenn ich ein Problem habe?",

@@ -9,6 +9,18 @@ author_handle: '@ErikUden@mastodon.de'
 
 ---
 
+**Created at:** 2023.09.05 at 12:10
+
+**Last Updated:** 2023.10.16 at 00:02
+
+
+
+# Note: Under Active Development
+
+Hi there! This blog post is under active and heavy development. I've began sharing it with people due to the story about Bernard von Bredow in relation to mastodon.de being brought up in a local newspaper recently, although it was never meant to be shared at this stage. This is a sneak-peak, many things will still change. Have fun reading it, though!
+
+<br/>
+
 # Prologue
 
 There are multiple perspectives to this story, and it is hard to come up with the right way of telling it. There is the **historic perspective** explaining why this domain exists, what it was originally meant for, and why it remained unused up until I got it - and then there's that: **WHY did I get it**? How did I, [Erik Uden](https://mastodon.de/@ErikUden), of all people, get involved in this story? mastodon.shop, as an example, has been sold for 36k USD on the domain aftermarket, every mastodon.tld has been registered years ago and they're widely sought after! So why would mastodon.de, the **name of the most popular Fediverse software** with the **top level domain of the country it was invented in** (*Germany - Mastodon GmbH*) be registered by me, more than two decades after it was initially created?
@@ -25,7 +37,7 @@ This story will focus on the registration of the domain itself, as it required a
 
 The story of mastodon.de is a story of **(child) murder**, **torture**, **covid conspiracies**, **betrayal**, and **harm of mammoths** (*among other animals*). 
 
-Our story was indirectly covered by [The Guardian]([https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), [AP News](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34), Der Spiegel [[1]([https://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3)] [[2](https://www.spiegel.de/panorama/justiz/paraguay-deutscher-forscher-und-tochter-brutal-ermordet-a-08282eea-5909-43fc-ab82-bead42736d97)] [[3](https://www.spiegel.de/panorama/justiz/paraguay-bernard-von-bredow-polizei-nimmt-nach-raubmord-zwei-weitere-verdaechtige-deutsche-fest-a-11b49e7f-85bc-4dae-bce8-938bd9c6e3db)] [[4](https://www.spiegel.de/panorama/justiz/paraguay-drei-deutsche-nach-raubmord-an-bernard-von-bredow-festgenommen-a-871d2cf4-9a29-418c-a84e-d2b5604903eb)] [[5](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-ermittler-in-paraguay-nehmen-anwalt-wegen-mordverdachts-fest-a-877e6758-a677-40a4-8516-fef671f010fa)] [[6](https://www.spiegel.de/panorama/gesellschaft/paraguay-der-raetselhafte-doppelmord-an-dem-deutschen-bernard-von-bredow-und-seiner-tochter-a-af88f432-9877-4c6c-b139-fd417560a3db)], [The BBC](https://www.bbc.co.uk/news/world-latin-america-59238867), [The Torygraph](https://www.telegraph.co.uk/world-news/2021/11/10/three-men-tortured-killed-archaeologist-teen-daughter-rare-stradivarius/), [Bloomberg](https://www.bloomberg.com/features/2023-stradivarius-murders/), [Vice](https://www.vice.com/en/article/5dgpwn/paraguay-violins-heist-germans-arrested), and many others without them knowing about it. 
+Our story was indirectly covered by [The Guardian]([https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), [AP News](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34), Der Spiegel [[1]([https://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3)] [[2](https://www.spiegel.de/panorama/justiz/paraguay-deutscher-forscher-und-tochter-brutal-ermordet-a-08282eea-5909-43fc-ab82-bead42736d97)] [[3](https://www.spiegel.de/panorama/justiz/paraguay-bernard-von-bredow-polizei-nimmt-nach-raubmord-zwei-weitere-verdaechtige-deutsche-fest-a-11b49e7f-85bc-4dae-bce8-938bd9c6e3db)] [[4](https://www.spiegel.de/panorama/justiz/paraguay-drei-deutsche-nach-raubmord-an-bernard-von-bredow-festgenommen-a-871d2cf4-9a29-418c-a84e-d2b5604903eb)] [[5](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-ermittler-in-paraguay-nehmen-anwalt-wegen-mordverdachts-fest-a-877e6758-a677-40a4-8516-fef671f010fa)] [[6](https://www.spiegel.de/panorama/gesellschaft/paraguay-der-raetselhafte-doppelmord-an-dem-deutschen-bernard-von-bredow-und-seiner-tochter-a-af88f432-9877-4c6c-b139-fd417560a3db)], [DW](https://www.dw.com/de/deutscher-eiszeitforscher-und-seine-tochter-in-paraguay-brutal-ermordet/a-59694752), [The BBC](https://www.bbc.co.uk/news/world-latin-america-59238867), [The Torygraph](https://www.telegraph.co.uk/world-news/2021/11/10/three-men-tortured-killed-archaeologist-teen-daughter-rare-stradivarius/), [Bloomberg](https://www.bloomberg.com/features/2023-stradivarius-murders/), [Vice](https://www.vice.com/en/article/5dgpwn/paraguay-violins-heist-germans-arrested), and many others without them knowing about it. 
 
 *Every link has archived versions at the bottom of this page* 
 
@@ -123,9 +135,23 @@ What had happened is that Bernard Raymond von Bredow planned to advertise his Ma
 
 # The Mammutheum - 1991 to 2017
 
-If you can speak German or have no problem with the auto-translated subtitles, you can watch **a documentary by Bernard Raymond von Bredow about the Mammutheum** [**here on his personal YouTube channel**](https://www.youtube.com/watch?v=iQaMkd7kG5g) titled "The Mammoth Project - It Started with a Bone" which I highly recommend (*also look around for other things on his channel*). This is a reupload of a documentary by Ulrich Weißbach for the Baverian Radio (*Bayerischer Rundfunk*) from 1993. 
+If you can speak German or have no problem with the auto-translated subtitles, you can watch **a documentary about Bernard Raymond von Bredow about the Mammutheum** [**here on his personal YouTube channel**](https://www.youtube.com/watch?v=iQaMkd7kG5g) titled "The Mammoth Project - It Started with a Bone" which I highly recommend (*also look around for other things on his channel*). This is a reupload of a documentary by Ulrich Weißbach for the Baverian Radio (*Bayerischer Rundfunk*) from 1993. 
 
-But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
+*While we're at it...*
+
+**Bernard Raymond von Bredow's Accounts:**
+
+- [YouTube](https://www.youtube.com/@mammutheum)
+
+- [Personal Facebook](https://www.facebook.com/bernardraymond.vonbredow/)
+
+- [Mammutheum Facebook](https://www.facebook.com/Mammutheum)
+
+- [Pinterest](https://www.pinterest.com/bernardraymondvonbredow/)
+  
+  
+
+But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum that I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
 
 Especially fascinating I find this interview he had with Bayern Alpha in 2004: [Bayern Alpha Interview](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/vortraege-und-hoerfunkbeitraege?showall=&start=1), as it is just Bernard answering so many questions about himself! 
 
@@ -133,7 +159,7 @@ Another interesting tidbit may be that Oscar the Mammoth was used as [promotiona
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG">
 
-Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Barnard was good friends with Roland Emmerich and just thought this would be funny. 
+Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Bernard was good friends with Roland Emmerich and just thought this would be funny. 
 
 There are terabytes of images and texts on this website and they tell a great story of what rich archeologic history such a small space had to offer, as well as how many visitors it must've fascinated in a year. I highly recommend you do this before continuing to the following, **rather morbid** sections.
 
@@ -141,9 +167,7 @@ One way or the other, thanks to Bernard Raymond von Bredow, Oscar got his fair s
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_7580.JPG">
 
-
-
-Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending, there were just a few losses on the way*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were sort-of plotting against Bernard with their own museum? Yup, obviously a non-existent / state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family, 
+Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending, there were just a few losses on the way*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were sort-of plotting against Bernard with their own museum? Yup, obviously a non-existent / non-state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family saw in this some sort of greater conspiracy, even describing the entire Covid ordeal as a "plandemic" on the frontpage of the Mammutheum. I obviously do not endorse nor believe that.
 
 <br/>
 
@@ -157,7 +181,7 @@ Sadly, the story of the physical Mammutheum ends on a low note (*but do not worr
 
 <br/>
 
-**Side note 2:** Yes, he has been a skilled (*antique*) violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article.
+**Side note 2:** Yes, Bernard Raymond von Bredow has been a skilled (*antique*) violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am still omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article.
 
 <br/>
 
@@ -165,7 +189,7 @@ Sadly, the story of the physical Mammutheum ends on a low note (*but do not worr
 
 ## Paraguay
 
-The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both kind of faded away by the year of 2017, which is why then and there Bernard and his then 10 year old daughter Loreena moved to Paraguay to begin a new chapter of their lives. It isn't known much about them during this time, but the Mammutheum continued running through family members and he sustained his living by building violins. At this point he is in the [possession of four antique violins believed to have been made by the revered Italian luthier Antonio Stradivari](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) which were worth [multiple millions of Euros](https://www.theguardian.com/science/2018/may/21/scientists-find-secret-behind-sweet-sound-of-stradivarius-violins) ([*maybe even each*](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article)).
+The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both kind of faded away by the year of 2017, which is why then and there Bernard and his then 10 year old daughter Loreena moved to Paraguay to begin a new chapter of their lives. It isn't known much about them during this time, but the Mammutheum continued running through family members and he sustained his living in Paraguay by [building and refurbishing violins](https://violinen.biz). At this point he is in the [possession of four antique violins believed to have been made by the revered Italian luthier Antonio Stradivari](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) which were worth [multiple millions of Euros](https://www.theguardian.com/science/2018/may/21/scientists-find-secret-behind-sweet-sound-of-stradivarius-violins) ([*maybe even each*](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article)).
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/bernard mit andrea amati 801x534.jpg">
 
@@ -173,13 +197,13 @@ The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both 
 
 <br/>
 
-By October of 2021, 4 years after moving here, 46 years after first finding Oscar the Mammoth, Bernard Raymond von Bredow, at 62 years old, and his daughter, at 14 years old, were found dead in their apartment in Paraguay. **How on god's green earth did this happen?**
+By October of 2021, 4 years after moving here, exactly 46 years after first finding Oscar the Mammoth, Bernard Raymond von Bredow, at 62 years old, and his daughter, at 14 years old, were found dead in their apartment in Paraguay. **How on god's green earth did this happen?**
 
 <br/>
 
 ## A Murder
 
-On the 22nd of October 2021 both **Bernard Raymond von Bredow and his daughter Loreena were found dead in their homes with the reason of death being murder**. 
+On the 22nd of October 2021 both **Bernard Raymond von Bredow and his daughter Loreena were found dead in their homes with the cause of death being bullet wounds, obviously the police suspected murder**. 
 
 Here is a report by a local TV station (*ABC TV Paraguay*) which shows the police investigation trying to initially figure out what they could:
 
@@ -210,13 +234,111 @@ Now, Volker Grannas claims the violins had been in his possession for a longer t
 
 <br/>
 
-So, why then kill a guy and his daughter when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case, sees as the principal hypothesis for the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that.
+So, since Volker Grannas was them main suspect: why would he kill a guy and his daughter to steal his prized possessions when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case, sees as the principal hypothesis for the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that. The murder and theft was hence about the certifications of those violins, not the violins themselves, as they had already been "stolen", or rather were never returned under the false pretense they were destroyed in a house fire. 
+
+One thing that should be noted is that those internationally recognized certifications are obviously also worthless without their counterpart violins. These certifications only serve the purpose of verifying the validity of these violins and have no intrinsic value by themselves. What I am trying to hint at here is that whoever committed all of these efforts (*murder*) in search for the certifications must've known the violins never burned in a house fire, a fact Bernard himself didn't even know, as that "loss" was public knowledge. No one would commit murder for a sheet of paper with no value. Whoever did this must've known the violins still existed. 
 
 <br/>
 
 The Bredow residence was left in such disarray and so full of blood stains that it became obvious both Bernard and Loreena von Bredow were murdered somewhere else on the property and then dragged into the positions they were found in. 
 
+<br/>
+
+<br/>
+
+So, what came of this case? After hundreds of articles and huge press attention, so many early investigations with promising findings and arrests, *what happened?*
+
+**Nothing.** All charges dropped due to a lack of evidence. No people mentioned in this article are convicted criminals (*yet, though there is no reason to believe we will ever hear updates on this story*).
+
+If you want to find out more details regarding this horrific event and its fallout, continue reading any of the following **articles from renounced news organizations** that will give more concise info than I ever could:
+
+
+
+[The Guardian](%5Bhttps://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), [AP News](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34), Der Spiegel [[1](%5Bhttps://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3)] [[2](https://www.spiegel.de/panorama/justiz/paraguay-deutscher-forscher-und-tochter-brutal-ermordet-a-08282eea-5909-43fc-ab82-bead42736d97)] [[3](https://www.spiegel.de/panorama/justiz/paraguay-bernard-von-bredow-polizei-nimmt-nach-raubmord-zwei-weitere-verdaechtige-deutsche-fest-a-11b49e7f-85bc-4dae-bce8-938bd9c6e3db)] [[4](https://www.spiegel.de/panorama/justiz/paraguay-drei-deutsche-nach-raubmord-an-bernard-von-bredow-festgenommen-a-871d2cf4-9a29-418c-a84e-d2b5604903eb)] [[5](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-ermittler-in-paraguay-nehmen-anwalt-wegen-mordverdachts-fest-a-877e6758-a677-40a4-8516-fef671f010fa)] [[6](https://www.spiegel.de/panorama/gesellschaft/paraguay-der-raetselhafte-doppelmord-an-dem-deutschen-bernard-von-bredow-und-seiner-tochter-a-af88f432-9877-4c6c-b139-fd417560a3db)], [DW](https://www.dw.com/de/deutscher-eiszeitforscher-und-seine-tochter-in-paraguay-brutal-ermordet/a-59694752), [The BBC](https://www.bbc.co.uk/news/world-latin-america-59238867), [Bloomberg](https://www.bloomberg.com/features/2023-stradivarius-murders/), [Vice](https://www.vice.com/en/article/5dgpwn/paraguay-violins-heist-germans-arrested),  [WELT](https://www.welt.de/vermischtes/article234785428/Raubmord-Deutscher-Auswanderer-Bernard-von-Bredow-in-Paraguay-getoetet.html)
+
+
+
+I've read through all of the following too, and usually they just re-iterate what the big news stations say, but here are some **not so well known news organizations talking about this case:**
+
+[ABC TV](https://twitter.com/ABCTVpy/status/1458420657948176390), [Samerberger Nachrichten](https://www.samerbergernachrichten.de/224720-2/), [Ostfriesische Nachrichten](https://www.on-online.de/artikel/1116860/Mammut-Fan-und-Querdenker-wer-war-Bernard-von-Bredow), [FAZ](https://www.faz.net/aktuell/gesellschaft/kriminalitaet/zwei-deutsche-in-paraguay-getoetet-17615038.html), [SHZ](https://www.shz.de/deutschland-welt/ostsee/artikel/deutscher-forscher-in-paraguay-getoetet-wer-war-bernard-von-bredow-20584054), [SZ - Süddeutsche Zeitung](https://www.sueddeutsche.de/panorama/bernard-von-bredow-mammut-forscher-doppelmord-paraguay-1.5491325), [Merkur](https://www.merkur.de/bayern/paraguay-bayern-forscher-mord-archaeologe-tochter-ermittlungen-raubmord-bernhard-bredow-zr-91088913.html), N-TV [[1](https://www.n-tv.de/mediathek/videos/panorama/Polizei-nimmt-Freund-als-Foltermordverdaechtigen-fest-article22919939.html)] [[2](https://www.n-tv.de/mediathek/videos/panorama/Deutscher-Archaeologe-und-Tochter-in-Paraguay-getoetet-article22905799.html)], [FOCUS online](https://www.focus.de/panorama/welt/bernard-von-bredow-bekannter-deutscher-archaeologe-mit-14-jaehriger-tochter-in-paraguay-ermordet_id_24383123.html), [Tagesspiegel](https://www.tagesspiegel.de/gesellschaft/panorama/drei-deutsche-verdachtige-im-fall-von-bredow-festgenommen-5125699.html), [Kölner Stadt-Anzeiger](https://www.ksta.de/panorama/bernard-von-bredow-und-tochter-in-paraguay-gefoltert-und-hingerichtet-243665), [Augsburger Allgemeine](https://www.augsburger-allgemeine.de/panorama/Verbrechen-Raeuber-toeten-bayerischen-Mammut-Entdecker-in-Paraguay-id60924956.html), [Chiemgau24](https://www.chiemgau24.de/chiemgau/traunstein/siegsdorf-ort45020/nach-foltermord-in-paraguay-an-siegsdorfer-von-bredow-tat-koennte-fuer-immer-ungeklaert-bleiben-92438879.html), [OVB Online](https://www.ovb-online.de/rosenheim/chiemgau/asuncion-siegsdorfer-archaeologe-bernard-von-bredow-und-tochter-in-paraguay-gefoltert-und-ermordet-91088661.html), Wochenblatt.cc [[1](https://wochenblatt.cc/wer-war-bernard-raymond-von-bredow/)] [[2](https://wochenblatt.cc/nach-mord-an-bernard-von-bredow-und-tochter-steht-nun-ein-anderer-mann-im-fokus/)], [Kronen Zeitung](https://www.krone.at/2546553), [PNP](https://www.pnp.de/archiv/1/bernard-von-bredow-wollte-vorerst-nicht-zurueckkehren-6952619), [Berliner Morgenpost](https://www.morgenpost.de/vermischtes/article233731493/deutscher-forscher-bredow-tot-paraguay.html), [TZ](https://www.tz.de/muenchen/stadt/paraguay-mord-forscher-bayern-bernard-von-bredow-tot-ermittlungen-muenchen-news-aktuell-91088827.html), [Latina Press](https://latina-press.com/news/293316-deutscher-forscher-und-tochter-in-paraguay-ermordet-update/), [El Comercio](https://elcomercio.pe/mundo/latinoamerica/paraguay-bernard-von-bredow-el-brutal-asesinato-de-un-arqueologo-aleman-y-su-hija-adolescente-cuyo-movil-pudo-ser-el-robo-de-sus-violines-stradivarius-historias-ec-noticia/), [Le Figaro](https://www.lefigaro.fr/musique/au-paraguay-les-meurtres-d-un-luthier-allemand-et-de-sa-fille-serait-lie-au-vol-de-violons-stradivarius-20211118), 
+
+
+
+You can also get "info" (*usually inaccurate, basically just accusatory nonsense*) from the the lesser "news" organizations here:
+
+BILD [[1](https://www.youtube.com/watch?v=QpJYGNltWOI)] [[2](https://www.youtube.com/watch?v=VUEhKJdGVxY)] [[3](https://www.youtube.com/watch?v=wzFTU2_QWPM)] [[4](https://www.bild.de/news/ausland/news-ausland/foltermord-von-paraguay-hauptverdaechtiger-aus-dem-knast-entlassen-80944764.bild.html)] [[5](https://www.bild.de/news/ausland/news-ausland/nach-bluttat-in-paraguay-bleiben-die-foltermorde-ungesuehnt-84894890.bild.html?t_ref=https%3A%2F%2Fwww.bild.de%2F)], RTL [[1](https://www.rtl.de/cms/bernard-von-bredow-und-tochter-in-paraguay-getoetet-hauptverdaechtiger-deutscher-wieder-frei-5001426.html)] [[2](https://www.rtl.de/cms/mord-an-bernard-von-bredow-und-seiner-tochter-in-paraguay-vierter-verdaechtiger-gefasst-4868287.html)] [[3](https://www.rtl.de/cms/bernard-von-bredow-getoetet-stecken-diese-drei-deutschen-hinter-der-tat-4864874.html)] [[4](https://www.rtl.de/cms/bernard-von-bredow-und-tochter-in-paraguay-erschossen-jetzt-spricht-der-freigelassene-ex-verdaechtige-volker-g-5002034.html)], [The Torygraph](https://www.telegraph.co.uk/world-news/2021/11/10/three-men-tortured-killed-archaeologist-teen-daughter-rare-stradivarius/), [STERN](https://www.stern.de/panorama/bernard-von-bredow--deutscher-archaeologe-und-tochter-offenbar-in-paraguay-getoetet-30886478.html), [Sputnik News](https://snanews.de/20211102/deutscher-forscher-tochter-paraguay-getoetet-medien-4182271.html)
+
+
+
+**Forums and Wikis** discussing Bernard Raymond von Bredow's and his daughter's death:
+
+[HET-Forum](https://het-forum.de/viewtopic.php?t=1131), [Wikipedia](https://de.wikipedia.org/wiki/Bernard_von_Bredow)
+
+
+
+**SEE ALSO** (*please*)
+
+https://www.bvonb.org/ [[English](https://en.bvonb.org/)] [[Spanish](https://es.bvonb.org/)] - a website **offering 150,000 USD to anyone knowing any important details necessary to solve the crime.** 
+
+While researching this some more on the 15th of October 2023 I have discovered the above page, which I had never stumbled upon in the past 8 months of research I've put into this article. I do not understand any of the symbols on it, nor do I know who set it up or why the year "1983" is referenced so often. *If you understand anything here, feel free to contact me!*
+
+
+
+This may be the most unsatisfying ending to any chapter you've ever read, but that is sadly how it is. There is no catharsis, no redemption. Sometimes things just happen and you're not allowed to have clearance within your or anyone's lifetime. **This will be the end of the entire story arc revolving around Bernard Raymond von Bredow** and the legend he is! 
+
+You've just read through a man's entire life story! Maybe take a break?
+
+
+
+[Here are some cat pictures and videos to possibly lighten the mood](https://mastodon.de/@KittyPictures) a bit... it is the best I can do.
+
+<br/>
+
+<br/>
+
+Okay... you can do this, let's go...
+
+## A Domain Long Forgotten
+
+Just as you forgot that this was about mastodon.de whilst reading this article, Bernard Raymond von Bredow forgot about the fact he owned it during the 20 or so years of his life where it was entirely unused. 
+
+At least that is the best way I can explain it! It is easy to forget some domain you registered many years ago when it most likely wasn't even listed on any bills you got nor were you ever reminded of its existence through admin panels in which your domains were displayed - because that is my working hypothesis: Bernard Raymond von Bredow hired many web developers throughout his lifetime who always just billed the domains next to their other services (*webhosting, E-Mail*), and hence the "domain" category was never shown in a way that would show all the domains that are being billed like
+
+- mammutheum.de
+
+- mastodon.de
+
+- violinen.biz
+
+Etc.! No, it was always just shown as "cost of domains" and since a ".de" domain can be as little as 5€ a year, that is something that can be easily overlooked on monthly bills. Nothing you run after or that enters your consciousness ever again. 
+
+At least this is how I can explain the fact his family had no idea of the domain mastodon.de's existence, but more about that later.
+
+<br/>
+
+If you know anything about mastodon.de or have read ahead further, you'll know that we launched the Mastodon instance on July 11th 2023, where we may have mentioned that we got the domain in February of 2023. You may even already know the story that mastodon.de entered the "registration grace period" in January of 2023 (*again, more on that later*) which is why you may be wondering "How come the domain was still registered in a dead man's name for that long?" to which I can give the following hypothesis:
+
+Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yearly on an **early day in early January.** It is quite likely his bank account or PayPal, or whatever he used to make the payment, **wasn't even shut down in January of 2022**, just two months after his death. So, the automatic payment to the domain registrar was able to be transferred, registering the domain for another year in his name post-mortum, leading to the domain expiring, also called entering the "registration grace period" in early January of 2023, where Erik Uden was searching for a domain for his upcoming huge Mastodon instance project...
+
+<br/>
+
+<br/>
+
+**BUT FIRST**: let's backtrack! WHY was Erik Uden (me) looking for a domain name for a Mastodon instance? How come I thought I had not only the monetary but server capacities to do this?
+
 # An Exciting Evening in November 2022
+
+On [insert date here], a Wednesday in November of 2022, on a whim after being contacted the night before, I drove over 650 km across the country from my city of Norden to the city of Frankfurt with the knowledge that I would not return empty handed. 
+
+Nick, a friend of mine (Erik Uden), which I got to know through the various protest actions on the island of Sylt in Germany in 2022 (*both me and him were organizers of the various events on Sylt - Aktion Sylt and Sylt51*), works at the DENIC eG, the co-op that manages the .de top level domain in Frankfurt! 
+
+For the less technical users: a "top level domain" is the ending of every domain name, for "erikuden.com" the ".com" bit would be the top level domain! There are many types of such TLDs, originally "generic top level domains" (gTLD) which are the original top level domains that existed on the internet, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these gTLDs! Nowadays, there are also the "new generic top level domains" (ngTLD) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money ~200k USD*) and then sell domains using that TLD back to people, such as ".marketing" or ".lgbt", even ".google" and ".amazon" exist now engrained into the fabric of the internet. Also the guy that introduced this program at ICANN later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*now Identity Digital*) which owns about 17% of all ngTLDs, 15% of all TLDs, so they own 15% of all basic internet infrastructure but are vastly unknown! Scary stuff, really! But that isn't what this story is about, because additionally there are also country code top level domains" (ccTLD) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
+
+Fun fact: this system is so old that even ".su" was given to the Soviet Union! Unlike ".yu" for Yugoslavia, which ICANN ended after Yugoslavia ended, ".su" was somehow annexed by the Russian government and can (*somehow*) still be registered to this day! 
+
+But back to the main story: Each country gets to decide what entity manages this top level domain and how! In Germany, that task is done by the DENIC eG,, which stands for ".DE Network Information Center" and then the company type eG "eingetragene Genossenschaft" (*worker's co-op*), you will see that "NIC"  term used a lot when dealing with domains and top level domains. 
+
+So, since there are about 17 million currently registered .de domains the DENIC has huge amounts of 
 
 # A Boring Morning in January 2023
 

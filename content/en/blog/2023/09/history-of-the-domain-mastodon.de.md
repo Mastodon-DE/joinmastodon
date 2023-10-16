@@ -9,15 +9,17 @@ author_handle: '@ErikUden@mastodon.de'
 
 ---
 
-**Created at:** 2023.09.05 at 12:10
-
-**Last Updated:** 2023.10.16 at 00:02
 
 
+<center><b>Created at:</b> 2023.09.05 at 12:10  |  <b>Last Updated:</b> 2023.10.16 at 23:40</center>
+
+<br/>
 
 # Note: Under Active Development
 
 Hi there! This blog post is under active and heavy development. I've began sharing it with people due to the story about Bernard von Bredow in relation to mastodon.de being brought up in a local newspaper recently, although it was never meant to be shared at this stage. This is a sneak-peak, many things will still change. Have fun reading it, though!
+
+<br/>
 
 <br/>
 
@@ -148,8 +150,6 @@ If you can speak German or have no problem with the auto-translated subtitles, y
 - [Mammutheum Facebook](https://www.facebook.com/Mammutheum)
 
 - [Pinterest](https://www.pinterest.com/bernardraymondvonbredow/)
-  
-  
 
 But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum that I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
 
@@ -207,8 +207,12 @@ On the 22nd of October 2021 both **Bernard Raymond von Bredow and his daughter L
 
 Here is a report by a local TV station (*ABC TV Paraguay*) which shows the police investigation trying to initially figure out what they could:
 
+```html
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Detienen a un alemán por crimen en Areguá<br><br>"Allanamos tres casas de ciudadanos alemanes, conocidos del fallecido. Incautamos varios elementos", crio. Hugo Grance, Dpto. de Homicidios<a href="https://twitter.com/hashtag/ABCTVPy?src=hash&ref_src=twsrc%5Etfw">#ABCTVPy</a> 🔗<a href="https://t.co/ZvwJlbwdHn">https://t.co/ZvwJlbwdHn</a> <a href="https://t.co/7w2a3whped">pic.twitter.com/7w2a3whped</a></p>— ABC TV Paraguay (@ABCTVpy) <a href="https://twitter.com/ABCTVpy/status/1458420657948176390?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+```
+
+
 
 <br>
 
@@ -250,45 +254,49 @@ So, what came of this case? After hundreds of articles and huge press attention,
 
 **Nothing.** All charges dropped due to a lack of evidence. No people mentioned in this article are convicted criminals (*yet, though there is no reason to believe we will ever hear updates on this story*).
 
+
+
+## News about the Bredow Case (*read further*)
+
 If you want to find out more details regarding this horrific event and its fallout, continue reading any of the following **articles from renounced news organizations** that will give more concise info than I ever could:
 
+> [The Guardian](%5Bhttps://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), [AP News](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34), Der Spiegel [[1](%5Bhttps://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3)] [[2](https://www.spiegel.de/panorama/justiz/paraguay-deutscher-forscher-und-tochter-brutal-ermordet-a-08282eea-5909-43fc-ab82-bead42736d97)] [[3](https://www.spiegel.de/panorama/justiz/paraguay-bernard-von-bredow-polizei-nimmt-nach-raubmord-zwei-weitere-verdaechtige-deutsche-fest-a-11b49e7f-85bc-4dae-bce8-938bd9c6e3db)] [[4](https://www.spiegel.de/panorama/justiz/paraguay-drei-deutsche-nach-raubmord-an-bernard-von-bredow-festgenommen-a-871d2cf4-9a29-418c-a84e-d2b5604903eb)] [[5](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-ermittler-in-paraguay-nehmen-anwalt-wegen-mordverdachts-fest-a-877e6758-a677-40a4-8516-fef671f010fa)] [[6](https://www.spiegel.de/panorama/gesellschaft/paraguay-der-raetselhafte-doppelmord-an-dem-deutschen-bernard-von-bredow-und-seiner-tochter-a-af88f432-9877-4c6c-b139-fd417560a3db)], [DW](https://www.dw.com/de/deutscher-eiszeitforscher-und-seine-tochter-in-paraguay-brutal-ermordet/a-59694752), [The BBC](https://www.bbc.co.uk/news/world-latin-america-59238867), [Bloomberg](https://www.bloomberg.com/features/2023-stradivarius-murders/), [Vice](https://www.vice.com/en/article/5dgpwn/paraguay-violins-heist-germans-arrested),  [WELT](https://www.welt.de/vermischtes/article234785428/Raubmord-Deutscher-Auswanderer-Bernard-von-Bredow-in-Paraguay-getoetet.html)
 
-
-[The Guardian](%5Bhttps://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), [AP News](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34), Der Spiegel [[1](%5Bhttps://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3)] [[2](https://www.spiegel.de/panorama/justiz/paraguay-deutscher-forscher-und-tochter-brutal-ermordet-a-08282eea-5909-43fc-ab82-bead42736d97)] [[3](https://www.spiegel.de/panorama/justiz/paraguay-bernard-von-bredow-polizei-nimmt-nach-raubmord-zwei-weitere-verdaechtige-deutsche-fest-a-11b49e7f-85bc-4dae-bce8-938bd9c6e3db)] [[4](https://www.spiegel.de/panorama/justiz/paraguay-drei-deutsche-nach-raubmord-an-bernard-von-bredow-festgenommen-a-871d2cf4-9a29-418c-a84e-d2b5604903eb)] [[5](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-ermittler-in-paraguay-nehmen-anwalt-wegen-mordverdachts-fest-a-877e6758-a677-40a4-8516-fef671f010fa)] [[6](https://www.spiegel.de/panorama/gesellschaft/paraguay-der-raetselhafte-doppelmord-an-dem-deutschen-bernard-von-bredow-und-seiner-tochter-a-af88f432-9877-4c6c-b139-fd417560a3db)], [DW](https://www.dw.com/de/deutscher-eiszeitforscher-und-seine-tochter-in-paraguay-brutal-ermordet/a-59694752), [The BBC](https://www.bbc.co.uk/news/world-latin-america-59238867), [Bloomberg](https://www.bloomberg.com/features/2023-stradivarius-murders/), [Vice](https://www.vice.com/en/article/5dgpwn/paraguay-violins-heist-germans-arrested),  [WELT](https://www.welt.de/vermischtes/article234785428/Raubmord-Deutscher-Auswanderer-Bernard-von-Bredow-in-Paraguay-getoetet.html)
-
-
+<br/>
 
 I've read through all of the following too, and usually they just re-iterate what the big news stations say, but here are some **not so well known news organizations talking about this case:**
 
-[ABC TV](https://twitter.com/ABCTVpy/status/1458420657948176390), [Samerberger Nachrichten](https://www.samerbergernachrichten.de/224720-2/), [Ostfriesische Nachrichten](https://www.on-online.de/artikel/1116860/Mammut-Fan-und-Querdenker-wer-war-Bernard-von-Bredow), [FAZ](https://www.faz.net/aktuell/gesellschaft/kriminalitaet/zwei-deutsche-in-paraguay-getoetet-17615038.html), [SHZ](https://www.shz.de/deutschland-welt/ostsee/artikel/deutscher-forscher-in-paraguay-getoetet-wer-war-bernard-von-bredow-20584054), [SZ - Süddeutsche Zeitung](https://www.sueddeutsche.de/panorama/bernard-von-bredow-mammut-forscher-doppelmord-paraguay-1.5491325), [Merkur](https://www.merkur.de/bayern/paraguay-bayern-forscher-mord-archaeologe-tochter-ermittlungen-raubmord-bernhard-bredow-zr-91088913.html), N-TV [[1](https://www.n-tv.de/mediathek/videos/panorama/Polizei-nimmt-Freund-als-Foltermordverdaechtigen-fest-article22919939.html)] [[2](https://www.n-tv.de/mediathek/videos/panorama/Deutscher-Archaeologe-und-Tochter-in-Paraguay-getoetet-article22905799.html)], [FOCUS online](https://www.focus.de/panorama/welt/bernard-von-bredow-bekannter-deutscher-archaeologe-mit-14-jaehriger-tochter-in-paraguay-ermordet_id_24383123.html), [Tagesspiegel](https://www.tagesspiegel.de/gesellschaft/panorama/drei-deutsche-verdachtige-im-fall-von-bredow-festgenommen-5125699.html), [Kölner Stadt-Anzeiger](https://www.ksta.de/panorama/bernard-von-bredow-und-tochter-in-paraguay-gefoltert-und-hingerichtet-243665), [Augsburger Allgemeine](https://www.augsburger-allgemeine.de/panorama/Verbrechen-Raeuber-toeten-bayerischen-Mammut-Entdecker-in-Paraguay-id60924956.html), [Chiemgau24](https://www.chiemgau24.de/chiemgau/traunstein/siegsdorf-ort45020/nach-foltermord-in-paraguay-an-siegsdorfer-von-bredow-tat-koennte-fuer-immer-ungeklaert-bleiben-92438879.html), [OVB Online](https://www.ovb-online.de/rosenheim/chiemgau/asuncion-siegsdorfer-archaeologe-bernard-von-bredow-und-tochter-in-paraguay-gefoltert-und-ermordet-91088661.html), Wochenblatt.cc [[1](https://wochenblatt.cc/wer-war-bernard-raymond-von-bredow/)] [[2](https://wochenblatt.cc/nach-mord-an-bernard-von-bredow-und-tochter-steht-nun-ein-anderer-mann-im-fokus/)], [Kronen Zeitung](https://www.krone.at/2546553), [PNP](https://www.pnp.de/archiv/1/bernard-von-bredow-wollte-vorerst-nicht-zurueckkehren-6952619), [Berliner Morgenpost](https://www.morgenpost.de/vermischtes/article233731493/deutscher-forscher-bredow-tot-paraguay.html), [TZ](https://www.tz.de/muenchen/stadt/paraguay-mord-forscher-bayern-bernard-von-bredow-tot-ermittlungen-muenchen-news-aktuell-91088827.html), [Latina Press](https://latina-press.com/news/293316-deutscher-forscher-und-tochter-in-paraguay-ermordet-update/), [El Comercio](https://elcomercio.pe/mundo/latinoamerica/paraguay-bernard-von-bredow-el-brutal-asesinato-de-un-arqueologo-aleman-y-su-hija-adolescente-cuyo-movil-pudo-ser-el-robo-de-sus-violines-stradivarius-historias-ec-noticia/), [Le Figaro](https://www.lefigaro.fr/musique/au-paraguay-les-meurtres-d-un-luthier-allemand-et-de-sa-fille-serait-lie-au-vol-de-violons-stradivarius-20211118), 
+> [ABC TV](https://twitter.com/ABCTVpy/status/1458420657948176390), [Samerberger Nachrichten](https://www.samerbergernachrichten.de/224720-2/), [Ostfriesische Nachrichten](https://www.on-online.de/artikel/1116860/Mammut-Fan-und-Querdenker-wer-war-Bernard-von-Bredow), [FAZ](https://www.faz.net/aktuell/gesellschaft/kriminalitaet/zwei-deutsche-in-paraguay-getoetet-17615038.html), [SHZ](https://www.shz.de/deutschland-welt/ostsee/artikel/deutscher-forscher-in-paraguay-getoetet-wer-war-bernard-von-bredow-20584054), [SZ - Süddeutsche Zeitung](https://www.sueddeutsche.de/panorama/bernard-von-bredow-mammut-forscher-doppelmord-paraguay-1.5491325), [Merkur](https://www.merkur.de/bayern/paraguay-bayern-forscher-mord-archaeologe-tochter-ermittlungen-raubmord-bernhard-bredow-zr-91088913.html), N-TV [[1](https://www.n-tv.de/mediathek/videos/panorama/Polizei-nimmt-Freund-als-Foltermordverdaechtigen-fest-article22919939.html)] [[2](https://www.n-tv.de/mediathek/videos/panorama/Deutscher-Archaeologe-und-Tochter-in-Paraguay-getoetet-article22905799.html)], [FOCUS online](https://www.focus.de/panorama/welt/bernard-von-bredow-bekannter-deutscher-archaeologe-mit-14-jaehriger-tochter-in-paraguay-ermordet_id_24383123.html), [Tagesspiegel](https://www.tagesspiegel.de/gesellschaft/panorama/drei-deutsche-verdachtige-im-fall-von-bredow-festgenommen-5125699.html), [Kölner Stadt-Anzeiger](https://www.ksta.de/panorama/bernard-von-bredow-und-tochter-in-paraguay-gefoltert-und-hingerichtet-243665), [Augsburger Allgemeine](https://www.augsburger-allgemeine.de/panorama/Verbrechen-Raeuber-toeten-bayerischen-Mammut-Entdecker-in-Paraguay-id60924956.html), [Chiemgau24](https://www.chiemgau24.de/chiemgau/traunstein/siegsdorf-ort45020/nach-foltermord-in-paraguay-an-siegsdorfer-von-bredow-tat-koennte-fuer-immer-ungeklaert-bleiben-92438879.html), [OVB Online](https://www.ovb-online.de/rosenheim/chiemgau/asuncion-siegsdorfer-archaeologe-bernard-von-bredow-und-tochter-in-paraguay-gefoltert-und-ermordet-91088661.html), Wochenblatt.cc [[1](https://wochenblatt.cc/wer-war-bernard-raymond-von-bredow/)] [[2](https://wochenblatt.cc/nach-mord-an-bernard-von-bredow-und-tochter-steht-nun-ein-anderer-mann-im-fokus/)], [Kronen Zeitung](https://www.krone.at/2546553), [PNP](https://www.pnp.de/archiv/1/bernard-von-bredow-wollte-vorerst-nicht-zurueckkehren-6952619), [Berliner Morgenpost](https://www.morgenpost.de/vermischtes/article233731493/deutscher-forscher-bredow-tot-paraguay.html), [TZ](https://www.tz.de/muenchen/stadt/paraguay-mord-forscher-bayern-bernard-von-bredow-tot-ermittlungen-muenchen-news-aktuell-91088827.html), [Latina Press](https://latina-press.com/news/293316-deutscher-forscher-und-tochter-in-paraguay-ermordet-update/), [El Comercio](https://elcomercio.pe/mundo/latinoamerica/paraguay-bernard-von-bredow-el-brutal-asesinato-de-un-arqueologo-aleman-y-su-hija-adolescente-cuyo-movil-pudo-ser-el-robo-de-sus-violines-stradivarius-historias-ec-noticia/), [Le Figaro](https://www.lefigaro.fr/musique/au-paraguay-les-meurtres-d-un-luthier-allemand-et-de-sa-fille-serait-lie-au-vol-de-violons-stradivarius-20211118), 
 
-
+<br/>
 
 You can also get "info" (*usually inaccurate, basically just accusatory nonsense*) from the the lesser "news" organizations here:
 
-BILD [[1](https://www.youtube.com/watch?v=QpJYGNltWOI)] [[2](https://www.youtube.com/watch?v=VUEhKJdGVxY)] [[3](https://www.youtube.com/watch?v=wzFTU2_QWPM)] [[4](https://www.bild.de/news/ausland/news-ausland/foltermord-von-paraguay-hauptverdaechtiger-aus-dem-knast-entlassen-80944764.bild.html)] [[5](https://www.bild.de/news/ausland/news-ausland/nach-bluttat-in-paraguay-bleiben-die-foltermorde-ungesuehnt-84894890.bild.html?t_ref=https%3A%2F%2Fwww.bild.de%2F)], RTL [[1](https://www.rtl.de/cms/bernard-von-bredow-und-tochter-in-paraguay-getoetet-hauptverdaechtiger-deutscher-wieder-frei-5001426.html)] [[2](https://www.rtl.de/cms/mord-an-bernard-von-bredow-und-seiner-tochter-in-paraguay-vierter-verdaechtiger-gefasst-4868287.html)] [[3](https://www.rtl.de/cms/bernard-von-bredow-getoetet-stecken-diese-drei-deutschen-hinter-der-tat-4864874.html)] [[4](https://www.rtl.de/cms/bernard-von-bredow-und-tochter-in-paraguay-erschossen-jetzt-spricht-der-freigelassene-ex-verdaechtige-volker-g-5002034.html)], [The Torygraph](https://www.telegraph.co.uk/world-news/2021/11/10/three-men-tortured-killed-archaeologist-teen-daughter-rare-stradivarius/), [STERN](https://www.stern.de/panorama/bernard-von-bredow--deutscher-archaeologe-und-tochter-offenbar-in-paraguay-getoetet-30886478.html), [Sputnik News](https://snanews.de/20211102/deutscher-forscher-tochter-paraguay-getoetet-medien-4182271.html)
+> BILD [[1](https://www.youtube.com/watch?v=QpJYGNltWOI)] [[2](https://www.youtube.com/watch?v=VUEhKJdGVxY)] [[3](https://www.youtube.com/watch?v=wzFTU2_QWPM)] [[4](https://www.bild.de/news/ausland/news-ausland/foltermord-von-paraguay-hauptverdaechtiger-aus-dem-knast-entlassen-80944764.bild.html)] [[5](https://www.bild.de/news/ausland/news-ausland/nach-bluttat-in-paraguay-bleiben-die-foltermorde-ungesuehnt-84894890.bild.html?t_ref=https%3A%2F%2Fwww.bild.de%2F)], RTL [[1](https://www.rtl.de/cms/bernard-von-bredow-und-tochter-in-paraguay-getoetet-hauptverdaechtiger-deutscher-wieder-frei-5001426.html)] [[2](https://www.rtl.de/cms/mord-an-bernard-von-bredow-und-seiner-tochter-in-paraguay-vierter-verdaechtiger-gefasst-4868287.html)] [[3](https://www.rtl.de/cms/bernard-von-bredow-getoetet-stecken-diese-drei-deutschen-hinter-der-tat-4864874.html)] [[4](https://www.rtl.de/cms/bernard-von-bredow-und-tochter-in-paraguay-erschossen-jetzt-spricht-der-freigelassene-ex-verdaechtige-volker-g-5002034.html)], [The Torygraph](https://www.telegraph.co.uk/world-news/2021/11/10/three-men-tortured-killed-archaeologist-teen-daughter-rare-stradivarius/), [STERN](https://www.stern.de/panorama/bernard-von-bredow--deutscher-archaeologe-und-tochter-offenbar-in-paraguay-getoetet-30886478.html), [Sputnik News](https://snanews.de/20211102/deutscher-forscher-tochter-paraguay-getoetet-medien-4182271.html)
 
-
+<br/>
 
 **Forums and Wikis** discussing Bernard Raymond von Bredow's and his daughter's death:
 
-[HET-Forum](https://het-forum.de/viewtopic.php?t=1131), [Wikipedia](https://de.wikipedia.org/wiki/Bernard_von_Bredow)
+> [HET-Forum](https://het-forum.de/viewtopic.php?t=1131), [Wikipedia](https://de.wikipedia.org/wiki/Bernard_von_Bredow)
 
-
+<br/>
 
 **SEE ALSO** (*please*)
 
-https://www.bvonb.org/ [[English](https://en.bvonb.org/)] [[Spanish](https://es.bvonb.org/)] - a website **offering 150,000 USD to anyone knowing any important details necessary to solve the crime.** 
+> https://www.bvonb.org/ [[English](https://en.bvonb.org/)] [[Spanish](https://es.bvonb.org/)] - a website **offering 150,000 USD to anyone knowing any important details necessary to solve the crime.** 
 
 While researching this some more on the 15th of October 2023 I have discovered the above page, which I had never stumbled upon in the past 8 months of research I've put into this article. I do not understand any of the symbols on it, nor do I know who set it up or why the year "1983" is referenced so often. *If you understand anything here, feel free to contact me!*
 
+<br/>
 
+<br/>
+
+## The End of Bredow
 
 This may be the most unsatisfying ending to any chapter you've ever read, but that is sadly how it is. There is no catharsis, no redemption. Sometimes things just happen and you're not allowed to have clearance within your or anyone's lifetime. **This will be the end of the entire story arc revolving around Bernard Raymond von Bredow** and the legend he is! 
 
 You've just read through a man's entire life story! Maybe take a break?
-
-
 
 [Here are some cat pictures and videos to possibly lighten the mood](https://mastodon.de/@KittyPictures) a bit... it is the best I can do.
 
@@ -302,7 +310,7 @@ Okay... you can do this, let's go...
 
 Just as you forgot that this was about mastodon.de whilst reading this article, Bernard Raymond von Bredow forgot about the fact he owned it during the 20 or so years of his life where it was entirely unused. 
 
-At least that is the best way I can explain it! It is easy to forget some domain you registered many years ago when it most likely wasn't even listed on any bills you got nor were you ever reminded of its existence through admin panels in which your domains were displayed - because that is my working hypothesis: Bernard Raymond von Bredow hired many web developers throughout his lifetime who always just billed the domains next to their other services (*webhosting, E-Mail*), and hence the "domain" category was never shown in a way that would show all the domains that are being billed like
+At least that is the best way I can explain it! It is easy to forget some domain you registered many years ago when it most likely wasn't even listed on any bills you got nor were you ever reminded of its existence through admin panels in which your domains were displayed - *because that is my working hypothesis:* Bernard Raymond von Bredow hired many web developers throughout his lifetime who always just billed the domains next to their other services (*webhosting, E-Mail*), and hence the "domain" category was never shown in a way that would show all the domains that are being billed like
 
 - mammutheum.de
 
@@ -310,7 +318,7 @@ At least that is the best way I can explain it! It is easy to forget some domain
 
 - violinen.biz
 
-Etc.! No, it was always just shown as "cost of domains" and since a ".de" domain can be as little as 5€ a year, that is something that can be easily overlooked on monthly bills. Nothing you run after or that enters your consciousness ever again. 
+Etc.! No, it was most likely always just shown as "cost of domains" and since a ".de" domain can be as little as 5€ a year, that is something that can be easily overlooked on monthly bills. Nothing you run after or that enters your consciousness ever again. 
 
 At least this is how I can explain the fact his family had no idea of the domain mastodon.de's existence, but more about that later.
 
@@ -318,7 +326,7 @@ At least this is how I can explain the fact his family had no idea of the domain
 
 If you know anything about mastodon.de or have read ahead further, you'll know that we launched the Mastodon instance on July 11th 2023, where we may have mentioned that we got the domain in February of 2023. You may even already know the story that mastodon.de entered the "registration grace period" in January of 2023 (*again, more on that later*) which is why you may be wondering "How come the domain was still registered in a dead man's name for that long?" to which I can give the following hypothesis:
 
-Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yearly on an **early day in early January.** It is quite likely his bank account or PayPal, or whatever he used to make the payment, **wasn't even shut down in January of 2022**, just two months after his death. So, the automatic payment to the domain registrar was able to be transferred, registering the domain for another year in his name post-mortum, leading to the domain expiring, also called entering the "registration grace period" in early January of 2023, where Erik Uden was searching for a domain for his upcoming huge Mastodon instance project...
+Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yearly **in early January.** It is quite likely his bank account or PayPal, or whatever he used to make the payment, **wasn't even shut down in January of 2022**, just two months after his death. So, the automatic payment to the domain registrar was able to be booked, registering the domain for another year in Bredow's name post-mortum, leading to the domain expiring, also called entering the "registration grace period", in early January of 2023, where Erik Uden was searching for a domain for his upcoming huge Mastodon instance project...
 
 <br/>
 
@@ -328,17 +336,192 @@ Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yea
 
 # An Exciting Evening in November 2022
 
-On [insert date here], a Wednesday in November of 2022, on a whim after being contacted the night before, I drove over 650 km across the country from my city of Norden to the city of Frankfurt with the knowledge that I would not return empty handed. 
+On the 15th of November 2022, a Tuesday, on a whim after being contacted the night before, I drove over 650 km across Germny from my city of Norden to the city of Frankfurt with the knowledge that I would not return empty handed. 
 
-Nick, a friend of mine (Erik Uden), which I got to know through the various protest actions on the island of Sylt in Germany in 2022 (*both me and him were organizers of the various events on Sylt - Aktion Sylt and Sylt51*), works at the DENIC eG, the co-op that manages the .de top level domain in Frankfurt! 
+Nick, a friend of mine, which I got to know through the various protest actions on the island of Sylt in Germany in 2022 (*both me and him were organizers of some events on Sylt - Aktion Sylt and Sylt51*), works at the DENIC eG, the co-op that manages the .de top level domain in Frankfurt! 
 
-For the less technical users: a "top level domain" is the ending of every domain name, for "erikuden.com" the ".com" bit would be the top level domain! There are many types of such TLDs, originally "generic top level domains" (gTLD) which are the original top level domains that existed on the internet, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these gTLDs! Nowadays, there are also the "new generic top level domains" (ngTLD) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money ~200k USD*) and then sell domains using that TLD back to people, such as ".marketing" or ".lgbt", even ".google" and ".amazon" exist now engrained into the fabric of the internet. Also the guy that introduced this program at ICANN later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*now Identity Digital*) which owns about 17% of all ngTLDs, 15% of all TLDs, so they own 15% of all basic internet infrastructure but are vastly unknown! Scary stuff, really! But that isn't what this story is about, because additionally there are also country code top level domains" (ccTLD) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
+## Tangent about how Top Level Domains work
 
-Fun fact: this system is so old that even ".su" was given to the Soviet Union! Unlike ".yu" for Yugoslavia, which ICANN ended after Yugoslavia ended, ".su" was somehow annexed by the Russian government and can (*somehow*) still be registered to this day! 
+For the less technical users: a "top level domain" is the ending of every domain name, for "erikuden.com" the ".com" bit would be the top level domain! There are many types of such top level domains, abbreviated as **TLD**s, for example originally the "generic top level domains" (*gTLD*) existed, which are the original top level domains, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these! Nowadays, there are also the "new generic top level domains" (*ngTLD*) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money ~200k USD*) and then sell domains using that TLD back to people, such as ".marketing" or ".lgbt", even ".google" and ".amazon" exist now, forever engrained into the fabric of the internet. 
 
-But back to the main story: Each country gets to decide what entity manages this top level domain and how! In Germany, that task is done by the DENIC eG,, which stands for ".DE Network Information Center" and then the company type eG "eingetragene Genossenschaft" (*worker's co-op*), you will see that "NIC"  term used a lot when dealing with domains and top level domains. 
+Also, [Akram Atallah](https://www.linkedin.com/in/akram-atallah/), the man that introduced this program as president of ICANN later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*now Identity Digital*) which [owns about 17% of all ngTLDs, 15% of all TLDs](https://docs.google.com/spreadsheets/d/117vHhDS9wb-1wpBdbVvsZjGGfLx06fAre1UCtiFMHe0/edit?usp=sharing), so they own 15% of all basic internet infrastructure but are vastly unknown! Scary stuff, really! However, that isn't what this story is about, because additionally there are also country code top level domains" (*ccTLD*) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
 
-So, since there are about 17 million currently registered .de domains the DENIC has huge amounts of 
+**Fun fact:** this system is so old that even ".su" was given to the Soviet Union! Unlike ".yu" for Yugoslavia, *which ICANN ended after Yugoslavia ended*, ".su" was somehow annexed by the Russian government and can (*somehow*) [still be registered to this day](https://tld-list.com/tld/su)!
+
+
+
+**But back to the part important for this story:** Each country gets to decide what entity manages this top level domain and how! In Germany, that task is done by the *DENIC eG*, which stands for ".**DE** **N**etwork **I**nformation **C**enter" with the addendum being the company type *eG* "**e**ingetragene **G**enossenschaft" (*worker's co-op*). You will see that "NIC" term used a lot when dealing with domains and especially top level domains. 
+
+Since there are about 17 million currently registered .de domains, the DENIC has huge amounts of funds, but is simultaneously a semi-government worker's co-op that has **no profit motive**. The DENIC never has any money struggles because all it needs to do to get more money is raise the .de domain registration cost by a singular cent, and even if they mess up that, they are so essential to Germany's IT infrastructure they are guaranteed to be bailed out by the government no matter what. 
+
+**End of Tangent**
+
+
+
+
+
+***Long story short:*** The DENIC was renewing all of their servers and "phasing out" (*i.e. throwing away*) LOTS of the "old" servers (*from 2018*) which I was happy to take for our upcoming project. 
+
+Since I wanted to write a separate story about the initial creation of the Mastodon instance mastodon.de, I am not going to go into too much detail about that, yet you can read about it here in the **specific blog post about us getting the hardware and building mastodon.de** (*if there is no link that means the blog post has not been written yet*). 
+
+
+
+So on the 15th of November in 2022 I was transporting servers from Frankfurt to Norden, which was a reoccurring theme, as I did the same on January 28th, as well as June 30th of 2023. All of this for just the idea of a mastodon instance which later became mastodon.de! After the first hardware transport in November, I began thinking about everything surrounding this instance more and created lists of domains that we could use. 
+
+Here is that exact list created and maintained on my note taking app Quillpad:
+
+```markdown
+Created at: 2023-01-26 10:35
+Last modified at: 2023-07-05 11:59
+
+https://tld-list.com/tld/
+
+# Deutschland
+- rlp.social
+- nds.social
+
+
+# Fediverse
+fediverse.lgbt
+
+
+
+
+# Mastodon
+
+mastodo.nu
+mstdn.tokyo
+todon.space
+todon.us
+todon.tech
+mastodon.lat 
+mastodon.gift
+mastodon.au
+mastodon.ong 
+mstd.no 
+mstdn.date 
+masto.ly 
+masto.gg 
+todon.guru 
+mstdn.camp
+mstdn.pizza
+masto.bar
+masto.coffee
+todon.town
+mstdn.country
+masto.country
+masto.place 
+mstdn.day (70€)
+masto.run 
+masto.red
+masto.pink 
+masto.black
+mstdn.green 
+mstdn.pink 
+mstdn.ee
+masto.ee
+masto.church
+mastod.us
+masto.date
+mstdn.date
+mstdn.soy
+masto.soy
+mstdn.center
+masto.center
+mstdn.observer
+masto.observer
+mstdn.academy
+masto.systems
+mstdn.land
+mastod.io
+masto.bond
+mstdn.solar
+masto.solar
+mstdn.irish
+
+
+
+
+# Pixelfed
+pixelfed.fun
+pixelfed.lat
+pixlfed.cyou
+pixelfed.wiki
+pixelfed.guru
+pixelfed.gay
+pixelfed.top
+pixelfed.media
+pixelfed.asia
+pixelfed.africa
+pixelfed.date
+pixelfed.love
+pixelfed.cool
+pixelfed.wtf
+pixelfed.center
+pixelfed.style
+pixelfed.fashion
+pixelfed.photography
+pixelfed.gallery
+pixelfed.graphics
+pixelfed.li
+pixelfed.cooking
+pixelfed.coffee
+pixelfed.tv
+pixelfed.pub
+pixelfed.piza
+pixelfed.town
+pixelfed.boo
+pixelfed.red
+pixelfed.camp
+pixelfed.film
+pixelfed.gg
+pixelfed.ai
+pixelfed.country
+pixelfed.soy
+pixelfed.pub
+
+
+## Strange Ideas:
+pixelfeed.me
+pixelf.id 
+pixelf.ee
+pixelfe.day
+
+
+
+
+
+### HANDSHAKE (Fakium)
+*Handshake domains are fake crypto domains you can only use if you have some weird programs installed, these are NOT REAL*
+mastodon.sus
+mastodon.pgp
+mastod.ot
+mast.od
+mast.oo
+masto.ja
+mastodon.catgirl
+```
+
+These are the domains I ended up buying at some point:
+
+```markdown
+• fediverse.gay (28.14 € / year)
+  ╚═>Namecheap
+• fediver.su (5.59 € / year)
+  ╚═>Regery
+• fedive.ru (3.39 € / year)
+  ╚═>Regery
+• ostfriesland.social (29.05 € / year)
+  ╚═>Namecheap
+• fediblock.wiki (24.50 € / year)
+  ╚═>Namecheap
+ pixelfed.party (25.41 € / year)
+  ╚═>Namecheap
+• beertu.be (4.99 € / year)
+  ╚═>Regery
+```
+
+When I initially created this list, all of the mentioned domains were available to be registered. Lots of that must've changed by now, but you can see there were many ideas. The main platform I was checking the availability for such domains was Namecheap through their "beast mode" - I did this research for multiple weeks until one boring morning, in which I just could not get out of bed, I logged back into Namecheap on my phone and did an interesting search query that would probably change my life forever...
 
 # A Boring Morning in January 2023
 
@@ -349,6 +532,8 @@ So, since there are about 17 million currently registered .de domains the DENIC 
 ## What is a Registration Grace Period (RGP)?
 
 ## Mammoth vs. Manitu
+
+[Uden AI Network](https://social.uden.ai/@Erik/posts/AX7nlOquw7TUJBhtXk)
 
 ## auctionThisDomainForFree-noScam.zipbomb
 

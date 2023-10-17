@@ -86,43 +86,110 @@ As uncoordinated as it can get, young Bernard excavated most of Oscar's bones ov
 
 This must've been among the most exciting times in Bernard's life, *so far*. As at the end of 1984 he traveled back to his home city in Bavaria, rediscovering his love for archeology. When the winter's snow melted [in early 1985 he began working on his site of discovery yet again](https://www.samerbergernachrichten.de/224720-2/). 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0212.JPG">
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0220.JPG">
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0212.JPG" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0220.JPG" width="400"/>
+     </div>
+</div>
+</center>
 
 Bernard would begin publicly talking about Oscar the Mammoth, even began getting the authorities and professors involved. Under Bernard Raymond von Bredow's guidance, **22,300m³ of dirt have been moved in order to find more of the mammoth's skeleton**. Bernard seemed obsessed with Oscar and finding the rest of his remains, weeks on end he'd reconstruct his skeleton in order to know what bones were missing only to then [tirelessly search after and dig for them, knee-deep in the mud](https://www.samerbergernachrichten.de/224720-2/) of the archeologic site (*"Gerhartsreiter Graben" in Siegsdorf*). The locals initially thought he was insane, out of his mind, but all of that changed when they saw what he dragged out of the site with him: a **cave lion**, **woolly rhinoceros**, and a **Megaloceros** (*giant deer*) to only name the remains of the extinct animals he discovered. 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/25.JPG"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/25.JPG" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG"/>
+     </div>
+</div>
+</center>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/17.JPG"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/17.JPG" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0194.JPG" width="400"/>
+     </div>
+</div>
+</center>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG"></img>
-
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0194.JPG"></img>
 
 Suddenly, that skepticism turned into excitement and Bernard's findings were praised in the entire city. This went as far as this city even **changing their Coat of Arms / Emblem to show Oscar the Mammoth**. 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/web groes wappen1.JPG"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/web groes wappen1.JPG" width="400"/>
+     </div>
+</div>
+</center>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/Luewe_in_Bayern1.jpg"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/Luewe_in_Bayern1.jpg" width="400"/>
+     </div>
+</div>
+</center>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG"></img>
 
 Here's a full article Bernard von Bredow wrote about this event himself:
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_prospekt_87.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_1.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_2.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das mammut von siegsdorf rckseite 801x736.jpg"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_prospekt_87.jpg" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_1.jpg"/>
+     </div>
+</div>
+</center>
+
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_2.jpg" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das mammut von siegsdorf rckseite 801x736.jpg"/>
+     </div>
+</div>
+</center>
+
+
 
 The skeletons, especially Oscar, would continue to be shown at various exhibits all across the world! From Shropshire (*England*), Amsterdam (*Netherlands*), Tyrole (*Austria*), Stockholm (*Sweden*), Halle (*Germany*), [and many many more](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=1), Oscar has really seen the world, and his companion Bernard Raymond von Bredow alongside with it. In Shropshire he even got to work as a visiting scientist for the University College of Cambridge, later the King of the Netherlands even [talked with Bernard about his skeletons](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2) on his own exhibition showcasing an entire family of mammoths that he found.
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/shropshire_arc_logo.jpg"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/shropshire_arc_logo.jpg" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/prinz bernhard u bernard 801x734.jpg"/>
+     </div>
+</div>
+</center>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/prinz bernhard u bernard 801x734.jpg"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oskar in schweden 801x537.jpg" width="400"/>
+     </div>
+</div>
+</center>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oskar in schweden 801x537.jpg"></img>
 
 Yes, you read that right *mammoths*, plural! The initial findings and this acknowledgement sparked something with such an intensity within Bernard, he would dedicate the rest of his life to archeology leading him to discover many, many more mammoths - as a matter of fact, counting only the ones from 1985 to 1999, Bernard Raymond von Bredow would organize ten (10) archeologic excavations in Germany, New Zealand, Scotland, England, Siberia (Russia), Kazakhstan, Mongolia, Arizona (USA), Alaska (USA), and Hungary in just those 14 years! He especially enjoyed his time in Siberia and the intensive exchange with the Academy of Science in Moscow in 1991. That same year Bernard would even [supervision Russian scientists](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/expeditionen-und-ausgrabungen) in his own newly founded museum about mammoths: The **Mammutheum** (*portmanteau of the German word for mammoth "Mammut" and "Museum"*)  with **Oscar being the main attraction**.
 
@@ -130,7 +197,13 @@ Yes, you read that right *mammoths*, plural! The initial findings and this ackno
 
 Sadly, **this would be Bernard Raymond von Bredow's fall from grace**. Bernard had extravagant plans for the Mammutheum including a [video spectacle, light/laser shows, and animations](https://www.samerbergernachrichten.de/224720-2/) (*as odd as it may seem, this is something he seemed to have* [*planned and executed in the exhibition in Stockholm*](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2) *as well*). Still, because of this, many scientists (*outside of Russia*) no longer supported him due to the commercialization of their findings, he'd more and more deeply go into "experimental archeology" and begin believing in conspiratorial myths [losing all support from local politicians](https://www.samerbergernachrichten.de/224720-2/), *but not the local population entirely*. As has been said, his exhibits were widely visited, even the first one that was just Oscar in a gym hall in Siegsdorf in 1987 had [2000 visitors in just 2 weeks](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&limitstart=). 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oscar_in_voller_pracht.jpg"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oscar_in_voller_pracht.jpg" width="700"/>
+     </div>
+</div>
+</center>
 
 The city of Siegsdorf, now being aware of the archeologic treasures surrounding it, began plotting against Bernard and opened their own museum named [*Southeast Bavarian Museum of Natural History and Mammoths*](https://museum-siegsdorf.de/museum.php) in May 1995 showcasing the **largest and best maintained skeleton of a mammoth ever discovered in Europe**, and it wasn't Oscar. The people of Siegsdorf creatively named it "Siegi". 
 
@@ -170,7 +243,13 @@ But in all honesty, beyond this, I do not know what to write down here. We've al
 
 Another interesting tidbit may be that Oscar the Mammoth was used as [promotional material for the Roland Emmerich movie 10.000 BC](https://www.mammutheum.de/index.php/museum-und-steinzeitpark/aktivitaeten-bis-heute?showall=&start=4) in 2008!
 
-![bild](/images/blog/2023-09-05-history-of-domain-mastodon.de/10000bc-close-801x534.jpg)
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/10000bc-close-801x534.jpg" width="500"/>
+     </div>
+</div>
+</center>
 
 
 Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Bernard was friends with Roland Emmerich and just thought this would be funny. 
@@ -179,7 +258,13 @@ There are terabytes of images and texts on this website and they tell a great st
 
 One way or the other, thanks to Bernard Raymond von Bredow, Oscar got his fair share on the big screen.
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_7580.JPG"></img>
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_7580.JPG" width="700"/>
+     </div>
+</div>
+</center>
 
 Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending, there were just a few losses on the way*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were sort-of plotting against Bernard with their own museum? Yup, obviously a non-existent / non-state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family saw in this some sort of greater conspiracy, even describing the entire Covid ordeal as a "plandemic" on the frontpage of the Mammutheum. I obviously do not endorse nor believe that.
 

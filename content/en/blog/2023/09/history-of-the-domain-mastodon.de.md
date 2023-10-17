@@ -9,15 +9,21 @@ author_handle: '@ErikUden@mastodon.de'
 
 ---
 
+<center><b>Created at:</b> 2023.09.05 at 12:10  |  <b>Last Updated:</b> 2023.10.17 at 10:42</center>
 
+<br>
 
-<center><b>Created at:</b> 2023.09.05 at 12:10  |  <b>Last Updated:</b> 2023.10.16 at 23:40</center>
+<center>by</center>
+
+<a href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer"><center><h1>Erik Uden</h1></center></a>
+
+<br/>
 
 <br/>
 
 # Note: Under Active Development
 
-Hi there! This blog post is under active and heavy development. I've began sharing it with people due to the story about Bernard von Bredow in relation to mastodon.de being brought up in a local newspaper recently, although it was never meant to be shared at this stage. This is a sneak-peak, many things will still change. Have fun reading it, though!
+**Hi there!** This blog post is under ***active and heavy development.*** I've began sharing it with people due to the story about Bernard von Bredow in relation to mastodon.de [being brought up in a local newspaper recently](https://nachrichten.ostfriesischer-kurier.de/Nachrichten/Ein-digitales-Mammut-in-Norden-2762.html), although it was never meant to be shared at this stage. This is a sneak-peak, many things will still change. Have fun reading it, though!
 
 <br/>
 
@@ -25,7 +31,7 @@ Hi there! This blog post is under active and heavy development. I've began shari
 
 # Prologue
 
-There are multiple perspectives to this story, and it is hard to come up with the right way of telling it. There is the **historic perspective** explaining why this domain exists, what it was originally meant for, and why it remained unused up until I got it - and then there's that: **WHY did I get it**? How did I, [Erik Uden](https://mastodon.de/@ErikUden), of all people, get involved in this story? mastodon.shop, as an example, has been sold for 36k USD on the domain aftermarket, every mastodon.tld has been registered years ago and they're widely sought after! So why would mastodon.de, the **name of the most popular Fediverse software** with the **top level domain of the country it was invented in** (*Germany - Mastodon GmbH*) be registered by me, more than two decades after it was initially created?
+There are multiple perspectives to this story, and it is hard to come up with the right way of telling it. There is the **historic perspective** explaining why this domain exists, what it was originally meant for, and why it remained unused up until I got it - and then there's that: **WHY did I get it**? How did I, [Erik Uden](https://mastodon.de/@ErikUden), of all people, get involved in this story? mastodon.shop, as an example, has been sold for 36k USD on the domain aftermarket, every mastodon.tld has been registered years ago and they're widely sought after! So why would mastodon.de, the **name of the most popular Fediverse software** with the **top level domain of the country it was invented in** (*Germany - Mastodon gGmbH*) be registered by me, more than two decades after it was initially created?
 
 This story will focus on the registration of the domain itself, as it required a multi-month operation during the beginning of 2023 (*January to early March*) having at some point dozens of people across all time zones working on it for everything to go just ***right***. If you're interested in the story about building the social network behind mastodon.de, click [here](https://join-mastodon.de).  
 
@@ -57,13 +63,21 @@ During the *Last Glacial Period*, also known as the ***Ice Age***, around what a
 
 <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_11.JPG">
 
-Frozen cold under layers of snow and ice, over the course of Millenia, above Oscar's gravesite, there were fought countless wars, cultures emancipated and exterminated, societies rose from ashes and fell from grace; **Oscar existed before the Germanic people**, **before even the remote concept of a "European" continent** and will still be there when those perish. Yet, surprisingly, long after his death, Oscar was first seen again in Siegsdorf (*Chiemgau*), a southern German village in Bavaria, central Europe, on an eventful [Saturday in October 1975](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/ein-junge-verwirklicht-einen-traum). A 16 year old German boy, out to find rare metals, through pure chance discovered and later named Oscar. That boy's name was **Bernard Raymond von Bredow** who will become the **center piece of this story**. 
+Frozen cold under layers of snow and ice, over the course of Millenia, above Oscar's gravesite, there were fought countless wars, cultures emancipated and exterminated, societies rose from ashes and fell from grace; **Oscar existed before the Germanic people**, **before even the remote concept of a "European" continent** and will still be there when those perish. Yet, surprisingly, long after his death, Oscar was first seen again in Siegsdorf (*Chiemgau*), a southern German village in Bavaria, central Europe, on an eventful [Saturday in October 1975](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/ein-junge-verwirklicht-einen-traum). A 16 year old German boy, out to find rare metals, through pure chance discovered and later named Oscar. That boy's name was **Bernard Raymond von Bredow** who will become the **center piece of the first arc of this story**. 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/36.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/36.JPG"></img>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
 
 # Best Friends Forever
 
-As uncoordinated as it can get, young Bernard excavated most of Oscar's bones over the course of the following three weeks from the clay he found them in, and then [stored them in his mother's attic without telling a soul](https://www.samerbergernachrichten.de/224720-2/). For this operation he would call in sick to school, later even claim [he suffered from "Mammotheritis"](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3) (*Mammugitis*). However, the following Winter in 1975 would distract young Bernard from his shared path with Oscar the Mammoth for over a decade, as his family inherited a farm in New Zealand, to which Bernard moved in an act of self-discovery to become:
+As uncoordinated as it can get, young Bernard excavated most of Oscar's bones over the course of the following three weeks from the clay he found them in, and then [stored them in his mother's attic without telling a soul](https://www.samerbergernachrichten.de/224720-2/). For this operation he would call in sick to school, later even jokingly claimed [he suffered from "Mammotheritis"](https://www.spiegel.de/panorama/justiz/bernard-von-bredow-gerichtsmediziner-spricht-hinrichtung-des-urzeitforschers-a-3a01ce5a-f453-453a-be18-c05d3590ddc3) (*Mammugitis*). However, the following Winter in 1975 would distract young Bernard from his shared path with Oscar the Mammoth for over a decade, as his family inherited a farm in New Zealand, to which Bernard moved in an act of self-discovery to become:
 
 - substitute laborer
 - piano tuner
@@ -77,45 +91,46 @@ This must've been among the most exciting times in Bernard's life, *so far*. As 
 
 Bernard would begin publicly talking about Oscar the Mammoth, even began getting the authorities and professors involved. Under Bernard Raymond von Bredow's guidance, **22,300m³ of dirt have been moved in order to find more of the mammoth's skeleton**. Bernard seemed obsessed with Oscar and finding the rest of his remains, weeks on end he'd reconstruct his skeleton in order to know what bones were missing only to then [tirelessly search after and dig for them, knee-deep in the mud](https://www.samerbergernachrichten.de/224720-2/) of the archeologic site (*"Gerhartsreiter Graben" in Siegsdorf*). The locals initially thought he was insane, out of his mind, but all of that changed when they saw what he dragged out of the site with him: a **cave lion**, **woolly rhinoceros**, and a **Megaloceros** (*giant deer*) to only name the remains of the extinct animals he discovered. 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/25.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/25.JPG"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/17.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/17.JPG"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG">
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0194.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG"></img>
+
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0194.JPG"></img>
 
 Suddenly, that skepticism turned into excitement and Bernard's findings were praised in the entire city. This went as far as this city even **changing their Coat of Arms / Emblem to show Oscar the Mammoth**. 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/web groes wappen1.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/web groes wappen1.JPG"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/Luewe_in_Bayern1.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/Luewe_in_Bayern1.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG"></img>
 
 Here's a full article Bernard von Bredow wrote about this event himself:
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_prospekt_87.jpg">
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_1.jpg">
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_2.jpg">
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das mammut von siegsdorf rckseite 801x736.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_prospekt_87.jpg"></img>
+
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_1.jpg"></img>
+
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das_mammut_von_siegsdorf_seite_2.jpg"></img>
+
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/das mammut von siegsdorf rckseite 801x736.jpg"></img>
 
 The skeletons, especially Oscar, would continue to be shown at various exhibits all across the world! From Shropshire (*England*), Amsterdam (*Netherlands*), Tyrole (*Austria*), Stockholm (*Sweden*), Halle (*Germany*), [and many many more](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=1), Oscar has really seen the world, and his companion Bernard Raymond von Bredow alongside with it. In Shropshire he even got to work as a visiting scientist for the University College of Cambridge, later the King of the Netherlands even [talked with Bernard about his skeletons](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2) on his own exhibition showcasing an entire family of mammoths that he found.
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/shropshire_arc_logo.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/shropshire_arc_logo.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/prinz bernhard u bernard 801x734.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/prinz bernhard u bernard 801x734.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oskar in schweden 801x537.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oskar in schweden 801x537.jpg"></img>
 
-Yes, you read that right *mammoths*, plural! The initial findings and this acknowledgement sparked something with such an intensity within Bernard, he would dedicate the rest of his life to archeology leading him to discover many, many more mammoths throughout his life - as a matter of fact, counting only the ones from 1985 to 1999, Bernard Raymond von Bredow would organize ten (10) archeologic excavations in Germany, New Zealand, Scotland, England, Siberia (Russia), Kazakhstan, Mongolia, Arizona (USA), Alaska (USA), and Hungary in just those 14 years! He especially enjoyed his time in Siberia and the intensive exchange with the Academy of Science in Moscow in 1991. That same year Bernard would even [supervision Russian scientists](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/expeditionen-und-ausgrabungen) in his own newly founded museum about mammoths: The **Mammutheum** (*portmanteau of the German word for mammoth "Mammut" and "Museum"*)  with **Oscar being the main attraction**.
-
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/1_Turnhalle_Bernard_sitzt_twischen_Unterkiefer35heller.JPG">
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/DSCF6702.JPG">
+Yes, you read that right *mammoths*, plural! The initial findings and this acknowledgement sparked something with such an intensity within Bernard, he would dedicate the rest of his life to archeology leading him to discover many, many more mammoths - as a matter of fact, counting only the ones from 1985 to 1999, Bernard Raymond von Bredow would organize ten (10) archeologic excavations in Germany, New Zealand, Scotland, England, Siberia (Russia), Kazakhstan, Mongolia, Arizona (USA), Alaska (USA), and Hungary in just those 14 years! He especially enjoyed his time in Siberia and the intensive exchange with the Academy of Science in Moscow in 1991. That same year Bernard would even [supervision Russian scientists](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/expeditionen-und-ausgrabungen) in his own newly founded museum about mammoths: The **Mammutheum** (*portmanteau of the German word for mammoth "Mammut" and "Museum"*)  with **Oscar being the main attraction**.
 
 <br/>
 
 Sadly, **this would be Bernard Raymond von Bredow's fall from grace**. Bernard had extravagant plans for the Mammutheum including a [video spectacle, light/laser shows, and animations](https://www.samerbergernachrichten.de/224720-2/) (*as odd as it may seem, this is something he seemed to have* [*planned and executed in the exhibition in Stockholm*](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2) *as well*). Still, because of this, many scientists (*outside of Russia*) no longer supported him due to the commercialization of their findings, he'd more and more deeply go into "experimental archeology" and begin believing in conspiratorial myths [losing all support from local politicians](https://www.samerbergernachrichten.de/224720-2/), *but not the local population entirely*. As has been said, his exhibits were widely visited, even the first one that was just Oscar in a gym hall in Siegsdorf in 1987 had [2000 visitors in just 2 weeks](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&limitstart=). 
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oscar_in_voller_pracht.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/oscar_in_voller_pracht.jpg"></img>
 
 The city of Siegsdorf, now being aware of the archeologic treasures surrounding it, began plotting against Bernard and opened their own museum named [*Southeast Bavarian Museum of Natural History and Mammoths*](https://museum-siegsdorf.de/museum.php) in May 1995 showcasing the **largest and best maintained skeleton of a mammoth ever discovered in Europe**, and it wasn't Oscar. The people of Siegsdorf creatively named it "Siegi". 
 
@@ -153,19 +168,18 @@ If you can speak German or have no problem with the auto-translated subtitles, y
 
 But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum that I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
 
-Especially fascinating I find this interview he had with Bayern Alpha in 2004: [Bayern Alpha Interview](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/vortraege-und-hoerfunkbeitraege?showall=&start=1), as it is just Bernard answering so many questions about himself! 
-
 Another interesting tidbit may be that Oscar the Mammoth was used as [promotional material for the Roland Emmerich movie 10.000 BC](https://www.mammutheum.de/index.php/museum-und-steinzeitpark/aktivitaeten-bis-heute?showall=&start=4) in 2008!
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0185.JPG">
+![bild](/images/blog/2023-09-05-history-of-domain-mastodon.de/10000bc-close-801x534.jpg)
 
-Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Bernard was good friends with Roland Emmerich and just thought this would be funny. 
+
+Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Bernard was friends with Roland Emmerich and just thought this would be funny. 
 
 There are terabytes of images and texts on this website and they tell a great story of what rich archeologic history such a small space had to offer, as well as how many visitors it must've fascinated in a year. I highly recommend you do this before continuing to the following, **rather morbid** sections.
 
 One way or the other, thanks to Bernard Raymond von Bredow, Oscar got his fair share on the big screen.
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_7580.JPG">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_7580.JPG"></img>
 
 Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending, there were just a few losses on the way*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were sort-of plotting against Bernard with their own museum? Yup, obviously a non-existent / non-state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family saw in this some sort of greater conspiracy, even describing the entire Covid ordeal as a "plandemic" on the frontpage of the Mammutheum. I obviously do not endorse nor believe that.
 
@@ -181,19 +195,24 @@ Sadly, the story of the physical Mammutheum ends on a low note (*but do not worr
 
 <br/>
 
-**Side note 2:** Yes, Bernard Raymond von Bredow has been a skilled (*antique*) violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am still omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article.
+**Side note 2:** Yes, Bernard Raymond von Bredow has been a skilled (*antique*) violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am still omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article.  
+
+
+**Now back to the story:**
 
 <br/>
 
-**Now back to the story:** 
+<br/>
+
+
 
 ## Paraguay
 
 The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both kind of faded away by the year of 2017, which is why then and there Bernard and his then 10 year old daughter Loreena moved to Paraguay to begin a new chapter of their lives. It isn't known much about them during this time, but the Mammutheum continued running through family members and he sustained his living in Paraguay by [building and refurbishing violins](https://violinen.biz). At this point he is in the [possession of four antique violins believed to have been made by the revered Italian luthier Antonio Stradivari](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) which were worth [multiple millions of Euros](https://www.theguardian.com/science/2018/may/21/scientists-find-secret-behind-sweet-sound-of-stradivarius-violins) ([*maybe even each*](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article)).
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/bernard mit andrea amati 801x534.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/bernard mit andrea amati 801x534.jpg"></img>
 
-<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/stradivaris werkstatt 801x557.jpg">
+<img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/stradivaris werkstatt 801x557.jpg"></img>
 
 <br/>
 
@@ -211,8 +230,6 @@ Here is a report by a local TV station (*ABC TV Paraguay*) which shows the polic
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Detienen a un alemán por crimen en Areguá<br><br>"Allanamos tres casas de ciudadanos alemanes, conocidos del fallecido. Incautamos varios elementos", crio. Hugo Grance, Dpto. de Homicidios<a href="https://twitter.com/hashtag/ABCTVPy?src=hash&ref_src=twsrc%5Etfw">#ABCTVPy</a> 🔗<a href="https://t.co/ZvwJlbwdHn">https://t.co/ZvwJlbwdHn</a> <a href="https://t.co/7w2a3whped">pic.twitter.com/7w2a3whped</a></p>— ABC TV Paraguay (@ABCTVpy) <a href="https://twitter.com/ABCTVpy/status/1458420657948176390?ref_src=twsrc%5Etfw">November 10, 2021</a></blockquote> 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
 ```
-
-
 
 <br>
 
@@ -232,11 +249,7 @@ In the light of this murder, the following people were arrested:
 
 - Stephen Jorg Messing Dachinger, 51
 
-<br/>
-
 Now, Volker Grannas claims the violins had been in his possession for a longer time as Bredow gave them into his custody when he travelled back to Germany for a summer, yet then lied to Bredow [claiming they were destroyed in a fire](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), when in reality as revealed through this investigation, they were in his possession the whole time. Ironic for Bredow to give the violins to his friend in order to prevent them from being stolen only for them to then be stolen and the aftermath of that most likely leading to his death. 
-
-<br/>
 
 So, since Volker Grannas was them main suspect: why would he kill a guy and his daughter to steal his prized possessions when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case, sees as the principal hypothesis for the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that. The murder and theft was hence about the certifications of those violins, not the violins themselves, as they had already been "stolen", or rather were never returned under the false pretense they were destroyed in a house fire. 
 
@@ -253,8 +266,6 @@ The Bredow residence was left in such disarray and so full of blood stains that 
 So, what came of this case? After hundreds of articles and huge press attention, so many early investigations with promising findings and arrests, *what happened?*
 
 **Nothing.** All charges dropped due to a lack of evidence. No people mentioned in this article are convicted criminals (*yet, though there is no reason to believe we will ever hear updates on this story*).
-
-
 
 ## News about the Bredow Case (*read further*)
 
@@ -286,7 +297,7 @@ You can also get "info" (*usually inaccurate, basically just accusatory nonsense
 
 > https://www.bvonb.org/ [[English](https://en.bvonb.org/)] [[Spanish](https://es.bvonb.org/)] - a website **offering 150,000 USD to anyone knowing any important details necessary to solve the crime.** 
 
-While researching this some more on the 15th of October 2023 I have discovered the above page, which I had never stumbled upon in the past 8 months of research I've put into this article. I do not understand any of the symbols on it, nor do I know who set it up or why the year "1983" is referenced so often. *If you understand anything here, feel free to contact me!*
+While researching this some more on the 15th of October 2023 I have discovered the above page, which I had never stumbled upon in the past 8 months of research I've put into this article. I do not understand any of the symbols on it, nor do I know who set it up or why the year "1983" is referenced so often. *If you understand this page more than I do, feel free to contact me!*
 
 <br/>
 
@@ -300,11 +311,13 @@ You've just read through a man's entire life story! Maybe take a break?
 
 [Here are some cat pictures and videos to possibly lighten the mood](https://mastodon.de/@KittyPictures) a bit... it is the best I can do.
 
-<br/>
-
-<br/>
-
 Okay... you can do this, let's go...
+
+<br/>
+
+<br/>
+
+
 
 ## A Domain Long Forgotten
 
@@ -338,33 +351,27 @@ Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yea
 
 On the 15th of November 2022, a Tuesday, on a whim after being contacted the night before, I drove over 650 km across Germny from my city of Norden to the city of Frankfurt with the knowledge that I would not return empty handed. 
 
-Nick, a friend of mine, which I got to know through the various protest actions on the island of Sylt in Germany in 2022 (*both me and him were organizers of some events on Sylt - Aktion Sylt and Sylt51*), works at the DENIC eG, the co-op that manages the .de top level domain in Frankfurt! 
+Nick, a friend of mine, which I got to know through the various protest actions on the island of Sylt in Germany in 2022 (*both me and him were organizers of some events on Sylt - [Aktion Sylt](https://aktion-sylt.de) and [Sylt51](https://www.reddit.com/r/sylt51/)*), works at the DENIC eG, the co-op that manages the .de top level domain in Frankfurt! 
 
 ## Tangent about how Top Level Domains work
 
-For the less technical users: a "top level domain" is the ending of every domain name, for "erikuden.com" the ".com" bit would be the top level domain! There are many types of such top level domains, abbreviated as **TLD**s, for example originally the "generic top level domains" (*gTLD*) existed, which are the original top level domains, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these! Nowadays, there are also the "new generic top level domains" (*ngTLD*) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money ~200k USD*) and then sell domains using that TLD back to people, such as ".marketing" or ".lgbt", even ".google" and ".amazon" exist now, forever engrained into the fabric of the internet. 
+*...you can [skip this](#end-of-tangent) if you already know or simply don't care. I promise, it is semi-relevant for understanding this section of the story.*
 
-Also, [Akram Atallah](https://www.linkedin.com/in/akram-atallah/), the man that introduced this program as president of ICANN later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*now Identity Digital*) which [owns about 17% of all ngTLDs, 15% of all TLDs](https://docs.google.com/spreadsheets/d/117vHhDS9wb-1wpBdbVvsZjGGfLx06fAre1UCtiFMHe0/edit?usp=sharing), so they own 15% of all basic internet infrastructure but are vastly unknown! Scary stuff, really! However, that isn't what this story is about, because additionally there are also country code top level domains" (*ccTLD*) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
+For the less technical users: a "top level domain" is the ending of every domain name, for "[erikuden.com](https://erikuden.com)" the ".com" bit would be the top level domain! There are many types of such top level domains, abbreviated as **TLD**s, for example originally the "generic top level domains" (*[gTLD](https://icannwiki.org/Generic_top-level_domain)*) existed, which are the original top level domains, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these! Nowadays, there are also the "new generic top level domains" (*[new gTLD](https://icannwiki.org/New_gTLD_Program)*) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money ~200k USD*) and then sell domains using that TLD back to people, such as "[.marketing](https://kuk.marketing)" or "[.lgbt](https://tech.lgbt/)", even "[.google](https://domains.google/)" and "[.amazon](https://nic.amazon/)" exist now, forever engrained into the fabric of the internet. 
+
+Also, [Akram Atallah](https://www.linkedin.com/in/akram-atallah/), the man that introduced the new gTLD program as president of ICANN later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*later Identity Digital*) which [owns about 17% of all new gTLDs, 15% of all TLDs](https://docs.google.com/spreadsheets/d/117vHhDS9wb-1wpBdbVvsZjGGfLx06fAre1UCtiFMHe0/edit?usp=sharing), so they own 15% of all root level internet infrastructure but are vastly unknown! Scary stuff, really! However, that isn't what this story is about, because additionally there are also country code top level domains" (*ccTLD*) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
 
 **Fun fact:** this system is so old that even ".su" was given to the Soviet Union! Unlike ".yu" for Yugoslavia, *which ICANN ended after Yugoslavia ended*, ".su" was somehow annexed by the Russian government and can (*somehow*) [still be registered to this day](https://tld-list.com/tld/su)!
-
-
 
 **But back to the part important for this story:** Each country gets to decide what entity manages this top level domain and how! In Germany, that task is done by the *DENIC eG*, which stands for ".**DE** **N**etwork **I**nformation **C**enter" with the addendum being the company type *eG* "**e**ingetragene **G**enossenschaft" (*worker's co-op*). You will see that "NIC" term used a lot when dealing with domains and especially top level domains. 
 
 Since there are about 17 million currently registered .de domains, the DENIC has huge amounts of funds, but is simultaneously a semi-government worker's co-op that has **no profit motive**. The DENIC never has any money struggles because all it needs to do to get more money is raise the .de domain registration cost by a singular cent, and even if they mess up that, they are so essential to Germany's IT infrastructure they are guaranteed to be bailed out by the government no matter what. 
 
-**End of Tangent**
-
-
-
-
+### End of Tangent
 
 ***Long story short:*** The DENIC was renewing all of their servers and "phasing out" (*i.e. throwing away*) LOTS of the "old" servers (*from 2018*) which I was happy to take for our upcoming project. 
 
 Since I wanted to write a separate story about the initial creation of the Mastodon instance mastodon.de, I am not going to go into too much detail about that, yet you can read about it here in the **specific blog post about us getting the hardware and building mastodon.de** (*if there is no link that means the blog post has not been written yet*). 
-
-
 
 So on the 15th of November in 2022 I was transporting servers from Frankfurt to Norden, which was a reoccurring theme, as I did the same on January 28th, as well as June 30th of 2023. All of this for just the idea of a mastodon instance which later became mastodon.de! After the first hardware transport in November, I began thinking about everything surrounding this instance more and created lists of domains that we could use. 
 

@@ -121,7 +121,6 @@ Bernard would begin publicly talking about Oscar the Mammoth, even began getting
 </div>
 </center>
 
-
 Suddenly, that skepticism turned into excitement and Bernard's findings were praised in the entire city. This went as far as this city even **changing their Coat of Arms / Emblem to show Oscar the Mammoth**. 
 
 <center>
@@ -140,10 +139,7 @@ Suddenly, that skepticism turned into excitement and Bernard's findings were pra
 </div>
 </center>
 
-
 Here's a full article Bernard von Bredow wrote about this event himself:
-
-
 
 <center>
 <div style="display:flex">
@@ -167,8 +163,6 @@ Here's a full article Bernard von Bredow wrote about this event himself:
 </div>
 </center>
 
-
-
 The skeletons, especially Oscar, would continue to be shown at various exhibits all across the world! From Shropshire (*England*), Amsterdam (*Netherlands*), Tyrole (*Austria*), Stockholm (*Sweden*), Halle (*Germany*), [and many many more](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=1), Oscar has really seen the world, and his companion Bernard Raymond von Bredow alongside with it. In Shropshire he even got to work as a visiting scientist for the University College of Cambridge, later the King of the Netherlands even [talked with Bernard about his skeletons](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/planung-und-durchfuehrung-von-ausstellungen?showall=&start=2) on his own exhibition showcasing an entire family of mammoths that he found.
 
 <center>
@@ -189,7 +183,6 @@ The skeletons, especially Oscar, would continue to be shown at various exhibits 
      </div>
 </div>
 </center>
-
 
 Yes, you read that right *mammoths*, plural! The initial findings and this acknowledgement sparked something with such an intensity within Bernard, he would dedicate the rest of his life to archeology leading him to discover many, many more mammoths - as a matter of fact, counting only the ones from 1985 to 1999, Bernard Raymond von Bredow would organize ten (10) archeologic excavations in Germany, New Zealand, Scotland, England, Siberia (Russia), Kazakhstan, Mongolia, Arizona (USA), Alaska (USA), and Hungary in just those 14 years! He especially enjoyed his time in Siberia and the intensive exchange with the Academy of Science in Moscow in 1991. That same year Bernard would even [supervision Russian scientists](https://www.mammutheum.de/index.php/ueber-bernard-von-bredow/expeditionen-und-ausgrabungen) in his own newly founded museum about mammoths: The **Mammutheum** (*portmanteau of the German word for mammoth "Mammut" and "Museum"*)  with **Oscar being the main attraction**.
 
@@ -251,7 +244,6 @@ Another interesting tidbit may be that Oscar the Mammoth was used as [promotiona
 </div>
 </center>
 
-
 Yes, this is our Oscar the Mammoth being transported all the way to Berlin in order to be shown for the world premiere of 10.000 BC. Apparently Bernard was friends with Roland Emmerich and just thought this would be funny. 
 
 There are terabytes of images and texts on this website and they tell a great story of what rich archeologic history such a small space had to offer, as well as how many visitors it must've fascinated in a year. I highly recommend you do this before continuing to the following, **rather morbid** sections.
@@ -282,14 +274,11 @@ Sadly, the story of the physical Mammutheum ends on a low note (*but do not worr
 
 **Side note 2:** Yes, Bernard Raymond von Bredow has been a skilled (*antique*) violin builder / refurbisher for about two decades at this point and *also has an interesting & long family history*, as you may have noticed, he is a man full of surprises and I am still omitting ***so much*** information writing down this story as our main character in it is just too fascinating to condense into written, chronological words. Again: **look Bernard Raymond von Bredow up! Read more stuff about him** - I cannot possibly talk about all of it because this is already a huge article.  
 
-
 **Now back to the story:**
 
 <br/>
 
 <br/>
-
-
 
 ## Paraguay
 
@@ -402,8 +391,6 @@ Okay... you can do this, let's go...
 
 <br/>
 
-
-
 ## A Domain Long Forgotten
 
 Just as you forgot that this was about mastodon.de whilst reading this article, Bernard Raymond von Bredow forgot about the fact he owned it during the 20 or so years of his life where it was entirely unused. 
@@ -458,7 +445,7 @@ Since there are about 17 million currently registered .de domains, the DENIC has
 
 Since I wanted to write a separate story about the initial creation of the Mastodon instance mastodon.de, I am not going to go into too much detail about that, yet you can read about it here in the **specific blog post about us getting the hardware and building mastodon.de** (*if there is no link that means the blog post has not been written yet*). 
 
-So on the 15th of November in 2022 I was transporting servers from Frankfurt to Norden, which was a reoccurring theme, as I did the same on January 28th, as well as June 30th of 2023. All of this for just the idea of a mastodon instance which later became mastodon.de! After the first hardware transport in November, I began thinking about everything surrounding this instance more and created lists of domains that we could use. 
+So on the 15th of November in 2022 I was transporting servers from Frankfurt to Norden, which was a reoccurring theme, as I did the same on January 28th, as well as June 30th of 2023. All of this for just the idea of a mastodon instance which later became mastodon.de! After the second hardware transport in January, I began thinking about everything surrounding this instance more and created lists of domains that we could use. 
 
 Here is that exact list created and maintained on my note taking app Quillpad:
 
@@ -613,13 +600,17 @@ These are the domains I ended up buying at some point:
   ╚═>Regery
 ```
 
-When I initially created this list, all of the mentioned domains were available to be registered. Lots of that must've changed by now, but you can see there were many ideas. The main platform I was checking the availability for such domains was Namecheap through their "beast mode" - I did this research for multiple weeks until one boring morning, in which I just could not get out of bed, I logged back into Namecheap on my phone and did an interesting search query that would probably change my life forever...
+When I initially created this list, all of the mentioned domains were available to be registered. Lots of that must've changed by now, but you can see there were many ideas. The main platform I was checking the availability for such domains was Namecheap through their "beast mode" - I did this research for multiple weeks until one boring morning, in which I just could not get out of bed, I logged back into Namecheap on my phone and did an interesting search query...
 
 # A Boring Morning in January 2023
 
 ...that would dictate the following two months of my life and impact every waking moment after.
 
+The story goes as such: I was lying in bed on the morning of January 26th 2023, a Thursday. I spent the last days looking at good domains for an upcoming **big** Fediverse server, but never compiled a full list, just looked at many options and wrote down some good ideas in the *Note To Self* chat in the [Signal Messenger](https://dessalines.github.io/essays/why_not_signal.html). As you can see through the timestamp of the list above, I began at 10:35 AM, compiled a large list, and at some point must have found...
+
 ## PANIC! at the Namecheap
+
+mastodon.de free to register. This did not compute in my brain. Whilst searching through many domain options that I've defined in the advanced Namecheap search (*mstdn, mastodon, masto, todon, fediverse, fedi, pixelfed, etc.*) the domain "mastodon.de" just showed up like it was nothing with a green button asking me whether I wanted to register it. I actually remember my mind racing and heart beating faster whilst instantly going through the steps required to register this domain. During that process I thought of how nonsensical this situation was: mastodon.us was on sale for several tens of thousands of dollars at that point, and Mastodon is a software developed by a company in Germany, additionally the Mastodon / Fediverse community is disproportionally overrepresented by Germans, so not only should "mastodon" dot ANYTHING be already gobbled up by domain bots and hoarders, but also would there have been good reasons for the Mastodon developers or people from within the community to actively monitor that 
 
 ## What is a Registration Grace Period (RGP)?
 

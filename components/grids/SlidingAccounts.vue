@@ -1,60 +1,116 @@
 <script setup lang="ts">
 const accounts = [
-	{
-		name: "Daily Dose of Kitty",
+		{
+		name: "Tagesschau",
 		avatarUrl:
-			"https://media.mastodon.de/accounts/avatars/110/718/480/989/497/647/original/6829b8f69ba0cbd3.jpg",
-		handle: "@KittyPictures",
-		href: "https://mastodon.de/@KittyPictures",
+			"https://storage.googleapis.com/mastodon-prod-bucket/accounts/avatars/110/316/234/024/575/088/original/44d05faa621f371b.png",
+		handle: "@tagesschau@ard.social",
+		href: "https://ard.social/@tagesschau",
 	},
 	{
-		name: "E L H O T Z O",
+		name: "Bundestag",
 		avatarUrl:
-			"https://files.mastodon.social/accounts/avatars/108/194/513/323/477/977/original/5d1e2ca045b87ac5.jpg",
-		handle: "@elhotzo@mastodon.social",
-		href: "https://mastodon.social/@elhotzo",
+			"https://social.bund.de/system/accounts/avatars/110/784/325/911/431/821/original/86e6304bdb9b26a7.png",
+		handle: "@bundestag@social.bund.de",
+		href: "https://social.bund.de/@bundestag",
 	},
 	{
-		name: "Jan Böhmermann 🤨",
+		name: "Rust",
 		avatarUrl:
-			"https://edi.social/system/accounts/avatars/108/236/804/944/204/154/original/ceade2df0c9129a6.jpg",
-		handle: "@janboehm@edi.social",
-		href: "https://edi.social/@janboehm",
+			"https://cdn.masto.host/socialrustlangorg/accounts/avatars/111/250/853/473/809/020/original/e761c85205588b37.png",
+		handle: "@rust@social.rust-lang.org",
+		href: "https://social.rust-lang.org/@rust",
 	},
 	{
-		name: "Ralph Caspers",
+		name: "NixOS",
 		avatarUrl:
-			"https://files.mastodon.social/accounts/avatars/000/449/624/original/6d1642100f473992.jpeg",
-		handle: "@hyperjinx@mastodon.social",
-		href: "https://mastodon.social/@hyperjinx",
+			"https://assets.chaos.social/accounts/avatars/107/829/824/358/955/190/original/dc376d16f7077b2a.png",
+		handle: "@nixos_org@chaos.social",
+		href: "https://chaos.social/@nixos_org",
 	},
 	{
-		name: "Greta Thunberg",
+		name: "Correctiv",
 		avatarUrl:
-			"https://media.mastodon.nu/accounts/avatars/109/303/381/328/440/258/original/cae3e3f7a0006811.png",
-		handle: "@gretathunberg@mastodon.nu",
-		href: "https://mastodon.nu/@gretathunberg",
+			"https://usercontent.correctiv.social/accounts/avatars/109/404/977/223/540/217/original/b8757bf832989e61.png",
+		handle: "@correctiv_org@correctiv.social",
+		href: "https://correctiv.social/@correctiv_org",
 	},
 	{
-		name: "Amira Mohamed Ali",
+		name: "Frag den Staat",
 		avatarUrl:
-			"https://social.linksfraktion.de/system/accounts/avatars/108/243/911/069/247/630/original/31294ed973d4dc0b.jpeg",
-		handle: "@amira_mohamed_ali@social.linksfraktion.de",
-		href: "https://social.linksfraktion.de/@amira_mohamed_ali",
+			"https://assets.chaos.social/accounts/avatars/000/106/976/original/2a6d76fa8906e3bf.png",
+		handle: "@fragdenstaat@chaos.social",
+		href: "https://chaos.social/@fragdenstaat",
 	},
 	{
-		name: "Dietmar Bartsch",
+		name: "Auschwitz Memorial",
 		avatarUrl:
-			"https://social.linksfraktion.de/system/accounts/avatars/108/243/885/801/745/725/original/0a4a4bdfb9043772.jpeg",
-		handle: "@dietmarbartsch@social.linksfraktion.de",
-		href: "https://social.linksfraktion.de/@dietmarbartsch",
+			"https://s3.eu-central-2.wasabisys.com/mastodonworld/accounts/avatars/109/362/825/494/156/334/original/03ae37dcfbf94e56.jpg",
+		handle: "@auschwitzmuseum@mastodon.world",
+		href: "https://mastodon.world/@auschwitzmuseum",
 	},
 	{
-		name: "Gregor Gysi",
+		name: "Volker Quaschning",
 		avatarUrl:
-			"https://social.linksfraktion.de/system/accounts/avatars/108/244/318/362/038/411/original/0412628757583163.jpeg",
-		handle: "@gregorgysi@social.linksfraktion.de",
-		href: "https://social.linksfraktion.de/@gregorgysi",
+			"https://files.mastodon.green/accounts/avatars/109/261/637/888/939/055/original/6ce3bea697fbe61a.jpg",
+		handle: "@VQuaschning@mastodon.green",
+		href: "https://mastodon.green/@VQuaschning",
+	},
+	{
+		name: "Robert McNees",
+		avatarUrl:
+			"https://files.mastodon.social/accounts/avatars/000/010/908/original/a92bd0fffe57a93f.jpeg",
+		handle: "@mcnees@mastodon.social",
+		href: "https://mastodon.social/@mcnees",
+	},
+	{
+		name: "Technology Connections",
+		avatarUrl:
+			"https://media.mas.to/masto-public/accounts/avatars/109/322/052/660/944/600/original/aae3fb7490d08c57.jpg",
+		handle: "@TechConnectify@mas.to",
+		href: "https://mas.to/@TechConnectify",
+	},
+	{
+		name: "VCD",
+		avatarUrl:
+			"https://media.mstdn.social/accounts/avatars/109/710/708/034/675/243/original/47eea147514dc63d.jpg",
+		handle: "@VCDeV@mstdn.social",
+		href: "https://mstdn.social/@VCDeV",
+	},
+	{
+		name: "Jeff Geerling",
+		avatarUrl:
+			"https://files.mastodon.social/accounts/avatars/109/434/496/883/816/897/original/d8a616764f9ac860.jpg",
+		handle: "@geerlingguy@mastodon.social",
+		href: "https://mastodon.social/@geerlingguy",
+	},
+	{
+		name: "Netzpolitik.org",
+		avatarUrl:
+			"https://assets.chaos.social/accounts/avatars/000/016/863/original/1658c25e98d1e0d0.png",
+		handle: "@netzpolitik_feed@chaos.social",
+		href: "https://chaos.social/@netzpolitik_feed",
+	},
+	{
+		name: "Universität Jena",
+		avatarUrl:
+			"https://files.mastodon.social/accounts/avatars/001/090/353/original/1ea55d6205ba806c.jpg",
+		handle: "@unijena@mastodon.social",
+		href: "https://mastodon.social/@unijena",
+	},
+	{
+		name: "Edeka Peper",
+		avatarUrl:
+			"https://media.mastodon.de/accounts/avatars/111/113/824/357/680/569/original/2eb794e308182892.png",
+		handle: "@EDEKA_Peper",
+		href: "https://mastodon.de/@EDEKA_Peper",
+	},
+	{
+		name: "Eichkat3er",
+		avatarUrl:
+			"https://hessen.social/system/accounts/avatars/107/563/777/355/832/623/original/d9700cebf275c7c0.png",
+		handle: "@eichkat3r@hessen.social",
+		href: "https://hessen.social/@eichkat3r",
 	},
 ];
 </script>

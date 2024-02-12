@@ -58,6 +58,7 @@ export default defineI18nConfig(() => ({
 			teamMemberNiklasPosition: "Moderation & Public Relations",
 			teamMemberEbowskiPosition: "Moderation",
 			teamMemberWalterPosition: "Finance & Legal",
+			teamMemberLunaPosition: "Moderation, PR & DevOps",
 
 			// What is Mastodon Explaination Text
 			// What is Mastodon Explaination Text

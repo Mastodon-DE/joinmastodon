@@ -53,6 +53,12 @@ const people = [
 		imageUrl:
 			"https://media.mastodon.de/accounts/avatars/110/696/833/299/709/033/original/2209f6209ff48d44.jpg",
 	},
+	{
+		name: "Luna",
+		role: "teamMemberLunaPosition",
+		imageUrl:
+			"https://media.mastodon.de/accounts/avatars/111/334/673/534/843/422/original/a7a4430f337ca0de.png",
+	},
 	// More people...
 ];
 </script>

@@ -138,8 +138,7 @@ const showBankInfo = ref(false);
 				id="sponsors"
 				class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 flex lg:flex-row flex-col gap-4">
 				<p class="text-xs leading-5 text-gray-400 mr-auto">
-					&copy; {{ new Date().getFullYear() }} Uden AI. Licensed
-					under AGPLv3
+				&copy; {{ new Date().getFullYear() }} Uden AI - <a href="https://github.com/Mastodon-DE/joinmastodon">Open Source</a>
 				</p>
 				<a
 					href="https://liberapay.com/MastodonDE/donate"
@@ -202,15 +201,5 @@ const showBankInfo = ref(false);
 				Set your Memo / Reference as “Donation for mastodon.de”
 			</div>
 		</div>
-		<a
-			href="https://cpluspatch.com"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="px-4 py-4 text-gray-100 text-sm group block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
-			<div class="mx-auto max-w-7xl text-center w-full">
-				A site by <strong class="font-semibold">CPlusPatch</strong
-				><ButtonsAnimatedArrow />
-			</div>
-		</a>
 	</footer>
 </template>

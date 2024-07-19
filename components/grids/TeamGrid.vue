@@ -9,7 +9,7 @@ const people = [
 		name: "Rodirick",
 		role: "teamMemberRodirikPosition",
 		imageUrl:
-			"https://media.mastodon.de/accounts/avatars/110/696/726/121/965/579/original/b8f1e64fce0c91ba.png",
+			"https://media.mastodon.de/accounts/avatars/110/696/726/121/965/579/original/cc48b147952beef2.png",
 	},
 	{
 		name: "Nick",
@@ -52,12 +52,6 @@ const people = [
 		role: "teamMemberWalterPosition",
 		imageUrl:
 			"https://media.mastodon.de/accounts/avatars/110/696/833/299/709/033/original/2209f6209ff48d44.jpg",
-	},
-	{
-		name: "Luna",
-		role: "teamMemberLunaPosition",
-		imageUrl:
-			"https://media.mastodon.de/accounts/avatars/111/334/673/534/843/422/original/a7a4430f337ca0de.png",
 	},
 	// More people...
 ];

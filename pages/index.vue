@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useServerSeoMeta({
-	title: "Social Networking That's Not For Sale",
+	title: "Soziales Netzwerk, für das Gemeinwohl",
 	ogImage: "/images/screenshots/desktop1-resized.webp",
 	ogImageAlt: "Screenshot of the Mastodon.de public timeline",
 	description:
-		"Mastodon.de is a decentralized, community-focused social network created by Erik Uden",
+		"Mastodon.de ist ein wahrlich offenes und soziales Netzwerk. Ohne Werbung, Tracking oder Algorithmen, die dir den Schlaf rauben. Von der Gemeinschaft für die Gemeinschaft bereitgestellt.",
 	author: "Erik Uden",
 });
 

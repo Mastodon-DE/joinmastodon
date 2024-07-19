@@ -9,7 +9,7 @@ author_handle: '@ErikUden@mastodon.de'
 
 ---
 
-<center><b>Created at:</b> 2023.09.05 at 12:10  |  <b>Last Updated:</b> 2023.10.17 at 10:42</center>
+<center><b>Created at:</b> 2023.09.05 at 12:10  |  <b>Last Updated:</b> 2024.07.16 at 11:13</center>
 
 <br>
 
@@ -31,9 +31,11 @@ author_handle: '@ErikUden@mastodon.de'
 
 # Prologue
 
-There are multiple perspectives to this story, and it is hard to come up with the right way of telling it. There is the **historic perspective** explaining why this domain exists, what it was originally meant for, and why it remained unused up until I got it - and then there's that: **WHY did I get it**? How did I, [Erik Uden](https://mastodon.de/@ErikUden), of all people, get involved in this story? mastodon.shop, as an example, has been sold for 36k USD on the domain aftermarket, every mastodon.tld has been registered years ago and they're widely sought after! So why would mastodon.de, the **name of the most popular Fediverse software** with the **top level domain of the country it was invented in** (*Germany - Mastodon gGmbH*) be registered by me, more than two decades after it was initially created?
+There are multiple perspectives to this story, and it is hard to come up with the right way of telling it. There is the **historic perspective**, explaining why this domain exists, what it was originally meant for, and why it remained unused up until I got it - and then there's that: **WHY did I get it**? How did I, [Erik Uden](https://mastodon.de/@ErikUden), of all people, get involved in this story? mastodon.shop, as an example, has been sold for 36k USD on the domain aftermarket, every mastodon.tld has been registered years ago and they're widely sought after! So why would mastodon.de, the **name of the most popular Fediverse software** with the **top level domain of the country it was invented in** (*Germany - Mastodon gGmbH*) be registered by me, about two decades after it was initially created?
 
-This story will focus on the registration of the domain itself, as it required a multi-month operation during the beginning of 2023 (*January to early March*) having at some point dozens of people across all time zones working on it for everything to go just ***right***. If you're interested in the story about building the social network behind mastodon.de, click [here](https://join-mastodon.de).  
+This story will focus on the registration of the domain itself, as it required a multi-month operation during the beginning of 2023 (*January to early March*), having at some point dozens of people across all time zones working on it for everything to go just ***right***, but this story will also begin by telling the historical aspect and context necessary to understand ***why*** this domain exists. If you're interested in the story about building the social network behind mastodon.de, click [here](https://join-mastodon.de) (*I have not written that yet*). 
+
+Additionally, as if this introduction has not been mysterious enough, I must say the following: **I will probably never be able to tell the full story** - and I do not just mean that in the sense that any recollection of events, especially now almost a year after they occurred, will always be blinded and told slightly incorrectly through a myopic lens, but rather that I've discovered things during my search, my digging through files, and in my conversations with the people this story is about that must not be shared publicly, possibly ever. In respect to those who cannot defend themselves anymore, as well as some things just not being my business. I've inserted myself into the conversation with one goal in mind, now that I've achieved that goal I do not see it as my place to speak. When I am 100 years of age you may ask me about what I meant with the previous paragraph, but before then I am happy taking some things to the grave. 
 
 <br/>
 
@@ -206,7 +208,7 @@ Bernard was a local legend, and he wasn't willing to give up the fight. Due to h
 
 What had happened is that Bernard Raymond von Bredow planned to advertise his Mammutheum online, for which he registered two domains: One, quite obviously, *mammutheum.de*, and **the other named after the specific species of Oscar the Mammoth**. 
 
-### Oscar the Mammoth was a Mastodon.
+### Oscar the "Mammoth" was actually a Mastodon.
 
 **...this is when and why Bernard Raymond von Bredow first registered mastodon.de**.
 
@@ -232,7 +234,7 @@ If you can speak German or have no problem with the auto-translated subtitles, y
 
 - [Pinterest](https://www.pinterest.com/bernardraymondvonbredow/)
 
-But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum that I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en))
+But in all honesty, beyond this, I do not know what to write down here. We've already discussed so many things regarding Bernard Raymond von Bredow and his fascinating stories surrounding and cumulating in the Mammutheum that I'd much rather want you to explore their website: https://www.mammutheum.de/ ([English/Any Language Version](https://www-mammutheum-de.translate.goog/?_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en)).
 
 Another interesting tidbit may be that Oscar the Mammoth was used as [promotional material for the Roland Emmerich movie 10.000 BC](https://www.mammutheum.de/index.php/museum-und-steinzeitpark/aktivitaeten-bis-heute?showall=&start=4) in 2008!
 
@@ -258,7 +260,7 @@ One way or the other, thanks to Bernard Raymond von Bredow, Oscar got his fair s
 </div>
 </center>
 
-Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending, there were just a few losses on the way*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were sort-of plotting against Bernard with their own museum? Yup, obviously a non-existent / non-state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family saw in this some sort of greater conspiracy, even describing the entire Covid ordeal as a "plandemic" on the frontpage of the Mammutheum. I obviously do not endorse nor believe that.
+Sadly, the story of the physical Mammutheum ends on a low note (*but do not worry, the story itself has a "good" ending*) and as a bit of a warning: the relatives of Bernard Raymond von Bredow had to close down the Museum in 2022 due to lower visitor numbers mainly caused by Covid-19 pandemic related restrictions. Remember how the museum wasn't officially a museum due to local politicians not wanting to hear anything about it, as they were, according to the Bredow family, sort-of plotting against Bernard with their own museum? Obviously a non-existent / non-state-sanctioned museum cannot receive government help which every regular museum was eligible for during Covid. The family saw in this some sort of greater conspiracy, even describing the entire Covid ordeal as a "plandemic" on the frontpage of the Mammutheum. I obviously do not endorse nor believe such conspiracy myths. The website is now preserved in that last state. 
 
 <br/>
 
@@ -290,7 +292,7 @@ The Mammutheum and Bernard Raymond von Bredow's archeologic interests have both 
 
 <br/>
 
-By October of 2021, 4 years after moving here, exactly 46 years after first finding Oscar the Mammoth, Bernard Raymond von Bredow, at 62 years old, and his daughter, at 14 years old, were found dead in their apartment in Paraguay. **How on god's green earth did this happen?**
+By October of 2021, 4 years after moving there, exactly 46 years after first finding Oscar the Mammoth, Bernard Raymond von Bredow, at 62 years old, and his daughter, at 14 years old, were found dead in their apartment in Paraguay. **How on god's green earth did this happen?**
 
 <br/>
 
@@ -313,7 +315,7 @@ What precisely had happened and by whom is unknown to this day, yet **this is th
 
 Bernard Raymond von Bredow and his 14 year old (*sometimes said to be 15 years old*) daughter Loreena (*sometimes called "Lydia" in news reports*) **were found murdered on the 22nd of October 2021 in their house in Patiño, Itauguá** in the South-West of Paraguay. The [crime report by Hugo Grance](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), the chief investigator of the local police, notes that **Bredow's body showed** [**signs of torture**](https://apnews.com/article/science-arrests-biology-robbery-paraguay-fbd0c9b9aaa9a258e5d94091472fdd34) and was killed with a "[great caliber weapon](https://wochenblatt.cc/noch-keine-festnahmen-nach-doppelmord-an-deutschen-nahe-aregua/)". It is believed that at least two people were involved in the material execution of this murder. 
 
-The main motive for this murder is believed to be the four **four Stradivarius violins**, built in the 17th/18th century, Bredow had possessed, worth [multiple tens of millions of Euros](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article). After the murder they were no longer present in Bredow's home yet [found in the posession of **Volker Grannas**](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), a 58 year-old German who not only lived near Bredow's residence, but also was [a good friend of his](https://twitter.com/MinPublicoPy/status/1458385860240494600). 
+The main motive for this murder is believed to be the four **four Stradivarius violins**, built in the 17th/18th century, Bredow had possessed, worth [multiple tens of millions of Euros](https://www.thestrad.com/lutherie/is-16-million-for-a-violin-too-much-to-pay-not-these-days/12438.article). After the murder, so some stories say, they were no longer present in Bredow's home yet [found in the posession of **Volker Grannas**](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), a 58 year-old German who not only lived near Bredow's residence, but also was [a good friend of his](https://twitter.com/MinPublicoPy/status/1458385860240494600). 
 
 In the light of this murder, the following people were arrested:
 
@@ -323,11 +325,11 @@ In the light of this murder, the following people were arrested:
 
 - Stephen Jorg Messing Dachinger, 51
 
-Now, Volker Grannas claims the violins had been in his possession for a longer time as Bredow gave them into his custody when he travelled back to Germany for a summer, yet then lied to Bredow [claiming they were destroyed in a fire](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), when in reality as revealed through this investigation, they were in his possession the whole time. Ironic for Bredow to give the violins to his friend in order to prevent them from being stolen only for them to then be stolen and the aftermath of that most likely leading to his death. 
+Now, Volker Grannas claims the violins had been in his possession for a longer time as Bredow gave them into his custody when he travelled back to Germany for a summer, but then lied to Bredow [claiming they were destroyed in a fire](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay), when in reality as revealed through this investigation, they were in his possession the whole time. Ironic for Bredow to give the violins to his friend in order to prevent them from being stolen only for them to then be stolen and the aftermath of that most likely leading to his death. 
 
-So, since Volker Grannas was them main suspect: why would he kill a guy and his daughter to steal his prized possessions when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case, sees as the principal hypothesis for the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that. The murder and theft was hence about the certifications of those violins, not the violins themselves, as they had already been "stolen", or rather were never returned under the false pretense they were destroyed in a house fire. 
+So, since Volker Grannas was them main suspect: why would he kill a guy and his daughter to steal his prized possessions when the theft had already been orchestrated? Well, you see, **these violins are worthless without the internationally recognized certification** of their authenticity, which is what Lorena Ledesma, the prosecutor for the Bredow Case in Paraguay, sees as the principal hypothesis for the intention behind the murder. They also believed that this crime was [committed by someone who knew Bredow well](https://www.theguardian.com/world/2021/nov/10/stradivarius-violin-germans-killing-paraguay) and that they have enough evidence to conclude that. The murder and theft was hence about the certifications of those violins, not the violins themselves, as they had already been "stolen", or rather were never returned under the false pretense they were destroyed in a house fire. I am not a lawyer, I have no idea if that is theft or what that is. 
 
-One thing that should be noted is that those internationally recognized certifications are obviously also worthless without their counterpart violins. These certifications only serve the purpose of verifying the validity of these violins and have no intrinsic value by themselves. What I am trying to hint at here is that whoever committed all of these efforts (*murder*) in search for the certifications must've known the violins never burned in a house fire, a fact Bernard himself didn't even know, as that "loss" was public knowledge. No one would commit murder for a sheet of paper with no value. Whoever did this must've known the violins still existed. 
+One thing that should be noted is that those internationally recognized certifications are obviously also worthless without their counterpart violins. These certifications only serve the purpose of verifying the validity of these violins and have no intrinsic value by themselves. What I am trying to hint at here is that whoever committed all of these efforts (*murder*) in search for the certifications must've known the violins never burned in a house fire, a fact Bernard himself didn't even know, as that "loss" was public knowledge. No one would commit murder for a sheet of paper with no value. Whoever did this must've known the violins still existed. I am not trying to sound like I uncovered anything big here, this just sounds very obvious to me. 
 
 <br/>
 
@@ -371,7 +373,9 @@ You can also get "info" (*usually inaccurate, basically just accusatory nonsense
 
 > https://www.bvonb.org/ [[English](https://en.bvonb.org/)] [[Spanish](https://es.bvonb.org/)] - a website **offering 150,000 USD to anyone knowing any important details necessary to solve the crime.** 
 
-While researching this some more on the 15th of October 2023 I have discovered the above page, which I had never stumbled upon in the past 8 months of research I've put into this article. I do not understand any of the symbols on it, nor do I know who set it up or why the year "1983" is referenced so often. *If you understand this page more than I do, feel free to contact me!*
+While researching this some more on the 15th of October 2023 I have discovered the above page, which I had never stumbled upon in the past 8 months of research I've put into this article. I do not understand any of the symbols on it, nor do I know who set it up or why the year "1983" is referenced so often. *If you understand this page more than I do, feel free to contact me!* 
+
+It fascinates me that even years after I initially began looking into this I still find more things. Things no forum ever mentions, Wikipedia excludes, the biggest newspapers and worst yellow journalists somehow overlooked... 
 
 <br/>
 
@@ -409,9 +413,11 @@ At least this is how I can explain the fact his family had no idea of the domain
 
 <br/>
 
-If you know anything about mastodon.de or have read ahead further, you'll know that we launched the Mastodon instance on July 11th 2023, where we may have mentioned that we got the domain in February of 2023. You may even already know the story that mastodon.de entered the "registration grace period" in January of 2023 (*again, more on that later*) which is why you may be wondering "How come the domain was still registered in a dead man's name for that long?" to which I can give the following hypothesis:
+If you know anything about mastodon.de or have read ahead further, you'll know that we launched the Mastodon instance on July 11th 2023, where we may have mentioned that we got the domain in February of 2023. You may even already know the story that mastodon.de entered the "redemption grace period" (RGP) in January of 2023 (*again, more on that later*) which is why you may be wondering "How come the domain was still registered in a dead man's name for that long?" to which I can give the following hypothesis:
 
-Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yearly **in early January.** It is quite likely his bank account or PayPal, or whatever he used to make the payment, **wasn't even shut down in January of 2022**, just two months after his death. So, the automatic payment to the domain registrar was able to be booked, registering the domain for another year in Bredow's name post-mortum, leading to the domain expiring, also called entering the "registration grace period", in early January of 2023, where Erik Uden was searching for a domain for his upcoming huge Mastodon instance project...
+Bernard Raymond von Bredow **died in late October 2021**. The domain renewed yearly **in early January** (*January 5th to be precise*). It is quite likely his bank account or PayPal, or whatever he used to make the payment, **wasn't even shut down in January of 2022**, just two months after his death. I also now there was usually someone else registering in his name, a web developer he hired, so very likely they had to comprehend the horrible news first and their first reaction to hearing someone's death wasn't to cancel their domain and webhosting subscription. 
+
+So, the automatic payment to the domain registrar was able to proceed, registering the domain for another year in Bredow's name post-mortum, leading to the domain expiring, also called entering the "redemption grace period", on January 5th of 2023 at 18:00:04 (*GMT+1*), where later that same month on January 26th Erik Uden was searching for a domain for his upcoming huge Mastodon project...
 
 <br/>
 
@@ -429,28 +435,47 @@ Nick, a friend of mine, which I got to know through the various protest actions 
 
 *...you can [skip this](#end-of-tangent) if you already know or simply don't care. I promise, it is semi-relevant for understanding this section of the story.*
 
-For the less technical users: a "top level domain" is the ending of every domain name, for "[erikuden.com](https://erikuden.com)" the ".com" bit would be the top level domain! There are many types of such top level domains, abbreviated as **TLD**s, for example originally the "generic top level domains" (*[gTLD](https://icannwiki.org/Generic_top-level_domain)*) existed, which are the original top level domains, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these! Nowadays, there are also the "new generic top level domains" (*[new gTLD](https://icannwiki.org/New_gTLD_Program)*) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money ~200k USD*) and then sell domains using that TLD back to people, such as "[.marketing](https://kuk.marketing)" or "[.lgbt](https://tech.lgbt/)", even "[.google](https://domains.google/)" and "[.amazon](https://nic.amazon/)" exist now, forever engrained into the fabric of the internet. 
+For the less technical users: a "top level domain" is the ending of every domain name, for "[erikuden.com](https://erikuden.com)" the ".com" bit would be the top level domain! There are many types of such top level domains, abbreviated as **TLD**s, for example originally the "generic top level domains" (*[gTLD](https://icannwiki.org/Generic_top-level_domain)*) existed, which are the original top level domains, meaning ".com", ".org", ".gov", or ".mil", etc., there are only a handful of these! Nowadays, there are also the "new generic top level domains" (*[new gTLD](https://icannwiki.org/New_gTLD_Program)*) which were introduced through a program by ICANN (*Internet Corporation for Assigned Names and Numbers*) in 2014 allowing any corporation to just make up any top level domain they desire (*for the right amount of money, ~200k USD*) and then sell domains using that TLD back to people, such as "[.marketing](https://kuk.marketing)" or "[.lgbt](https://tech.lgbt/)", even "[.google](https://domains.google/)" and "[.amazon](https://nic.amazon/)" exist now, forever engrained into the fabric of the internet. 
 
-Also, [Akram Atallah](https://www.linkedin.com/in/akram-atallah/), the man that introduced the new gTLD program as president of ICANN later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*later Identity Digital*) which [owns about 17% of all new gTLDs, 15% of all TLDs](https://docs.google.com/spreadsheets/d/117vHhDS9wb-1wpBdbVvsZjGGfLx06fAre1UCtiFMHe0/edit?usp=sharing), so they own 15% of all root level internet infrastructure but are vastly unknown! Scary stuff, really! However, that isn't what this story is about, because additionally there are also country code top level domains" (*ccTLD*) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
+Also, [Akram Atallah](https://www.linkedin.com/in/akram-atallah/), the man that introduced the new gTLD program as president of ICANN, later became the CEO of the one company mainly benefitting from this change, a now multiple hundreds of millions dollar worth company called Donuts Inc. (*later Identity Digital*) which [owns about 17% of all new gTLDs, 15% of all TLDs](https://docs.google.com/spreadsheets/d/117vHhDS9wb-1wpBdbVvsZjGGfLx06fAre1UCtiFMHe0/edit?usp=sharing), so they own 15% of all root level internet infrastructure but are vastly unknown! Scary stuff, really! However, that isn't what this story is about, because additionally there are also country code top level domains" (*ccTLD*) which were and are still given out to each country. Such as ".us" was given to the USA, ".cn" was given to China, and ".de" was given to Germany by ICANN! 
 
-**Fun fact:** this system is so old that even ".su" was given to the Soviet Union! Unlike ".yu" for Yugoslavia, *which ICANN ended after Yugoslavia ended*, ".su" was somehow annexed by the Russian government and can (*somehow*) [still be registered to this day](https://tld-list.com/tld/su)!
+**Fun fact:** this system is so old that even ".su" was given to the Soviet Union! Unlike ".yu" for Yugoslavia, *which ICANN ended after Yugoslavia ended*, ".su" was somehow annexed by the Russian government and can (*somehow*) [still be registered to this day](https://tld-list.com/tld/su)! The Russian government seems very capable to annex things that aren't theirs. 
 
 **But back to the part important for this story:** Each country gets to decide what entity manages this top level domain and how! In Germany, that task is done by the *DENIC eG*, which stands for ".**DE** **N**etwork **I**nformation **C**enter" with the addendum being the company type *eG* "**e**ingetragene **G**enossenschaft" (*worker's co-op*). You will see that "NIC" term used a lot when dealing with domains and especially top level domains. 
 
-Since there are about 17 million currently registered .de domains, the DENIC has huge amounts of funds, but is simultaneously a semi-government worker's co-op that has **no profit motive**. The DENIC never has any money struggles because all it needs to do to get more money is raise the .de domain registration cost by a singular cent, and even if they mess up that, they are so essential to Germany's IT infrastructure they are guaranteed to be bailed out by the government no matter what. 
+Since there are about 17.66 million currently registered .de domains (*30th of November 2023*), the DENIC has huge amounts of funds, but is simultaneously a semi-government worker's co-op that has **no profit motive**. The DENIC never has any money struggles because all it needs to do to get more money is raise the .de domain registration cost by a singular cent, and even if they mess up that, they are so essential to Germany's IT infrastructure they are guaranteed to be bailed out by the government no matter what. 
 
 ### End of Tangent
 
-***Long story short:*** The DENIC was renewing all of their servers and "phasing out" (*i.e. throwing away*) LOTS of the "old" servers (*from 2018*) which I was happy to take for our upcoming project. 
+***Long story short:*** The DENIC was renewing all of their servers and "phasing out" (*i.e. throwing away*) LOTS of the "old" servers (*from 2018*) which I was happy to take for our or any upcoming project. 
+
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/2022-DENIC/signal-2022-11-17-14-10-52-452.jpg" width="400"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/2022-DENIC/IMG_20221115_173335.jpg"/>
+     </div>
+</div>
+</center>
+
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/2022-DENIC/IMG_20221115_172517.jpg" width="300"/>
+     </div>
+</div>
+</center>
 
 Since I wanted to write a separate story about the initial creation of the Mastodon instance mastodon.de, I am not going to go into too much detail about that, yet you can read about it here in the **specific blog post about us getting the hardware and building mastodon.de** (*if there is no link that means the blog post has not been written yet*). 
 
-So on the 15th of November in 2022 I was transporting servers from Frankfurt to Norden, which was a reoccurring theme, as I did the same on January 28th, as well as June 30th of 2023. All of this for just the idea of a mastodon instance which later became mastodon.de! After the second hardware transport in January, I began thinking about everything surrounding this instance more and created lists of domains that we could use. 
+So on the 15th of November in 2022 I was transporting servers from Frankfurt to Norden, which was a reoccurring theme, as I did the same on January 28th, as well as June 30th of 2023 [[1]([https://social.uden.ai/@Erik/posts/AXCxfwLlS1jRnGyDy4)] [[2]([https://youtu.be/mtj4G0CCH1s&t=446)]. All of this for just the idea of a mastodon instance which later became mastodon.de! After the second hardware transport in January, I began thinking about everything surrounding this instance more and created lists of domains that we could use. 
 
-Here is that exact list created and maintained on my note taking app Quillpad:
+Here is that exact list created and maintained on my note taking app [Quillpad]([https://github.com/quillpad/quillpad) (*back then still called Quillnote*):
 
 ```markdown
-Created at: 2023-01-26 10:35
+Created at: 2023-01-26 09:35
 Last modified at: 2023-07-05 11:59
 
 https://tld-list.com/tld/
@@ -600,19 +625,102 @@ These are the domains I ended up buying at some point:
   ╚═>Regery
 ```
 
+From: [Explanation of the Cost for mastodon.de](https://mastodon.de/@MastodonDE/110811119053549314)
+
 When I initially created this list, all of the mentioned domains were available to be registered. Lots of that must've changed by now, but you can see there were many ideas. The main platform I was checking the availability for such domains was Namecheap through their "beast mode" - I did this research for multiple weeks until one boring morning, in which I just could not get out of bed, I logged back into Namecheap on my phone and did an interesting search query...
+
+<br/>
+
+<br/>
 
 # A Boring Morning in January 2023
 
 ...that would dictate the following two months of my life and impact every waking moment after.
 
-The story goes as such: I was lying in bed on the morning of January 26th 2023, a Thursday. I spent the last days looking at good domains for an upcoming **big** Fediverse server, but never compiled a full list, just looked at many options and wrote down some good ideas in the *Note To Self* chat in the [Signal Messenger](https://dessalines.github.io/essays/why_not_signal.html). As you can see through the timestamp of the list above, I began at 10:35 AM, compiled a large list, and at some point must have found...
+The story goes as such: I was lying in bed on the morning of January 26th 2023, a Thursday. I spent the last days looking at good domains for an upcoming **big** Fediverse server, but I never compiled a full list, just looked at many options and wrote down some good ideas in the *Note To Self* chat in the [Signal Messenger](https://dessalines.github.io/essays/why_not_signal.html). As you can see through the timestamp of the list above, I began at 09:35 AM, compiled a large list, and at some point must have found...
 
 ## PANIC! at the Namecheap
 
-mastodon.de free to register. This did not compute in my brain. Whilst searching through many domain options that I've defined in the advanced Namecheap search (*mstdn, mastodon, masto, todon, fediverse, fedi, pixelfed, etc.*) the domain "mastodon.de" just showed up like it was nothing with a green button asking me whether I wanted to register it. I actually remember my mind racing and heart beating faster whilst instantly going through the steps required to register this domain. During that process I thought of how nonsensical this situation was: mastodon.us was on sale for several tens of thousands of dollars at that point, and Mastodon is a software developed by a company in Germany, additionally the Mastodon / Fediverse community is disproportionally overrepresented by Germans, so not only should "mastodon" dot ANYTHING be already gobbled up by domain bots and hoarders, but also would there have been good reasons for the Mastodon developers or people from within the community to actively monitor that 
+**mastodon.de free to register!??!?!!** This did not compute in my brain. Whilst searching through many domain options that I've defined in the advanced Namecheap search (*mstdn, mastodon, masto, todon, fediverse, fedi, pixelfed, etc.*) the domain "mastodon.de" just showed up like it was nothing with a green button asking me whether I wanted to register it for 6.41 € / year. I actually remember my mind racing and heart beating faster whilst instantly going through the steps required to register this domain. I knew this would be big news. During the purchasing process I thought of how nonsensical this situation was: mastodon.us was on sale for several tens of thousands of dollars at that point, and Mastodon is a software developed by a non-profit company in Germany, additionally the Mastodon / Fediverse community is disproportionally overrepresented by Germans, so not only should and has "mastodon" dot ANYTHING already been gobbled up by domain bots and hoarders, but also would there have been good reasons for the Mastodon developers or people from within the community to actively monitor this domain and buy it years back. I was partially in denial of this situation, partially really hoping for it to work out. I punched in my credit card details, I gave them whatever information they asked me for, ticket the boxes, clicked "Yes" on probably everything they asked me for as I did not care and just wanted to buy this domain. 
 
-## What is a Registration Grace Period (RGP)?
+
+
+At exactly 09:59:34 (*GMT+1*) my Namecheap order went through. I did everything right as quickly as possible. Sadly, in the moment, I did not take a screenshot of what Namecheap's website told me about what happened during / after processing, but **it resulted in an error**. The registration failed, the site told me, I am very certain they threw me a more specific error, but in the moment I was just shocked. Luckily, I still got the E-Mail: 
+
+
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/2023-01-26/E-Mail-Namecheap-mastodon.de-registration-FAILED.png" width="700"/>
+     </div>
+</div>
+</center>
+
+Confused, I checked the status of the domain elsewhere. "Maybe this was an error with Namecheap" I thought, already accepting the domain was lost and Namecheap just displayed a button incorrectly, so I hurdled to the official [DE Webwhois checker by the DENIC](https://webwhois.denic.de/?lang=de&query=mastodon.de) and saw this:
+
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/2023-01-26/Screenshot_20230126_100254_com.duckduckgo.mobile.android.jpg" width="300"/>
+     </div>
+</div>
+</center>
+
+This didn't make any sense. The domain was "deleted" - what? So it CAN be re-registered, no? What is going on here? So I asked my friend Nick who works at the DENIC...
+
+
+## What is a Redemption Grace Period (RGP)?
+
+Whenever you register a domain you *create* it. Through something called an RRI (*realtime registry interface*) a registrar such as Namecheap gets access to the servers of the Network Information Center (NIC), in this case the DENIC, which makes sure the domain doesn't already exist and hence responds accordingly. 
+
+If you've never registered a domain, these stories will sound foreign to you, but if you have registered a domain you'll know about the countless of E-Mails one received by registrars reminding you to renew your domain. You do not buy a domain like you buy property, even if one can think of domains as more like property, you register them and renew that subscription yearly. We're all tenants and ICANN is the landlord. However, each NIC can decide of how nice of a sub-landlord they want to be, hence they can implement something called a Redemption Grace Period (RGP), which basically ensures one thing: if you forget to renew your domain it isn't instantly cast into the fire and every random individual is allowed to re-register it if they're fast enough, most registrars allow for a grace period in which your domain sits in a sort of limbo. In case all warning messages by registrars have not reached you, this is the final straw. Your website and E-Mail etc. will go offline, but the domain is kind of still yours. The definition of ownership will become important later, but the really important part right now is this:
+
+On the one side the domain is up for registration, technically it can be re-registered and currently no one has that domain registered in their name, on the other side only one person can re-register it, which is the previous owner, which does sound a lot like ownership to me.
+
+Again, it is not easy, but I finally understood in this moment what happened: Namecheap checked for all the domains that included the words specified in my query, one of which being "Mastodon", so when it came to "mastodon.de" it saw that one could technically register this domain, but unbeknownst to me in that moment, that someone was dead and buried years ago.
+
+At this point I had not heard of Bernard von Bredow, I knew nothing of the previous owners of this domain, but I knew one thing: if domains are property they can be inherited. Even if the person behind this domain died, which was not a thought I had in that moment, but even if, then the descendants could re-register it before the grace period ends. Worst case scenario I'd remind someone who hasn't read their E-Mails in a while to renew their domains, and quite possibly tell them about this neat new software called Mastodon. The game was on, and there was only the biggest data privacy act in EU history in my way...
+
+
+
+## How to Circumvent the GDPR Really Fast
+
+When registering a domain you have to insert your credentials. Your full name, address, E-Mail, etc. Back in the day, and I do not even mean long ago, just a couple of years back, this info was completely public. Through something called "whois" or "whois lookup", for which there are numerous of services online [[1](https://lookup.icann.org/)] [[2](https://www.whois.com/whois/)] [[3](https://www.heise.de/netze/tools/whois/)], one can enter a domain and find out the name and address of whoever was behind it, where they lived, and how to contact them instantly. Over the years people figured out that this was a bad thing. 
+
+As the internet became mainstream and concerns about data privacy rose, services emerged that allowed you to stay anonymous even when having to enter those credentials, most registrars inserted them into their purchasing process, often even made them free for some domains. "Whois privacy" they're called, which meant that even if you looked up some domain, you may only find out the name of a person behind it or just the registrar, not really any personal details. Later with the GDPR this info became completely redacted and only accessible to the government. 
+
+Now, in 2023 these laws were already full in effect. I could at best figure out that mastodon.de used to be registered at a German registrar called Manitu GmbH, but that's it. Not who registered it, nothing. 
+
+I contacted the DENIC at 13:32 on that same day asking them for data regarding the owner of the domain mastodon.de.  
+
+I knew many registrars had some internal service through which people can sell domains on the aftermarket. Usually every domain has a fixed price, be it google.com or wefbhqe4bwbdyhedohupd6znw.com, they all cost the same. If you've ever seen two domains with the same TLD but a different price, then it is very likely that domain was not available to be registered, but rather sold on the aftermarket. Someone already registered that domain, they might have used it, but now do not need it anymore and sell it. Most likely the person selling that domain has never used it, they just got it because it is very cheap to do and sooner than later someone may need it for a higher price. Very often people aren't even behind this, but automated bots who look for english words or combination of English words. Sometimes these domain bots are controlled by shadowy figures, like the Freemasons. That is not a joke, Linus Sebastian, the man behind the LinusTechTips (LTT) YouTube channel and their streaming service FloatPlane.com had to [buy that domain from the Freemasons.](https://www.youtube.com/watch?v=pru6U5XpOOk). That is the thing about domains, once you're in, you've seen things you'll never forget. 
+
+Regardless, I'm getting distracted from the main story. SO, there ae ways to contact people that own a domain in case they want to sell it and registrars often provide that service. I will get into this more at some later chapter, but I contacted the previous registrar, the Manitu GmbH,  still on the same 26th of January 2023 at 15:02, and asked them to help me contact the person who owns the domain or previously had it registered, and left it at that.
+
+Around that time I got a response from the DENIC which just baffled me.
+
+<center>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/2023-01-26/E-Mail-DENIC-mastodon.de-not-registered.png" width="700"/>
+     </div>
+</div>
+</center>
+
+Translated this reads: 
+
+```
+Dear Mr. Uden,
+We refer to your email and your request for information from today and inform you that the domain mastodon.de is currently not registered.
+Best regards
+[REDACTED]
+```
+
+So the DENIC claims the domain is not registered, hence they store no data of the former owners. Which technically makes sense for any purposes regarding the reporting of abuse of domains, etc. However, for someone who wants to purchase a domain from the previous owners this situation became more hopeless than I initially realized. 
+
+There was one thing I could do however...
+
+
 
 ## Mammoth vs. Manitu
 

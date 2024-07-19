@@ -6,7 +6,7 @@ const accounts = [
 			"https://edi.social/system/accounts/avatars/108/242/597/965/460/626/original/d6f058f7ac6a87ad.png",
 		handle: "@zdfmagazin@edi.social",
 		href: "https://edi.social/@zdfmagazin",
-	},	
+	},
 	{
 		name: "Jan Böhmermann",
 		avatarUrl:
@@ -16,7 +16,7 @@ const accounts = [
 	},
 	{
 		name: "Bundesregierung",
-		avatarUrl:	
+		avatarUrl:
 			"https://social.bund.de/system/accounts/avatars/109/563/508/325/494/356/original/7ae12ac7be042b20.png",
 		handle: "@Bundesregierung@social.bund.de",
 		href: "https://social.bund.de/@Bundesregierung",
@@ -196,8 +196,6 @@ const accounts = [
 		handle: "@wirsindverdi@mastodon.social",
 		href: "https://mastodon.social/@wirsindverdi",
 	},
-	
-	
 ];
 </script>
 
@@ -209,19 +207,20 @@ const accounts = [
 			v-for="person in accounts"
 			:key="person.href"
 			:to="person.href"
-			class="rounded items-center w-full bg-dark-400 ring-dark-200 ring-1 duration-200 hover:ring-2 hover:ring-red-500 flex flex-row p-2 gap-2">
+			class="rounded overflow-hidden text-ellipsis items-center w-full bg-dark-400 ring-dark-200 ring-1 duration-200 hover:ring-2 hover:ring-red-500 flex flex-row p-2 gap-2">
 			<div
-				class="h-15 w-15 rounded overflow-hidden flex items-center justify-center shrink-0">
+				class="size-16 rounded overflow-hidden flex items-center justify-center shrink-0">
 				<img
 					:src="person.avatarUrl"
-					class="h-full w-full object-cover" />
+					class="h-full w-full object-cover"
+					alt="" />
 			</div>
 			<div
 				class="flex flex-col gap-2 justify-center text-sm text-left max-w-50 text-ellipsis pr-2">
 				<h3 class="font-semibold text-gray-50">
 					{{ person.name }}
 				</h3>
-				<p class="text-gray-300 overflow-hidden text-ellipsis">
+				<p class="text-gray-300 line-clamp-1">
 					{{ person.handle }}
 				</p>
 			</div>

@@ -69,9 +69,10 @@ const showBankInfo = ref(false);
 							:href="item.href"
 							class="text-gray-500 hover:text-gray-400">
 							<span class="sr-only">{{ item.name }}</span>
-							<Icon
-								:name="item.icon"
-								class="h-6 w-6"
+							<iconify-icon
+								width="unset"
+								:icon="item.icon"
+								class="size-6"
 								aria-hidden="true" />
 						</a>
 					</div>
@@ -138,24 +139,36 @@ const showBankInfo = ref(false);
 				id="sponsors"
 				class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 flex lg:flex-row flex-col gap-4">
 				<p class="text-xs leading-5 text-gray-400 mr-auto">
-				&copy; {{ new Date().getFullYear() }} Uden AI - <a href="https://github.com/Mastodon-DE/joinmastodon">Open Source</a>
+					&copy; {{ new Date().getFullYear() }} Uden AI -
+					<a href="https://github.com/Mastodon-DE/joinmastodon"
+						>Open Source</a
+					>
 				</p>
 				<a
 					href="https://liberapay.com/MastodonDE/donate"
 					class="bg-yellow-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm">
-					<Icon name="simple-icons:liberapay" />
+					<iconify-icon
+						width="unset"
+						icon="simple-icons:liberapay"
+						class="size-4" />
 					LiberaPay
 				</a>
 				<a
 					href="https://patreon.com/MastodonDE"
 					class="bg-rose-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm">
-					<Icon name="simple-icons:patreon" />
+					<iconify-icon
+						width="unset"
+						icon="simple-icons:patreon"
+						class="size-4" />
 					Patreon
 				</a>
 				<a
 					href="https://ko-fi.com/mastodonde/"
 					class="bg-green-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm">
-					<Icon name="cib:ko-fi" />
+					<iconify-icon
+						width="unset"
+						icon="cib:ko-fi"
+						class="size-4" />
 					Ko-Fi
 				</a>
 				<form
@@ -165,7 +178,10 @@ const showBankInfo = ref(false);
 					<button
 						type="submit"
 						class="!bg-blue-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm">
-						<Icon name="ic:baseline-paypal" />
+						<iconify-icon
+							width="unset"
+							icon="ic:baseline-paypal"
+							class="size-4" />
 						PayPal
 					</button>
 					<input
@@ -176,7 +192,10 @@ const showBankInfo = ref(false);
 				<button
 					class="bg-orange-500 text-black flex flex-row items-center px-2 py-1 rounded font-semibold gap-3 text-sm"
 					@click="showBankInfo = !showBankInfo">
-					<Icon name="tabler:credit-card" />
+					<iconify-icon
+						width="unset"
+						icon="tabler:credit-card"
+						class="size-4" />
 					IBAN
 				</button>
 			</div>

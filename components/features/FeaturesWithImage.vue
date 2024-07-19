@@ -47,8 +47,9 @@ const features = [
 						:key="feature.name"
 						class="relative">
 						<dt class="ml-9 inline-block font-semibold text-white">
-							<Icon
-								:name="feature.icon"
+							<iconify-icon
+								width="unset"
+								:icon="feature.icon"
 								class="absolute left-1 top-1 h-5 w-5 text-red-500"
 								aria-hidden="true" />
 							{{ $t(feature.name) }}

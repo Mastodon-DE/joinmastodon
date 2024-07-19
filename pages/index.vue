@@ -73,7 +73,6 @@ const faqs = [
 	},
 ];
 
-
 const languages = [
 	{
 		name: "Deutsch",
@@ -84,8 +83,6 @@ const languages = [
 		lang: "en",
 	},
 ];
-
-
 </script>
 
 <template>
@@ -136,8 +133,9 @@ const languages = [
 					<a
 						href="https://mastodon.de/about"
 						class="text-sm group font-semibold leading-6 text-gray-100"
-						>{{ $t("learnMoreButton") }} <ButtonsAnimatedArrow
-					/></a>
+						>{{ $t("learnMoreButton") }}
+						<ButtonsAnimatedArrow />
+					</a>
 				</div>
 			</div>
 			<div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
@@ -186,16 +184,29 @@ const languages = [
 			<div
 				class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
 				<div class="inline-flex flex-row flex-wrap gap-4 text-white">
-					<Icon name="logos:paypal" class="w-6 h-6" />
-					<Icon name="logos:patreon" class="w-6 h-6" />
-					<Icon name="cib:ko-fi" class="w-6 h-6" />
-					<Icon name="cib:liberapay" class="w-6 h-6" />
+					<iconify-icon
+						width="unset"
+						icon="logos:paypal"
+						class="size-6" />
+					<iconify-icon
+						width="unset"
+						icon="logos:patreon"
+						class="size-6" />
+					<iconify-icon
+						width="unset"
+						icon="cib:ko-fi"
+						class="size-6" />
+					<iconify-icon
+						width="unset"
+						icon="cib:liberapay"
+						class="size-6" />
 				</div>
 				<NuxtLink
 					to="/donate"
-					class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-					>Donate<ButtonsAnimatedArrow
-				/></NuxtLink>
+					class="rounded-md group bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
+					Donate
+					<ButtonsAnimatedArrow />
+				</NuxtLink>
 			</div>
 		</div>
 
@@ -230,15 +241,17 @@ const languages = [
 								faq.question
 							}}</span>
 							<span class="ml-6 flex h-7 items-center">
-								<Icon
+								<iconify-icon
+									width="unset"
 									v-if="!open"
-									name="tabler:plus"
-									class="h-6 w-6"
+									icon="tabler:plus"
+									class="size-6"
 									aria-hidden="true" />
-								<Icon
+								<iconify-icon
+									width="unset"
 									v-else
-									name="tabler:minus"
-									class="h-6 w-6"
+									icon="tabler:minus"
+									class="size-6"
 									aria-hidden="true" />
 							</span>
 						</HeadlessDisclosureButton>

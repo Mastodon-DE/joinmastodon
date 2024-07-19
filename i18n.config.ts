@@ -131,7 +131,7 @@ export default defineI18nConfig(() => ({
 			// Funktionsbereich
 			featuresTitle: "Föderiertes, offenes Netzwerk",
 			featuresSubText:
-				"Mastodon.de ist Teil eines riesigen Netzwerkes namens Fediverse. Tausende Instanzen sprechen ein gemeinsames Protokoll, um eines der größten unabhängigen sozialen Netzwerke zu schaffen. Nutzernamen bestehen hierbei, wie bei einer Mailadresse, aus Nutzernamen und Serveradresse (@username@example.com).",
+				"Mastodon.de ist Teil eines riesigen Netzwerkes namens Fediverse. Tausende Instanzen sprechen ein gemeinsames Protokoll, um eines der größten unabhängigen sozialen Netzwerke zu schaffen. Nutzernamen bestehen hierbei, wie bei einer Mailadresse, aus Nutzernamen und Serveradresse ({'@'}username{'@'}example.com).",
 
 			feature1Title: "Leistungsstarke Moderationstools",
 			feature1SubText:

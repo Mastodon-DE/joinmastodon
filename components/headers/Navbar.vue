@@ -26,21 +26,13 @@ const languages = [
 	},
 ];
 
-const { y: scrollY } = useWindowScroll();
-
 const mobileMenuOpen = ref(false);
-
-const scrolledBackground = computed(() => scrollY.value > 2);
 
 const switchLocalePath = useSwitchLocalePath();
 </script>
 <template>
 	<header
-		:class="[
-			scrolledBackground
-				? 'bg-dark-500/40 backdrop-blur-lg'
-				: 'bg-transparent',
-		]"
+		:class="['bg-dark-500/40 backdrop-blur-lg']"
 		class="fixed top-0 inset-x-0 z-50">
 		<nav
 			class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -48,7 +40,7 @@ const switchLocalePath = useSwitchLocalePath();
 			<div class="flex lg:flex-1">
 				<NuxtLink to="/" class="p-1.5 -m-1.5">
 					<span class="sr-only">mastodon.de</span>
-					<img class="h-8 w-35" src="/images/icons/logo.svg" alt="" />
+					<img class="h-8 w-36" src="/images/icons/logo.svg" alt="" />
 				</NuxtLink>
 			</div>
 			<div class="flex lg:hidden">
@@ -57,9 +49,10 @@ const switchLocalePath = useSwitchLocalePath();
 					class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
 					@click="mobileMenuOpen = true">
 					<span class="sr-only">Open main menu</span>
-					<Icon
-						name="tabler:menu-2"
-						class="h-6 w-6"
+					<iconify-icon
+						width="unset"
+						icon="tabler:menu-2"
+						class="size-6"
 						aria-hidden="true" />
 				</button>
 			</div>
@@ -68,8 +61,9 @@ const switchLocalePath = useSwitchLocalePath();
 					<HeadlessPopoverButton
 						class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-50">
 						{{ $t("navbar.aboutUs") }}
-						<Icon
-							name="tabler:chevron-down"
+						<iconify-icon
+							width="unset"
+							icon="tabler:chevron-down"
 							class="h-5 w-5 flex-none text-gray-500"
 							aria-hidden="true" />
 					</HeadlessPopoverButton>
@@ -117,7 +111,10 @@ const switchLocalePath = useSwitchLocalePath();
 					<div>
 						<HeadlessMenuButton
 							class="rounded-md group font-semibold leading-6 text-white">
-							<Icon name="tabler:language" class="h-6 w-6" />
+							<iconify-icon
+								width="unset"
+								icon="tabler:language"
+								class="size-6" />
 						</HeadlessMenuButton>
 					</div>
 
@@ -136,13 +133,13 @@ const switchLocalePath = useSwitchLocalePath();
 									:key="language.name">
 									<NuxtLink
 										:class="[
-											'text-gray-200 group block px-4 py-2 text-sm flex flex-row items-center gap-4 font-semibold hover:bg-dark-100',
+											'text-gray-200 group px-4 py-2 text-sm flex flex-row items-center gap-4 font-semibold hover:bg-dark-100',
 										]"
 										:to="switchLocalePath(language.lang)">
 										{{ language.name
-										}}<span class="ml-auto"
-											><ButtonsAnimatedArrow
-										/></span>
+										}}<span class="ml-auto">
+											<ButtonsAnimatedArrow />
+										</span>
 									</NuxtLink>
 								</HeadlessMenuItem>
 							</div>
@@ -152,8 +149,9 @@ const switchLocalePath = useSwitchLocalePath();
 				<a
 					href="https://mastodon.de"
 					class="text-sm group font-semibold leading-6 text-gray-50"
-					>{{ $t("navbar.explore") }} <ButtonsAnimatedArrow
-				/></a>
+					>{{ $t("navbar.explore") }}
+					<ButtonsAnimatedArrow />
+				</a>
 			</div>
 		</nav>
 		<HeadlessTransitionRoot appear :show="mobileMenuOpen" as="template">
@@ -186,9 +184,10 @@ const switchLocalePath = useSwitchLocalePath();
 								class="-m-2.5 rounded-md p-2.5 text-gray-200"
 								@click="mobileMenuOpen = false">
 								<span class="sr-only">Close menu</span>
-								<Icon
-									name="tabler:x"
-									class="h-6 w-6"
+								<iconify-icon
+									width="unset"
+									icon="tabler:x"
+									class="size-6"
 									aria-hidden="true" />
 							</button>
 						</div>
@@ -202,8 +201,9 @@ const switchLocalePath = useSwitchLocalePath();
 										<HeadlessDisclosureButton
 											class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300">
 											{{ $t("aboutUs") }}
-											<Icon
-												name="tabler:chevron-down"
+											<iconify-icon
+												width="unset"
+												icon="tabler:chevron-down"
 												:class="[
 													open ? 'rotate-180' : '',
 													'h-5 w-5 flex-none',
@@ -217,8 +217,8 @@ const switchLocalePath = useSwitchLocalePath();
 												:key="item.name"
 												as="a"
 												:href="item.href"
-												class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-50 hover:bg-dark-400"
-												>{{
+												class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-50 hover:bg-dark-400">
+												{{
 													item.name
 												}}</HeadlessDisclosureButton
 											>
@@ -236,8 +236,8 @@ const switchLocalePath = useSwitchLocalePath();
 									>
 									<NuxtLink
 										href="/contact"
-										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300"
-										>{{ $t("navbar.contact") }}</NuxtLink
+										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300">
+										{{ $t("navbar.contact") }}</NuxtLink
 									>
 								</div>
 								<div class="py-6">

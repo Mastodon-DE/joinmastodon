@@ -51,22 +51,20 @@ const socials = [
 					{{ $t("contacttext") }}
 				</p>
 
-				<ul class="flex flex-col gap-4 mt-15">
+				<ul class="flex flex-col gap-4 mt-16">
 					<li v-for="social of socials" :key="social.name">
 						<a
 							:href="social.href"
 							class="flex gap-2 flex-col max-w-sm group">
 							<div class="flex gap-3 items-center">
-								<Icon
-									:name="social.icon"
-									class="w-6 h-6 text-gray-300" />
+								<iconify-icon
+									width="unset"
+									:icon="social.icon"
+									class="size-6 text-gray-300" />
 								<span
 									class="font-semibold text-gray-200 group-hover:underline"
 									>{{ social.name }}</span
 								>
-							</div>
-							<div class="text-gray-300 ml-9">
-								{{ social.description }}
 							</div>
 						</a>
 					</li>

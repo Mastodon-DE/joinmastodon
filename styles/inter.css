@@ -3,7 +3,9 @@
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 100;
-	src: local("Inter Thin"), local("Inter-Thin"),
+	src:
+		local("Inter Thin"),
+		local("Inter-Thin"),
 		url("~/assets/fonts/inter-thin-latin.woff2") format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
 		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
@@ -14,7 +16,9 @@
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 300;
-	src: local("Inter Light"), local("Inter-Light"),
+	src:
+		local("Inter Light"),
+		local("Inter-Light"),
 		url("~/assets/fonts/inter-light-latin.woff2") format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
 		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
@@ -25,7 +29,9 @@
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 400;
-	src: local("Inter Regular"), local("Inter-Regular"),
+	src:
+		local("Inter Regular"),
+		local("Inter-Regular"),
 		url("~/assets/fonts/inter-regular-latin.woff2") format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
 		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
@@ -36,7 +42,9 @@
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 600;
-	src: local("Inter SemiBold"), local("Inter-SemiBold"),
+	src:
+		local("Inter SemiBold"),
+		local("Inter-SemiBold"),
 		url("~/assets/fonts/inter-semibold-latin.woff2") format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
 		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
@@ -47,7 +55,9 @@
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 700;
-	src: local("Inter Bold"), local("Inter-Bold"),
+	src:
+		local("Inter Bold"),
+		local("Inter-Bold"),
 		url("~/assets/fonts/inter-bold-latin.woff2") format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
 		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
@@ -58,7 +68,9 @@
 	font-family: Inter;
 	font-style: normal;
 	font-weight: 900;
-	src: local("Inter Black"), local("Inter-Black"),
+	src:
+		local("Inter Black"),
+		local("Inter-Black"),
 		url("~/assets/fonts/inter-black-latin.woff2") format("woff2");
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
 		U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;

@@ -1,15 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	modules: [
-		"@unocss/nuxt",
 		"nuxt-headlessui",
-		"nuxt-icon",
 		"@vueuse/nuxt",
-		"@nuxtseo/module",
+		"@nuxtjs/seo",
 		"@nuxtjs/i18n",
-		"nuxt-swiper",
 		"@nuxt/content",
+		"@nuxtjs/tailwindcss",
 	],
+
 	app: {
 		head: {
 			link: [
@@ -22,10 +21,12 @@ export default defineNuxtConfig({
 			htmlAttrs: { lang: "en-us" },
 		},
 	},
+
 	content: {
 		locales: ["en", "de"],
 		defaultLocale: "de",
 	},
+
 	i18n: {
 		vueI18n: "./i18n.config.ts",
 		baseUrl: "https://join-mastodon.de",
@@ -52,6 +53,7 @@ export default defineNuxtConfig({
 			},
 		],
 	},
+
 	nitro: {
 		compressPublicAssets: true,
 		routeRules: {
@@ -64,6 +66,7 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+
 	runtimeConfig: {
 		public: {
 			siteName: "Mastodon.de",
@@ -75,4 +78,10 @@ export default defineNuxtConfig({
 			trailingSlash: true,
 		},
 	},
+	vue: {
+		compilerOptions: {
+			isCustomElement: tag => tag === "iconify-icon",
+		},
+	},
+	compatibilityDate: "2024-07-19",
 });

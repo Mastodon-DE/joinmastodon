@@ -1,40 +1,44 @@
 # JoinMastodon
 
 
-How to deploy
-First install pnpm
-then...
+## Installation
+
+First, install the Bun runtime at https://bun.sh.
+
+Then, run the following commands:
 
 ```
-pnpm install
-pnpm run dev
+bun install
+bun dev
+```
+
+## Server Deployment
+
+To update the server, run the following commands:
+
+```
+sudo docker compose pull
+sudo docker compose down
+sudo docker compose up -d
 ```
 
 
-How to update on server
+## Development
 
-`sudo docker compose pull`
-`sudo docker compose down`
-`sudo docker compose up -d`
-
-
-
-How to Edit...
+### Relevant Files
 
 **Index**
+
 `joinmastodon\pages\index.vue`
 
 **Embedded Posts**
+
 `joinmastodon\components\grids\EmbedGrid.vue`
 
 **SlidingAccounts**
+
 `joinmastodon\components\grids\SlidingAccounts.vue`
 
 **TeamGrid**
+
 `joinmastodon\components\grids\TeamGrid.vue`
-
-
-
-
-
-In case there has been no activity in this repository for over 60 days, workflows need to be re-enabled manually.

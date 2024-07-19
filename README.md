@@ -67,3 +67,5 @@ sudo docker compose up -d
 - Add English translations for the FAQ
 - Fix everything written in English
 - Make CLEARER that we are not Mastodon nor are we developing the Mastodon software, but simply a singular instance
+- Fix the fact that when compiling markdown into a blog the "` `" (marks for inline code) do not work, or when used they are displayed too
+- Make H2 headline "##" in markdown without an underline 

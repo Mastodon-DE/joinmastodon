@@ -61,6 +61,22 @@ sudo docker compose up -d
 
 `joinmastodon\components\grids\TeamGrid.vue`
 
+# Website
+
+Anything inside the `pages/` directory appears and exists as a webpage. `index.vue` is `/` meanwhile `contact.vue` is `/contact`! The file in the directory `pages/blog/` has a special filename (`[...path].vue`) to tell it to handle anything that starts with `/blog/` differently (*excluding the locale tags like /en or /de*)
+
+## Blog
+
+To edit the way the blog posts look (*CSS, JS, Template*) you need to edit the following file:
+
+`joinmastodon\pages\blog\[...path].vue`
+
+
+## Troubleshoot / Find Anything In This Code
+
+1. Go to join-mastodon.de and inspect element whatever you wish to find
+2. Copy the class names
+3. Go to VSCode/VSCodium and do CTRL+SHIFT+F to do a global search for them
 
 
 ## To Do

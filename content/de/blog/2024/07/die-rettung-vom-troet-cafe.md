@@ -1133,7 +1133,8 @@ Termine für beide Tage:
 - `2024.07.16 | 11:24 - 12:33 (01:09h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.18 | 11:29 - 12:01 (00:30h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.19 | 13:25 - 14:41 (01:16h) Aufarbeitung des Protokolls von Erik Uden`
-- `2024.07.19 | 18:40 - 22:01 (03:21h) Aufarbeitung des Protokolls sowie der Webseite join-mastodon.de von Erik Uden`
+- `2024.07.19 | 18:40 - 22:01 (03:21h) Reparatur der Webseite join-mastodon.de`
+- `2024.07.20 | 09:47 - 15:00 (05:13h) Reparatur der Webseite join-mastodon.de`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

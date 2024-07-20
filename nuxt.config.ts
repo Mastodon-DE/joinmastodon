@@ -50,7 +50,16 @@ export default defineNuxtConfig({
 	},
 
 	sitemap: {
-		sources: [...getRouteRenderingPaths(), "/en", "/en/privacy", "/en/contact", "/de/", "/de/privacy", "/de/contact", "/"],
+		sources: [
+			...getRouteRenderingPaths(),
+			"/en",
+			"/en/donate",
+			"/en/contact",
+			"/de/",
+			"/de/donate",
+			"/de/contact",
+			"/",
+		],
 	},
 
 	i18n: {
@@ -89,7 +98,16 @@ export default defineNuxtConfig({
 		},
 		prerender: {
 			failOnError: true,
-			routes: [...getRouteRenderingPaths(), "/en", "/en/privacy", "/en/contact", "/de/", "/de/privacy", "/de/contact", "/"],
+			routes: [
+				...getRouteRenderingPaths(),
+				"/en",
+				"/en/donate",
+				"/en/contact",
+				"/de/",
+				"/de/donate",
+				"/de/contact",
+				"/",
+			],
 		},
 	},
 

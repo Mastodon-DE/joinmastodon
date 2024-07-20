@@ -1,11 +1,11 @@
 ---
-title: 'Die Rettung vom Troet.Cafe'
+title: Die Rettung vom Troet.Cafe
 created_at: 1721080823000
 image: /images/blog/2024-07-16-saving-troet-cafe/thumbnail-saving-troet-cafe.png
-description: 'Eine Aufzeichnung der zwei Tage langen Videokonferenz, resultierend aus mehreren Monaten an Recherche zum Beheben der technischen Probleme mit dem sozialen Netzwerk troet.cafe basierend auf der Mastodon Software'
+description: Eine Aufzeichnung der zwei Tage langen Videokonferenz, resultierend aus mehreren Monaten an Recherche zum Beheben der technischen Probleme mit dem sozialen Netzwerk troet.cafe basierend auf der Mastodon Software
 author: Erik Uden
 author_image: /images/people/erikuden-resized.webp
-author_handle: '@ErikUden@mastodon.de'
+author_handle: @ErikUden@mastodon.de
 
 ---
 

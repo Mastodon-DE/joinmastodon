@@ -14,6 +14,16 @@ First, install the Bun runtime at https://bun.sh.
 ### Linux/MacOS
 `curl -fsSL https://bun.sh/install | bash`
 
+Then, install the Node Version Manager (NVM) at https://github.com/nvm-sh/nvm.
+
+### Windows
+`wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+
+### Linux/MacOS
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+
+After installing these, reload your shell using `exec bash` (*or the name of whatever shell you use*) or restart your command line interface. 
+
 Then, run the following commands:
 
 ```
@@ -21,7 +31,7 @@ bun install
 bun dev
 ```
 
-## Test as In Production
+## Test as in Production
 
 ```
 bun build

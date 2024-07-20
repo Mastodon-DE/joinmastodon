@@ -1247,7 +1247,7 @@ Insgesamt: (muss noch ausgerechnet werden)
 
 # Danksagungen
 
-Ich bedanke mich bei **crymond** [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond) für das Helfen beim Aufdecken des Authentifizierungsproblems von Postgresql, sowie das Hinweisen auf die richtige Arbeitsweise mit der Datenbank!
+Ich bedanke mich bei **crymond** ([@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond)) für das Helfen beim Aufdecken des Authentifizierungsproblems von Postgresql, sowie das Hinweisen auf die richtige Arbeitsweise mit der Datenbank!
 
 Auch bei **Jain** ([@Jain@blob.cat](https://blob.cat/users/Jain)) sollte Ich mich groß bedanken, vor allem weil du am Anfang als es wichtig war das *Foreign-Key-Constraints* Problem gelöst hast!
 

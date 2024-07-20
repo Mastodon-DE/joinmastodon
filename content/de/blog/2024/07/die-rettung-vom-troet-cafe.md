@@ -821,7 +821,8 @@ Wir überlegten trotzdem ob wir langfristig einen
 cronjob Einrichten der preview_cards und dessen URLs rauswirft, denn eine Tabelle mit so vielen Einträgen, vor allem bei so irrelevanten Daten, ist nicht akzeptabel. 
 
 Um 17:12 generierten wir zum ersten Mal eine Liste an allen Links die in dieser Tabelle gespeichert wurden, von Alt zu Neu. Wir zeigten lediglich die ersten 5 Einträge an, denn die gesamten 19.000.000 auszugeben wäre nicht machbar. 
-```                                                  url                                                   | id |         created_at         
+```
+                                                  url                                                   | id |         created_at         
 --------------------------------------------------------------------------------------------------------+----+----------------------------
  https://youtu.be/IPSbNdBmWKE                                                                           |  1 | 2018-05-01 07:10:15.725173
  https://techcrunch.com/2018/04/30/jan-koum-quits-facebook/                                             |  2 | 2018-05-01 07:13:48.155344

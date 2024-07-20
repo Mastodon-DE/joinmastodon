@@ -13,9 +13,9 @@ author_handle: '@ErikUden@mastodon.de'
 
 <br>
 
-<center>by</center>
+<center style="margin-top: -20px; margin-bottom: -20px">von</center>
 
-<a href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer"><center><h1>Erik Uden</h1></center></a>
+<a style="text-decoration: none;" href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer"><center><h1>Erik Uden</h1></center></a>
 
 <br/>
 

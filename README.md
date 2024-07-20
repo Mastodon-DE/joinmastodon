@@ -96,6 +96,3 @@ To edit the way the blog posts look (*CSS, JS, Template*) you need to edit the f
 - Add English translations for the FAQ
 - Fix everything written in English
 - Make CLEARER that we are not Mastodon nor are we developing the Mastodon software, but simply a singular instance
-- Fix the fact that when compiling markdown into a blog the "` `" (marks for inline code) do not work, or when used they are displayed too
-- Make H2 headline "##" in markdown without an underline 
-- Stuff looking bad in mobile

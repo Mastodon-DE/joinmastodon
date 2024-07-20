@@ -89,11 +89,11 @@ As uncoordinated as it can get, young Bernard excavated most of Oscar's bones ov
 This must've been among the most exciting times in Bernard's life, *so far*. As at the end of 1984 he traveled back to his home city in Bavaria, rediscovering his love for archeology. When the winter's snow melted [in early 1985 he began working on his site of discovery yet again](https://www.samerbergernachrichten.de/224720-2/). 
 
 <center>
-<div style="display:flex">
-     <div style="flex:1;padding-right:10px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem;">
+     <div>
           <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0212.JPG" width="400"/>
      </div>
-     <div style="flex:1;padding-left:10px;">
+     <div>
           <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/IMG_0220.JPG" width="400"/>
      </div>
 </div>

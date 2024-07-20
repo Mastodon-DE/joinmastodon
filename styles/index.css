@@ -16,18 +16,6 @@
 	touch-action: manipulation;
 }
 
-html {
-	width: 100%;
-	min-height: 100vh;
-}
-body,
-#app {
-	width: inherit;
-	min-height: inherit;
-	margin: 0;
-	padding: 0;
-}
-
 a {
 	color: inherit;
 	text-decoration: none;

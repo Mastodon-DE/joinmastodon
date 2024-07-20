@@ -1,3 +1,32 @@
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
+
+/*
+ * Reads the content directory and returns an array of all the files in the directory and subdirectories.
+ */
+const getRouteRenderingPaths = () => {
+	const contentDir = join(process.cwd(), "content");
+	const paths: string[] = [];
+
+	const readDir = (dir: string) => {
+		const files = readdirSync(dir);
+		for (const file of files) {
+			const filePath = join(dir, file);
+			if (file.endsWith(".md")) {
+				paths.push(
+					filePath.replace(contentDir, "/blog").replace(".md", "")
+				);
+			} else {
+				readDir(filePath);
+			}
+		}
+	};
+
+	readDir(contentDir);
+
+	return paths;
+};
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	modules: [
@@ -20,6 +49,10 @@ export default defineNuxtConfig({
 			],
 			htmlAttrs: { lang: "en-us" },
 		},
+	},
+
+	sitemap: {
+		sources: [...getRouteRenderingPaths(), "/", "/privacy", "/contact"],
 	},
 
 	i18n: {
@@ -60,6 +93,13 @@ export default defineNuxtConfig({
 				},
 			},
 		},
+		prerender: {
+			failOnError: true,
+		},
+	},
+
+	ogImage: {
+		enabled: false,
 	},
 
 	runtimeConfig: {

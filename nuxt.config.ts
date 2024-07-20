@@ -13,9 +13,7 @@ const getRouteRenderingPaths = () => {
 		for (const file of files) {
 			const filePath = join(dir, file);
 			if (file.endsWith(".md")) {
-				paths.push(
-					filePath.replace(contentDir, "/blog").replace(".md", "")
-				);
+				paths.push(filePath.replace(contentDir, "").replace(".md", ""));
 			} else {
 				readDir(filePath);
 			}
@@ -52,13 +50,13 @@ export default defineNuxtConfig({
 	},
 
 	sitemap: {
-		sources: [...getRouteRenderingPaths(), "/", "/privacy", "/contact"],
+		sources: [...getRouteRenderingPaths(), "/en", "/en/privacy", "/en/contact", "/de/", "/de/privacy", "/de/contact", "/"],
 	},
 
 	i18n: {
 		vueI18n: "./i18n.config.ts",
 		baseUrl: "https://join-mastodon.de",
-		strategy: "prefix_and_default",
+		strategy: "prefix",
 		defaultLocale: "de",
 		trailingSlash: true,
 		detectBrowserLanguage: {
@@ -91,7 +89,7 @@ export default defineNuxtConfig({
 		},
 		prerender: {
 			failOnError: true,
-			routes: [...getRouteRenderingPaths(), "/", "/donate", "/contact"],
+			routes: [...getRouteRenderingPaths(), "/en", "/en/privacy", "/en/contact", "/de/", "/de/privacy", "/de/contact", "/"],
 		},
 	},
 

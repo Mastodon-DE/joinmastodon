@@ -1,4 +1,3 @@
-import { join } from "node:path";
 import { usePost } from "~/composables/server/Post";
 
 export default defineEventHandler(async (event) => {
@@ -10,7 +9,9 @@ export default defineEventHandler(async (event) => {
     // Get the path query parameter
     const filePath = decodeURIComponent(url.searchParams.get("path") ?? "");
 
-    const post = usePost(filePath);
+    // Trim the trailing slash
+    const path = filePath.replace(/\/$/, "");
+    const post = usePost(path);
 
     if (!post)
         throw createError({

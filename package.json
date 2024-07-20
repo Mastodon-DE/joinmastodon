@@ -41,6 +41,7 @@
 		"markdown-it-anchor": "^9.0.1",
 		"markdown-it-container": "^4.0.0",
 		"markdown-it-toc-done-right": "^4.2.0",
+		"sharp": "^0.33.4",
 		"shiki": "^1.10.3"
 	}
 }

@@ -128,7 +128,7 @@ Suddenly, that skepticism turned into excitement and Bernard's findings were pra
 <center>
 <div style="display:flex">
      <div style="flex:1;padding-right:10px;">
-          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/web groes wappen1.JPG" width="400"/>
+          <img title="a title" alt="Alt text" src="/images/blog/2023-09-05-history-of-domain-mastodon.de/web groes wappen1.jpg" width="400"/>
      </div>
 </div>
 </center>

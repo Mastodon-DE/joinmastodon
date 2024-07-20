@@ -942,7 +942,7 @@ Diese 15 Links waren unser Problem in der Datenbank und der Grund warum kein Ind
 
 Ich kann mich nicht mehr genau dran erinnern was dieser Code machte, Ich habe ihn aber gespeichert.
 
-```SQL
+```
 def vacuum_cached_images!
     preview_cards_past_retention_period.find_each do |preview_card|
       preview_card.image.destroy

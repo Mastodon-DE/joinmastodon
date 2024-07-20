@@ -1,7 +1,8 @@
 # Join-Mastodon.de
 
-The landing page for the Mastodon instance https://mastodon.de!
+The landing page for the Mastodon instance [mastodon.de](https://mastodon.de)!
 
+For a live version of this repository check here: https://join-mastodon.de! 
 
 ## Installation
 
@@ -71,4 +72,4 @@ sudo docker compose up -d
 - Make CLEARER that we are not Mastodon nor are we developing the Mastodon software, but simply a singular instance
 - Fix the fact that when compiling markdown into a blog the "` `" (marks for inline code) do not work, or when used they are displayed too
 - Make H2 headline "##" in markdown without an underline 
-- Stuff looking fucked up in mobile
+- Stuff looking bad in mobile

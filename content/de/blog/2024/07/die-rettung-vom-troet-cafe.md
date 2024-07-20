@@ -1,6 +1,6 @@
 ---
 title: Die Rettung vom Troet.Cafe
-created_at: 1721080823000
+created_at: 1721510753000
 image: /images/blog/2024-07-16-saving-troet-cafe/thumbnail-saving-troet-cafe.png
 description: Eine Aufzeichnung der zwei Tage langen Videokonferenz, resultierend aus mehreren Monaten an Recherche zum Beheben der technischen Probleme mit dem sozialen Netzwerk troet.cafe basierend auf der Mastodon Software
 author: Erik Uden
@@ -9,7 +9,7 @@ author_handle: @ErikUden@mastodon.de
 
 ---
 
-<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.07.20 um 23:23</center>
+<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.07.20 um 23:28</center>
 
 <br>
 
@@ -1238,7 +1238,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.19 | 18:40 - 22:01 (03:21h) Reparatur der Webseite join-mastodon.de`
 - `2024.07.20 | 09:47 - 15:00 (05:13h) Reparatur der Webseite join-mastodon.de`
 - `2024.07.20 | 17:20 - 18:42 (01:22h) Aufarbeitung des Protokolls von Erik Uden`
-- `2024.07.20 | 19:34 - 23:24 (03:50h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.07.20 | 19:34 - 23:28 (03:54h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

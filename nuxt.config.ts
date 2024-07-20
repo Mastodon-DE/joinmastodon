@@ -5,8 +5,8 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@nuxtjs/seo",
 		"@nuxtjs/i18n",
-		"@nuxt/content",
 		"@nuxtjs/tailwindcss",
+		"@nuxt/image",
 	],
 
 	app: {
@@ -20,11 +20,6 @@ export default defineNuxtConfig({
 			],
 			htmlAttrs: { lang: "en-us" },
 		},
-	},
-
-	content: {
-		locales: ["en", "de"],
-		defaultLocale: "de",
 	},
 
 	i18n: {

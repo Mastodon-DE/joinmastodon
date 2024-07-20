@@ -91,6 +91,7 @@ export default defineNuxtConfig({
 		},
 		prerender: {
 			failOnError: true,
+			routes: [...getRouteRenderingPaths(), "/", "/donate", "/contact"],
 		},
 	},
 

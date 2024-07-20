@@ -9,7 +9,7 @@ author_handle: @ErikUden@mastodon.de
 
 ---
 
-<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.07.18 um 22:01</center>
+<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.07.20 um 23:23</center>
 
 <br>
 
@@ -31,18 +31,19 @@ Eigentlich bräuchte diese Geschichte, wie Martin, Nick und Ich nun eigentlich z
 
 Da viele die Situation zur Rettung vom troet.cafe und muenchen.social durch die Spamwelle, sowie allen möglichen kleinen Updates, verfolgten, gab es viele Menschen die sofort bereit waren zu helfen und ihre Unterstützung angeboten haben! Ich notierte mir alle Personen die helfen könnten und wollte diese vor dem Wochenende anschreiben um bereits im Voraus ein Team an Expert:Innen zu haben mit denen wir die Updates und Fehler gemeinsam angehen. Leider wurde aus dem Plan nichts und Ich erstellte spontan eine Gruppe als wir bereits angefangen haben und verzweifelten, die Vorarbeit mit der Liste erstellte sich jedoch als unfassbar hilfreich heraus! 
 
-Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https://mastodon.de/@freestyle/) und [mir](https://mastodon.de/@ErikUden) haben folgende Personen uns massiv bei der Rettung vom troet.cafe geholfen:
+Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https://mastodon.de/@freestyle/), [Rodirik](https://mastodon.de/@Rodirik) und [mir](https://mastodon.de/@ErikUden) haben folgende Personen uns massiv bei der Rettung vom troet.cafe geholfen:
 - Patrick Fedick [@patrickf@mastodon.de](https://mastodon.de/@patrickf)
 - Panda [@panda@pandas.social](https://pandas.social/@panda)
 - André Jaenisch [@andre@fedi.jaenis.ch](https://fedi.jaenis.ch/@andre)
 - osmodia [@osmodia@chaos.social](https://chaos.social/@osmodia)
+- Jain [@Jain@blob.cat](https://blob.cat/users/Jain)
 - crymond [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond)
 
 Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee gebracht hat und wo geholfen hat, doch zum Schluss findet ihr noch eine ganz klare Danksagung!
 
 <br/>
 
-Folgendes war der ungefähre Plan den wir am 10. Mai (einen Tag vor der Rettung des troet.cafes) uns notierten:
+Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung des troet.cafes*) uns notierten:
 
 
 *Wir versuchen die Datenbank auf einen neuen Server zu übertragen und sie dort einzuspielen.*
@@ -60,12 +61,29 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (einen Tag vor der Rettung 
 11. muenchen.social Web- und Worker-Server auf neuste Mastodon Version updaten. 
 12. All das mit troet.cafe wiederholen. 
 
+</br></br>
+
+# Glossar
+Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen kurzen Blick hier rein, man kann beim Durchlesen des Protokolls auch zwischenzeitig hierher zurückkommen!
+
+- **Mastodon:** Die dezentrale Social Media Software
+- **mastodon:** Der User welcher sowohl als in der Postgresql-Software sowie innerhalb der Debian-Umgebung für die Mastodon-Software Befehle ausführt. 
+- **Postgresql:** Die Datenbank-Software.
+- **postgres:** Der SuperUser der Datenbanksoftware. 
+- **Datenbank-Schema:** Die Struktur der Datenbank, sozusagen eine Auflistung der Namen an Tabellen welche eine Datenbank enthält, jedoch keine Daten. 
+- **Datenbank-Daten:** Die Daten innerhalb einer Datenbank (*gelöst vom Schema*). 
+- **pgbouncer:** PgBouncer ist ein *Pooler* für PostgreSQL-Datenbankverbindungen. Dabei kann eine große Anzahl von Verbindungen von der Anwendung zum Pooler durch eine deutlich geringere Anzahl von Verbindungen vom Pooler zur Datenbank bedient werden, was Ressourcen im Datenbankserver spart. Außerdem wird dadurch der Verbindungsaufbau beschleunigt.
+- **Maintenance-Skript:** Von mir auch genannt „*Mastodon-Fix-Skript*“ oder `tootctl maintenance fix-duplicates` ist ein Mastodon internes Skript welches versprochen hat *preview_cards* zu deduplizieren und somit einer der Probleme zu lösen.
+- **Web- und Worker-Server:** Die Server web1, web2, web3, worker3 und worker4 welche zusammen die Frontend und Middleend Dienste von troet.cafe ausführen! 
+- **worker3-Server:** Der Server welcher zuerst ge-updated wurde und von dem die Datenbank auf dem neuen Datenbank-Server aus bedient wurde. 
+- **Alter Datenbank-Server:** Der Server mit der bis zum 12. Mai 2024 live troet.cafe Datenbank auf dem wir keine Arbeiten durchführten außer die Datenbank zu exportieren. Dieser hat PostgreSQL, Pgbouncer und ElasticSearch installiert, jedoch nach dem Transfer der Datenbank wurde dieser nur noch für ElasticSearch genutzt. Ab dem 06. Juni 2024, als auch ElasticSearch auf den neuen Datenbank-Server übertragen wurde, wurde der Server das letzte Mal heruntergefahren.  
+- **Neuer Datenbank-Server:** Der Server auf dem der Datenbank-Dump übertragen wurde und worauf 90% der Arbeit stattgefunden hat. Auf diesem Server modifizierten wir den Export der Datenbank um diesen wieder zum laufen zu bringen. Am Abend des 12. Mai 2024 war dies der Server auf dem die troet.cafe Datenbank ohne Probleme und auf einer neueren Version schneller lief. Darauf sind PostgreSQL (*die Datenbank*), Pgbouncer, Redis, sowie ab dem 06. Juni 2024 auch ElasticSearch installiert und in Betrieb. 
+
 <br/><br/>
 
 
 # Tag 1 der Rettung
-
-**Total:** 10:20 Stunden für und am Tag 1.
+**Total:** 10:20 Stunden an Arbeit für und am Tag 1.
 
 ## Einführung
 
@@ -507,6 +525,8 @@ Auch wenn der alte Datenbank-Server keine laufenden Mastodon-Dienste (*Web, Work
 
 Wegen mir gerade nicht mehr bekannten Komplikationen bei dem Export des Dumps (*ggf. fiel uns erst während der ersten Exports auf das noch einige Web-/Worker-Dienste laufen könnten, zudem haben wir ein paar Flags hinzugefügt*) haben wir den Prozess (*pg_dump*) drei Mal gestartet und abgebrochen, der vierte Export der troet.cafe Datenbank war dann letztendlich der Finale. 
 
+<sup>**Fun Fact:** Um diese Uhrzeit (09:28) schrieb [@osmodia@chaos.social](https://chaos.social/@osmodia) exakt und detailliert wie man das *preview_cards* URL Problem lösen kann `select id from preview_cards where pg_column_size(url)>2712` in die Matrix-Gruppe. Niemand von uns bemerkte die Nachricht und sie ging einfach unter, erst 8 Stunden später sollten wir selbst auf diese Lösung kommen.</sup>
+
 Um 09:30 war das finale dump der alten troet.cafe Datenbank mit den folgenden Befehl in Auftrag gegeben worden:
 
 `su mastodon --c "pg_dump --quote-all-identifiers -Fc mastodon_production > /backup/mastodon_production-manuelles-backup.sql"` 
@@ -815,10 +835,16 @@ Um 17:05 löschten wir den gesamten Index der neuen Datenbank um sie daraufhin m
 Als mastodon User innerhalb von Postgresql ausgeführt:
 `CREATE INDEX index_preview_cards_on_url ON public.preview_cards USING hash (url)` 
 
-Dieser scheint auch in irgendeiner Form gescheitert zu sein. Nach einer längeren Analyse des Datenbank-Schemas sowie der Fehlermeldung meldete sich hier Patrick ein und brachte die notwendige Idee. Was ist wenn das Problem gar nicht das Aufbauen des Indexes ist, sondern dieser Index zur scheitert weil etwas mit den Daten nicht in ordnung ist? Klar sind 19 Millionen Einträge viel, aber ganz und gar nicht ist das die größte Tabelle innerhalb einer Datenbank! Postgresql kann weitaus mehr. Das 7/8 Byte Limit des Indexes bezog sich keineswegs auf die größe des Indexes selbst, sondern auf die Größe eines einzelnen Eintrags. Das war der springende Punkt. 
+Dieser scheint auch in irgendeiner Form gescheitert zu sein. 
 
-Wir überlegten trotzdem ob wir langfristig einen 
-cronjob Einrichten der preview_cards und dessen URLs rauswirft, denn eine Tabelle mit so vielen Einträgen, vor allem bei so irrelevanten Daten, ist nicht akzeptabel. 
+
+### Missing-Link (Erfolgreich)
+
+Nach einer längeren Analyse des Datenbank-Schemas sowie der Fehlermeldung meldete sich hier Patrick ein und brachte die notwendige Idee. Was ist wenn das Problem gar nicht das Aufbauen des Indexes ist, sondern dieser Index zur scheitert weil etwas mit den Daten nicht in ordnung ist? Klar sind 19 Millionen Einträge viel, aber ganz und gar nicht ist das die größte Tabelle innerhalb einer Datenbank! Postgresql kann weitaus mehr. Das 7/8 Byte Limit des Indexes bezog sich keineswegs auf die größe des Indexes selbst, sondern auf die Größe eines einzelnen Eintrags. Das war der springende Punkt. 
+
+Wir überlegten trotzdem ob wir langfristig einen cronjob Einrichten der preview_cards und dessen URLs rauswirft, denn eine Tabelle mit so vielen Einträgen, vor allem bei so irrelevanten Daten, ist nicht akzeptabel. 
+
+Alle folgenden Befehle rundum die Länge sowie die Entfernung von Links diktierte mir Patrick und Ich führte diese lediglich aus. 
 
 Um 17:12 generierten wir zum ersten Mal eine Liste an allen Links die in dieser Tabelle gespeichert wurden, von Alt zu Neu. Wir zeigten lediglich die ersten 5 Einträge an, denn die gesamten 19.000.000 auszugeben wäre nicht machbar. 
 ```
@@ -831,46 +857,52 @@ Um 17:12 generierten wir zum ersten Mal eine Liste an allen Links die in dieser 
  https://blog.online.net/2018/05/03/introducing-scaleway-nextgen-nvme-cloud-servers-with-hot-snapshots/ |  5 | 2018-05-03 15:49:04.626933
 (5 rows)
 ```
-Notiz: Der erste YouTube Link führt zum Erklärungsvideo von Mastodon! Es ist der Link aus dem Beitrag den Martin am 01. Mai 2018 gemacht hat, was wahrscheinlich der [erste Beitrag von troet.cafe](https://troet.cafe/@martinmuc/99952797514332520) war!
+**Fun fact:** Der erste YouTube Link führt zum Erklärungsvideo von Mastodon! Es ist der Link aus dem Beitrag den Martin am 01. Mai 2018 gemacht hat, was wahrscheinlich der [erste Beitrag von troet.cafe](https://troet.cafe/@martinmuc/99952797514332520) ist!
 
-mastodon_production=> 
+Ich ging also über psql wieder zurück in die *mastodon_production* Datenbank um 17:14. 
 
-\d preview_cards;
+mastodon_production=> `\d preview_cards;`
 
-17:14
+Wir wollten herausfinden was der längste Link in der Datenbank ist!
 
-mastodon_production=> select max(length(url)) from preview_cards;
+mastodon_production=> `select max(length(url)) from preview_cards;`
+```
  max  
 ------
  9150
 (1 row)
+```
 
-mastodon_production=> select count(*) from preview_cards where length(url)>1000;
+Es war nicht zu fassen. Der längste Link der lediglich einen einzelnen Eintrag in der Tabelle *preview_cards* darstellt war **9150 Zeichen** lang, das obwohl Mastodon standardmäßig nur 500 Zeichen erlaubt! Wie konnte das sein? Einfach: Mastodon zählt jeden Link als 23 Zeichen, egal ob er kürzer oder länger als das ist. Der Grund dafür ist lediglich um das Benutzen von Link-Shortener zu verhindern da diese oftmals echt viele Daten sammeln und die Firmen dahinter für Werbezwecke nutzen. Somit wird auf Mastodon und im Fediverse jeder Link gleich lang behandelt. Einen Link zu haben der länger als das Zeichenlimit von 500 ist, ist somit einfach. Doch das bis heute in der Mastodon-Software kein Check existiert der überprüft ob der geschriebene Link länger ist als die maximale Bytegröße die ein Eintrag in der Tabelle der Mastodon-Datenbank haben kann ist *sehr* fraglich. Am Ende des Tages lief troet.cafe auf einer älteren Version von Mastodon, und das schon lange! Selbst wenn heute für dieses Problem ein Fix existieren würde, Datenbankeinträge lösen sich damit nicht von alleine und werden so *grandfathered in*, und über die Jahre bis zu Jahrzehnte übernommen. 
+
+Doch um das Ausmaß des Problems wirklich zu wissen mussten wir nicht nur den längsten Link finden, sondern alle Links die zu lang sind und sich fehlerhafterweise in die Datenbank geschlichen haben! 
+
+
+mastodon_production=> `select count(*) from preview_cards where length(url)>1000;`
+```
  count 
 -------
    780
 (1 row)
+```
+
+Es gibt also genau 780 Links welche über 1000 Zeichen lang sind. Naja, so schlimm das klingt, 1000 Zeichen sind noch nicht am 7-Byte Limit dran, also erhöhten wir die Zahl.
 
 
-mastodon_production=> select count(*) from preview_cards where length(url)>2000;
+mastodon_production=> `select count(*) from preview_cards where length(url)>2000;`
+```
  count 
 -------
    357
 (1 row)
+```
+357 Links sind in der Datenbank welche über 2000 Zeichen lang sind. Immer noch kein Problem, also gingen wir weiter. 
 
-```
-https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=htmlmixed&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%250AGenerate%2520an%2520RDF-based%2520FAQ%2520using%2520RDF-Turtle%2520and%2520terms%2520from%2520the%2520schema.org%2520vocabulary%253A%2520How%2520much%2520does%2520it%2520cost%2520to%2520use%2520ChatGPT%253F%2520During%2520the%2520initial%2520research%2520preview%252C%2520ChatGPT%2520is%2520free%2520to%2520use.%2520How%2520does%2520ChatGPT%2520work%253F%2520ChatGPT%2520is%2520fine-tuned%2520from%2520GPT-3.5%252C%2520a%2520language%2520model%2520trained%2520to%2520produce%2520text.%2520ChatGPT%2520was%2520optimized%2520for%2520dialogue%2520by%2520using%2520Reinforcement%2520Learning%2520with%2520Human%2520Feedback%2520%28RLHF%29%2520%25E2%2580%2593%2520a%2520method%2520that%2520uses%2520human%2520demonstrations%2520to%2520guide%2520the%2520model%2520toward%2520desired%2520behavior.%2520Why%2520does%2520the%2520AI%2520seem%2520so%2520real%2520and%2520lifelike%253F%2520These%2520models%2520were%2520trained%2520on%2520vast%2520amounts%2520of%2520data%2520from%2520the%2520internet%2520written%2520by%2520humans%252C%2520including%2520conversations%252C%2520so%2520the%2520responses%2520it%2520provides%2520may%2520sound%2520human-like.%2520It%2520is%2520important%2520to%2520keep%2520in%2520mind%2520that%2520this%2520is%2520a%2520direct%2520result%2520of%2520the%2520system%27s%2520design%2520%28i.e.%2520maximizing%2520the%2520similarity%2520between%2520outputs%2520and%2520the%2520dataset%2520the%2520models%2520were%2520trained%2520on%29%2520and%2520that%2520such%2520outputs%2520may%2520be%2520inaccurate%252C%2520untruthful%252C%2520and%2520otherwise%2520misleading%2520at%2520times.%2520Can%2520I%2520trust%2520that%2520the%2520AI%2520is%2520telling%2520me%2520the%2520truth%253F%2520ChatGPT%2520is%2520not%2520connected%2520to%2520the%2520internet%252C%2520and%2520it%2520can%2520occasionally%2520produce%2520incorrect%2520answers.%2520It%2520has%2520limited%2520knowledge%2520of%2520world%2520and%2520events%2520after%25202021%2520and%2520may%2520also%2520occasionally%2520produce%2520harmful%2520instructions%2520or%2520biased%2520content.%2520We%27d%2520recommend%2520checking%2520whether%2520responses%2520from%2520the%2520model%2520are%2520accurate%2520or%2520not.%2520If%2520you%2520find%2520an%2520answer%2520is%2520incorrect%252C%2520please%2520provide%2520that%2520feedback%2520by%2520using%2520the%2520%2522Thumbs%2520Down%2522%2520button.%2520Who%2520can%2520view%2520my%2520conversations%253F%2520As%2520part%2520of%2520our%2520commitment%2520to%2520safe%2520and%2520responsible%2520AI%252C%2520we%2520review%2520conversations%2520to%2520improve%2520our%2520systems%2520and%2520to%2520ensure%2520the%2520content%2520complies%2520with%2520our%2520policies%2520and%2520safety%2520requirements.%2520Will%2520you%2520use%2520my%2520conversations%2520for%2520training%253F%2520Yes.%2520Your%2520conversations%2520may%2520be%2520reviewed%2520by%2520our%2520AI%2520trainers%2520to%2520improve%2520our%2520systems.%2520Can%2520you%2520delete%2520my%2520data%253F%2520Yes%252C%2520please%2520follow%2520the%2520data%2520deletion%2520process%2520here%253A%2520https%253A%252F%252Fhelp.openai.com%252Fen%252Farticles%252F6378407-how-can-i-delete-my-account%2520Can%2520you%2520delete%2520specific%2520prompts%253F%2520No%252C%2520we%2520are%2520not%2520able%2520to%2520delete%2520specific%2520prompts%2520from%2520your%2520history.%2520Please%2520don%27t%2520share%2520any%2520sensitive%2520information%2520in%2520your%2520conversations.%2520Can%2520I%2520see%2520my%2520history%2520of%2520threads%253F%2520How%2520can%2520I%2520save%2520a%2520conversation%2520I%25E2%2580%2599ve%2520had%253F%2520Yes%252C%2520you%2520can%2520now%2520view%2520and%2520continue%2520your%2520past%2520conversations.%2520Where%2520do%2520you%2520save%2520my%2520personal%2520and%2520conversation%2520data%253F%2520For%2520more%2520information%2520on%2520how%2520we%2520handle%2520data%252C%2520please%2520see%2520our%2520Privacy%2520Policy%2520and%2520Terms%2520of%2520Use.%2520How%2520can%2520I%2520implement%2520this%253F%2520Is%2520there%2520any%2520implementation%2520guide%2520for%2520this%253F%2520ChatGPT%2520is%2520being%2520made%2520available%2520as%2520a%2520research%2520preview%2520so%2520we%2520can%2520learn%2520about%2520its%2520strengths%2520and%2520weaknesses.%2520It%2520is%2520not%2520available%2520in%2520the%2520API.%2520Do%2520I%2520need%2520a%2520new%2520account%2520if%2520I%2520already%2520have%2520a%2520Labs%2520or%2520Playground%2520account%253F%2520If%2520you%2520have%2520an%2520existing%2520account%2520at%2520labs.openai.com%2520or%2520beta.openai.com%252C%2520then%2520you%2520can%2520login%2520directly%2520at%2520chat.openai.com%2520using%2520the%2520same%2520login%2520information.%2520If%2520you%2520don%27t%2520have%2520an%2520account%252C%2520you%27ll%2520need%2520to%2520sign-up%2520for%2520a%2520new%2520account%2520at%2520chat.openai.com.
-```
-
-```
-https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%250A%2520%2520%2520%2520%2522%2540context%2522%253A%2520%2522http%253A%252F%252Fschema.org%252F%2522%252C%250A%2520%2520%2520%2520%2522%2540type%2522%253A%2520%2522SoftwareApplication%2522%252C%250A%2520%2520%2520%2520%2522%2540id%2522%253A%2520%2522https%253A%252F%252Fxibbon.com%252F%2523softwareApplication%2522%252C%250A%2520%2520%2520%2520%2522name%2522%253A%2520%2522La%2520Terminal%2522%252C%250A%2520%2520%2520%2520%2522operatingSystem%2522%253A%2520%2522iOS%252C%2520MacOS%252C%2520Windows%2522%252C%250A%2520%2520%2520%2520%2522applicationCategory%2522%253A%2520%2522Terminal%2520Emulator%2522%252C%250A%2520%2520%2520%2520%2522feature%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Fully%2520Native%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Provides%2520a%2520fully-native%252C%2520first-class%2520touch%2520experience%2520for%2520command-line%2520hackers%2520on%2520iPhone%2520and%2520iPad%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522iCloud%2520for%2520Everyone%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Makes%2520it%2520easy%2520to%2520switch%2520between%2520your%2520iPhone%252C%2520iPad%252C%2520and%2520Mac%2520by%2520syncing%2520your%2520settings%2520and%2520keys%2520over%2520iCloud%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Live%2520Backgrounds%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Sports%2520a%2520fully%2520themeable%2520experience%2520accented%2520with%2520beautifully%2520captivating%2520live-effect%2520backgrounds%2520powered%2520by%2520Metal%2520Performance%2520Shaders%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Inline%2520graphics%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Allows%2520to%2520view%2520graphical%2520output%252C%2520such%2520as%2520plots%252C%2520graphs%252C%2520and%2520images%252C%2520in-place%2520in%2520the%2520terminal%2520while%2520you%2520work%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Built%2520on%2520open%2520source%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Provides%2520a%2520comprehensive%2520terminal%2520emulator%2520experience%2520based%2520on%2520the%2520popular%2520open%2520source%2520SwiftTerm%2520library%2520with%2520powerful%2520client%2520amenities%2520for%2520serious%2520c
-ommand-line%2520aficionados%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%252
-0%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Secure%2520Enclave%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522des
-cription%2522%253A%2520%2522Stores%2520your%2520private%2520keys%2520in%2520the%2520secure%2520enclave%2520so%2520your%2520private%2520key%2520can%2520never%2520be%2520found%2520in%2520plain%2520text%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Linux%2520and%2520Mac%2520and%2520Windows%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522A%2520terminal%2520emulator%2520that%2520support%2520Windows-aware%2520to%2520ensure%2520PowerShell%2520power%2520users%2520can%2520enjoy%2520a%2520delightful%2520ssh%2520experience%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522International%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Renders%2520internationalized%2520output%2520and%2520supports%2520internationalized%2520input%252C%2520including%2520native%2520iOS%2520dictation%2520and%2520international%2520keyboards%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2522screenshot%2522%253A%2520%2522https%253A%252F%252Fxibbon.com%252Fimages%252Fphone.png%2522%250A%257D%250A%250A
-```
+Da wir uns langsam der handvoll Links annäherten welche dieses ganze Fiasko ausgelöst haben probierten wir nun herauszufinden ob diese Links in einem gewissen Zeitraum, im Rahmen einer „Attacke“, oder bis zu einem gewissen Punkt (*also nach einem Update z.B. nicht mehr*) erstellt wurden, doch konnten keinerlei Zusammenhänge finden. 
 
 
-mastodon_production=> select id,created_at from preview_cards where length(url)>5000 order by created_at asc;
+mastodon_production=> `select id,created_at from preview_cards where length(url)>5000 order by created_at asc;`
+```
     id    |         created_at         
 ----------+----------------------------
   6375495 | 2022-12-25 19:30:26.319969
@@ -878,8 +910,14 @@ mastodon_production=> select id,created_at from preview_cards where length(url)>
   6816706 | 2023-01-12 17:07:12.834289
  10406136 | 2023-06-16 15:40:57.290047
 (4 rows)
+```
+Dies sind die vier (4) Links welche über 5000 Zeichen lang sind sowie der genaue Zeitpunkt an dem sie geposted wurden. 
 
-mastodon_production=> select id,created_at from preview_cards where length(url)>2730 order by created_at asc;
+
+Doch alle Links mit der Länge 2730 und höher könnten uns zum Verhängnis werden, also erschufen wir eine Liste und würden diese Links später dann auch löschen.
+
+mastodon_production=> `select id,created_at from preview_cards where length(url)>2730 order by created_at asc;`
+```
     id    |         created_at         
 ----------+----------------------------
    492035 | 2019-11-22 06:30:30.96322
@@ -898,59 +936,131 @@ mastodon_production=> select id,created_at from preview_cards where length(url)>
  15104912 | 2023-12-15 08:16:27.722657
  15686193 | 2024-01-08 11:23:11.878902
 (15 rows)
+```
 
+Diese 15 Links waren unser Problem in der Datenbank und der Grund warum kein Index für die *preview_cards* Tabelle aufgebaut werden konnte. Diese löschten wir mit einem nicht in diesem Protokoll benannten Befehl, er ist aber sehr einfach und ähnelt den Befehlen die wir später aufstellen welche Links nach einem Datum löschen. 
 
+Ich kann mich nicht mehr genau dran erinnern was dieser Code machte, Ich habe ihn aber gespeichert.
 
+```SQL
 def vacuum_cached_images!
     preview_cards_past_retention_period.find_each do |preview_card|
       preview_card.image.destroy
       preview_card.save
     end
   end
-  
-17:40
+```
 
+Es war 17:40 und wir ließen uns die vier schlimmsten Links ausgeben um zu gucken womit wir es überhaupt zu tun haben! **Wie kommt es das ein Link so übermäßig lang ist?** Es war leider wie zu erwarten: Dies waren Links die Teile der Webseite innerhalb von sich gespeichert hatten. Manchmal ist dies möglich oder notwendig, vor allem um user-spezifische Eingaben innerhalb der Webseite zu speichern auf eine Weise die Teilbar ist, im Browser-Verlauf gespeichert ist und zudem keine Cookies benötigt! Alle Links, bis auf der Größte, folgten diesem Schema. Es ging um eine Webseite in die User etwas hineinschreiben konnten und das geschriebene mit dem Link zu teilen. Aus Respekt zu den Usern haben wir nie nachgesehen wer diese Links geteilt hat und wieso, denn in jedem Fall kann hier keine Boswilligkeit nachgewiesen werden, sondern wohlmöglich eher „schaut was Ich hier eingerichtet habe, sieht das nicht cool aus?“ Im Normalfall sollte man mit einem Beitrag auf sozialen Netzwerken auch niemals so ein riesiges Problem auslösen. Den ersten Link verstehen wir bis heute nicht... 
 
-17:44
-keine db einträge von tootctl gelöscht 
+Folgendes sind die vier längsten Links:
+*Alle clickbaren Links werden verkürzt angezeigt, sodass diese Seite noch lesbar bleibt, können aber dennoch angeklickt werden.*
 
-mastodon_production=> BEGIN; DELETE FROM preview_cards WHERE created_at <= '2024-02-12';
+**Link 1:** „Lange Nacht der Wissenschaften“ 
+[https://www.langenachtderwissenschaften.de/](https://www.langenachtderwissenschaften.de/programm?tx_aaevents_programmpunkte%5B__referrer%5D%5B%40extension%5D=AaEvents&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40vendor%5D=Events&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40controller%5D=Programmpunkt&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40action%5D=list&tx_aaevents_programmpunkte%5B__referrer%5D%5Barguments%5D=YToxMzp7czo2OiJhY3Rpb24iO3M6NDoibGlzdCI7czo0OiJhcmVhIjtzOjA6IiI7czo5OiJhdHRlbmRlZXMiO3M6MDoiIjtzOjExOiJjdXJyZW50UGFnZSI7czoxOiI2IjtzOjc6ImVuZ2xpc2giO3M6MDoiIjtzOjc6ImZvcmtpZHMiO2E6MTp7aTowO3M6MToiMSI7fXM6NzoiZm9ybWF0cyI7czowOiIiO3M6OToiaW50ZXJlc3RzIjtzOjA6IiI7czo0OiJraW5kIjtzOjA6IiI7czo2OiJzZWFyY2giO3M6MDoiIjtzOjc6InNvcnRpbmciO3M6OToic3RpbWUtQVNDIjtzOjc6InN1YmplY3QiO3M6MDoiIjtzOjQ6InRpbWUiO2E6NDp7aTowO3M6NToiMTYtMTciO2k6MTtzOjU6IjE3LTE4IjtpOjI7czo1OiIxOC0xOSI7aTozO3M6NToiMTktMjAiO319bbaac0e7c781cbfb17abf5e17509272c1d801f3e&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40request%5D=a%3A4%3A%7Bs%3A10%3A%22%40extension%22%3Bs%3A8%3A%22AaEvents%22%3Bs%3A11%3A%22%40controller%22%3Bs%3A13%3A%22Programmpunkt%22%3Bs%3A7%3A%22%40action%22%3Bs%3A4%3A%22list%22%3Bs%3A7%3A%22%40vendor%22%3Bs%3A6%3A%22Events%22%3B%7D50016a8afd78bc9923971f574837acbfc1245e07&tx_aaevents_programmpunkte%5B__trustedProperties%5D=a%3A14%3A%7Bs%3A9%3A%22attendees%22%3Ba%3A57%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3Bi%3A18%3Bi%3A1%3Bi%3A19%3Bi%3A1%3Bi%3A20%3Bi%3A1%3Bi%3A21%3Bi%3A1%3Bi%3A22%3Bi%3A1%3Bi%3A23%3Bi%3A1%3Bi%3A24%3Bi%3A1%3Bi%3A25%3Bi%3A1%3Bi%3A26%3Bi%3A1%3Bi%3A27%3Bi%3A1%3Bi%3A28%3Bi%3A1%3Bi%3A29%3Bi%3A1%3Bi%3A30%3Bi%3A1%3Bi%3A31%3Bi%3A1%3Bi%3A32%3Bi%3A1%3Bi%3A33%3Bi%3A1%3Bi%3A34%3Bi%3A1%3Bi%3A35%3Bi%3A1%3Bi%3A36%3Bi%3A1%3Bi%3A37%3Bi%3A1%3Bi%3A38%3Bi%3A1%3Bi%3A39%3Bi%3A1%3Bi%3A40%3Bi%3A1%3Bi%3A41%3Bi%3A1%3Bi%3A42%3Bi%3A1%3Bi%3A43%3Bi%3A1%3Bi%3A44%3Bi%3A1%3Bi%3A45%3Bi%3A1%3Bi%3A46%3Bi%3A1%3Bi%3A47%3Bi%3A1%3Bi%3A48%3Bi%3A1%3Bi%3A49%3Bi%3A1%3Bi%3A50%3Bi%3A1%3Bi%3A51%3Bi%3A1%3Bi%3A52%3Bi%3A1%3Bi%3A53%3Bi%3A1%3Bi%3A54%3Bi%3A1%3Bi%3A55%3Bi%3A1%3Bi%3A56%3Bi%3A1%3B%7Ds%3A4%3A%22area%22%3Ba%3A6%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3B%7Ds%3A9%3A%22interests%22%3Ba%3A5%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3B%7Ds%3A4%3A%22time%22%3Ba%3A8%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3B%7Ds%3A4%3A%22kind%22%3Ba%3A18%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3B%7Ds%3A7%3A%22english%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A13%3A%22accessability%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A7%3A%22formats%22%3Ba%3A3%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3B%7Ds%3A7%3A%22subject%22%3Ba%3A97%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3Bi%3A18%3Bi%3A1%3Bi%3A19%3Bi%3A1%3Bi%3A20%3Bi%3A1%3Bi%3A21%3Bi%3A1%3Bi%3A22%3Bi%3A1%3Bi%3A23%3Bi%3A1%3Bi%3A24%3Bi%3A1%3Bi%3A25%3Bi%3A1%3Bi%3A26%3Bi%3A1%3Bi%3A27%3Bi%3A1%3Bi%3A28%3Bi%3A1%3Bi%3A29%3Bi%3A1%3Bi%3A30%3Bi%3A1%3Bi%3A31%3Bi%3A1%3Bi%3A32%3Bi%3A1%3Bi%3A33%3Bi%3A1%3Bi%3A34%3Bi%3A1%3Bi%3A35%3Bi%3A1%3Bi%3A36%3Bi%3A1%3Bi%3A37%3Bi%3A1%3Bi%3A38%3Bi%3A1%3Bi%3A39%3Bi%3A1%3Bi%3A40%3Bi%3A1%3Bi%3A41%3Bi%3A1%3Bi%3A42%3Bi%3A1%3Bi%3A43%3Bi%3A1%3Bi%3A44%3Bi%3A1%3Bi%3A45%3Bi%3A1%3Bi%3A46%3Bi%3A1%3Bi%3A47%3Bi%3A1%3Bi%3A48%3Bi%3A1%3Bi%3A49%3Bi%3A1%3Bi%3A50%3Bi%3A1%3Bi%3A51%3Bi%3A1%3Bi%3A52%3Bi%3A1%3Bi%3A53%3Bi%3A1%3Bi%3A54%3Bi%3A1%3Bi%3A55%3Bi%3A1%3Bi%3A56%3Bi%3A1%3Bi%3A57%3Bi%3A1%3Bi%3A58%3Bi%3A1%3Bi%3A59%3Bi%3A1%3Bi%3A60%3Bi%3A1%3Bi%3A61%3Bi%3A1%3Bi%3A62%3Bi%3A1%3Bi%3A63%3Bi%3A1%3Bi%3A64%3Bi%3A1%3Bi%3A65%3Bi%3A1%3Bi%3A66%3Bi%3A1%3Bi%3A67%3Bi%3A1%3Bi%3A68%3Bi%3A1%3Bi%3A69%3Bi%3A1%3Bi%3A70%3Bi%3A1%3Bi%3A71%3Bi%3A1%3Bi%3A72%3Bi%3A1%3Bi%3A73%3Bi%3A1%3Bi%3A74%3Bi%3A1%3Bi%3A75%3Bi%3A1%3Bi%3A76%3Bi%3A1%3Bi%3A77%3Bi%3A1%3Bi%3A78%3Bi%3A1%3Bi%3A79%3Bi%3A1%3Bi%3A80%3Bi%3A1%3Bi%3A81%3Bi%3A1%3Bi%3A82%3Bi%3A1%3Bi%3A83%3Bi%3A1%3Bi%3A84%3Bi%3A1%3Bi%3A85%3Bi%3A1%3Bi%3A86%3Bi%3A1%3Bi%3A87%3Bi%3A1%3Bi%3A88%3Bi%3A1%3Bi%3A89%3Bi%3A1%3Bi%3A90%3Bi%3A1%3Bi%3A91%3Bi%3A1%3Bi%3A92%3Bi%3A1%3Bi%3A93%3Bi%3A1%3Bi%3A94%3Bi%3A1%3Bi%3A95%3Bi%3A1%3Bi%3A96%3Bi%3A1%3B%7Ds%3A7%3A%22forkids%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A6%3A%22search%22%3Bi%3A1%3Bs%3A6%3A%22remove%22%3Ba%3A2%3A%7Bs%3A4%3A%22time%22%3Ba%3A4%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3B%7Ds%3A7%3A%22forkids%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7D%7Ds%3A5%3A%22reset%22%3Bi%3A1%3Bs%3A7%3A%22sorting%22%3Bi%3A1%3B%7D3df9433178127fc260a1e8c2790bea4f50fa1275&tx_aaevents_programmpunkte%5Battendees%5D=&tx_aaevents_programmpunkte%5Barea%5D=&tx_aaevents_programmpunkte%5Barea%5D%5B%5D=3&tx_aaevents_programmpunkte%5Binterests%5D=&tx_aaevents_programmpunkte%5Btime%5D=&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=16-17&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=17-18&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=18-19&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=19-20&tx_aaevents_programmpunkte%5Bkind%5D=&tx_aaevents_programmpunkte%5Benglish%5D=&tx_aaevents_programmpunkte%5Baccessability%5D=&tx_aaevents_programmpunkte%5Bformats%5D=&tx_aaevents_programmpunkte%5Bsubject%5D=&tx_aaevents_programmpunkte%5Bforkids%5D=&tx_aaevents_programmpunkte%5Bforkids%5D%5B%5D=1&tx_aaevents_programmpunkte%5Bsearch%5D=&tx_aaevents_programmpunkte%5Bsorting%5D=stime-ASC)
+
+Hier der gleiche Link nochmal zum durchlesen:
+```
+https://www.langenachtderwissenschaften.de/programm?tx_aaevents_programmpunkte%5B__referrer%5D%5B%40extension%5D=AaEvents&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40vendor%5D=Events&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40controller%5D=Programmpunkt&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40action%5D=list&tx_aaevents_programmpunkte%5B__referrer%5D%5Barguments%5D=YToxMzp7czo2OiJhY3Rpb24iO3M6NDoibGlzdCI7czo0OiJhcmVhIjtzOjA6IiI7czo5OiJhdHRlbmRlZXMiO3M6MDoiIjtzOjExOiJjdXJyZW50UGFnZSI7czoxOiI2IjtzOjc6ImVuZ2xpc2giO3M6MDoiIjtzOjc6ImZvcmtpZHMiO2E6MTp7aTowO3M6MToiMSI7fXM6NzoiZm9ybWF0cyI7czowOiIiO3M6OToiaW50ZXJlc3RzIjtzOjA6IiI7czo0OiJraW5kIjtzOjA6IiI7czo2OiJzZWFyY2giO3M6MDoiIjtzOjc6InNvcnRpbmciO3M6OToic3RpbWUtQVNDIjtzOjc6InN1YmplY3QiO3M6MDoiIjtzOjQ6InRpbWUiO2E6NDp7aTowO3M6NToiMTYtMTciO2k6MTtzOjU6IjE3LTE4IjtpOjI7czo1OiIxOC0xOSI7aTozO3M6NToiMTktMjAiO319bbaac0e7c781cbfb17abf5e17509272c1d801f3e&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40request%5D=a%3A4%3A%7Bs%3A10%3A%22%40extension%22%3Bs%3A8%3A%22AaEvents%22%3Bs%3A11%3A%22%40controller%22%3Bs%3A13%3A%22Programmpunkt%22%3Bs%3A7%3A%22%40action%22%3Bs%3A4%3A%22list%22%3Bs%3A7%3A%22%40vendor%22%3Bs%3A6%3A%22Events%22%3B%7D50016a8afd78bc9923971f574837acbfc1245e07&tx_aaevents_programmpunkte%5B__trustedProperties%5D=a%3A14%3A%7Bs%3A9%3A%22attendees%22%3Ba%3A57%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3Bi%3A18%3Bi%3A1%3Bi%3A19%3Bi%3A1%3Bi%3A20%3Bi%3A1%3Bi%3A21%3Bi%3A1%3Bi%3A22%3Bi%3A1%3Bi%3A23%3Bi%3A1%3Bi%3A24%3Bi%3A1%3Bi%3A25%3Bi%3A1%3Bi%3A26%3Bi%3A1%3Bi%3A27%3Bi%3A1%3Bi%3A28%3Bi%3A1%3Bi%3A29%3Bi%3A1%3Bi%3A30%3Bi%3A1%3Bi%3A31%3Bi%3A1%3Bi%3A32%3Bi%3A1%3Bi%3A33%3Bi%3A1%3Bi%3A34%3Bi%3A1%3Bi%3A35%3Bi%3A1%3Bi%3A36%3Bi%3A1%3Bi%3A37%3Bi%3A1%3Bi%3A38%3Bi%3A1%3Bi%3A39%3Bi%3A1%3Bi%3A40%3Bi%3A1%3Bi%3A41%3Bi%3A1%3Bi%3A42%3Bi%3A1%3Bi%3A43%3Bi%3A1%3Bi%3A44%3Bi%3A1%3Bi%3A45%3Bi%3A1%3Bi%3A46%3Bi%3A1%3Bi%3A47%3Bi%3A1%3Bi%3A48%3Bi%3A1%3Bi%3A49%3Bi%3A1%3Bi%3A50%3Bi%3A1%3Bi%3A51%3Bi%3A1%3Bi%3A52%3Bi%3A1%3Bi%3A53%3Bi%3A1%3Bi%3A54%3Bi%3A1%3Bi%3A55%3Bi%3A1%3Bi%3A56%3Bi%3A1%3B%7Ds%3A4%3A%22area%22%3Ba%3A6%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3B%7Ds%3A9%3A%22interests%22%3Ba%3A5%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3B%7Ds%3A4%3A%22time%22%3Ba%3A8%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3B%7Ds%3A4%3A%22kind%22%3Ba%3A18%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3B%7Ds%3A7%3A%22english%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A13%3A%22accessability%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A7%3A%22formats%22%3Ba%3A3%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3B%7Ds%3A7%3A%22subject%22%3Ba%3A97%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3Bi%3A18%3Bi%3A1%3Bi%3A19%3Bi%3A1%3Bi%3A20%3Bi%3A1%3Bi%3A21%3Bi%3A1%3Bi%3A22%3Bi%3A1%3Bi%3A23%3Bi%3A1%3Bi%3A24%3Bi%3A1%3Bi%3A25%3Bi%3A1%3Bi%3A26%3Bi%3A1%3Bi%3A27%3Bi%3A1%3Bi%3A28%3Bi%3A1%3Bi%3A29%3Bi%3A1%3Bi%3A30%3Bi%3A1%3Bi%3A31%3Bi%3A1%3Bi%3A32%3Bi%3A1%3Bi%3A33%3Bi%3A1%3Bi%3A34%3Bi%3A1%3Bi%3A35%3Bi%3A1%3Bi%3A36%3Bi%3A1%3Bi%3A37%3Bi%3A1%3Bi%3A38%3Bi%3A1%3Bi%3A39%3Bi%3A1%3Bi%3A40%3Bi%3A1%3Bi%3A41%3Bi%3A1%3Bi%3A42%3Bi%3A1%3Bi%3A43%3Bi%3A1%3Bi%3A44%3Bi%3A1%3Bi%3A45%3Bi%3A1%3Bi%3A46%3Bi%3A1%3Bi%3A47%3Bi%3A1%3Bi%3A48%3Bi%3A1%3Bi%3A49%3Bi%3A1%3Bi%3A50%3Bi%3A1%3Bi%3A51%3Bi%3A1%3Bi%3A52%3Bi%3A1%3Bi%3A53%3Bi%3A1%3Bi%3A54%3Bi%3A1%3Bi%3A55%3Bi%3A1%3Bi%3A56%3Bi%3A1%3Bi%3A57%3Bi%3A1%3Bi%3A58%3Bi%3A1%3Bi%3A59%3Bi%3A1%3Bi%3A60%3Bi%3A1%3Bi%3A61%3Bi%3A1%3Bi%3A62%3Bi%3A1%3Bi%3A63%3Bi%3A1%3Bi%3A64%3Bi%3A1%3Bi%3A65%3Bi%3A1%3Bi%3A66%3Bi%3A1%3Bi%3A67%3Bi%3A1%3Bi%3A68%3Bi%3A1%3Bi%3A69%3Bi%3A1%3Bi%3A70%3Bi%3A1%3Bi%3A71%3Bi%3A1%3Bi%3A72%3Bi%3A1%3Bi%3A73%3Bi%3A1%3Bi%3A74%3Bi%3A1%3Bi%3A75%3Bi%3A1%3Bi%3A76%3Bi%3A1%3Bi%3A77%3Bi%3A1%3Bi%3A78%3Bi%3A1%3Bi%3A79%3Bi%3A1%3Bi%3A80%3Bi%3A1%3Bi%3A81%3Bi%3A1%3Bi%3A82%3Bi%3A1%3Bi%3A83%3Bi%3A1%3Bi%3A84%3Bi%3A1%3Bi%3A85%3Bi%3A1%3Bi%3A86%3Bi%3A1%3Bi%3A87%3Bi%3A1%3Bi%3A88%3Bi%3A1%3Bi%3A89%3Bi%3A1%3Bi%3A90%3Bi%3A1%3Bi%3A91%3Bi%3A1%3Bi%3A92%3Bi%3A1%3Bi%3A93%3Bi%3A1%3Bi%3A94%3Bi%3A1%3Bi%3A95%3Bi%3A1%3Bi%3A96%3Bi%3A1%3B%7Ds%3A7%3A%22forkids%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A6%3A%22search%22%3Bi%3A1%3Bs%3A6%3A%22remove%22%3Ba%3A2%3A%7Bs%3A4%3A%22time%22%3Ba%3A4%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3B%7Ds%3A7%3A%22forkids%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7D%7Ds%3A5%3A%22reset%22%3Bi%3A1%3Bs%3A7%3A%22sorting%22%3Bi%3A1%3B%7D3df9433178127fc260a1e8c2790bea4f50fa1275&tx_aaevents_programmpunkte%5Battendees%5D=&tx_aaevents_programmpunkte%5Barea%5D=&tx_aaevents_programmpunkte%5Barea%5D%5B%5D=3&tx_aaevents_programmpunkte%5Binterests%5D=&tx_aaevents_programmpunkte%5Btime%5D=&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=16-17&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=17-18&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=18-19&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=19-20&tx_aaevents_programmpunkte%5Bkind%5D=&tx_aaevents_programmpunkte%5Benglish%5D=&tx_aaevents_programmpunkte%5Baccessability%5D=&tx_aaevents_programmpunkte%5Bformats%5D=&tx_aaevents_programmpunkte%5Bsubject%5D=&tx_aaevents_programmpunkte%5Bforkids%5D=&tx_aaevents_programmpunkte%5Bforkids%5D%5B%5D=1&tx_aaevents_programmpunkte%5Bsearch%5D=&tx_aaevents_programmpunkte%5Bsorting%5D=stime-ASC.
+```
+Ich verstehe nicht was diese Webseite ist, in welchem Kontext der Link geposted wurde und was dieser original darstellen sollte. Wenn Ich heute die Webseite besuche bekomme Ich folgende Fehlermeldung `Oops, an error occurred! Code: 2024072016331727c9ddc0`, welcher abweicht von der lediglichen 404 Seite. Heißt also diese Webseite hat mal irgendwas gemacht. Was das werden wir wohl nie erfahren!
+</br></br>
+
+**Link 2:** „Keyboard Layout Editor“ 
+[http://www.keyboard-layout-editor.com/](http://www.keyboard-layout-editor.com/#%23@_name=Snowslide&author=ZENSIERT%2ZENSIERT&switchMount=cherry;&@_y:0.2&x:4&c=%23e8e7e3&p=CHICKLET&f:8;&=3%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%C2%BB&_x:9.5;&=8%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A-;&@_y:-0.85&x:3;&=2%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%C2%AB&_x:1;&=4%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A(&_x:7.5;&=7%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A+&_x:1;&=9%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A//;&@_y:-0.8500000000000001&x:6;&=5%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A)&_x:5.5;&=6%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A/@;&@_y:-0.75&x:1&a:7&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Escape-3'%3E%3C//i%3E&_a:4&f:8;&=1%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%22&_x:13.5;&=0%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A*&_a:7;&=%C3%87;&@_y:-0.55&x:4;&=P&_x:9.5;&=D;&@_y:-0.8500000000000001&x:3;&=%C3%89&_x:1;&=O&_x:7.5;&=V&_x:1;&=L;&@_y:-0.8500000000000001&x:6;&=%C3%88&_x:5.5&a:4;&=!%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%5E;&@_y:-0.75&x:1&a:7&f:9;&=%3Ci%20class/='kb%20kb-Line-Start-End'%3E%3C//i%3E&_f:8;&=B&_x:13.5;&=J&_f:6;&=Z;&@_y:-0.5499999999999998&x:4&f:8;&=I&_x:9.5;&=S;&@_y:-0.8500000000000001&x:3;&=U&_x:1&n:true;&=E&_x:7.5&n:true;&=T&_x:1;&=R;&@_y:-0.8500000000000001&x:6&a:5;&=/;%0A,&_x:5.5&a:7;&=C;&@_y:-0.75&f:9;&=%3Ci%20class/='kb%20kb-Multimedia-Play-Pause'%3E%3C//i%3E&_t=%230d0d0b;&=/&uArr/;&_t=%23000000&f:8;&=A&_x:13.5;&=N&_t=%230d0d0b;&=M&_t=%23000000&f:9;&=/&uArr/;;&@_y:-0.8500000000000001&x:7&c=%23ffffff&t=%23e8e7e3;&=%3Ci%20class/='kb%20kb-Unicode-DeleteRight-Big'%3E%3C//i%3E;&@_y:-0.6999999999999997&x:4&c=%23e8e7e3&t=%23000000&f:8;&=X&_x:9.5;&=G;&@_y:-0.8500000000000001&x:3;&=Y&_x:1&a:5;&=/:%0A.&_x:7.5&a:7;&=Q&_x:1;&=H;&@_y:-0.8499999999999996&x:6;&=K&_x:5.5&a:4;&=?%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A';&@_y:-0.75&x:1&a:5;&=%C2%B0%0A/=&_a:7;&=%C3%80&_x:13.5;&=F&=W;&@_y:-0.40000000000000036&x:4.5&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E;&@_y:-0.5999999999999996&x:1&f:8;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E&_x:15.5&f:9;&=%3Ci%20class/='fa%20fa-rocket'%3E%3C//i%3E;&@_y:1.2999999999999998&x:4&c=%23b81b24&f:8;&=F3&_x:9.5;&=F8;&@_y:-0.8500000000000005&x:3;&=F2&_x:1;&=F4&_x:7.5;&=F7&_x:1;&=F9;&@_y:-0.8499999999999996&x:6;&=F5&_x:5.5;&=F6;&@_y:-0.75&x:1&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Escape-3'%3E%3C//i%3E&_f:8;&=F1&_x:13.5;&=F10&=F11;&@_y:-0.5499999999999989&x:4&a:6&f:4;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E%0A%0Aspc&_x:9.5&a:7&f:8;&=%3Ci%20class/='fa%20fa-arrow-up'%3E%3C//i%3E;&@_y:-0.8500000000000014&x:3&a:4&f:6;&=/&uArr/;%0A%0A%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%0A%0A%0A%0A%0A%0A%0AB&_x:1;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E%0A/&uArr/;%0A%0A%0A%0A%0A%0A%0A%0A%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E&_x:7.5&a:7;&=prev%20word&_x:1;&=next%20word;&@_y:-0.8499999999999996&x:6&a:6;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E%0A%0A%3Ci%20class/='kb%20kb-Unicode-PrintScreen-1'%3E%3C//i%3E&_x:5.5&a:7&f:7;&=del%20line;&@_y:-0.75&x:1;&=%3Ci%20class/='kb%20kb-Multimedia-Mute-1'%3E%3C//i%3E&_f:6;&=%3Ci%20class/='kb%20kb-logo-windows-8'%3E%3C//i%3E/&uArr/;%3Ci%20class/='fa%20fa-arrow-left'%3E%3C//i%3E&_x:13.5&f:7;&=%3Ci%20class/='kb%20kb-Hamburger-Menu'%3E%3C//i%3E&_f:8;&=F12;&@_y:-0.5499999999999989&x:4;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E&_x:9.5;&=%3Ci%20class/='fa%20fa-arrow-down'%3E%3C//i%3E;&@_y:-0.8500000000000014&x:3;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E&_x:1&n:true;&=/&uArr/;&_x:7.5&n:true;&=%3Ci%20class/='fa%20fa-arrow-left'%3E%3C//i%3E&_x:1;&=%3Ci%20class/='fa%20fa-arrow-right'%3E%3C//i%3E;&@_y:-0.8499999999999996&x:6&a:4&f:5;&=%0Agr%0A%0A%0A%0A%0A%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%3Ci%20class/='kb%20kb-Line-Start-End'%3E%3C//i%3E&_x:5.5&a:7&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Page-Up-5'%3E%3C//i%3E;&@_y:-0.75&t=%230d0d0b;&=%3Ci%20class/='fa%20fa-comment'%3E%3C//i%3E&_f:6;&=&_t=%23000000&f:5;&=Undo&_x:13.5&a:6;&=/&uArr/;%0A%0AF12&_t=%230d0d0b&a:7&f:8;&=%3Ci%20class/='kb%20kb-logo-windows-8'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Unicode-PrintScreen-1'%3E%3C//i%3E;&@_y:-0.8499999999999996&x:7&t=%23000000&f:9;&=%3Ci%20class/='kb%20kb-Multimedia-FastForward-End'%3E%3C//i%3E;&@_y:-0.6999999999999993&x:4&f:6;&=copy&_x:9.5&f:8;&=;&@_y:-0.8500000000000014&x:3&f:6;&=cut&_x:1&f:5;&=paste&_x:7.5&f:8;&=%3Ci%20class/='kb%20kb-Arrows-Top-2'%3E%3C//i%3E&_x:1;&=%3Ci%20class/='kb%20kb-Arrows-Bottom-2'%3E%3C//i%3E;&@_y:-0.8499999999999996&x:6&f:6;&=ditto&_x:5.5&f:8;&=%3Ci%20class/='mss%20mss-Unicode-Page-Down-5'%3E%3C//i%3E;&@_y:-0.75&x:1&f:5;&=caps%20lock&=Redo&_x:13.5&f:6;&=F&_f:7;&=;&@_y:-0.34999999999999964&x:4.5&a:6&f:6;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%0AF4;&@_y:-0.6500000000000004&x:1&a:5&f:5;&=caps%0Aword&_x:15.5&a:7&f:4;&=Game;&@_y:1.450000000000001&x:4&c=%230078a3&f:8;&=F3&_x:9.5;&=F8;&@_y:-0.9500000000000011&x:13.5;&=F7;&@_y:-0.9000000000000004&x:3;&=F2&_x:1;&=F4&_x:9.5;&=F9;&@_y:-0.8499999999999996&x:6;&=F5&_x:5.5;&=F6;&@_y:-0.75&x:1&a:5&f:5;&=Ver%0ANum&_a:7&f:8;&=F1&_x:13.5;&=F10&=F11;&@_y:-0.5499999999999989&x:4;&=%3C&_x:9.5;&=8;&@_y:-0.9500000000000011&x:13.5;&=7;&@_y:-0.9000000000000021&x:3&a:4&f:5;&=%C2%B6%0A%0A%0A%0A%0A%0A%0A%0A%0A%23&_x:1&a:7&f:8;&=%3E&_x:9.5;&=9;&@_y:-0.8499999999999996&x:6;&=-%3E&_x:5.5&f:9;&=-;&@_y:-0.7500000000000018&x:1;&=%3Ci%20class/='kb%20kb-Line-Start-End'%3E%3C//i%3E&_f:7;&=%5C&_x:13.5&f:9;&=//&_f:8;&=F12;&@_y:-0.5500000000000007&x:14.5;&=5;&@_y:-0.9499999999999993&x:4;&=%7B;&@_y:-0.9500000000000028&x:13.5&n:true;&=4;&@_y:-0.9499999999999993&x:3;&=%7D&_x:1&a:5&f:6&n:true;&=%0A/&&_x:9.5&a:7&f:8;&=6;&@_y:-0.8499999999999979&x:6;&=/=%3E&_x:5.5&f:9;&=+;&@_y:-0.75&t=%230d0d0b;&=%3Ci%20class/='fa%20fa-lock'%3E%3C//i%3E&=/&uArr/;&_t=%23000000&f:8;&=%7C&_x:13.5;&=*&_t=%230d0d0b;&=%E2%82%AC&=Ins;&@_y:-0.8500000000000014&x:7&t=%23000000&f:9;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_y:-0.6999999999999993&x:4&a:4&f:6;&=%0A%0A%0A%E2%80%93%0A%0A%0A%0A%0A%0A$&_x:9.5&a:7&f:8;&=2;&@_y:-0.8500000000000014&x:3&a:4&f:6;&=%E2%80%B0%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%25&_x:1&a:7&f:8;&=%5B&_x:7.5;&=1&_x:1;&=3;&@_y:-0.8499999999999979&x:6;&=%5D&_x:5.5;&=0;&@_y:-0.75&x:1&f:5;&=&=&_x:13.5&f:6;&=$&_f:8;&=%C2%A3;&@_y:-0.40000000000000213&x:4.5&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E;&@_y:-0.5999999999999979&x:1&a:5&f:5;&=caps%0Aword&_x:15.5&a:6;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%0AF4;&@_ry:9&y:7.75&x:11.5&a:7&f:6;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_rx:0.25&ry:0&y:4.35&x:13.75&c=%23ffffff;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%20gr;&@_y:5.9&x:13.7&c=%23b81b24&f:9;&=;&@_y:5.949999999999999&x:13.75&c=%230078a3;&=;&@_rx:0.5&y:9.75&x:11&c=%23b81b24&f:8;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_rx:2&y:2.9&x:9.5&c=%23e8e7e3;&=%60;&@_r:15&rx:0&y:2.75&x:6.75&f:9;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E;&@_y:5.65&x:8.5&c=%23b81b24&f:8;&=%3Ci%20class/='fa%20fa-lock'%3E%3C//i%3E;&@_y:5.749999999999998&x:10.25&c=%230078a3&f:9;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E;&@_r:30&y:-4.199999999999999&c=%23ffffff&t=%23ff0000%0A%23000000&a:5&f:3&f2:1&d:true;&=%3Ci%20class/='fa%20fa-circle'%3E%3C//i%3E%0ANUM%20LOCK&_t=%23800000%0A%23000000&d:true;&=%3Ci%20class/='fa%20fa-circle'%3E%3C//i%3E%0ACAPS%20LOCK&_d:true;&=%3Ci%20class/='fa%20fa-circle'%3E%3C//i%3E%0ASCROLL%20LOCK;&@_rx:0.25&y:5.75&x:11.65&c=%23b81b24&t=%23000000&a:7&f:8;&=%3Ci%20class/='fa%20fa-paper-plane'%3E%3C//i%3E;&@_x:11.65&c=%23e8e7e3&f:9;&=%3Ci%20class/='kb%20kb-Arrows-Down-Circle-Filled'%3E%3C//i%3E;&@_y:4.050000000000001&x:15.1&c=%230078a3;&=%3Ci%20class/='kb%20kb-Unicode-DeleteRight-Big'%3E%3C//i%3E;&@_x:15.1;&=;&@_rx:1.25&y:1.25&x:7.35&c=%23b81b24&t=%23e8e7e3;&=%3Ci%20class/='kb%20kb-Arrows-Down-Circle-Filled'%3E%3C//i%3E;&@_rx:3&y:1.15&x:5.800000000000001&c=%23ffffff&t=%23000000;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_r:40&rx:0&y:4.3&x:14&c=%23b81b24;&=spc;&@_y:4.3500000000000005&x:18.5&c=%230078a3;&=/_;&@_rx:2&y:0.25&x:8&c=%23ffffff;&=spc;&@_r:-40&rx:0&ry:9&y:15.25&x:1.2&c=%230078a3;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_rx:0.5&ry:0&y:16.5&x:-0.45&c=%23b81b24&f:8;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_rx:2&y:10.25&x:2.9000000000000004&c=%23e8e7e3;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_r:-30&rx:0.75&y:15&x:3.3499999999999996&c=%23b81b24;&=%3Ci%20class/='kb%20kb-Multimedia-Rewind-Start'%3E%3C//i%3E;&@_x:3.3499999999999996;&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Down-1'%3E%3C//i%3E;&@_ry:3&y:18.4&x:1.35&c=%230078a3&f:5;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%20gr;&@_x:1.35&c=%23e8e7e3&f:9;&=%3Ci%20class/='kb%20kb-Arrows-Up-Circle-Filled'%3E%3C//i%3E;&@_rx:1.25&ry:0&y:8.8&x:6.45&t=%23e8e7e3;&=%3Ci%20class/='fa%20fa-shield'%3E%3C//i%3E;&@_x:6.45&c=%230078a3;&=%3Ci%20class/='kb%20kb-Arrows-Up-Circle-Filled'%3E%3C//i%3E;&@_r:-15&rx:0&y:7.8&x:11.15&c=%23e8e7e3&t=%23000000;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_y:5.649999999999999&x:9.3&c=%23b81b24;&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Up-1'%3E%3C//i%3E;&@_ry:3.75&y:17.55&x:8.5&c=%230078a3;&=.)
+
+Hier der gleiche Link nochmal zum durchlesen:
+
+```
+http://www.keyboard-layout-editor.com/#%23@_name=Snowslide&author=ZENSIERT%2ZENSIERT&switchMount=cherry;&@_y:0.2&x:4&c=%23e8e7e3&p=CHICKLET&f:8;&=3%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%C2%BB&_x:9.5;&=8%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A-;&@_y:-0.85&x:3;&=2%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%C2%AB&_x:1;&=4%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A(&_x:7.5;&=7%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A+&_x:1;&=9%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A//;&@_y:-0.8500000000000001&x:6;&=5%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A)&_x:5.5;&=6%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A/@;&@_y:-0.75&x:1&a:7&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Escape-3'%3E%3C//i%3E&_a:4&f:8;&=1%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%22&_x:13.5;&=0%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A*&_a:7;&=%C3%87;&@_y:-0.55&x:4;&=P&_x:9.5;&=D;&@_y:-0.8500000000000001&x:3;&=%C3%89&_x:1;&=O&_x:7.5;&=V&_x:1;&=L;&@_y:-0.8500000000000001&x:6;&=%C3%88&_x:5.5&a:4;&=!%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%5E;&@_y:-0.75&x:1&a:7&f:9;&=%3Ci%20class/='kb%20kb-Line-Start-End'%3E%3C//i%3E&_f:8;&=B&_x:13.5;&=J&_f:6;&=Z;&@_y:-0.5499999999999998&x:4&f:8;&=I&_x:9.5;&=S;&@_y:-0.8500000000000001&x:3;&=U&_x:1&n:true;&=E&_x:7.5&n:true;&=T&_x:1;&=R;&@_y:-0.8500000000000001&x:6&a:5;&=/;%0A,&_x:5.5&a:7;&=C;&@_y:-0.75&f:9;&=%3Ci%20class/='kb%20kb-Multimedia-Play-Pause'%3E%3C//i%3E&_t=%230d0d0b;&=/&uArr/;&_t=%23000000&f:8;&=A&_x:13.5;&=N&_t=%230d0d0b;&=M&_t=%23000000&f:9;&=/&uArr/;;&@_y:-0.8500000000000001&x:7&c=%23ffffff&t=%23e8e7e3;&=%3Ci%20class/='kb%20kb-Unicode-DeleteRight-Big'%3E%3C//i%3E;&@_y:-0.6999999999999997&x:4&c=%23e8e7e3&t=%23000000&f:8;&=X&_x:9.5;&=G;&@_y:-0.8500000000000001&x:3;&=Y&_x:1&a:5;&=/:%0A.&_x:7.5&a:7;&=Q&_x:1;&=H;&@_y:-0.8499999999999996&x:6;&=K&_x:5.5&a:4;&=?%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A';&@_y:-0.75&x:1&a:5;&=%C2%B0%0A/=&_a:7;&=%C3%80&_x:13.5;&=F&=W;&@_y:-0.40000000000000036&x:4.5&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E;&@_y:-0.5999999999999996&x:1&f:8;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E&_x:15.5&f:9;&=%3Ci%20class/='fa%20fa-rocket'%3E%3C//i%3E;&@_y:1.2999999999999998&x:4&c=%23b81b24&f:8;&=F3&_x:9.5;&=F8;&@_y:-0.8500000000000005&x:3;&=F2&_x:1;&=F4&_x:7.5;&=F7&_x:1;&=F9;&@_y:-0.8499999999999996&x:6;&=F5&_x:5.5;&=F6;&@_y:-0.75&x:1&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Escape-3'%3E%3C//i%3E&_f:8;&=F1&_x:13.5;&=F10&=F11;&@_y:-0.5499999999999989&x:4&a:6&f:4;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E%0A%0Aspc&_x:9.5&a:7&f:8;&=%3Ci%20class/='fa%20fa-arrow-up'%3E%3C//i%3E;&@_y:-0.8500000000000014&x:3&a:4&f:6;&=/&uArr/;%0A%0A%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%0A%0A%0A%0A%0A%0A%0AB&_x:1;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E%0A/&uArr/;%0A%0A%0A%0A%0A%0A%0A%0A%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E&_x:7.5&a:7;&=prev%20word&_x:1;&=next%20word;&@_y:-0.8499999999999996&x:6&a:6;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E%0A%0A%3Ci%20class/='kb%20kb-Unicode-PrintScreen-1'%3E%3C//i%3E&_x:5.5&a:7&f:7;&=del%20line;&@_y:-0.75&x:1;&=%3Ci%20class/='kb%20kb-Multimedia-Mute-1'%3E%3C//i%3E&_f:6;&=%3Ci%20class/='kb%20kb-logo-windows-8'%3E%3C//i%3E/&uArr/;%3Ci%20class/='fa%20fa-arrow-left'%3E%3C//i%3E&_x:13.5&f:7;&=%3Ci%20class/='kb%20kb-Hamburger-Menu'%3E%3C//i%3E&_f:8;&=F12;&@_y:-0.5499999999999989&x:4;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E&_x:9.5;&=%3Ci%20class/='fa%20fa-arrow-down'%3E%3C//i%3E;&@_y:-0.8500000000000014&x:3;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E&_x:1&n:true;&=/&uArr/;&_x:7.5&n:true;&=%3Ci%20class/='fa%20fa-arrow-left'%3E%3C//i%3E&_x:1;&=%3Ci%20class/='fa%20fa-arrow-right'%3E%3C//i%3E;&@_y:-0.8499999999999996&x:6&a:4&f:5;&=%0Agr%0A%0A%0A%0A%0A%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%3Ci%20class/='kb%20kb-Line-Start-End'%3E%3C//i%3E&_x:5.5&a:7&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Page-Up-5'%3E%3C//i%3E;&@_y:-0.75&t=%230d0d0b;&=%3Ci%20class/='fa%20fa-comment'%3E%3C//i%3E&_f:6;&=&_t=%23000000&f:5;&=Undo&_x:13.5&a:6;&=/&uArr/;%0A%0AF12&_t=%230d0d0b&a:7&f:8;&=%3Ci%20class/='kb%20kb-logo-windows-8'%3E%3C//i%3E&=%3Ci%20class/='kb%20kb-Unicode-PrintScreen-1'%3E%3C//i%3E;&@_y:-0.8499999999999996&x:7&t=%23000000&f:9;&=%3Ci%20class/='kb%20kb-Multimedia-FastForward-End'%3E%3C//i%3E;&@_y:-0.6999999999999993&x:4&f:6;&=copy&_x:9.5&f:8;&=;&@_y:-0.8500000000000014&x:3&f:6;&=cut&_x:1&f:5;&=paste&_x:7.5&f:8;&=%3Ci%20class/='kb%20kb-Arrows-Top-2'%3E%3C//i%3E&_x:1;&=%3Ci%20class/='kb%20kb-Arrows-Bottom-2'%3E%3C//i%3E;&@_y:-0.8499999999999996&x:6&f:6;&=ditto&_x:5.5&f:8;&=%3Ci%20class/='mss%20mss-Unicode-Page-Down-5'%3E%3C//i%3E;&@_y:-0.75&x:1&f:5;&=caps%20lock&=Redo&_x:13.5&f:6;&=F&_f:7;&=;&@_y:-0.34999999999999964&x:4.5&a:6&f:6;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%0AF4;&@_y:-0.6500000000000004&x:1&a:5&f:5;&=caps%0Aword&_x:15.5&a:7&f:4;&=Game;&@_y:1.450000000000001&x:4&c=%230078a3&f:8;&=F3&_x:9.5;&=F8;&@_y:-0.9500000000000011&x:13.5;&=F7;&@_y:-0.9000000000000004&x:3;&=F2&_x:1;&=F4&_x:9.5;&=F9;&@_y:-0.8499999999999996&x:6;&=F5&_x:5.5;&=F6;&@_y:-0.75&x:1&a:5&f:5;&=Ver%0ANum&_a:7&f:8;&=F1&_x:13.5;&=F10&=F11;&@_y:-0.5499999999999989&x:4;&=%3C&_x:9.5;&=8;&@_y:-0.9500000000000011&x:13.5;&=7;&@_y:-0.9000000000000021&x:3&a:4&f:5;&=%C2%B6%0A%0A%0A%0A%0A%0A%0A%0A%0A%23&_x:1&a:7&f:8;&=%3E&_x:9.5;&=9;&@_y:-0.8499999999999996&x:6;&=-%3E&_x:5.5&f:9;&=-;&@_y:-0.7500000000000018&x:1;&=%3Ci%20class/='kb%20kb-Line-Start-End'%3E%3C//i%3E&_f:7;&=%5C&_x:13.5&f:9;&=//&_f:8;&=F12;&@_y:-0.5500000000000007&x:14.5;&=5;&@_y:-0.9499999999999993&x:4;&=%7B;&@_y:-0.9500000000000028&x:13.5&n:true;&=4;&@_y:-0.9499999999999993&x:3;&=%7D&_x:1&a:5&f:6&n:true;&=%0A/&&_x:9.5&a:7&f:8;&=6;&@_y:-0.8499999999999979&x:6;&=/=%3E&_x:5.5&f:9;&=+;&@_y:-0.75&t=%230d0d0b;&=%3Ci%20class/='fa%20fa-lock'%3E%3C//i%3E&=/&uArr/;&_t=%23000000&f:8;&=%7C&_x:13.5;&=*&_t=%230d0d0b;&=%E2%82%AC&=Ins;&@_y:-0.8500000000000014&x:7&t=%23000000&f:9;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_y:-0.6999999999999993&x:4&a:4&f:6;&=%0A%0A%0A%E2%80%93%0A%0A%0A%0A%0A%0A$&_x:9.5&a:7&f:8;&=2;&@_y:-0.8500000000000014&x:3&a:4&f:6;&=%E2%80%B0%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A%25&_x:1&a:7&f:8;&=%5B&_x:7.5;&=1&_x:1;&=3;&@_y:-0.8499999999999979&x:6;&=%5D&_x:5.5;&=0;&@_y:-0.75&x:1&f:5;&=&=&_x:13.5&f:6;&=$&_f:8;&=%C2%A3;&@_y:-0.40000000000000213&x:4.5&f:9;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E;&@_y:-0.5999999999999979&x:1&a:5&f:5;&=caps%0Aword&_x:15.5&a:6;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%0A%0AF4;&@_ry:9&y:7.75&x:11.5&a:7&f:6;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_rx:0.25&ry:0&y:4.35&x:13.75&c=%23ffffff;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%20gr;&@_y:5.9&x:13.7&c=%23b81b24&f:9;&=;&@_y:5.949999999999999&x:13.75&c=%230078a3;&=;&@_rx:0.5&y:9.75&x:11&c=%23b81b24&f:8;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_rx:2&y:2.9&x:9.5&c=%23e8e7e3;&=%60;&@_r:15&rx:0&y:2.75&x:6.75&f:9;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E;&@_y:5.65&x:8.5&c=%23b81b24&f:8;&=%3Ci%20class/='fa%20fa-lock'%3E%3C//i%3E;&@_y:5.749999999999998&x:10.25&c=%230078a3&f:9;&=%3Ci%20class/='fa%20fa-angle-up'%3E%3C//i%3E;&@_r:30&y:-4.199999999999999&c=%23ffffff&t=%23ff0000%0A%23000000&a:5&f:3&f2:1&d:true;&=%3Ci%20class/='fa%20fa-circle'%3E%3C//i%3E%0ANUM%20LOCK&_t=%23800000%0A%23000000&d:true;&=%3Ci%20class/='fa%20fa-circle'%3E%3C//i%3E%0ACAPS%20LOCK&_d:true;&=%3Ci%20class/='fa%20fa-circle'%3E%3C//i%3E%0ASCROLL%20LOCK;&@_rx:0.25&y:5.75&x:11.65&c=%23b81b24&t=%23000000&a:7&f:8;&=%3Ci%20class/='fa%20fa-paper-plane'%3E%3C//i%3E;&@_x:11.65&c=%23e8e7e3&f:9;&=%3Ci%20class/='kb%20kb-Arrows-Down-Circle-Filled'%3E%3C//i%3E;&@_y:4.050000000000001&x:15.1&c=%230078a3;&=%3Ci%20class/='kb%20kb-Unicode-DeleteRight-Big'%3E%3C//i%3E;&@_x:15.1;&=;&@_rx:1.25&y:1.25&x:7.35&c=%23b81b24&t=%23e8e7e3;&=%3Ci%20class/='kb%20kb-Arrows-Down-Circle-Filled'%3E%3C//i%3E;&@_rx:3&y:1.15&x:5.800000000000001&c=%23ffffff&t=%23000000;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_r:40&rx:0&y:4.3&x:14&c=%23b81b24;&=spc;&@_y:4.3500000000000005&x:18.5&c=%230078a3;&=/_;&@_rx:2&y:0.25&x:8&c=%23ffffff;&=spc;&@_r:-40&rx:0&ry:9&y:15.25&x:1.2&c=%230078a3;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_rx:0.5&ry:0&y:16.5&x:-0.45&c=%23b81b24&f:8;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_rx:2&y:10.25&x:2.9000000000000004&c=%23e8e7e3;&=%3Ci%20class/='kb%20kb-Return-2'%3E%3C//i%3E;&@_r:-30&rx:0.75&y:15&x:3.3499999999999996&c=%23b81b24;&=%3Ci%20class/='kb%20kb-Multimedia-Rewind-Start'%3E%3C//i%3E;&@_x:3.3499999999999996;&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Down-1'%3E%3C//i%3E;&@_ry:3&y:18.4&x:1.35&c=%230078a3&f:5;&=%3Ci%20class/='mss%20mss-Unicode-Option-3'%3E%3C//i%3E%20gr;&@_x:1.35&c=%23e8e7e3&f:9;&=%3Ci%20class/='kb%20kb-Arrows-Up-Circle-Filled'%3E%3C//i%3E;&@_rx:1.25&ry:0&y:8.8&x:6.45&t=%23e8e7e3;&=%3Ci%20class/='fa%20fa-shield'%3E%3C//i%3E;&@_x:6.45&c=%230078a3;&=%3Ci%20class/='kb%20kb-Arrows-Up-Circle-Filled'%3E%3C//i%3E;&@_r:-15&rx:0&y:7.8&x:11.15&c=%23e8e7e3&t=%23000000;&=%3Ci%20class/='kb%20kb-Unicode-BackSpace-DeleteLeft-Big'%3E%3C//i%3E;&@_y:5.649999999999999&x:9.3&c=%23b81b24;&=%3Ci%20class/='kb%20kb-Multimedia-Volume-Up-1'%3E%3C//i%3E;&@_ry:3.75&y:17.55&x:8.5&c=%230078a3;&=.
+```
+Dies ist ziemlich selbsterklärend: Das ist eine Webseite mit der man sich sein eigenes Keyboard-Layout gestalten kann. Jede Variation und Abwandlung von einem normalen Layout wird im Link gespeichert, darunter auch der Name des Autors! Dieser scheint sich sehr auszukennen, denn der Link ist gewaltig. Stand 20. Juli 2024 können wir den Link zwar öffnen, es scheint die Konfiguration jedoch nicht zu laden auf der Webseite, wir können also nur spekulieren was tatsächlich an der Tastatur geändert wurde, es scheint sehr viel! Wir mussten den Link editieren um nicht blatant die Person zu doxxen. Der Link wurde zwar öffentlich geposted, jedoch vielleicht möchte die Person nicht berühmt dadurch werden das sie die einzig identifizierbare Person ist die einen der 15 Links geposted hat welche die Datenbank von troet.cafe zerstörten! Haha. 
+</br></br>
+
+**Link 3:** „Carbon - Beautiful Images of Your Source Code“
+
+[https://carbon.now.sh/](https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%250A%2520%2520%2520%2520%2522%2540context%2522%253A%2520%2522http%253A%252F%252Fschema.org%252F%2522%252C%250A%2520%2520%2520%2520%2522%2540type%2522%253A%2520%2522SoftwareApplication%2522%252C%250A%2520%2520%2520%2520%2522%2540id%2522%253A%2520%2522https%253A%252F%252Fxibbon.com%252F%2523softwareApplication%2522%252C%250A%2520%2520%2520%2520%2522name%2522%253A%2520%2522La%2520Terminal%2522%252C%250A%2520%2520%2520%2520%2522operatingSystem%2522%253A%2520%2522iOS%252C%2520MacOS%252C%2520Windows%2522%252C%250A%2520%2520%2520%2520%2522applicationCategory%2522%253A%2520%2522Terminal%2520Emulator%2522%252C%250A%2520%2520%2520%2520%2522feature%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Fully%2520Native%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Provides%2520a%2520fully-native%252C%2520first-class%2520touch%2520experience%2520for%2520command-line%2520hackers%2520on%2520iPhone%2520and%2520iPad%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522iCloud%2520for%2520Everyone%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Makes%2520it%2520easy%2520to%2520switch%2520between%2520your%2520iPhone%252C%2520iPad%252C%2520and%2520Mac%2520by%2520syncing%2520your%2520settings%2520and%2520keys%2520over%2520iCloud%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Live%2520Backgrounds%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Sports%2520a%2520fully%2520themeable%2520experience%2520accented%2520with%2520beautifully%2520captivating%2520live-effect%2520backgrounds%2520powered%2520by%2520Metal%2520Performance%2520Shaders%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Inline%2520graphics%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Allows%2520to%2520view%2520graphical%2520output%252C%2520such%2520as%2520plots%252C%2520graphs%252C%2520and%2520images%252C%2520in-place%2520in%2520the%2520terminal%2520while%2520you%2520work%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Built%2520on%2520open%2520source%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Provides%2520a%2520comprehensive%2520terminal%2520emulator%2520experience%2520based%2520on%2520the%2520popular%2520open%2520source%2520SwiftTerm%2520library%2520with%2520powerful%2520client%2520amenities%2520for%2520serious%2520command-line%2520aficionados%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Secure%2520Enclave%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Stores%2520your%2520private%2520keys%2520in%2520the%2520secure%2520enclave%2520so%2520your%2520private%2520key%2520can%2520never%2520be%2520found%2520in%2520plain%2520text%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Linux%2520and%2520Mac%2520and%2520Windows%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522A%2520terminal%2520emulator%2520that%2520support%2520Windows-aware%2520to%2520ensure%2520PowerShell%2520power%2520users%2520can%2520enjoy%2520a%2520delightful%2520ssh%2520experience%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522International%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Renders%2520internationalized%2520output%2520and%2520supports%2520internationalized%2520input%252C%2520including%2520native%2520iOS%2520dictation%2520and%2520international%2520keyboards%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2522screenshot%2522%253A%2520%2522https%253A%252F%252Fxibbon.com%252Fimages%252Fphone.png%2522%250A%257D%250A%250A)
+
+Hier der gleiche Link nochmal zum durchlesen:
+
+```
+https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=application%2Fjson&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%257B%250A%2520%2520%2520%2520%2522%2540context%2522%253A%2520%2522http%253A%252F%252Fschema.org%252F%2522%252C%250A%2520%2520%2520%2520%2522%2540type%2522%253A%2520%2522SoftwareApplication%2522%252C%250A%2520%2520%2520%2520%2522%2540id%2522%253A%2520%2522https%253A%252F%252Fxibbon.com%252F%2523softwareApplication%2522%252C%250A%2520%2520%2520%2520%2522name%2522%253A%2520%2522La%2520Terminal%2522%252C%250A%2520%2520%2520%2520%2522operatingSystem%2522%253A%2520%2522iOS%252C%2520MacOS%252C%2520Windows%2522%252C%250A%2520%2520%2520%2520%2522applicationCategory%2522%253A%2520%2522Terminal%2520Emulator%2522%252C%250A%2520%2520%2520%2520%2522feature%2522%253A%2520%255B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Fully%2520Native%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Provides%2520a%2520fully-native%252C%2520first-class%2520touch%2520experience%2520for%2520command-line%2520hackers%2520on%2520iPhone%2520and%2520iPad%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522iCloud%2520for%2520Everyone%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Makes%2520it%2520easy%2520to%2520switch%2520between%2520your%2520iPhone%252C%2520iPad%252C%2520and%2520Mac%2520by%2520syncing%2520your%2520settings%2520and%2520keys%2520over%2520iCloud%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Live%2520Backgrounds%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Sports%2520a%2520fully%2520themeable%2520experience%2520accented%2520with%2520beautifully%2520captivating%2520live-effect%2520backgrounds%2520powered%2520by%2520Metal%2520Performance%2520Shaders%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Inline%2520graphics%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Allows%2520to%2520view%2520graphical%2520output%252C%2520such%2520as%2520plots%252C%2520graphs%252C%2520and%2520images%252C%2520in-place%2520in%2520the%2520terminal%2520while%2520you%2520work%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Built%2520on%2520open%2520source%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Provides%2520a%2520comprehensive%2520terminal%2520emulator%2520experience%2520based%2520on%2520the%2520popular%2520open%2520source%2520SwiftTerm%2520library%2520with%2520powerful%2520client%2520amenities%2520for%2520serious%2520command-line%2520aficionados%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Secure%2520Enclave%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Stores%2520your%2520private%2520keys%2520in%2520the%2520secure%2520enclave%2520so%2520your%2520private%2520key%2520can%2520never%2520be%2520found%2520in%2520plain%2520text%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522Linux%2520and%2520Mac%2520and%2520Windows%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522A%2520terminal%2520emulator%2520that%2520support%2520Windows-aware%2520to%2520ensure%2520PowerShell%2520power%2520users%2520can%2520enjoy%2520a%2520delightful%2520ssh%2520experience%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522name%2522%253A%2520%2522International%2522%252C%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2522description%2522%253A%2520%2522Renders%2520internationalized%2520output%2520and%2520supports%2520internationalized%2520input%252C%2520including%2520native%2520iOS%2520dictation%2520and%2520international%2520keyboards%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%255D%252C%250A%2520%2520%2520%2520%2522screenshot%2522%253A%2520%2522https%253A%252F%252Fxibbon.com%252Fimages%252Fphone.png%2522%250A%257D%250A%250A
+```
+Eine Erklärung zu diesem sowie den nächsten Link folgt weiter unten. 
+</br></br>
+
+**Link 4:** Carbon - „Beautiful Images of Your Source Code“ (*nochmal*)
+[https://carbon.now.sh/](https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=htmlmixed&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%250AGenerate%2520an%2520RDF-based%2520FAQ%2520using%2520RDF-Turtle%2520and%2520terms%2520from%2520the%2520schema.org%2520vocabulary%253A%2520How%2520much%2520does%2520it%2520cost%2520to%2520use%2520ChatGPT%253F%2520During%2520the%2520initial%2520research%2520preview%252C%2520ChatGPT%2520is%2520free%2520to%2520use.%2520How%2520does%2520ChatGPT%2520work%253F%2520ChatGPT%2520is%2520fine-tuned%2520from%2520GPT-3.5%252C%2520a%2520language%2520model%2520trained%2520to%2520produce%2520text.%2520ChatGPT%2520was%2520optimized%2520for%2520dialogue%2520by%2520using%2520Reinforcement%2520Learning%2520with%2520Human%2520Feedback%2520%28RLHF%29%2520%25E2%2580%2593%2520a%2520method%2520that%2520uses%2520human%2520demonstrations%2520to%2520guide%2520the%2520model%2520toward%2520desired%2520behavior.%2520Why%2520does%2520the%2520AI%2520seem%2520so%2520real%2520and%2520lifelike%253F%2520These%2520models%2520were%2520trained%2520on%2520vast%2520amounts%2520of%2520data%2520from%2520the%2520internet%2520written%2520by%2520humans%252C%2520including%2520conversations%252C%2520so%2520the%2520responses%2520it%2520provides%2520may%2520sound%2520human-like.%2520It%2520is%2520important%2520to%2520keep%2520in%2520mind%2520that%2520this%2520is%2520a%2520direct%2520result%2520of%2520the%2520system%27s%2520design%2520%28i.e.%2520maximizing%2520the%2520similarity%2520between%2520outputs%2520and%2520the%2520dataset%2520the%2520models%2520were%2520trained%2520on%29%2520and%2520that%2520such%2520outputs%2520may%2520be%2520inaccurate%252C%2520untruthful%252C%2520and%2520otherwise%2520misleading%2520at%2520times.%2520Can%2520I%2520trust%2520that%2520the%2520AI%2520is%2520telling%2520me%2520the%2520truth%253F%2520ChatGPT%2520is%2520not%2520connected%2520to%2520the%2520internet%252C%2520and%2520it%2520can%2520occasionally%2520produce%2520incorrect%2520answers.%2520It%2520has%2520limited%2520knowledge%2520of%2520world%2520and%2520events%2520after%25202021%2520and%2520may%2520also%2520occasionally%2520produce%2520harmful%2520instructions%2520or%2520biased%2520content.%2520We%27d%2520recommend%2520checking%2520whether%2520responses%2520from%2520the%2520model%2520are%2520accurate%2520or%2520not.%2520If%2520you%2520find%2520an%2520answer%2520is%2520incorrect%252C%2520please%2520provide%2520that%2520feedback%2520by%2520using%2520the%2520%2522Thumbs%2520Down%2522%2520button.%2520Who%2520can%2520view%2520my%2520conversations%253F%2520As%2520part%2520of%2520our%2520commitment%2520to%2520safe%2520and%2520responsible%2520AI%252C%2520we%2520review%2520conversations%2520to%2520improve%2520our%2520systems%2520and%2520to%2520ensure%2520the%2520content%2520complies%2520with%2520our%2520policies%2520and%2520safety%2520requirements.%2520Will%2520you%2520use%2520my%2520conversations%2520for%2520training%253F%2520Yes.%2520Your%2520conversations%2520may%2520be%2520reviewed%2520by%2520our%2520AI%2520trainers%2520to%2520improve%2520our%2520systems.%2520Can%2520you%2520delete%2520my%2520data%253F%2520Yes%252C%2520please%2520follow%2520the%2520data%2520deletion%2520process%2520here%253A%2520https%253A%252F%252Fhelp.openai.com%252Fen%252Farticles%252F6378407-how-can-i-delete-my-account%2520Can%2520you%2520delete%2520specific%2520prompts%253F%2520No%252C%2520we%2520are%2520not%2520able%2520to%2520delete%2520specific%2520prompts%2520from%2520your%2520history.%2520Please%2520don%27t%2520share%2520any%2520sensitive%2520information%2520in%2520your%2520conversations.%2520Can%2520I%2520see%2520my%2520history%2520of%2520threads%253F%2520How%2520can%2520I%2520save%2520a%2520conversation%2520I%25E2%2580%2599ve%2520had%253F%2520Yes%252C%2520you%2520can%2520now%2520view%2520and%2520continue%2520your%2520past%2520conversations.%2520Where%2520do%2520you%2520save%2520my%2520personal%2520and%2520conversation%2520data%253F%2520For%2520more%2520information%2520on%2520how%2520we%2520handle%2520data%252C%2520please%2520see%2520our%2520Privacy%2520Policy%2520and%2520Terms%2520of%2520Use.%2520How%2520can%2520I%2520implement%2520this%253F%2520Is%2520there%2520any%2520implementation%2520guide%2520for%2520this%253F%2520ChatGPT%2520is%2520being%2520made%2520available%2520as%2520a%2520research%2520preview%2520so%2520we%2520can%2520learn%2520about%2520its%2520strengths%2520and%2520weaknesses.%2520It%2520is%2520not%2520available%2520in%2520the%2520API.%2520Do%2520I%2520need%2520a%2520new%2520account%2520if%2520I%2520already%2520have%2520a%2520Labs%2520or%2520Playground%2520account%253F%2520If%2520you%2520have%2520an%2520existing%2520account%2520at%2520labs.openai.com%2520or%2520beta.openai.com%252C%2520then%2520you%2520can%2520login%2520directly%2520at%2520chat.openai.com%2520using%2520the%2520same%2520login%2520information.%2520If%2520you%2520don%27t%2520have%2520an%2520account%252C%2520you%27ll%2520need%2520to%2520sign-up%2520for%2520a%2520new%2520account%2520at%2520chat.openai.com.)
+
+Hier der gleiche Link nochmal zum durchlesen:
+
+```
+https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=htmlmixed&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%250AGenerate%2520an%2520RDF-based%2520FAQ%2520using%2520RDF-Turtle%2520and%2520terms%2520from%2520the%2520schema.org%2520vocabulary%253A%2520How%2520much%2520does%2520it%2520cost%2520to%2520use%2520ChatGPT%253F%2520During%2520the%2520initial%2520research%2520preview%252C%2520ChatGPT%2520is%2520free%2520to%2520use.%2520How%2520does%2520ChatGPT%2520work%253F%2520ChatGPT%2520is%2520fine-tuned%2520from%2520GPT-3.5%252C%2520a%2520language%2520model%2520trained%2520to%2520produce%2520text.%2520ChatGPT%2520was%2520optimized%2520for%2520dialogue%2520by%2520using%2520Reinforcement%2520Learning%2520with%2520Human%2520Feedback%2520%28RLHF%29%2520%25E2%2580%2593%2520a%2520method%2520that%2520uses%2520human%2520demonstrations%2520to%2520guide%2520the%2520model%2520toward%2520desired%2520behavior.%2520Why%2520does%2520the%2520AI%2520seem%2520so%2520real%2520and%2520lifelike%253F%2520These%2520models%2520were%2520trained%2520on%2520vast%2520amounts%2520of%2520data%2520from%2520the%2520internet%2520written%2520by%2520humans%252C%2520including%2520conversations%252C%2520so%2520the%2520responses%2520it%2520provides%2520may%2520sound%2520human-like.%2520It%2520is%2520important%2520to%2520keep%2520in%2520mind%2520that%2520this%2520is%2520a%2520direct%2520result%2520of%2520the%2520system%27s%2520design%2520%28i.e.%2520maximizing%2520the%2520similarity%2520between%2520outputs%2520and%2520the%2520dataset%2520the%2520models%2520were%2520trained%2520on%29%2520and%2520that%2520such%2520outputs%2520may%2520be%2520inaccurate%252C%2520untruthful%252C%2520and%2520otherwise%2520misleading%2520at%2520times.%2520Can%2520I%2520trust%2520that%2520the%2520AI%2520is%2520telling%2520me%2520the%2520truth%253F%2520ChatGPT%2520is%2520not%2520connected%2520to%2520the%2520internet%252C%2520and%2520it%2520can%2520occasionally%2520produce%2520incorrect%2520answers.%2520It%2520has%2520limited%2520knowledge%2520of%2520world%2520and%2520events%2520after%25202021%2520and%2520may%2520also%2520occasionally%2520produce%2520harmful%2520instructions%2520or%2520biased%2520content.%2520We%27d%2520recommend%2520checking%2520whether%2520responses%2520from%2520the%2520model%2520are%2520accurate%2520or%2520not.%2520If%2520you%2520find%2520an%2520answer%2520is%2520incorrect%252C%2520please%2520provide%2520that%2520feedback%2520by%2520using%2520the%2520%2522Thumbs%2520Down%2522%2520button.%2520Who%2520can%2520view%2520my%2520conversations%253F%2520As%2520part%2520of%2520our%2520commitment%2520to%2520safe%2520and%2520responsible%2520AI%252C%2520we%2520review%2520conversations%2520to%2520improve%2520our%2520systems%2520and%2520to%2520ensure%2520the%2520content%2520complies%2520with%2520our%2520policies%2520and%2520safety%2520requirements.%2520Will%2520you%2520use%2520my%2520conversations%2520for%2520training%253F%2520Yes.%2520Your%2520conversations%2520may%2520be%2520reviewed%2520by%2520our%2520AI%2520trainers%2520to%2520improve%2520our%2520systems.%2520Can%2520you%2520delete%2520my%2520data%253F%2520Yes%252C%2520please%2520follow%2520the%2520data%2520deletion%2520process%2520here%253A%2520https%253A%252F%252Fhelp.openai.com%252Fen%252Farticles%252F6378407-how-can-i-delete-my-account%2520Can%2520you%2520delete%2520specific%2520prompts%253F%2520No%252C%2520we%2520are%2520not%2520able%2520to%2520delete%2520specific%2520prompts%2520from%2520your%2520history.%2520Please%2520don%27t%2520share%2520any%2520sensitive%2520information%2520in%2520your%2520conversations.%2520Can%2520I%2520see%2520my%2520history%2520of%2520threads%253F%2520How%2520can%2520I%2520save%2520a%2520conversation%2520I%25E2%2580%2599ve%2520had%253F%2520Yes%252C%2520you%2520can%2520now%2520view%2520and%2520continue%2520your%2520past%2520conversations.%2520Where%2520do%2520you%2520save%2520my%2520personal%2520and%2520conversation%2520data%253F%2520For%2520more%2520information%2520on%2520how%2520we%2520handle%2520data%252C%2520please%2520see%2520our%2520Privacy%2520Policy%2520and%2520Terms%2520of%2520Use.%2520How%2520can%2520I%2520implement%2520this%253F%2520Is%2520there%2520any%2520implementation%2520guide%2520for%2520this%253F%2520ChatGPT%2520is%2520being%2520made%2520available%2520as%2520a%2520research%2520preview%2520so%2520we%2520can%2520learn%2520about%2520its%2520strengths%2520and%2520weaknesses.%2520It%2520is%2520not%2520available%2520in%2520the%2520API.%2520Do%2520I%2520need%2520a%2520new%2520account%2520if%2520I%2520already%2520have%2520a%2520Labs%2520or%2520Playground%2520account%253F%2520If%2520you%2520have%2520an%2520existing%2520account%2520at%2520labs.openai.com%2520or%2520beta.openai.com%252C%2520then%2520you%2520can%2520login%2520directly%2520at%2520chat.openai.com%2520using%2520the%2520same%2520login%2520information.%2520If%2520you%2520don%27t%2520have%2520an%2520account%252C%2520you%27ll%2520need%2520to%2520sign-up%2520for%2520a%2520new%2520account%2520at%2520chat.openai.com.
+```
+
+In diesen zwei Fällen führt der Link zu einer Webseite welche Code so darstellt wie in einem Terminal-Fenster mit richtiger, farblicher Formatierung, sozusagen schön aussehen lässt um davon ein Bild zu machen für YouTube Videos, Präsentationen oder öffentliche Posts! Das heißt der Link beinhaltet den gesamten Code für ein Programm das jemand schön darstellen wollte. Faszinierend! Der zweite Link beinhaltet nichtmal Code, sondern nur einen langen Werbetext für ChatGPT? Naja, was es nicht alles gibt...
+
+Nun da mein kurzer Ausflug als Erklärung dieser Links vorbei ist, geht es weiter damit diese Links zu beseitigen und die Datenbank zu fixen!
+
+Wir löschten also alle Einträge mit Links die zu groß waren. Der genaue Befehl muss ungefähr so ausgesehen haben, auch wenn Ich ihn (*komischerweise*) nicht in diesem Protokoll notiert habe:
+
+mastodon_production=> `BEGIN; DELETE FROM preview_cards WHERE length(url)>2730;`
+
+Mit dem Ergebnis das 15 Links welche unsere Datenbank plagten natürlich gelöscht wurden. Wir wussten es in diesem Moment zwar noch nicht, wollten auch nicht zu früh feiern, doch dies war der Moment an dem die Datenbank von troet.cafe vollständig funktionsfähig war.  
+
+### Tatsächlich die Datenbank Updaten (Erfolgreich)
+
+Da nun die Datenbank *pico bello* war, alle vorherigen Probleme gelöst, jetzt auch das Mega-Problem der zu großen Links in der *preview_cards* Tabelle (*nach 07:27 Stunden*) behoben war, konnten wir endlich mit dem eigentlichen Prozess fortfahren: Um 17:44 führten wir das standardmäßige Update eines Mastodon-Servers zu der [v4.2.0 von einer v4.1.X Instanz](https://github.com/mastodon/mastodon/releases/tag/v4.2.0) auf dem worker3-Server durch, und ließen so die Migrations-Skripte, die bei einem jeden Mastodon-Update dabei sind, über die troet.cafe Datenbank laufen. In der Vergangenheit sind diese immer Fehlgeschlagen aufgrunddessen das die Datenbank eine **falsche Schema-Version** hatte, die **Foreign-Key-Constraints** oder der Fakt das kein Index aufgebaut werden konnte wegen **Links** die selbst länger waren als jeder Beitrag auf der Plattform. Heute, in diesem Moment aber, hat das Update funktioniert. Es war wirklich ein Heureka-Moment, auch wenn wir ihn in diesem Moment nach diesem Wochenende wenig würdigten und lediglich hofften, das nichts *weiteres* auf diesem holprigen Weg schief läuft. Wir updateten den worker3-Server auf die Version 4.2.8, was weitaus leichter und mit weniger Veränderungen der Dependencies kam als das große Update von 4.1.X auf 4.2.X!
+
+Daraufhin haben wir nun ein vorletztes Mal das tootctl Maintenance-Skript ausgeführt, es lief wahrscheinlich das erste Mal so erfolgreich durch, dass es bis zum Punkt `Deduplicating preview_cards…` erreichte, doch löschte (*oder deduplizierte*) keinen Eintrag in der Datenbank. Nachlesbar ist der gesamte Log unter [troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.log](). Uns wurde also klar: um die vielen Einträge der *preview_cards* Tabelle zu beseitigen müssen wir diese manuell löschen. Langfristig sollte dies natürlich ein cronjob tun! Auch wichtig war, dass das Skript dennoch scheiterte mit einer anderen Fehlermeldung *scheinbar* nachdem es versuchte die Webhooks zu deduplizieren. Wir waren dadurch verwirrt und versuchten deshalb das Skript später erneut auszuführen und entschieden uns, nachdem wir die *preview_cards* eigenständig deduplizierten, uns das ganze genauer anzusehen. 
+
+Nun löschten wir also alle Einträge innerhalb der Tabelle *preview_cards* die älter als 3 Monate waren:
+
+mastodon_production=> `BEGIN; DELETE FROM preview_cards WHERE created_at <= '2024-02-12';`
+```
 BEGIN
 DELETE 16672362
+```
+Der Prefix *BEGIN;* vor einen jeden SQL-Befehl stellt sicher das der darauffolgende Befehl nicht ausgeführt wird, sondern nur dessen potenzielle Änderung dargestellt. Erst mit `COMMIT;` würde der Befehl tatsächlich ausgeführt werden.
 
-
-mastodon_production=> BEGIN; DELETE FROM preview_cards WHERE created_at <= '2024-02-12';
+mastodon_production=> `BEGIN; DELETE FROM preview_cards WHERE created_at <= '2024-02-12';`
+```
 BEGIN
 DELETE 16672362
-mastodon_production=*> commit;
+```
+mastodon_production=*> `commit;`
+```
 COMMIT
-mastodon_production=> select count (id) from preview_cards;
+```
+
+mastodon_production=> `select count (id) from preview_cards;`
+```
   count  
 ---------
  2596351
 (1 row)
-
-mastodon_production=> 
-
-
-18:00
-
 ```
-mastodon_production=> select * from webhooks;
+Die Anzahl an Einträgen in der *preview_cards* Tabelle war nun von 19.268.713 Links auf lediglich 2.596.351 reduziert worden, eine verminderung auf ~13,5%! 
+
+Es war nun 18:00, wir schauten auch in die *webhooks* Tabelle. Der Server hat keine Webhooks, das würde uns auch wundern denn wir haben keine eingerichtet. Dennoch hat das Maintenance-Skript daran gescheitert (*so dachten wir*), was sehr verwirrend war wenn die Aufgabe so klein schien...
+
+mastodon_production=> `select * from webhooks;`
+```
  id | url | events | secret | enabled | created_at | updated_at | template 
 ----+-----+--------+--------+---------+------------+------------+----------
 (0 rows)
 
 ```
+Uns beeindruckte das scheiternde Maintenance-Skript erstmal weniger, da wir uns selbst zu Helfen wussten. Wir machten also weiter...
 
-materialized_view?
+Nick erzählte irgendwas von *materialized_view*, Ich verstehe nicht genau was das ist, aber irgendwas wichtiges hat er verändert. Ich weiß, dies ist ein super Protokoll. Wenn irgendwas ist, fragt Nick!
 
-passwort von Mastodon user ändern weil es jeder kennt :D
+Mir fiel in diesem Moment ein, dass wir das Passwort vom mastodon User auf dem Datenbank-Server später ändern sollten, da es nun jeder im Anruf kennt. Glücklicherweise haben wir das bereits getan!
 
+Um 18:12 führten wir folgenden Befehl aus um zu gucken auf welcher Version nun unsere Datenbank nach den Migrations-Skripts sind:
 
-18:12
-
-mastodon_production=> select version from schema_migrations order by version desc limit 5;
+mastodon_production=> `select version from schema_migrations order by version desc limit 5;`
+```
     version     
 ----------------
  20230907150100
@@ -958,11 +1068,14 @@ mastodon_production=> select version from schema_migrations order by version des
  20230822081029
  20230818142253
  20230818141056
+```
+
+Dieser zeigte uns die jetzige Schema-Vesion der Datenbank des Datenbank-Servers. Verglichen zur vorherigen Version `2022_12_06_114142`, sind wir nun bei `2023_09_07_15_01_00`, was nach dem Update auf 4.2.0, sowie später auf 4.2.8 zu erwarten war. Das Datenbank-Update war also erfolgreich!
+
+Nick sagte der Server „[...] versucht ein repopulate in einer nicht populated view“. Was auch immer das heißen mag. 
  
- es versucht ein repopulate in einer nicht populated view
- 
+Wir schauten uns die *materialized view* an:
  ```
- 
   schemaname | matviewname | matviewowner | tablespace | hasindexes | ispopulated |                                            definition                                             
 ------------+-------------+--------------+------------+------------+-------------+---------------------------------------------------------------------------------------------------
  public     | instances   | mastodon     |            | t          | f           |  WITH domain_counts(domain, accounts_count) AS (                                                 +
@@ -985,46 +1098,26 @@ mastodon_production=> select version from schema_migrations order by version des
             |             |              |            |            |             |     COALESCE(domain_counts.accounts_count, (0)::bigint) AS accounts_count                        +
             |             |              |            |            |             |    FROM (domain_allows                                                                           +
             |             |              |            |            |             |      LEFT JOIN domain_counts ON (((domain_counts.domain)::text = (domain_allows.domain)::text)));
- 
  ```
 
+Nick exportierte das neue Datenbankschema. Ich schrieb in diesem Moment „*Ich habe keine Ahnung was eine materialized view ist*“ ins Protokoll was alle sehen konnten da Ich meinen Bildschirm teilte. Mir wurde es von einigen Expert:Innen erklärt, Ich habe mein Bestes versucht das wiederzugeben:  
 
-nick hat das neue datenbankschema exportiert
+> *materialized view* heißt das es die Daten in einer *view* zwischenspeichert in einer Tabelle und eine *view* kann sich aus mehreren Tabellen zusammenstellen.
 
-ich habe keine ahnung was eine materialized view ist
+Okay, Ich hoffe das hat jemanden geholfen!
 
-aelect auf eine table doch für die datenbank ist es ein table und es 
+mastodon_production=>  `REFRESH MATERIALIZED VIEW public.instances;`
 
-materialized view heißt das es die daten in einer view zwischenspeichert in einer table
+Das scheint bei irgendwas geholfen zu haben. 
 
-eine view kann sich aus mehreren tablen zusammenstellen
+Um 18:25 führten wir den Maintenance-Skript Befehl ein letztes Mal aus und dieser hat 100% funktioniert! Nachlesen lässt sich dies im Log [troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.log](). Das Problem lag anscheinend nicht bei den Webhooks (*diese waren ja auch nichtexistent*), sondern bei dem „Finished“ welches zum Schluss kommen sollte. Dieses führt noch einige generelle Systemchecks durch welche aufgrund von der *materialized view* gescheitert sind. Durch das *refreshen* dieser lief das Maintenance-Skript nun ohne Probleme durch, 07:11 Stunden nachdem wir es das erste Mal heute versucht haben. 
 
-REFRESH MATERIALIZED VIEW public.instances;
-danach
-18:25 der befehl (maintenance script tootctl) hat 100% funktioniert 
+### Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)
 
-es waren nicht die webhooks sondern das "finished"
+Um 18:30 haben wir die Firewall-Regeln des neuen Datenbank-Servers nochmal mit UFW (*Universal Firewall*) umgeschrieben und verhärtet:
 
-wir schreiben die firewall regeln nochmal um (18:30)
-
-wir machen ein snapshot
-
-anscheinend gibt es eine fixed policy notification "foreign key"
-
-39GB datenbank
-
-rbenv install (scheitert)
-
-git -C /home/mastodon/.rbenv/plugins/ruby-build pull
-
-rbenv install (geht)
-
-für nächsten April machen wir aus troet.cafe ne andere Seite
-
-
-datenbank:
-
-root@pg:/home# ufw status verbose
+root@pg:/home# `ufw status verbose`
+```
 Status: active
 Logging: on (low)
 Default: deny (incoming), allow (outgoing), disabled (routed)
@@ -1032,63 +1125,78 @@ New profiles: skip
 
 To                         Action      From
 --                         ------      ----
-22                         ALLOW IN    159.69.89.221             
-22                         ALLOW IN    188.34.207.90             
-Anywhere                   ALLOW IN    116.203.82.164            
-Anywhere                   ALLOW IN    162.55.63.189             
-Anywhere                   ALLOW IN    167.235.146.56            
-Anywhere                   ALLOW IN    195.201.1.28              
-Anywhere                   ALLOW IN    168.119.122.106           
-22/tcp                     ALLOW IN    84.140.81.88              
-22/tcp                     ALLOW IN    87.163.228.105            
-22/tcp                     ALLOW IN    159.69.18.103             
+22                         ALLOW IN    ZENSIERT             
+22                         ALLOW IN    ZENSIERT            
+Anywhere                   ALLOW IN    ZENSIERT           
+Anywhere                   ALLOW IN    ZENSIERT             
+Anywhere                   ALLOW IN    ZENSIERT           
+Anywhere                   ALLOW IN    ZENSIERT           
+Anywhere                   ALLOW IN    ZENSIERT          
+22/tcp                     ALLOW IN    ZENSIERT              
+22/tcp                     ALLOW IN    ZENSIERT          
+22/tcp                     ALLOW IN    ZENSIERT            
 22/tcp                     ALLOW IN    Anywhere                  
-22/tcp                     ALLOW IN    2a01:4f8:1c0c:7f80::1     
+22/tcp                     ALLOW IN    ZENSIERT     
 22/tcp (v6)                ALLOW IN    Anywhere (v6)   
+```
+Das „ZENSIERT“ ersetzt die IP Adressen der Worker- und Web-server welche alle auf die neue Datenbank zugreifen müssen.  
 
+Daraufhin haben wir über Hetzner einen Snapshot vom nun funktionstüchtigen neuen Datenbank-Server erstellt, einfach um sicherzustellen, dass wenn wir nach diesem großen Meilenstein irgendeinen Fehler begehen würden die Arbeit nicht umsonst war (*auch wenn wir nun, auch aufgrund dieses Protokolls, das Problem mit Leichtigkeit erneut meistern könnten*). Ich glaube ein jeder Snapshot kostet Martin immer einen Centbetrag an Geld, weswegen Ich als Ich so leichtsinnig oft den „Neuer Snapshot“ Knopf gedrückt habe erstmal komisch angeguckt wurde.  
 
-etckeeper
+Wir stellten fest, dass es eine *fixed policy notification* namens „foreign key“ gibt. 
 
-19:09
+Die Datenbank war final auf 39GB reduziert worden. 
 
-19:14
+Der `rbenv install` ist gescheitert, da der Ruby-Installer nicht installiert war. 
 
-nick macht mit multi-irgendwas die updates der web1,web2,web3,worker4 auf 4.2.8
+`git -C /home/mastodon/.rbenv/plugins/ruby-build pull`
 
-nick macht auch die streaming server
+Wiederholt `rbenv install` hat daraufhin funktioniert. 
 
-wir machen nix mit elasticsearch
+Nick stellte die Idee auf, dass wir für den nächsten 01. April aus troet.cafe eine ganz andere Webseite machen! Ob das Ralph Ruthe, Krieg und Freitag, oder dem ND gefallen würde, welche auch alle irgendwo ihre Aprilscherze veröffentlichen wollen! Ich weiß ja nicht... ;) 
 
-19:40 starten neuen elasticsearch zeugs
+Uns wurde die Software etckeeper nahegelegt welche das *etc* Directory wie ein Git-Repository führt, so können alle Einstellungen zeitlich zurückgefahren werden. 
 
-kurz davor fertig zu sein
+Um 19:14 war dann alles im verminderten Setup so weit. Der worker3-Server, auf dem wir bisher die gesamte Zeit arbeiteten um den neuen Datenbank-Server zu bedienen, war bereits auf dem neusten stand, jedoch nicht der web1, web2, web3, sowie worker4 Server! Diese mussten alle auf die Mastodon-Version 4.2.8 ge-updated werden. Praktisch vier (4) Mastodon-Installationen müssen noch durchgeführt werden. Nick versuchte dies mit einem Multi-Terminal-Emulator, also ein Programm was den gleichen Befehl an mehrere Server gleichzeitig senden konnte, was aber leider scheiterte. Später habe Ich manuell jeden Server einzeln aktualisiert. Ich sah es wie ein Mastodon-Installation any% Speedrun. Ich änderte zudem die Konfiguration (`.env.production`) der vier (4) Mastodon-Server, sodass diese sich nun mit der neuen Datenbank sowie dem neuen Redis auf dem neuen Datenbank-Server verbinden würden. 
 
-loadbalancer an dann ding an
+Nick richtete auch die Streaming-Server ein (*die Server welche Medien wie Videos, Audios und Bilder als separaten Task streamen und eine aktive Verbindung mit dem Client aufrechterhalten*). 
 
-kurz davor
+ElasticSearch hatten wir nicht verändert und ließen wir weiterhin auf den alten Datenbank-Server, dies änderte sich erst am 06. Juni 2024 wo Martin auch ElasticSearch zum neuen Datenbank-Server umgezogen hat und den alten, nach 6 Jahren an Arbeit, endlich heruntergefahren hat. 
 
-19:41
+Um 19:40 haben wir auf dem alten Datenbank-Server eine neue Indexierung aller Beiträge gestartet. 
 
-19:59
+Wir merkten nur, dass wir kurz davor waren das ganze tatsächlich, hoffentlich ohne weitere Probleme, abzuschließen. 
 
-auf worker:
-systemctl restart mastodon-sk-pull.service mastodon-sk-push.service mastodon-sidekiq mastodon-sidekiq-schedulers.service
+Wenn wir nun Hetzner's Loadbalancer anschalten würden, welcher die erste Anlaufstelle für die DNS Einträge der troet.cafe Domain sind und jegliches Traffic zwischen den web1, web2, und web3 Server aufteilt, dann würde troet.cafe tatsächlich auch wieder online gehen. 
 
-auf web: einfach restart lol
+Um 19:59 führten wir folgende Befehle auf allen Worker-Servern aus:
+`systemctl restart mastodon-sk-pull.service mastodon-sk-push.service mastodon-sidekiq mastodon-sidekiq-schedulers.service`
+Dies würde jeden dortigen relevanten Mastodon-Service neustarten. 
 
-20:02 lb anschalten instanz hoch
-(wir haben es erst so 20:03 oder 20:04 angeschaltet, und es war erst so 20:05 online weil Erik noch ne lange Rede darüber gehalten hat wie alles schief laufen wird)
+Gleichzeitig starteten wir alle Web-Server neu um den gleichen Effekt zu erzielen. 
 
+### Der letzte Schritt und Smoke Test (Erfolgreich)
 
-20:15 es scheint alles zu funktionieren
+Um 20:02 kam der Moment der Wahrheit, wir würden nun endlich den Loadbalancer hochfahren und somit troet.cafe auf neuer Hardware mit neuen Servern und funktionierender Datenbank hochfahren. Es war meine Aufgabe den Loadbalancer anzuschalten. Zuerst nahm Ich jedoch einen Schritt zurück und verinnerlichte was das bedeuten würde. Wenn irgendwas, auch nur irgendwas an dieser Datenbank dennoch kaputt war, etwas das man anhand von Statistiken nicht sehen könnte, etwas das wir übersehen haben, dann müssten wir troet.cafe wieder herunterfahren, alle Web- und Worker-Server wieder auf die alte Datenbank lenken und Dinge so weiterführen wie bisher. Doch das würde bedeuten, dass alle Beiträge während des *smoke test* gelöscht werden. Jeder neue Account, jedes Bild, alles über Nacht weg. Wir stellten natürlich neue Registrationen bereits im Voraus aus und würden diese auch nicht wieder anstellen bis der *smoke test* vorbei ist. Ich informierte natürlich im [Voraus](https://mastodon.de/@ErikUden/112426891286057054) sowie [währenddessen](https://mastodon.de/@ErikUden/112429444523028870) troet.cafe wieder online ging das dies ein Test ist und was das überhaupt bedeutet. Dennoch hatte Ich bedenken. 
 
-um zu "tröt!" zu verändern
+Würde der Server online gehen? Würden Menschen zu uns kommen und sagen, dass ihre Beiträge fehlen oder gelöscht sind? Wie würden uns die Accounts erreichen die ggf. gelöscht wurden durch unsere Änderungen an der Datenbank? Was wenn nicht alle es sofort bemerken? Was wenn nur einige Accounts betroffen sind - ab wie vielen Accounts würden wir dann all unsere Arbeit rückgängig machen? All diese Fragen gingen mir durch den Kopf. Doch erst 20:04, nachdem Ich innerhalb der Videokonferenz das alles verinnerlichte und erzählte, drückte Ich tatsächlich den Knopf welcher den Loadbalancer wieder hochfahren sollte. 
 
-Anpassung von Übersetzungen lokal auf den Webservern.
+20:05 war troet.cafe dann wieder online. Wir loggten uns sofort ein - es war erfolgreich. Wir checkten das Admin-Interface - es lud, zum ersten Mal sogar vollständig, und das schnell. Wir guckten auf alle föderierten Posts, Bilder, Links, sowie troet.cafe auf der neuen Version - alles schien perfekt zu laufen. Ich verfasste einen [Beitrag](https://mastodon.de/@ErikUden/112429444523028870) das wir wieder online sind. 20:15 notierten wir das bisher keine Fehlermeldungen eingerieselt sind. 
 
+Da sich der ElasticSearch Index (*was die erweiterte Suchfunktion ermöglicht*) noch aufbaut, berichteten viele Personen damit ein Problem! Zudem musste gerade die Föderation der letzten ~11,5 Stunden nachgearbeitet werden, das heißt viele Posts kamen erst verlangsamt auf mastodon.de bei mir an, sowie auch bei den Menschen auf troet.cafe. Doch die Clients (*vor allem Apps auf dem Handy*) die sich in dem Moment in dem troet.cafe online ging wieder verbinden konnten und dies auch sofort getan haben, wollten natürlich sofort die neuste Timeline haben, alle Benachrichtigungen abfragen und am besten noch neue Posts schreiben! Das Nacharbeiten des fehlenden Tages und gleichzeitig neue Bereitstellen von Inhalten konnten dann auch unsere neuen Server nicht *sofort*, weswegen wir einige Meldungen einiger User darüber bekommen haben, jedoch meistens mit der Meldung dazu, dass alles andere zu gehen scheint. Solange wir nur diese Art an Fehlermeldung bekommen, dann ist alles gut! Denn dieses Problem löst sich mit der Zeit von selbst. 
+
+Langsam ließ die Angst in mir nach, dass wir alles doch noch wieder zurückfahren mussten, doch mit jeder vergehenden Minute, mit jedem neuen Post, wäre das ein Beitrag der falls doch irgendwas schief läuft gelöscht werden sollte. Auch dieses Gefühl stummte mit der Zeit ab. 
+
+Da es nun nur noch hieß das wir warten müssen um zu gucken ob irgendwas passiert, beschäftigte Ich mich mit einer eher Trivialen, dennoch unfassbar wichtigen Aufgabe! Einer der **wichtigsten** Rückmeldungen die wir bekommen haben war skandalös! Viele beschwerten sich, dass der ikonische „Tröt!“ Knopf nun mit einem langweiligen „Veröffentlichen!“ Knopf ersetzt wurde. Die Geschichte dahinter wird einigen bekannt sein: der Britische YouTuber Hbomberguy (*Harry Brewis*) sagte Eugen Rochko eines Tages er würde das Mastodon-Projekt auf ewig finanziell unterstützen, wenn diese die [Post-Funktion zu „Toot“ umbenennen](https://mastodon.social/@Hbomberguy/146524) würden. Oberflächlich mag diese Idee sinnvoll erscheinen, denn Twitter (*benannt nach einem Vogel*) hat „Tweets“ (*im englischen das Geräusch was Vögel machen, Zwitschern*), also Mastodon (*benannt nach einer Mammutartigen Spezies mit Rüssel*) hat Tröts (*Toots*)! Was Hbomberguy dabei verheimlichte war, dass im englischen das Wort „Toot“ auch umgangsprachlich für „Furzen“ ist. Das Mastodon-Team realisierte dies nach einigen Updates und ersetzte *Toot* / *Tröt* mit dem generischen „Publish“ / „Veröffentlichen“. So die einfache Geschichte, natürlich hat auch ein bisschen der Gedanke mit reingespielt, dass man Twitter nicht nachahmen möchte und eine Plattform welche sich selbst nicht in den Mittelpunkt stellt ggf. höhere Chancen hat zu wachsen. Vielleicht, das sind nur meine Spekulationen, Ich weiß es selbst nicht. 
+
+Letztendlich sind *wir* aber immer noch troet.cafe! Ob das **tröt** offiziell da steht oder nicht, daran wird sich nichts ändern.      
+
+Deshalb gibt es eine sehr schöne Anleitung vom Admin von vhs.social hier:
 https://vhs.social/@admin/109359411953821552
 
-Wie holen wir uns #Tröt zurück?
+Welche mit den folgenden Schritten erläutert wie man das „Veröffentlichen!“ zurück zu „Tröt!“ ändern kann.   
+
+**Wie holen wir uns #Tröt zurück?**
 
 1. Datei "live/app/javascript/mastodon/locales/de.json" öffnen
 2. dort "compose_form.publish" suchen, hinten "Tröt" reinschreiben
@@ -1097,29 +1205,23 @@ Wie holen wir uns #Tröt zurück?
 5. "RAILS_ENV=production bundle exec rails assets:precompile" laden
 6. neu laden: "systemctl restart mastodon-web"
 
-13:10:17 um 21:25 Beendet.
+Dies setzte Ich auf allen drei Web-Servern um, woraufhin jede Person wieder das ikonische **Tröt!** zu sehen bekam beim Veröffentlichen ihrer Beiträge!
 
-Wir hatten eine Videokonferenz die 13 Stunden, 10 Minuten und 21 Sekunden lang war. Wir haben um 08:15 angefangen und um 21:25 beendet. 
+Wir beobachteten die Lage spannend, nach so einem langen Tag waren 30 Minuten, eine weitere Stunde, nicht wirklich irgendwas nennenswertes. Wir redeten, gratulierten einander. Sahen nach und nach viele Helfende die Videokonferenz verlassen, bis nur noch das Kernteam von Rodirik, Nick, Martin und meiner Wenigkeit übrig blieb. Als wirklich nichts fragwürdiges aufkam erklärten wir post-factum: **Das troet.cafe wurde gerettet!**
 
-# Glossar
+Mit einer gesamten Zeit von 13 Stunden, 10 Minuten und 21 Sekunden innerhalb der Videokonferenz beendeten wir das Meeting ein für Alle Mal am 12.05.2024 um 21:25. Wir haben heute Morgen um 08:15 Uhr angefangen und es soeben um 21:25 Uhr beendet. 
 
-- **Mastodon:** Die dezentrale Social Media Software
-- **mastodon:** Der User welcher sowohl als in der Postgresql-Software sowie innerhalb der Debian-Umgebung für die Mastodon-Software Befehle ausführt. 
-- **Postgresql:** Die Datenbank-Software.
-- **postgres:** Der SuperUser der Datenbanksoftware. 
-- **Datenbank-Schema:** Die Struktur der Datenbank, sozusagen eine Auflistung der Namen an Tabellen welche eine Datenbank enthält, jedoch keine Daten. 
-- **Datenbank-Daten:** Die Daten innerhalb einer Datenbank (*gelöst vom Schema*). 
-- **pgbouncer:**
+Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenchen.social?***
 
 # Zeitaufwendung
 
-Termine für den ersten Tag:
+**Termine für den ersten Tag:**
 - `08:30 - 09:55 (01:25h) Meeting mit Martin und Erik Uden`
 - `10:21 - 13:10 (02:49h) Meeting mit Martin und Erik Uden`
 - `15:41 - 18:45 (03:04h) Meeting mit Martin, Erik Uden, Jain und Panda`
 - `18:45 - 21:47 (03:02h) Aufbereitung des Protokolls von Erik Uden`
 
-Termine für den zweiten Tag:
+**Termine für den zweiten Tag:**
 - `2024.05.12 | 08:15 - 21:25 (13:10h) Meeting mit Martin, Erik Uden, Nick, Rodirik, Patrick, Jain, Panda, André und Osmodia`
 - `2024.05.14 | 13:05 - 13:40 (00:35h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.05.14 | 15:40 - 17:27 (01:47h) Aufarbeitung des Protokolls von Erik Uden`
@@ -1129,31 +1231,38 @@ Termine für den zweiten Tag:
 - `2024.06.13 | 18:00 - 21:05 (03:05h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.15 | 11:35 - 12:35 (01:00h) Aufarbeitung des Protokolls von Erik Uden`
 
-Termine für beide Tage:
+**Termine für beide Tage:**
 - `2024.07.16 | 11:24 - 12:33 (01:09h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.18 | 11:29 - 12:01 (00:30h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.19 | 13:25 - 14:41 (01:16h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.19 | 18:40 - 22:01 (03:21h) Reparatur der Webseite join-mastodon.de`
 - `2024.07.20 | 09:47 - 15:00 (05:13h) Reparatur der Webseite join-mastodon.de`
+- `2024.07.20 | 17:20 - 18:42 (01:22h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.07.20 | 19:34 - 23:24 (03:50h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
+
+**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski. 
 
 
 # Danksagungen
 
-Ich bedanke mich bei crymond für das Helfen beim Aufdecken des Authentifizierungsproblems von Postgresql, sowie das Hinweisen auf die richtige Arbeitsweise mit der Datenbank!
+Ich bedanke mich bei **crymond** [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond) für das Helfen beim Aufdecken des Authentifizierungsproblems von Postgresql, sowie das Hinweisen auf die richtige Arbeitsweise mit der Datenbank!
 
-Danke an Patrick Fedick für das Aufdecken und Lösen vom letztendlichen Datenbankproblem mit den *preview_cards* URLs. Ich führte lediglich die Befehle aus die du ausformuliertest, und deine Idee für das Suchen nach zu langen URLs sowie das Entfernen dieser war der Knackpunkt der das gravierende Problem der Datenbank am zweiten Tag gelöst hat! Für das Analysieren der Schema, sowie deine Hilfe bei diversen Problemen innerhalb der mehreren Stunden die du dabei warst bedanke Ich mich natürlich auch, du hast bei so vielen Dingen geholfen das Ich sie gar nicht mehr alle akkurat weiß!
+Auch bei **Jain** [@Jain@blob.cat](https://blob.cat/users/Jain) sollte Ich mich groß bedanken, vor allem weil du am Anfang als es wichtig war das *Foreign-Key-Constraints* Problem gelöst hast!
 
-Ich muss mich natürlich auch bei Nick bedanken der nicht nur die zwei Tage, sondern die 5 Monate zuvor bei mehreren Meetings und vielen Gesprächen dabei war um troet.cafe zu retten, und das während einer der stressigsten Phasen seines Lebens. Ohne den Fakt das er im Voraus 
+Ich bedanke mich bei **osmodia** [@osmodia@chaos.social](https://chaos.social/@osmodia), für das Fixen vom *materialized view* Problem, sowie dem dabei sein als es am wichtigsten war! Die vielen Stunden Videokonferenz werde Ich dir leider nicht zurückgeben können, deshalb kann Ich mich nur bedanken. Woran Ich auch oft denken musst ist wie du am Tag des 12. Mai 2024 bereits am Morgen die Lösung für das *preview_cards* Tabelle geschrieben hast, doch uns diese Nachricht einfach nicht aufgefallen ist. 
 
+Ich muss mich bei **Panda** [@panda@pandas.social](https://pandas.social/@panda) bedanken, dafür, dass du bei vielen „kleinen“ Problemen wie der Firewall, Problemen mit der Gemfile, aber auch den schweren Aufgaben wie das Instandbringen des Deduplikations-Skripts geholfen hast! Natürlich auch das du am zweiten Tag für viele Stunden live dabei warst! Witzig war auch, dass du herausgefunden hast das einige User dachten troet.cafe sei für immer geschlossen und deshalb versuchten Accounts auf deiner Instanz zu erstellen, ohne dich hätten wir diese Informationen nie gehabt! Auch deine vielen Skripts für PostgreSQL haben den Tag weitaus erleichtert!
 
+Zudem kann Ich natürlich nicht vergessen **André Jaenisch** [@andre@fedi.jaenis.ch](https://fedi.jaenis.ch/@andre) zu danken, welcher seit der ersten Sekunde dabei war um im Expert:Innenrat auszuhelfen. Ich könnte jede Sache auflisten bei der du mitgeholfen hast, Ich glaube aber zu jeder Sache die wir besprochen haben hast du eine passende Idee dazu gegeben, Logs analysiert, oder sofort einen Link gehabt zu einer Seite die alles erklärt oder löst. „Das funktioniert nicht weil diese Dependency depubliziert wurde, hier könnt ihr in der Dokumentation nachlesen wie man das und jenes macht“  - wie aus der Pistole geschossen! Immer eine Hilfe und sogar eine sehr Gute!
 
-Danke an 
+Danke an **Patrick Fedick** [@patrickf@mastodon.de](https://mastodon.de/@patrickf) für das Aufdecken und Lösen vom letztendlichen Datenbankproblem mit den *preview_cards* URLs. Ich führte lediglich die Befehle aus die du ausformuliertest, und deine Idee für das Suchen nach zu langen URLs sowie das Entfernen dieser war der Knackpunkt der das gravierende Problem der Datenbank am zweiten Tag gelöst hat! Für das Analysieren der Schema, sowie deine Hilfe bei diversen Problemen innerhalb der mehreren Stunden die du dabei warst bedanke Ich mich natürlich auch, du hast bei so vielen Dingen geholfen das Ich sie gar nicht mehr alle akkurat weiß!
 
-Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https://mastodon.de/@freestyle/) und [mir](https://mastodon.de/@ErikUden) haben folgende Personen uns massiv bei der Rettung vom troet.cafe geholfen:
-- Patrick Fedick [@patrickf@mastodon.de](https://mastodon.de/@patrickf)
-- Panda [@panda@pandas.social](https://pandas.social/@panda)
-- André Jaenisch [@andre@fedi.jaenis.ch](https://fedi.jaenis.ch/@andre)
-- osmodia [@osmodia@chaos.social]()https://chaos.social/@osmodia)
-- crymond [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond)
+Ein großes Dankeschön an **Rodirik** [@Rodirik@mastodon.de](https://mastodon.de/@Rodirik) welcher mit Rat und Tat gleich am Morgen des ersten sowie zweiten Tages dabei war und unsere Entscheidungen kritisch betrachten und Einordnen konnte. Selbstverständlich bin Ich auch dankbar für deine sehr aktive Zusammenarbeit am zweiten Tag wo du bis zum Schluss als troet.cafe online war mitgeholfen hast, neben der ständigen Hilfe! Der Fakt, dass deine Server überhaupt die Videokonferenz gehostet haben auf der all das hier stattgefunden hat, sollte Beleg genug sein wie buchstäblich fundamental deine Rolle in dieser Operation war!
+
+Ich muss mich natürlich auch bei **Nick** [@freestyle@mastodon.de](https://mastodon.de/@freestyle/) bedanken, der nicht nur den zweiten Tag, sondern die 5 Monate zuvor bei mehreren Meetings und vielen Gesprächen dabei war um troet.cafe zu retten, und das während einer der stressigsten Phasen deines Lebens. Ohne den Fakt das du im Voraus das Datenbank-Schema analysiert hast, die Logs aufbereitet, bei der DENIC um Hilfe gebeten und vieles aufgearbeitet hast, wär dieses Wochenende nicht geschehen, zumindest nicht mit dem Resultat das troet.cafe jetzt noch steht!
+
+Zu guter letzt kommt natürlich das wichtigste: **Martin - bei dir kann man sich eigentlich nur bedanken** [@martinmuc@muenchen.social](https://muenchen.social/@martinmuc), denn die offensichtlichen Dinge für die Ich dankbar bin macht dieses Protokoll hoffentlich klar, aber was Ich dieses Wochenende, und vermindert die vorherigen Monate, miterlebt habe, war ein kleiner Einblick in das was du für über sechs (6) Jahre für troet.cafe, und umso länger für andere Mastodon-Instanzen, gemacht hast. Komplett alleine. Ich hatte Nick, Rodirik, Emily und Ivan, sowie die gesamte Öffentlichkeit. Du hast alles alleine geschmissen, nicht nur die Administration, sondern vor allem auch die Moderation. Es gab Wochen, und nicht nur während der Spamwelle, wo mir das zu viel war, viel zu viel. Als Ich die Nachrichten hörte, dass du im Januar 2024 troet.cafe und muenchen.social schließen wolltest, war Ich natürlich verblüfft. Nachdem Ich auch nur eine Woche mit dir zusammengearbeitet habe und entsetzt lernen musste, dass dies wirklich eine ***one-man-show*** war, war Ich eher erstaunt, dass du es nicht viel früher beendet hast. Ich glaube das absolut stärkste wofür Ich mich bedanken kann, und das erneut neben all den anderen *offensichtlichen* Dingen, ist das du bereit warst Hilfe anzunehmen. Das diese Geschichte einen recht negativen Anfang und doch letztendlich diese unfassbare Wendung ins positive haben konnte, ist einzig und allein dein verdienst! Dafür sollten wir dir Alle danken, dafür musst du aber auch **dir selbst dankbar sein!** 
+
+Natürlich... aber NATÜRLICH auch ein Dankeschön an euch, die das hier lesen. Entweder seid ihr Benutzer:Innen der Plattform troet.cafe, Tech-Interessierte, oder irgendwelche Menschen die sich über das Geschehen und die Geschichte von troet.cafe interessieren. Vielleicht habt ihr auch nur Probleme mit eurer Datenbank und dieser Blog ist das erste was auf Google auftaucht, so oder so: Danke. Wir machen das ganze für euch und Ich glaube nach diesem riesigen Text der nur die Arbeit von zwei Tagen zusammenfasst, wisst ihr wer das [#TeamTroetCafe](https://troet.cafe/tags/TeamTroetCafe) ist, denn **es kann wirklich jede Person dazugehören!**

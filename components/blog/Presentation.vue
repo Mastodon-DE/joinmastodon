@@ -36,9 +36,7 @@ const formatDate = (date?: string) => {
 						class="flex flex-col items-start h-full justify-between"
 						:href="`${post.path}`">
 						<div class="relative w-full" v-if="post.image">
-							<nuxt-img
-								format="webp"
-								width="500"
+							<img
 								:src="post.image"
 								alt=""
 								class="aspect-[16/9] w-full rounded bg-dark-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />

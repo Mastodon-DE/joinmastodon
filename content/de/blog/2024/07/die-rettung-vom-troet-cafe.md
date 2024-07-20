@@ -29,9 +29,21 @@ Die ganzen Monate seit Januar gingen wir die Logs der Fehlermeldungen bei der Da
 
 Eigentlich bräuchte diese Geschichte, wie Martin, Nick und Ich nun eigentlich zusammengekommen sind und uns für den Aufrechterhalt sowie Wiederaufbau des troet.cafes und muenchen.social getroffen haben, einen eigenen Blogeintrag. Jedoch hebe Ich diesen für einen anderen Tag auf!
 
-Folgendes war der ungefähre Plan den wir am 10. Mai (einen Tag vor der Rettung des troet.cafes) uns notierten:
+Da viele die Situation zur Rettung vom troet.cafe und muenchen.social durch die Spamwelle, sowie allen möglichen kleinen Updates, verfolgten, gab es viele Menschen die sofort bereit waren zu helfen und ihre Unterstützung angeboten haben! Ich notierte mir alle Personen die helfen könnten und wollte diese vor dem Wochenende anschreiben um bereits im Voraus ein Team an Expert:Innen zu haben mit denen wir die Updates und Fehler gemeinsam angehen. Leider wurde aus dem Plan nichts und Ich erstellte spontan eine Gruppe als wir bereits angefangen haben und verzweifelten, die Vorarbeit mit der Liste erstellte sich jedoch als unfassbar hilfreich heraus! 
+
+Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https://mastodon.de/@freestyle/) und [mir](https://mastodon.de/@ErikUden) haben folgende Personen uns massiv bei der Rettung vom troet.cafe geholfen:
+- Patrick Fedick [@patrickf@mastodon.de](https://mastodon.de/@patrickf)
+- Panda [@panda@pandas.social](https://pandas.social/@panda)
+- André Jaenisch [@andre@fedi.jaenis.ch](https://fedi.jaenis.ch/@andre)
+- osmodia [@osmodia@chaos.social](https://chaos.social/@osmodia)
+- crymond [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond)
+
+Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee gebracht hat und wo geholfen hat, doch zum Schluss findet ihr noch eine ganz klare Danksagung!
 
 <br/>
+
+Folgendes war der ungefähre Plan den wir am 10. Mai (einen Tag vor der Rettung des troet.cafes) uns notierten:
+
 
 *Wir versuchen die Datenbank auf einen neuen Server zu übertragen und sie dort einzuspielen.*
 
@@ -1099,7 +1111,7 @@ Wir hatten eine Videokonferenz die 13 Stunden, 10 Minuten und 21 Sekunden lang w
 - **Datenbank-Daten:** Die Daten innerhalb einer Datenbank (*gelöst vom Schema*). 
 - **pgbouncer:**
 
-## Zeitaufwendung
+# Zeitaufwendung
 
 Termine für den ersten Tag:
 - `08:30 - 09:55 (01:25h) Meeting mit Martin und Erik Uden`
@@ -1124,3 +1136,23 @@ Termine für beide Tage:
 - `2024.07.19 | 18:40 - 22:01 (03:21h) Aufarbeitung des Protokolls sowie der Webseite join-mastodon.de von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
+
+
+# Danksagungen
+
+Ich bedanke mich bei crymond für das Helfen beim Aufdecken des Authentifizierungsproblems von Postgresql, sowie das Hinweisen auf die richtige Arbeitsweise mit der Datenbank!
+
+Danke an Patrick Fedick für das Aufdecken und Lösen vom letztendlichen Datenbankproblem mit den *preview_cards* URLs. Ich führte lediglich die Befehle aus die du ausformuliertest, und deine Idee für das Suchen nach zu langen URLs sowie das Entfernen dieser war der Knackpunkt der das gravierende Problem der Datenbank am zweiten Tag gelöst hat! Für das Analysieren der Schema, sowie deine Hilfe bei diversen Problemen innerhalb der mehreren Stunden die du dabei warst bedanke Ich mich natürlich auch, du hast bei so vielen Dingen geholfen das Ich sie gar nicht mehr alle akkurat weiß!
+
+Ich muss mich natürlich auch bei Nick bedanken der nicht nur die zwei Tage, sondern die 5 Monate zuvor bei mehreren Meetings und vielen Gesprächen dabei war um troet.cafe zu retten, und das während einer der stressigsten Phasen seines Lebens. Ohne den Fakt das er im Voraus 
+
+
+
+Danke an 
+
+Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https://mastodon.de/@freestyle/) und [mir](https://mastodon.de/@ErikUden) haben folgende Personen uns massiv bei der Rettung vom troet.cafe geholfen:
+- Patrick Fedick [@patrickf@mastodon.de](https://mastodon.de/@patrickf)
+- Panda [@panda@pandas.social](https://pandas.social/@panda)
+- André Jaenisch [@andre@fedi.jaenis.ch](https://fedi.jaenis.ch/@andre)
+- osmodia [@osmodia@chaos.social]()https://chaos.social/@osmodia)
+- crymond [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond)

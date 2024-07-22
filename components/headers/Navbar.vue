@@ -219,7 +219,7 @@ const switchLocalePath = useSwitchLocalePath();
 												:href="item.href"
 												class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-50 hover:bg-dark-400">
 												{{
-													item.name
+													$t(item.name)
 												}}</HeadlessDisclosureButton
 											>
 										</HeadlessDisclosurePanel>

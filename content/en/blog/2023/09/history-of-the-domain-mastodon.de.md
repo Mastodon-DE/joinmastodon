@@ -1,11 +1,11 @@
 ---
-title: 'The Incredible History of the Domain mastodon.de'
+title: The Incredible History of the Domain mastodon.de
 created_at: 1693915804000
 image: /images/blog/2023-09-05-history-of-domain-mastodon.de/edited/the-incredible-story-of-the-domain-mastodon.de.webp
-description: 'Erik Uden explains the entire sequence of events of how mastodon.de both came into existence and his posession starting from the ice age to today'
+description: Erik Uden explains the entire sequence of events of how mastodon.de both came into existence and his posession starting from the ice age to today
 author: Erik Uden
 author_image: /images/people/erikuden-resized.webp
-author_handle: '@ErikUden@mastodon.de'
+author_handle: @ErikUden@mastodon.de
 
 ---
 

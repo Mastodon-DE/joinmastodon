@@ -200,7 +200,7 @@ const switchLocalePath = useSwitchLocalePath();
 										class="-mx-3">
 										<HeadlessDisclosureButton
 											class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-50 hover:bg-dark-300">
-											{{ $t("aboutUs") }}
+											{{ $t("navbar.aboutUs") }}
 											<iconify-icon
 												width="unset"
 												icon="tabler:chevron-down"

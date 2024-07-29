@@ -41,6 +41,8 @@ Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https
 
 Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee gebracht hat und wo geholfen hat, doch zum Schluss findet ihr noch eine ganz klare Danksagung!
 
+<br/>
+
 [[Jeder Log für diesen Blogeintrag zum Durchlesen](https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt)]
 
 <br/>
@@ -205,11 +207,11 @@ pg_restore -p 5432 -j 16 -Fc -v -a  -U mastodon -n public --no-owner --role=mast
 
 Dieser resultierte in den Log 004 (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-004-pg_restore-data-only-psql-15-2024-05-11-13-16.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_004_pg_restore_data-only_psql-15_2024-05-11-13-16.txt`</a>).
 
-Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting für eine Mittagspause beendeten und um ~15:30 wieder anfangen wollten. Martin nahm sich jedoch keine Mittagspause, denn zur gleichen Zeit berichtete er mir über diesen Import und mit wie vielen Fehlermeldungen er wieder fehlgeschlagen ist. Ich nahm mir auch keine Mittagspause sondern nahm die Zeit einen Beitrag auf Mastodon zu verfassen und mit Interessierten zu kollaborieren um mit den bisher aufgezeichneten Fehlern öffentlich um Hilfe zu bitten. 
+Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting für eine Mittagspause beendeten und um ~15:30 wieder anfangen wollten. Martin nahm sich jedoch keine Mittagspause, denn zur gleichen Zeit berichtete er mir über diesen Import und mit wie vielen Fehlermeldungen er wieder fehlgeschlagen ist. Ich nahm mir auch keine Mittagspause sondern nahm die Zeit einen zu verfassen (<a href="https://mastodon.de/@ErikUden/112422312099854395" target="_blank" rel="noopener noreferrer">Beitrag auf Mastodon</a>) und mit Interessierten zu kollaborieren um mit den bisher aufgezeichneten Fehlern öffentlich um Hilfe zu bitten. 
 
 <img title="Die unterschiedlichen Größen der beiden Datenbanken" alt="Ein Screenshot von zwei Terminal-Fenstern auf MacOS. Beide zeigen die Ergebnisse eines Checks der Größe einer jeden Tabelle in der Datenbank. Die IP Adressen der einzelnen Fenster sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-005-comparison-of-database-size-2024-05-11-13-58.jpeg">
 
-Er verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus. Das hier gezeigte Bild ist der jeweilige Output der Datenbanksoftware Postgresql, welche lediglich schätzt wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. **Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte.**
+Martin verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus. Das hier gezeigte Bild ist der jeweilige Output der Datenbanksoftware Postgresql, welche lediglich schätzt wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. **Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte.**
 
 #### Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger
 
@@ -226,7 +228,7 @@ Anfang: `SET session_replication_role = replica;`
 
 Ende: `SET session_replication_role = origin;` 
 
-Diese Lösung haben wir letztendlich nicht genommen, doch sie führte uns in die richtige Richtung. Zuerst haben wir zu diesem Zeitpunkt mit keinem clear-text Datendump gearbeitet, sondern mit einer komprimierten SQL-Datei (*zu diesem Zeitpunkt praktisch eine Binary*), somit wäre das Einfügen von Text am Anfang sowie am Ende nicht möglich gewesen, außer wir hätten ein weiteres clear-text Backup der troet.cafe Datenbank angefertigt, was bei 99GB einfach von der größe nicht mehr möglich gewesen wäre. Selbst wenn wäre es schwierig eine Text-Datei von der größe zu bearbeiten. 
+Diese Lösung haben wir letztendlich nicht genommen, doch sie führte uns in die richtige Richtung. Zuerst haben wir zu diesem Zeitpunkt mit keinem clear-text Datendump gearbeitet, sondern mit einer komprimierten SQL-Datei (*zu diesem Zeitpunkt praktisch eine Binary*), somit wäre das Einfügen von Text am Anfang sowie am Ende nicht möglich gewesen, außer wir hätten ein weiteres clear-text Backup der troet.cafe Datenbank angefertigt, was bei 99GB einfach von der größe nicht mehr möglich gewesen wäre. Selbst wenn wäre es schwierig eine Text-Datei von der größe zu bearbeiten. Somit kamen wir auf die Idee das Schema als clear-text Dump zu exportieren und um das Problem der *Foreign Key Constraints* zu lösen benutzten wir `--disable-triggers`. 
 
 
 ##### Importieren der Daten über die --disable-triggers Flag (Erfolgreich)
@@ -292,17 +294,19 @@ Einige Fragen blieben jedoch weiterhin ungeklärt: Warum waren die Datenbanken t
 
 Naja, auf der einen Seite bleibt der zweite Fehler übrig dessen Lösung einiges in dieser Diskrepanz erklärt, auf der anderen Seite...
 
-Diese Datenbank läuft nun seit über sechs (6) Jahren! Dabei passieren Mal Fehler und Ungereimtheiten bleiben stehen. 
+Diese Datenbank läuft nun seit über sechs (6) Jahren! Dabei passieren Mal Fehler und Ungereimtheiten bleiben stehen (*bloat*). 
 
 Panda schlug also ein Skript aus dem Postgresql Wiki vor welches die sogenannten „wasted bytes“ der einzelnen Tabellen in der Datenbank zeigt, also die Anzahl an Bytes welche praktisch nur Müll sind. Dies sind noch nichteinmal die Wasted Bytes des Index, heißt die gesamte Diskrepanz kann und muss sich nicht hiermit erklären. 
 
-Das Skript: https://wiki.postgresql.org/wiki/Show_database_bloat
+Das Skript lässt sich im <a href="https://wiki.postgresql.org/wiki/Show_database_bloat" target="_blank" rel="noopener noreferrer">PostgreSQL-Wiki</a>)  finden. 
+
+
 
 Dadurch stellte sich für uns heraus, dass die Datenbank wirklich nur 30GB klein ist, der Rest ist der Index dieser Datenbank sowie einfach übergebliebener Müll. 
 
 Jain schrieb das Skript zudem so um, dass es von einem User ausgeführt und in eine Datei ge-piped werden konnte. Beide Dateien, sowohl vom neuen als auch vom alten Server existieren.
 
-Dieses umgeschriebene Skript wurde von Jain original in [diesem Pastebin](https://pastebin.com/n0jD4EGM) uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a>) nachschlagen. 
+Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebin.com/n0jD4EGM" target="_blank" rel="noopener noreferrer">diesem Pastebin</a>) uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a>) nachschlagen. 
 
 Die Erklärung der Diskrepanz erklärte sich somit für uns zu einem Teil, doch das nicht-Erstellen eines Indexes bereitete uns Probleme und der Fakt, dass wir bisher nur eines der zwei (2) Probleme gelöst haben machte uns auch Sorgen!
 

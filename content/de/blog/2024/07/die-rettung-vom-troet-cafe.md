@@ -67,6 +67,40 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 
 </br></br>
 
+### Übersicht
+- [Glossar](#glossar)
+- [Tag 1 der Rettung](#tag-1-der-rettung)
+  - [Einführung](#einführung)
+  - [Fehler beim Importieren](#fehler-beim-importieren)
+    - [Fehler 1: Foreign Key Constraints](#fehler-1%3A-foreign-key-constraints)
+      - [Import bei gleicher Datenbankversion (fehlgeschlagen)](#import-bei-gleicher-datenbankversion-(fehlgeschlagen))
+      - [Import bei neuer Datenbankversion (Fehlgeschlagen)](#import-bei-neuer-datenbankversion-(fehlgeschlagen))
+      - [Import von Datenbank-Schema](#import-von-datenbank-schema)
+        - [Import von Schema aus existierender Datenbank (Fehlgeschlagen)](#import-von-schema-aus-existierender-datenbank-(fehlgeschlagen))
+        - [Import von Schema aus spezifischen Schema-Dump (Erfolgreich)](#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich))
+        - [Import von Datenbank auf funktionierendes Datenbank-Schema](#import-von-datenbank-auf-funktionierendes-datenbank-schema)
+      - [Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger](#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger)
+        - [Importieren der Daten über die --disable-triggers Flag (Erfolgreich)](#importieren-der-daten-%C3%BCber-die---disable-triggers-flag-(erfolgreich))
+        - [Elevated Privileges (Erfolgreich)](#elevated-privileges-(erfolgreich))
+      - [Vergleich der Datenbank-Größe](#vergleich-der-datenbank-gr%C3%B6%C3%9Fe)
+        - [Vergleich über das Zählen der Einträge in einer Tabelle](#vergleich-%C3%BCber-das-z%C3%A4hlen-der-eintr%C3%A4ge-in-einer-tabelle)
+        - [Vergleich über Database-Bloat](#vergleich-%C3%BCber-database-bloat)
+    - [Fehler 2: index_preview_cards_on_url](#fehler-2%3A-index_preview_cards_on_url)
+        - [Das Editieren der Index-Methode dank Clear-Text Datenbank-Schema (Fehlgeschlagen)](#das-editieren-der-index-methode-dank-clear-text-datenbank-schema-(fehlgeschlagen))
+        - [Das Auskommentieren der Erstellung eines Indexes im Clear-Text Dump (Erfolgreich)](#das-auskommentieren-der-erstellung-eines-indexes-im-clear-text-dump-(erfolgreich))
+  - [Die (gedachte) Lösung aller Probleme (Fehlgeschlagen)](#die-(gedachte)-l%C3%B6sung-aller-probleme-(fehlgeschlagen))
+- [Tag 2 der Rettung](#tag-2-der-rettung))
+  - [Das Ändern der Datenbank-Schema-Version](#das-%C3%A4ndern-der-datenbank-schema-version)
+  - [Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)](#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich))
+  - [Missing-Link (Erfolgreich)](#missing-link-(erfolgreich))
+  - [Tatsächlich die Datenbank Updaten (Erfolgreich)](#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich))
+  - [Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)](#kleine-aufgaben-zur-vorbereitung-auf-das-hochfahren-(erfolgreich))
+  - [Der letzte Schritt und Smoke Test (Erfolgreich)](#der-letzte-schritt-und-smoke-test-(erfolgreich))
+- [Zeitaufzeichnung](#zeitaufzeichnung)
+- [Danksagungen](#danksagungen)
+
+</br></br>
+
 # Glossar
 Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen kurzen Blick hier rein, man kann beim Durchlesen des Protokolls auch zwischenzeitig hierher zurückkommen!
 
@@ -121,7 +155,7 @@ Als dieser Befehl ausgeführt wurde haben wir das erste (1) Meeting beendet und 
 
 Die resultierende Datenbank war nach dem Import nur 33GB groß. Verglichen zu der 99GB Datenbank auf troet.cafe, so dachten wir, mussten viele Daten verloren gegangen sein. Wir hatten zu diesem Zeitpunkt nicht unrecht, jedoch aus anderen Gründen.
 
-Dies hat den 01. Log erzeugt (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`</a>) und wurde in 1.5 analysiert (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md" target="_blank" rel="noopener noreferrer">`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`</a>). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
+Dies hat den Log 001 erzeugt (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`</a>) und wurde in 002 analysiert (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md" target="_blank" rel="noopener noreferrer">`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`</a>). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
 
 Es waren zwei (2) unterschiedliche Fehler zu erkennen:
 - „foreign key constraints“ Probleme (vier Mal)
@@ -244,8 +278,9 @@ Ende: `SET session_replication_role = origin;`
 
 Diese Lösung haben wir letztendlich nicht genommen, doch sie führte uns in die richtige Richtung. Zuerst haben wir zu diesem Zeitpunkt mit keinem clear-text Datendump gearbeitet, sondern mit einer komprimierten SQL-Datei (*zu diesem Zeitpunkt praktisch eine Binary*), somit wäre das Einfügen von Text am Anfang sowie am Ende nicht möglich gewesen, außer wir hätten ein weiteres clear-text Backup der troet.cafe Datenbank angefertigt, was bei 99GB einfach von der größe nicht mehr möglich gewesen wäre. Selbst wenn wäre es schwierig eine Text-Datei von der größe zu bearbeiten. Somit kamen wir auf die Idee das Schema als clear-text Dump zu exportieren und um das Problem der *Foreign Key Constraints* zu lösen benutzten wir `--disable-triggers`. 
 
+</br>
 
-##### Importieren der Daten über die --disable-triggers Flag (Erfolgreich)
+#### Importieren der Daten über die --disable-triggers Flag (Erfolgreich)
 
 Es hat uns vielleicht bis 15:30 gedauert um hier ohne funktionierenden Lösungsweg für unsere Probleme anzukommen, jedoch ging diese Lösung in die richtige Richtung. Foreign Key Constraints sind nichts essenzielles für eine Datenbank, man kann sie (*unter anderem*) einfach deaktivieren über das Argument "--disable-triggers" am Ende vom Befehl. Wir hatten also das gleiche Vorgehen wie sonst auch: Die jetzige Datenbank droppen (*löschen*), daraufhin nur das Schema importieren, welches ja immer ohne Fehler stattfand, mit dem Unterschied das wir daraufhin ausschließlich die Daten vom Dump importieren ohne Trigger. 
 
@@ -271,7 +306,7 @@ Dieser Import gab viele Fehlermeldungen aus und hat nicht funktioniert. Es resul
 
 Wir hatten gleichzeitig Angst, dass weil der Dump erstellt wurde währenddessen troet.cafe lief, es deshalb so viele Ungereimtheiten in der Datenbank gäbe. Die Integrität des Dumps selbst wurde in Frage gestellt und ob wir nicht einen neuen anfertigen müssten. Jain jedoch war der festen Überzeugung das der Dump einwandfrei war, somit nur irgendwas am Import falsch lief. Jain hatte letztendlich absolut recht mit dieser Annahme. 
 
-##### Elevated Privileges (Erfolgreich)
+#### Elevated Privileges (Erfolgreich)
 
 Es stellte sich jedoch heraus das man erhöhtew Privilegien benötigte um die Flag „*--disable-triggers*“ richtig zu benutzen, sogar Superuser Privileges. Foreign-Key Constraints sowie die Indexierung wurden nicht übersprungen, die Fehlermeldungen wurden also nur erweitert mit Fehlern des Rechte-Systems. 
 
@@ -284,9 +319,9 @@ Die Datenbank hatte letztendlich wieder eine Größe von 33GB.
 
 </br>
 
-#### Vergleich der Datenbank-Größe
+### Vergleich der Datenbank-Größe
 
-##### Vergleich über das Zählen der Einträge in einer Tabelle
+#### Vergleich über das Zählen der Einträge in einer Tabelle
 
 Wir fanden zeitgleich heraus, dass der Weg wie die Größe der Datenbanken-Tabellen über Statistiken verglichen werden ungenau ist, genau so wie das ledigliche Vergleichen der Größen der Datenbanken. Um nicht auf die Ausgabe der Statistiken von Postgresql vertrauen zu müssen haben wir sowohl die neue als auch die alte Datenbank auf den jeweiligen Servern ausgewählt und gebeten die Anzahl der von Beiträgen in der jeweiligen Tabelle genau zu zählen:
 
@@ -305,7 +340,7 @@ Wir haben es endlich geschafft und dieses große Problem gelöst! Uns fiel natü
 
 </br>
 
-##### Vergleich über Database-Bloat
+#### Vergleich über Database-Bloat
 
 Einige Fragen blieben jedoch weiterhin ungeklärt: Warum waren die Datenbanken trotzdem so unterschiedlich groß? Die eine sollte ja lediglich eine Kopie der anderen sein. Eine Reduzierung der Größe von 99GB auf 33GB kann keineswegs normal sein, auch wenn wir nachgewiesen haben das alle Beiträge auf beiden Instanzen vorhanden sind.
 
@@ -316,8 +351,6 @@ Diese Datenbank läuft nun seit über sechs (6) Jahren! Dabei passieren Mal Fehl
 Panda schlug also ein Skript aus dem Postgresql Wiki vor welches die sogenannten „wasted bytes“ der einzelnen Tabellen in der Datenbank zeigt, also die Anzahl an Bytes welche praktisch nur Müll sind. Dies sind noch nichteinmal die Wasted Bytes des Index, heißt die gesamte Diskrepanz kann und muss sich nicht hiermit erklären. 
 
 Das Skript lässt sich im <a href="https://wiki.postgresql.org/wiki/Show_database_bloat" target="_blank" rel="noopener noreferrer">PostgreSQL-Wiki</a>)  finden. 
-
-
 
 Dadurch stellte sich für uns heraus, dass die Datenbank wirklich nur 30GB klein ist, der Rest ist der Index dieser Datenbank sowie einfach übergebliebener Müll. 
 

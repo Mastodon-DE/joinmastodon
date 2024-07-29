@@ -43,7 +43,7 @@ Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee 
 
 <br/>
 
-<a style="text-decoration: none;" href="https://troet.cafe" target="_blank" rel="noopener noreferrer">troet.cafe</a> und <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag zum Durchlesen</a> 
+<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag zum Durchlesen</a> 
 
 <br/>
 
@@ -67,7 +67,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 
 </br></br>
 
-### Übersicht
+# Übersicht
 - [Glossar](#glossar)
 - [Tag 1 der Rettung](#tag-1-der-rettung)
   - [Einführung](#einführung)
@@ -89,7 +89,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
         - [Das Editieren der Index-Methode dank Clear-Text Datenbank-Schema (Fehlgeschlagen)](#das-editieren-der-index-methode-dank-clear-text-datenbank-schema-(fehlgeschlagen))
         - [Das Auskommentieren der Erstellung eines Indexes im Clear-Text Dump (Erfolgreich)](#das-auskommentieren-der-erstellung-eines-indexes-im-clear-text-dump-(erfolgreich))
   - [Die (gedachte) Lösung aller Probleme (Fehlgeschlagen)](#die-(gedachte)-l%C3%B6sung-aller-probleme-(fehlgeschlagen))
-- [Tag 2 der Rettung](#tag-2-der-rettung))
+- [Tag 2 der Rettung](#tag-2-der-rettung)
   - [Das Ändern der Datenbank-Schema-Version](#das-%C3%A4ndern-der-datenbank-schema-version)
   - [Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)](#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich))
   - [Missing-Link (Erfolgreich)](#missing-link-(erfolgreich))
@@ -1035,6 +1035,9 @@ Es war 17:40 und wir ließen uns die vier schlimmsten Links ausgeben um zu gucke
 Folgendes sind die vier längsten Links:
 *Alle clickbaren Links werden verkürzt angezeigt, sodass diese Seite noch lesbar bleibt, können aber dennoch angeklickt werden.*
 
+
+---
+
 **Link 1:** „Lange Nacht der Wissenschaften“ 
 [https://www.langenachtderwissenschaften.de/](https://www.langenachtderwissenschaften.de/programm?tx_aaevents_programmpunkte%5B__referrer%5D%5B%40extension%5D=AaEvents&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40vendor%5D=Events&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40controller%5D=Programmpunkt&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40action%5D=list&tx_aaevents_programmpunkte%5B__referrer%5D%5Barguments%5D=YToxMzp7czo2OiJhY3Rpb24iO3M6NDoibGlzdCI7czo0OiJhcmVhIjtzOjA6IiI7czo5OiJhdHRlbmRlZXMiO3M6MDoiIjtzOjExOiJjdXJyZW50UGFnZSI7czoxOiI2IjtzOjc6ImVuZ2xpc2giO3M6MDoiIjtzOjc6ImZvcmtpZHMiO2E6MTp7aTowO3M6MToiMSI7fXM6NzoiZm9ybWF0cyI7czowOiIiO3M6OToiaW50ZXJlc3RzIjtzOjA6IiI7czo0OiJraW5kIjtzOjA6IiI7czo2OiJzZWFyY2giO3M6MDoiIjtzOjc6InNvcnRpbmciO3M6OToic3RpbWUtQVNDIjtzOjc6InN1YmplY3QiO3M6MDoiIjtzOjQ6InRpbWUiO2E6NDp7aTowO3M6NToiMTYtMTciO2k6MTtzOjU6IjE3LTE4IjtpOjI7czo1OiIxOC0xOSI7aTozO3M6NToiMTktMjAiO319bbaac0e7c781cbfb17abf5e17509272c1d801f3e&tx_aaevents_programmpunkte%5B__referrer%5D%5B%40request%5D=a%3A4%3A%7Bs%3A10%3A%22%40extension%22%3Bs%3A8%3A%22AaEvents%22%3Bs%3A11%3A%22%40controller%22%3Bs%3A13%3A%22Programmpunkt%22%3Bs%3A7%3A%22%40action%22%3Bs%3A4%3A%22list%22%3Bs%3A7%3A%22%40vendor%22%3Bs%3A6%3A%22Events%22%3B%7D50016a8afd78bc9923971f574837acbfc1245e07&tx_aaevents_programmpunkte%5B__trustedProperties%5D=a%3A14%3A%7Bs%3A9%3A%22attendees%22%3Ba%3A57%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3Bi%3A18%3Bi%3A1%3Bi%3A19%3Bi%3A1%3Bi%3A20%3Bi%3A1%3Bi%3A21%3Bi%3A1%3Bi%3A22%3Bi%3A1%3Bi%3A23%3Bi%3A1%3Bi%3A24%3Bi%3A1%3Bi%3A25%3Bi%3A1%3Bi%3A26%3Bi%3A1%3Bi%3A27%3Bi%3A1%3Bi%3A28%3Bi%3A1%3Bi%3A29%3Bi%3A1%3Bi%3A30%3Bi%3A1%3Bi%3A31%3Bi%3A1%3Bi%3A32%3Bi%3A1%3Bi%3A33%3Bi%3A1%3Bi%3A34%3Bi%3A1%3Bi%3A35%3Bi%3A1%3Bi%3A36%3Bi%3A1%3Bi%3A37%3Bi%3A1%3Bi%3A38%3Bi%3A1%3Bi%3A39%3Bi%3A1%3Bi%3A40%3Bi%3A1%3Bi%3A41%3Bi%3A1%3Bi%3A42%3Bi%3A1%3Bi%3A43%3Bi%3A1%3Bi%3A44%3Bi%3A1%3Bi%3A45%3Bi%3A1%3Bi%3A46%3Bi%3A1%3Bi%3A47%3Bi%3A1%3Bi%3A48%3Bi%3A1%3Bi%3A49%3Bi%3A1%3Bi%3A50%3Bi%3A1%3Bi%3A51%3Bi%3A1%3Bi%3A52%3Bi%3A1%3Bi%3A53%3Bi%3A1%3Bi%3A54%3Bi%3A1%3Bi%3A55%3Bi%3A1%3Bi%3A56%3Bi%3A1%3B%7Ds%3A4%3A%22area%22%3Ba%3A6%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3B%7Ds%3A9%3A%22interests%22%3Ba%3A5%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3B%7Ds%3A4%3A%22time%22%3Ba%3A8%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3B%7Ds%3A4%3A%22kind%22%3Ba%3A18%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3B%7Ds%3A7%3A%22english%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A13%3A%22accessability%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A7%3A%22formats%22%3Ba%3A3%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3B%7Ds%3A7%3A%22subject%22%3Ba%3A97%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3Bi%3A4%3Bi%3A1%3Bi%3A5%3Bi%3A1%3Bi%3A6%3Bi%3A1%3Bi%3A7%3Bi%3A1%3Bi%3A8%3Bi%3A1%3Bi%3A9%3Bi%3A1%3Bi%3A10%3Bi%3A1%3Bi%3A11%3Bi%3A1%3Bi%3A12%3Bi%3A1%3Bi%3A13%3Bi%3A1%3Bi%3A14%3Bi%3A1%3Bi%3A15%3Bi%3A1%3Bi%3A16%3Bi%3A1%3Bi%3A17%3Bi%3A1%3Bi%3A18%3Bi%3A1%3Bi%3A19%3Bi%3A1%3Bi%3A20%3Bi%3A1%3Bi%3A21%3Bi%3A1%3Bi%3A22%3Bi%3A1%3Bi%3A23%3Bi%3A1%3Bi%3A24%3Bi%3A1%3Bi%3A25%3Bi%3A1%3Bi%3A26%3Bi%3A1%3Bi%3A27%3Bi%3A1%3Bi%3A28%3Bi%3A1%3Bi%3A29%3Bi%3A1%3Bi%3A30%3Bi%3A1%3Bi%3A31%3Bi%3A1%3Bi%3A32%3Bi%3A1%3Bi%3A33%3Bi%3A1%3Bi%3A34%3Bi%3A1%3Bi%3A35%3Bi%3A1%3Bi%3A36%3Bi%3A1%3Bi%3A37%3Bi%3A1%3Bi%3A38%3Bi%3A1%3Bi%3A39%3Bi%3A1%3Bi%3A40%3Bi%3A1%3Bi%3A41%3Bi%3A1%3Bi%3A42%3Bi%3A1%3Bi%3A43%3Bi%3A1%3Bi%3A44%3Bi%3A1%3Bi%3A45%3Bi%3A1%3Bi%3A46%3Bi%3A1%3Bi%3A47%3Bi%3A1%3Bi%3A48%3Bi%3A1%3Bi%3A49%3Bi%3A1%3Bi%3A50%3Bi%3A1%3Bi%3A51%3Bi%3A1%3Bi%3A52%3Bi%3A1%3Bi%3A53%3Bi%3A1%3Bi%3A54%3Bi%3A1%3Bi%3A55%3Bi%3A1%3Bi%3A56%3Bi%3A1%3Bi%3A57%3Bi%3A1%3Bi%3A58%3Bi%3A1%3Bi%3A59%3Bi%3A1%3Bi%3A60%3Bi%3A1%3Bi%3A61%3Bi%3A1%3Bi%3A62%3Bi%3A1%3Bi%3A63%3Bi%3A1%3Bi%3A64%3Bi%3A1%3Bi%3A65%3Bi%3A1%3Bi%3A66%3Bi%3A1%3Bi%3A67%3Bi%3A1%3Bi%3A68%3Bi%3A1%3Bi%3A69%3Bi%3A1%3Bi%3A70%3Bi%3A1%3Bi%3A71%3Bi%3A1%3Bi%3A72%3Bi%3A1%3Bi%3A73%3Bi%3A1%3Bi%3A74%3Bi%3A1%3Bi%3A75%3Bi%3A1%3Bi%3A76%3Bi%3A1%3Bi%3A77%3Bi%3A1%3Bi%3A78%3Bi%3A1%3Bi%3A79%3Bi%3A1%3Bi%3A80%3Bi%3A1%3Bi%3A81%3Bi%3A1%3Bi%3A82%3Bi%3A1%3Bi%3A83%3Bi%3A1%3Bi%3A84%3Bi%3A1%3Bi%3A85%3Bi%3A1%3Bi%3A86%3Bi%3A1%3Bi%3A87%3Bi%3A1%3Bi%3A88%3Bi%3A1%3Bi%3A89%3Bi%3A1%3Bi%3A90%3Bi%3A1%3Bi%3A91%3Bi%3A1%3Bi%3A92%3Bi%3A1%3Bi%3A93%3Bi%3A1%3Bi%3A94%3Bi%3A1%3Bi%3A95%3Bi%3A1%3Bi%3A96%3Bi%3A1%3B%7Ds%3A7%3A%22forkids%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7Ds%3A6%3A%22search%22%3Bi%3A1%3Bs%3A6%3A%22remove%22%3Ba%3A2%3A%7Bs%3A4%3A%22time%22%3Ba%3A4%3A%7Bi%3A0%3Bi%3A1%3Bi%3A1%3Bi%3A1%3Bi%3A2%3Bi%3A1%3Bi%3A3%3Bi%3A1%3B%7Ds%3A7%3A%22forkids%22%3Ba%3A1%3A%7Bi%3A0%3Bi%3A1%3B%7D%7Ds%3A5%3A%22reset%22%3Bi%3A1%3Bs%3A7%3A%22sorting%22%3Bi%3A1%3B%7D3df9433178127fc260a1e8c2790bea4f50fa1275&tx_aaevents_programmpunkte%5Battendees%5D=&tx_aaevents_programmpunkte%5Barea%5D=&tx_aaevents_programmpunkte%5Barea%5D%5B%5D=3&tx_aaevents_programmpunkte%5Binterests%5D=&tx_aaevents_programmpunkte%5Btime%5D=&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=16-17&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=17-18&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=18-19&tx_aaevents_programmpunkte%5Btime%5D%5B%5D=19-20&tx_aaevents_programmpunkte%5Bkind%5D=&tx_aaevents_programmpunkte%5Benglish%5D=&tx_aaevents_programmpunkte%5Baccessability%5D=&tx_aaevents_programmpunkte%5Bformats%5D=&tx_aaevents_programmpunkte%5Bsubject%5D=&tx_aaevents_programmpunkte%5Bforkids%5D=&tx_aaevents_programmpunkte%5Bforkids%5D%5B%5D=1&tx_aaevents_programmpunkte%5Bsearch%5D=&tx_aaevents_programmpunkte%5Bsorting%5D=stime-ASC)
 
@@ -1078,6 +1081,8 @@ https://carbon.now.sh/?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=seti&wt=none&l=html
 ```
 
 Dieser zweite Link beinhaltet nichtmal Code, sondern nur einen langen Werbetext für ChatGPT? Naja, was es nicht alles gibt...
+
+---
 
 Nun da mein kurzer Ausflug als Erklärung dieser Links vorbei ist, geht es weiter damit diese Links zu beseitigen und die Datenbank zu fixen!
 

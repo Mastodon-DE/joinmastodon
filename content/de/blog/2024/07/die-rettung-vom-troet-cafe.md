@@ -84,6 +84,7 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 
 <img title="Die Infrastruktur vom Troet.Cafe" alt="Ein Bild welches die drei Web-Server sowie die zwei Worker-Server verbunden mit der Datenbank und dem Load-Balancer zeigt und somit den Aufbau vom troet.cafe darstellt. Die IP Adressen der einzelnen Server sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-network-infrastructure-2024-05-12-09-24.png">
 
+<br/><br/>
 
 # Tag 1 der Rettung
 **Total:** 10:20 Stunden an Arbeit für und am Tag 1.
@@ -114,7 +115,7 @@ Als dieser Befehl ausgeführt wurde haben wir das erste (1) Meeting beendet und 
 
 Die resultierende Datenbank war nach dem Import nur 33GB groß. Verglichen zu der 99GB Datenbank auf troet.cafe, so dachten wir, mussten viele Daten verloren gegangen sein. Wir hatten zu diesem Zeitpunkt nicht unrecht, jedoch aus anderen Gründen.
 
-Dies hat den 01. Log erzeugt (`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`) und wurde in 1.5 analysiert (`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
+Dies hat den 01. Log erzeugt ([`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`](https://join-mastodon.de/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt)) und wurde in 1.5 analysiert (`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
 
 Es waren zwei (2) unterschiedliche Fehler zu erkennen:
 - „foreign key constraints“ Probleme (vier Mal)

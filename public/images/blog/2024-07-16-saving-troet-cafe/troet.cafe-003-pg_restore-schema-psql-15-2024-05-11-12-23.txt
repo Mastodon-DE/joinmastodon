@@ -1,0 +1,1414 @@
+root@pg:/etc/postgresql/15/main# pg_restore -p 5432 -Fc -v -c -s -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
+pg_restore: connecting to database for restore
+Password: 
+pg_restore: dropping MATERIALIZED VIEW DATA instances
+pg_restore: dropping MATERIALIZED VIEW DATA follow_recommendations
+pg_restore: dropping MATERIALIZED VIEW DATA account_summaries
+pg_restore: dropping FK CONSTRAINT invites fk_rails_ff69dbb2ac
+pg_restore: dropping FK CONSTRAINT account_aliases fk_rails_fc91575d08
+pg_restore: dropping FK CONSTRAINT tombstones fk_rails_f95b861449
+pg_restore: dropping FK CONSTRAINT users fk_rails_ecc9536e7c
+pg_restore: dropping FK CONSTRAINT appeals fk_rails_ea84881569
+pg_restore: dropping FK CONSTRAINT list_accounts fk_rails_e54e356c88
+pg_restore: dropping FK CONSTRAINT login_activities fk_rails_e4b6396b41
+pg_restore: dropping FK CONSTRAINT announcement_mutes fk_rails_e35401adf1
+pg_restore: dropping FK CONSTRAINT custom_filter_statuses fk_rails_e2ddaf5b14
+pg_restore: dropping FK CONSTRAINT follow_recommendation_suppressions fk_rails_dfb9a1dbe2
+pg_restore: dropping FK CONSTRAINT statuses_tags fk_rails_df0fe11427
+pg_restore: while PROCESSING TOC:
+pg_restore: from TOC entry 4333; 2606 17283 FK CONSTRAINT statuses_tags fk_rails_df0fe11427 mastodon
+pg_restore: error: could not execute query: ERROR:  constraint "fk_rails_df0fe11427" of relation "statuses_tags" does not exist
+Command was: ALTER TABLE ONLY public.statuses_tags DROP CONSTRAINT fk_rails_df0fe11427;
+pg_restore: dropping FK CONSTRAINT account_moderation_notes fk_rails_dd62ed5ac3
+pg_restore: dropping FK CONSTRAINT status_edits fk_rails_dc8988c545
+pg_restore: dropping FK CONSTRAINT account_migrations fk_rails_d9a8dad070
+pg_restore: dropping FK CONSTRAINT account_pins fk_rails_d44979e5dd
+pg_restore: dropping FK CONSTRAINT one_time_keys fk_rails_d3edd8c878
+pg_restore: dropping FK CONSTRAINT report_notes fk_rails_cae66353f3
+pg_restore: dropping FK CONSTRAINT account_migrations fk_rails_c9f701caaf
+pg_restore: dropping FK CONSTRAINT announcement_reactions fk_rails_b742c91c0e
+pg_restore: dropping FK CONSTRAINT poll_votes fk_rails_b6c18cf44a
+pg_restore: dropping FK CONSTRAINT web_push_subscriptions fk_rails_b006f28dac
+pg_restore: dropping FK CONSTRAINT appeals fk_rails_a99f14546e
+pg_restore: dropping FK CONSTRAINT status_edits fk_rails_a960f234a0
+pg_restore: dropping FK CONSTRAINT encrypted_messages fk_rails_a83e4df7ae
+pg_restore: dropping FK CONSTRAINT account_warnings fk_rails_a7ebbb1e37
+pg_restore: dropping FK CONSTRAINT devices fk_rails_a796b75798
+pg_restore: dropping FK CONSTRAINT admin_action_logs fk_rails_a7667297fa
+pg_restore: dropping FK CONSTRAINT markers fk_rails_a7009bc2b6
+pg_restore: dropping FK CONSTRAINT poll_votes fk_rails_a6e6974b7e
+pg_restore: dropping FK CONSTRAINT status_trends fk_rails_a6b527ea49
+pg_restore: dropping FK CONSTRAINT account_warnings fk_rails_a65a1bf71b
+pg_restore: dropping FK CONSTRAINT webauthn_credentials fk_rails_a4355aef77
+pg_restore: dropping FK CONSTRAINT encrypted_messages fk_rails_a42ad0f8d5
+pg_restore: dropping FK CONSTRAINT account_pins fk_rails_a176e26c37
+pg_restore: dropping FK CONSTRAINT announcement_reactions fk_rails_a1226eaa5c
+pg_restore: dropping FK CONSTRAINT bookmarks fk_rails_9f6ac182a6
+pg_restore: dropping FK CONSTRAINT appeals fk_rails_9deb2f63ad
+pg_restore: dropping FK CONSTRAINT announcement_mutes fk_rails_9c99f8e835
+pg_restore: dropping FK CONSTRAINT statuses fk_rails_94a6f70399
+pg_restore: dropping FK CONSTRAINT users fk_rails_8fb2a43e88
+pg_restore: dropping FK CONSTRAINT account_warnings fk_rails_8f2bab4b16
+pg_restore: dropping FK CONSTRAINT custom_filters fk_rails_8b8d786993
+pg_restore: dropping FK CONSTRAINT list_accounts fk_rails_85fee9d6ab
+pg_restore: dropping FK CONSTRAINT report_notes fk_rails_7fa83a61eb
+pg_restore: dropping FK CONSTRAINT web_push_subscriptions fk_rails_751a9f390b
+pg_restore: dropping FK CONSTRAINT announcement_reactions fk_rails_7444ad831f
+pg_restore: dropping FK CONSTRAINT account_conversations fk_rails_6f5278b6e9
+pg_restore: dropping FK CONSTRAINT status_trends fk_rails_68c610dc1a
+pg_restore: dropping FK CONSTRAINT status_pins fk_rails_65c05552f1
+pg_restore: dropping FK CONSTRAINT users fk_rails_642f17018b
+pg_restore: dropping FK CONSTRAINT polls fk_rails_5b19a0c011
+pg_restore: dropping FK CONSTRAINT conversation_mutes fk_rails_5ab139311f
+pg_restore: dropping FK CONSTRAINT custom_filter_keywords fk_rails_5a49a74012
+pg_restore: dropping FK CONSTRAINT mentions fk_rails_59edbe2887
+pg_restore: from TOC entry 4308; 2606 17068 FK CONSTRAINT mentions fk_rails_59edbe2887 mastodon
+pg_restore: error: could not execute query: ERROR:  constraint "fk_rails_59edbe2887" of relation "mentions" does not exist
+Command was: ALTER TABLE ONLY public.mentions DROP CONSTRAINT fk_rails_59edbe2887;
+pg_restore: dropping FK CONSTRAINT appeals fk_rails_501c3a6e13
+pg_restore: dropping FK CONSTRAINT account_notes fk_rails_4ee4503c69
+pg_restore: dropping FK CONSTRAINT reports fk_rails_4e7a498fb4
+pg_restore: dropping FK CONSTRAINT status_stats fk_rails_4a247aac42
+pg_restore: from TOC entry 4344; 2606 17048 FK CONSTRAINT status_stats fk_rails_4a247aac42 mastodon
+pg_restore: error: could not execute query: ERROR:  constraint "fk_rails_4a247aac42" of relation "status_stats" does not exist
+Command was: ALTER TABLE ONLY public.status_stats DROP CONSTRAINT fk_rails_4a247aac42;
+pg_restore: dropping FK CONSTRAINT account_deletion_requests fk_rails_45bf2626b9
+pg_restore: dropping FK CONSTRAINT list_accounts fk_rails_40f9cc29f1
+pg_restore: dropping FK CONSTRAINT email_domain_blocks fk_rails_408efe0a15
+pg_restore: dropping FK CONSTRAINT account_moderation_notes fk_rails_3f8b75089b
+pg_restore: dropping FK CONSTRAINT media_attachments fk_rails_3ec0cfdd70
+pg_restore: from TOC entry 4306; 2606 17023 FK CONSTRAINT media_attachments fk_rails_3ec0cfdd70 mastodon
+pg_restore: error: could not execute query: ERROR:  constraint "fk_rails_3ec0cfdd70" of relation "media_attachments" does not exist
+Command was: ALTER TABLE ONLY public.media_attachments DROP CONSTRAINT fk_rails_3ec0cfdd70;
+pg_restore: dropping FK CONSTRAINT polls fk_rails_3e0d9f1115
+pg_restore: dropping FK CONSTRAINT devices fk_rails_393f74df68
+pg_restore: dropping FK CONSTRAINT lists fk_rails_3853b78dac
+pg_restore: dropping FK CONSTRAINT user_invite_requests fk_rails_3773f15361
+pg_restore: dropping FK CONSTRAINT preview_card_trends fk_rails_371593db34
+pg_restore: dropping FK CONSTRAINT media_attachments fk_rails_31fc5aeef1
+pg_restore: dropping FK CONSTRAINT custom_filter_statuses fk_rails_2f6d20c0cf
+pg_restore: dropping FK CONSTRAINT account_notes fk_rails_2801b48f1a
+pg_restore: dropping FK CONSTRAINT statuses fk_rails_256483a9ab
+pg_restore: dropping FK CONSTRAINT account_statuses_cleanup_policies fk_rails_23d5f73cfe
+pg_restore: dropping FK CONSTRAINT scheduled_statuses fk_rails_23bd9018f9
+pg_restore: dropping FK CONSTRAINT featured_tags fk_rails_23a9055c7c
+pg_restore: dropping FK CONSTRAINT accounts fk_rails_2320833084
+pg_restore: dropping FK CONSTRAINT account_stats fk_rails_215bb31ff1
+pg_restore: dropping FK CONSTRAINT canonical_email_blocks fk_rails_1ecb262096
+pg_restore: dropping FK CONSTRAINT featured_tags fk_rails_174efcf15f
+pg_restore: dropping FK CONSTRAINT account_conversations fk_rails_1491654f9f
+pg_restore: dropping FK CONSTRAINT bookmarks fk_rails_11207ffcfd
+pg_restore: dropping FK CONSTRAINT tag_follows fk_rails_0deefe597f
+pg_restore: dropping FK CONSTRAINT backups fk_rails_096669d221
+pg_restore: dropping FK CONSTRAINT tag_follows fk_rails_091e831473
+pg_restore: dropping FK CONSTRAINT notifications fk_fbd6b0bf9e
+pg_restore: dropping FK CONSTRAINT oauth_access_tokens fk_f5fc4c1ee3
+pg_restore: dropping FK CONSTRAINT mutes fk_eecff219ea
+pg_restore: dropping FK CONSTRAINT reports fk_eb37af34f0
+pg_restore: dropping FK CONSTRAINT oauth_access_tokens fk_e84df68546
+pg_restore: dropping FK CONSTRAINT session_activations fk_e5fda67334
+pg_restore: dropping FK CONSTRAINT status_pins fk_d4cb435b62
+pg_restore: dropping FK CONSTRAINT statuses fk_c7fa917661
+pg_restore: dropping FK CONSTRAINT notifications fk_c141c8ee55
+pg_restore: dropping FK CONSTRAINT identities fk_bea040f377
+pg_restore: dropping FK CONSTRAINT reports fk_bca45b75fd
+pg_restore: dropping FK CONSTRAINT mutes fk_b8d8daf315
+pg_restore: dropping FK CONSTRAINT favourites fk_b0e856845e
+pg_restore: dropping FK CONSTRAINT oauth_applications fk_b0988c7c0a
+pg_restore: dropping FK CONSTRAINT statuses fk_9bda1543f7
+pg_restore: dropping FK CONSTRAINT mentions fk_970d43f9d1
+pg_restore: dropping FK CONSTRAINT media_attachments fk_96dd81e81b
+pg_restore: dropping FK CONSTRAINT session_activations fk_957e5bda89
+pg_restore: dropping FK CONSTRAINT blocks fk_9571bfabc1
+pg_restore: dropping FK CONSTRAINT follow_requests fk_9291ec025d
+pg_restore: dropping FK CONSTRAINT follow_requests fk_76d644b0e7
+pg_restore: dropping FK CONSTRAINT follows fk_745ca29eac
+pg_restore: dropping FK CONSTRAINT imports fk_6db1b6e408
+pg_restore: dropping FK CONSTRAINT oauth_access_grants fk_63b044929b
+pg_restore: dropping FK CONSTRAINT favourites fk_5eb6c2b873
+pg_restore: dropping FK CONSTRAINT users fk_50500f500d
+pg_restore: dropping FK CONSTRAINT reports fk_4b81f7522c
+pg_restore: dropping FK CONSTRAINT blocks fk_4269e03e65
+pg_restore: dropping FK CONSTRAINT oauth_access_grants fk_34d54b0a33
+pg_restore: dropping FK CONSTRAINT follows fk_32ed1b5560
+pg_restore: dropping FK CONSTRAINT statuses_tags fk_3081861e21
+pg_restore: dropping FK CONSTRAINT conversation_mutes fk_225b4212bb
+pg_restore: dropping FK CONSTRAINT account_domain_blocks fk_206c6029bd
+pg_restore: dropping FK CONSTRAINT web_settings fk_11910667b2
+pg_restore: dropping INDEX search_index
+pg_restore: dropping INDEX index_webhooks_on_url
+pg_restore: dropping INDEX index_webauthn_credentials_on_user_id
+pg_restore: dropping INDEX index_webauthn_credentials_on_external_id
+pg_restore: dropping INDEX index_web_settings_on_user_id
+pg_restore: dropping INDEX index_web_push_subscriptions_on_user_id
+pg_restore: dropping INDEX index_web_push_subscriptions_on_access_token_id
+pg_restore: dropping INDEX index_users_on_role_id
+pg_restore: dropping INDEX index_users_on_reset_password_token
+pg_restore: dropping INDEX index_users_on_email
+pg_restore: dropping INDEX index_users_on_created_by_application_id
+pg_restore: dropping INDEX index_users_on_confirmation_token
+pg_restore: dropping INDEX index_users_on_account_id
+pg_restore: dropping INDEX index_user_invite_requests_on_user_id
+pg_restore: dropping INDEX index_unique_conversations
+pg_restore: dropping INDEX index_unavailable_domains_on_domain
+pg_restore: dropping INDEX index_tombstones_on_uri
+pg_restore: dropping INDEX index_tombstones_on_account_id
+pg_restore: dropping INDEX index_tags_on_name_lower_btree
+pg_restore: dropping INDEX index_tag_follows_on_tag_id
+pg_restore: dropping INDEX index_tag_follows_on_account_id_and_tag_id
+pg_restore: dropping INDEX index_statuses_tags_on_tag_id_and_status_id
+pg_restore: dropping INDEX index_statuses_tags_on_status_id
+pg_restore: dropping INDEX index_statuses_public_20200119
+pg_restore: dropping INDEX index_statuses_on_uri
+pg_restore: dropping INDEX index_statuses_on_reblog_of_id_and_account_id
+pg_restore: dropping INDEX index_statuses_on_in_reply_to_id
+pg_restore: dropping INDEX index_statuses_on_in_reply_to_account_id
+pg_restore: dropping INDEX index_statuses_on_deleted_at
+pg_restore: dropping INDEX index_statuses_on_account_id
+pg_restore: dropping INDEX index_statuses_local_20190824
+pg_restore: dropping INDEX index_statuses_20190820
+pg_restore: dropping INDEX index_status_trends_on_status_id
+pg_restore: dropping INDEX index_status_trends_on_account_id
+pg_restore: dropping INDEX index_status_stats_on_status_id
+pg_restore: dropping INDEX index_status_pins_on_status_id
+pg_restore: dropping INDEX index_status_pins_on_account_id_and_status_id
+pg_restore: dropping INDEX index_status_edits_on_status_id
+pg_restore: dropping INDEX index_status_edits_on_account_id
+pg_restore: dropping INDEX index_site_uploads_on_var
+pg_restore: dropping INDEX index_settings_on_thing_type_and_thing_id_and_var
+pg_restore: dropping INDEX index_session_activations_on_user_id
+pg_restore: dropping INDEX index_session_activations_on_session_id
+pg_restore: dropping INDEX index_session_activations_on_access_token_id
+pg_restore: dropping INDEX index_scheduled_statuses_on_account_id
+pg_restore: dropping INDEX index_reports_on_target_account_id
+pg_restore: dropping INDEX index_reports_on_assigned_account_id
+pg_restore: dropping INDEX index_reports_on_action_taken_by_account_id
+pg_restore: dropping INDEX index_preview_cards_statuses_on_status_id_and_preview_card_id
+pg_restore: dropping INDEX index_preview_cards_on_url
+pg_restore: from TOC entry 4064; 1259 17011 INDEX index_preview_cards_on_url mastodon
+pg_restore: error: could not execute query: ERROR:  index "index_preview_cards_on_url" does not exist
+Command was: DROP INDEX public.index_preview_cards_on_url;
+pg_restore: dropping INDEX index_preview_card_trends_on_preview_card_id
+pg_restore: dropping INDEX index_preview_card_providers_on_domain
+pg_restore: dropping INDEX index_polls_on_status_id
+pg_restore: dropping INDEX index_polls_on_account_id
+pg_restore: dropping INDEX index_poll_votes_on_poll_id
+pg_restore: dropping INDEX index_poll_votes_on_account_id
+pg_restore: dropping INDEX index_pghero_space_stats_on_database_and_captured_at
+pg_restore: dropping INDEX index_oauth_applications_on_uid
+pg_restore: dropping INDEX index_oauth_applications_on_owner_id_and_owner_type
+pg_restore: dropping INDEX index_oauth_access_tokens_on_token
+pg_restore: dropping INDEX index_oauth_access_tokens_on_resource_owner_id
+pg_restore: dropping INDEX index_oauth_access_tokens_on_refresh_token
+pg_restore: dropping INDEX index_oauth_access_grants_on_token
+pg_restore: dropping INDEX index_oauth_access_grants_on_resource_owner_id
+pg_restore: dropping INDEX index_notifications_on_from_account_id
+pg_restore: dropping INDEX index_notifications_on_activity_id_and_activity_type
+pg_restore: dropping INDEX index_notifications_on_account_id_and_id_and_type
+pg_restore: dropping INDEX index_mutes_on_target_account_id
+pg_restore: dropping INDEX index_mutes_on_account_id_and_target_account_id
+pg_restore: dropping INDEX index_mentions_on_status_id
+pg_restore: dropping INDEX index_mentions_on_account_id_and_status_id
+pg_restore: dropping INDEX index_media_attachments_on_status_id
+pg_restore: dropping INDEX index_media_attachments_on_shortcode
+pg_restore: dropping INDEX index_media_attachments_on_scheduled_status_id
+pg_restore: dropping INDEX index_media_attachments_on_account_id_and_status_id
+pg_restore: dropping INDEX index_markers_on_user_id_and_timeline
+pg_restore: dropping INDEX index_login_activities_on_user_id
+pg_restore: dropping INDEX index_lists_on_account_id
+pg_restore: dropping INDEX index_list_accounts_on_list_id_and_account_id
+pg_restore: dropping INDEX index_list_accounts_on_follow_id
+pg_restore: dropping INDEX index_list_accounts_on_account_id_and_list_id
+pg_restore: dropping INDEX index_ip_blocks_on_ip
+pg_restore: dropping INDEX index_invites_on_code
+pg_restore: dropping INDEX index_instances_on_domain
+pg_restore: dropping INDEX index_identities_on_user_id
+pg_restore: dropping INDEX index_follows_on_target_account_id
+pg_restore: dropping INDEX index_follows_on_account_id_and_target_account_id
+pg_restore: dropping INDEX index_follow_requests_on_account_id_and_target_account_id
+pg_restore: dropping INDEX index_follow_recommendations_on_account_id
+pg_restore: dropping INDEX index_follow_recommendation_suppressions_on_account_id
+pg_restore: dropping INDEX index_featured_tags_on_account_id_and_tag_id
+pg_restore: dropping INDEX index_favourites_on_status_id
+pg_restore: dropping INDEX index_favourites_on_account_id_and_status_id
+pg_restore: dropping INDEX index_favourites_on_account_id_and_id
+pg_restore: dropping INDEX index_email_domain_blocks_on_domain
+pg_restore: dropping INDEX index_domain_blocks_on_domain
+pg_restore: dropping INDEX index_domain_allows_on_domain
+pg_restore: dropping INDEX index_devices_on_access_token_id
+pg_restore: dropping INDEX index_custom_filter_statuses_on_status_id
+pg_restore: dropping INDEX index_custom_filter_statuses_on_custom_filter_id
+pg_restore: dropping INDEX index_custom_filter_keywords_on_custom_filter_id
+pg_restore: dropping INDEX index_custom_emojis_on_shortcode_and_domain
+pg_restore: dropping INDEX index_custom_emoji_categories_on_name
+pg_restore: dropping INDEX index_conversations_on_uri
+pg_restore: dropping INDEX index_conversation_mutes_on_account_id_and_conversation_id
+pg_restore: dropping INDEX index_canonical_email_blocks_on_reference_account_id
+pg_restore: dropping INDEX index_canonical_email_blocks_on_canonical_email_hash
+pg_restore: dropping INDEX index_bookmarks_on_status_id
+pg_restore: dropping INDEX index_bookmarks_on_account_id_and_status_id
+pg_restore: dropping INDEX index_blocks_on_target_account_id
+pg_restore: dropping INDEX index_blocks_on_account_id_and_target_account_id
+pg_restore: dropping INDEX index_appeals_on_rejected_by_account_id
+pg_restore: dropping INDEX index_appeals_on_approved_by_account_id
+pg_restore: dropping INDEX index_appeals_on_account_warning_id
+pg_restore: dropping INDEX index_appeals_on_account_id
+pg_restore: dropping INDEX index_announcement_reactions_on_custom_emoji_id
+pg_restore: dropping INDEX index_announcement_reactions_on_announcement_id
+pg_restore: dropping INDEX index_announcement_reactions_on_account_id_and_announcement_id
+pg_restore: dropping INDEX index_announcement_mutes_on_announcement_id
+pg_restore: dropping INDEX index_announcement_mutes_on_account_id_and_announcement_id
+pg_restore: dropping INDEX index_admin_action_logs_on_target_type_and_target_id
+pg_restore: dropping INDEX index_admin_action_logs_on_account_id
+pg_restore: dropping INDEX index_accounts_tags_on_tag_id_and_account_id
+pg_restore: dropping INDEX index_accounts_tags_on_account_id_and_tag_id
+pg_restore: dropping INDEX index_accounts_on_username_and_domain_lower
+pg_restore: dropping INDEX index_accounts_on_url
+pg_restore: dropping INDEX index_accounts_on_uri
+pg_restore: dropping INDEX index_accounts_on_moved_to_account_id
+pg_restore: dropping INDEX index_account_summaries_on_account_id
+pg_restore: dropping INDEX index_account_statuses_cleanup_policies_on_account_id
+pg_restore: dropping INDEX index_account_stats_on_account_id
+pg_restore: dropping INDEX index_account_pins_on_account_id_and_target_account_id
+pg_restore: dropping INDEX index_account_notes_on_account_id_and_target_account_id
+pg_restore: dropping INDEX index_account_migrations_on_target_account_id
+pg_restore: dropping INDEX index_account_migrations_on_account_id
+pg_restore: dropping INDEX index_account_domain_blocks_on_account_id_and_domain
+pg_restore: dropping INDEX index_account_deletion_requests_on_account_id
+pg_restore: dropping INDEX index_account_conversations_on_conversation_id
+pg_restore: dropping INDEX index_account_aliases_on_account_id
+pg_restore: dropping CONSTRAINT webhooks webhooks_pkey
+pg_restore: dropping CONSTRAINT webauthn_credentials webauthn_credentials_pkey
+pg_restore: dropping CONSTRAINT web_settings web_settings_pkey
+pg_restore: dropping CONSTRAINT web_push_subscriptions web_push_subscriptions_pkey
+pg_restore: dropping CONSTRAINT users users_pkey
+pg_restore: dropping CONSTRAINT user_roles user_roles_pkey
+pg_restore: dropping CONSTRAINT user_invite_requests user_invite_requests_pkey
+pg_restore: dropping CONSTRAINT unavailable_domains unavailable_domains_pkey
+pg_restore: dropping CONSTRAINT tombstones tombstones_pkey
+pg_restore: dropping CONSTRAINT tags tags_pkey
+pg_restore: dropping CONSTRAINT tag_follows tag_follows_pkey
+pg_restore: dropping CONSTRAINT system_keys system_keys_pkey
+pg_restore: dropping CONSTRAINT statuses statuses_pkey
+pg_restore: dropping CONSTRAINT status_trends status_trends_pkey
+pg_restore: dropping CONSTRAINT status_stats status_stats_pkey
+pg_restore: dropping CONSTRAINT status_pins status_pins_pkey
+pg_restore: dropping CONSTRAINT status_edits status_edits_pkey
+pg_restore: dropping CONSTRAINT site_uploads site_uploads_pkey
+pg_restore: dropping CONSTRAINT settings settings_pkey
+pg_restore: dropping CONSTRAINT session_activations session_activations_pkey
+pg_restore: dropping CONSTRAINT schema_migrations schema_migrations_pkey
+pg_restore: dropping CONSTRAINT scheduled_statuses scheduled_statuses_pkey
+pg_restore: dropping CONSTRAINT rules rules_pkey
+pg_restore: dropping CONSTRAINT reports reports_pkey
+pg_restore: dropping CONSTRAINT report_notes report_notes_pkey
+pg_restore: dropping CONSTRAINT relays relays_pkey
+pg_restore: dropping CONSTRAINT preview_cards preview_cards_pkey
+pg_restore: dropping CONSTRAINT preview_card_trends preview_card_trends_pkey
+pg_restore: dropping CONSTRAINT preview_card_providers preview_card_providers_pkey
+pg_restore: dropping CONSTRAINT polls polls_pkey
+pg_restore: dropping CONSTRAINT poll_votes poll_votes_pkey
+pg_restore: dropping CONSTRAINT pghero_space_stats pghero_space_stats_pkey
+pg_restore: dropping CONSTRAINT one_time_keys one_time_keys_pkey
+pg_restore: dropping CONSTRAINT oauth_applications oauth_applications_pkey
+pg_restore: dropping CONSTRAINT oauth_access_tokens oauth_access_tokens_pkey
+pg_restore: dropping CONSTRAINT oauth_access_grants oauth_access_grants_pkey
+pg_restore: dropping CONSTRAINT notifications notifications_pkey
+pg_restore: dropping CONSTRAINT mutes mutes_pkey
+pg_restore: dropping CONSTRAINT mentions mentions_pkey
+pg_restore: dropping CONSTRAINT media_attachments media_attachments_pkey
+pg_restore: dropping CONSTRAINT markers markers_pkey
+pg_restore: dropping CONSTRAINT login_activities login_activities_pkey
+pg_restore: dropping CONSTRAINT lists lists_pkey
+pg_restore: dropping CONSTRAINT list_accounts list_accounts_pkey
+pg_restore: dropping CONSTRAINT ip_blocks ip_blocks_pkey
+pg_restore: dropping CONSTRAINT invites invites_pkey
+pg_restore: dropping CONSTRAINT identities index_identities_on_id
+pg_restore: dropping CONSTRAINT imports imports_pkey
+pg_restore: dropping CONSTRAINT follows follows_pkey
+pg_restore: dropping CONSTRAINT follow_requests follow_requests_pkey
+pg_restore: dropping CONSTRAINT follow_recommendation_suppressions follow_recommendation_suppressions_pkey
+pg_restore: dropping CONSTRAINT featured_tags featured_tags_pkey
+pg_restore: dropping CONSTRAINT favourites favourites_pkey
+pg_restore: dropping CONSTRAINT encrypted_messages encrypted_messages_pkey
+pg_restore: dropping CONSTRAINT email_domain_blocks email_domain_blocks_pkey
+pg_restore: dropping CONSTRAINT domain_blocks domain_blocks_pkey
+pg_restore: dropping CONSTRAINT domain_allows domain_allows_pkey
+pg_restore: dropping CONSTRAINT devices devices_pkey
+pg_restore: dropping CONSTRAINT custom_filters custom_filters_pkey
+pg_restore: dropping CONSTRAINT custom_filter_statuses custom_filter_statuses_pkey
+pg_restore: dropping CONSTRAINT custom_filter_keywords custom_filter_keywords_pkey
+pg_restore: dropping CONSTRAINT custom_emojis custom_emojis_pkey
+pg_restore: dropping CONSTRAINT custom_emoji_categories custom_emoji_categories_pkey
+pg_restore: dropping CONSTRAINT conversations conversations_pkey
+pg_restore: dropping CONSTRAINT conversation_mutes conversation_mutes_pkey
+pg_restore: dropping CONSTRAINT canonical_email_blocks canonical_email_blocks_pkey
+pg_restore: dropping CONSTRAINT bookmarks bookmarks_pkey
+pg_restore: dropping CONSTRAINT blocks blocks_pkey
+pg_restore: dropping CONSTRAINT backups backups_pkey
+pg_restore: dropping CONSTRAINT ar_internal_metadata ar_internal_metadata_pkey
+pg_restore: dropping CONSTRAINT appeals appeals_pkey
+pg_restore: dropping CONSTRAINT announcements announcements_pkey
+pg_restore: dropping CONSTRAINT announcement_reactions announcement_reactions_pkey
+pg_restore: dropping CONSTRAINT announcement_mutes announcement_mutes_pkey
+pg_restore: dropping CONSTRAINT admin_action_logs admin_action_logs_pkey
+pg_restore: dropping CONSTRAINT accounts accounts_pkey
+pg_restore: dropping CONSTRAINT account_warnings account_warnings_pkey
+pg_restore: dropping CONSTRAINT account_warning_presets account_warning_presets_pkey
+pg_restore: dropping CONSTRAINT account_statuses_cleanup_policies account_statuses_cleanup_policies_pkey
+pg_restore: dropping CONSTRAINT account_stats account_stats_pkey
+pg_restore: dropping CONSTRAINT account_pins account_pins_pkey
+pg_restore: dropping CONSTRAINT account_notes account_notes_pkey
+pg_restore: dropping CONSTRAINT account_moderation_notes account_moderation_notes_pkey
+pg_restore: dropping CONSTRAINT account_migrations account_migrations_pkey
+pg_restore: dropping CONSTRAINT account_domain_blocks account_domain_blocks_pkey
+pg_restore: dropping CONSTRAINT account_deletion_requests account_deletion_requests_pkey
+pg_restore: dropping CONSTRAINT account_conversations account_conversations_pkey
+pg_restore: dropping CONSTRAINT account_aliases account_aliases_pkey
+pg_restore: dropping DEFAULT webhooks id
+pg_restore: dropping DEFAULT webauthn_credentials id
+pg_restore: dropping DEFAULT web_settings id
+pg_restore: dropping DEFAULT web_push_subscriptions id
+pg_restore: dropping DEFAULT users id
+pg_restore: dropping DEFAULT user_roles id
+pg_restore: dropping DEFAULT user_invite_requests id
+pg_restore: dropping DEFAULT unavailable_domains id
+pg_restore: dropping DEFAULT tombstones id
+pg_restore: dropping DEFAULT tags id
+pg_restore: dropping DEFAULT tag_follows id
+pg_restore: dropping DEFAULT system_keys id
+pg_restore: dropping DEFAULT status_trends id
+pg_restore: dropping DEFAULT status_stats id
+pg_restore: dropping DEFAULT status_pins id
+pg_restore: dropping DEFAULT status_edits id
+pg_restore: dropping DEFAULT site_uploads id
+pg_restore: dropping DEFAULT settings id
+pg_restore: dropping DEFAULT session_activations id
+pg_restore: dropping DEFAULT scheduled_statuses id
+pg_restore: dropping DEFAULT rules id
+pg_restore: dropping DEFAULT reports id
+pg_restore: dropping DEFAULT report_notes id
+pg_restore: dropping DEFAULT relays id
+pg_restore: dropping DEFAULT preview_cards id
+pg_restore: dropping DEFAULT preview_card_trends id
+pg_restore: dropping DEFAULT preview_card_providers id
+pg_restore: dropping DEFAULT polls id
+pg_restore: dropping DEFAULT poll_votes id
+pg_restore: dropping DEFAULT pghero_space_stats id
+pg_restore: dropping DEFAULT one_time_keys id
+pg_restore: dropping DEFAULT oauth_applications id
+pg_restore: dropping DEFAULT oauth_access_tokens id
+pg_restore: dropping DEFAULT oauth_access_grants id
+pg_restore: dropping DEFAULT notifications id
+pg_restore: dropping DEFAULT mutes id
+pg_restore: dropping DEFAULT mentions id
+pg_restore: dropping DEFAULT markers id
+pg_restore: dropping DEFAULT login_activities id
+pg_restore: dropping DEFAULT lists id
+pg_restore: dropping DEFAULT list_accounts id
+pg_restore: dropping DEFAULT ip_blocks id
+pg_restore: dropping DEFAULT invites id
+pg_restore: dropping DEFAULT imports id
+pg_restore: dropping DEFAULT identities id
+pg_restore: dropping DEFAULT follows id
+pg_restore: dropping DEFAULT follow_requests id
+pg_restore: dropping DEFAULT follow_recommendation_suppressions id
+pg_restore: dropping DEFAULT featured_tags id
+pg_restore: dropping DEFAULT favourites id
+pg_restore: dropping DEFAULT email_domain_blocks id
+pg_restore: dropping DEFAULT domain_blocks id
+pg_restore: dropping DEFAULT domain_allows id
+pg_restore: dropping DEFAULT devices id
+pg_restore: dropping DEFAULT custom_filters id
+pg_restore: dropping DEFAULT custom_filter_statuses id
+pg_restore: dropping DEFAULT custom_filter_keywords id
+pg_restore: dropping DEFAULT custom_emojis id
+pg_restore: dropping DEFAULT custom_emoji_categories id
+pg_restore: dropping DEFAULT conversations id
+pg_restore: dropping DEFAULT conversation_mutes id
+pg_restore: dropping DEFAULT canonical_email_blocks id
+pg_restore: dropping DEFAULT bookmarks id
+pg_restore: dropping DEFAULT blocks id
+pg_restore: dropping DEFAULT backups id
+pg_restore: dropping DEFAULT appeals id
+pg_restore: dropping DEFAULT announcements id
+pg_restore: dropping DEFAULT announcement_reactions id
+pg_restore: dropping DEFAULT announcement_mutes id
+pg_restore: dropping DEFAULT admin_action_logs id
+pg_restore: dropping DEFAULT account_warnings id
+pg_restore: dropping DEFAULT account_warning_presets id
+pg_restore: dropping DEFAULT account_statuses_cleanup_policies id
+pg_restore: dropping DEFAULT account_stats id
+pg_restore: dropping DEFAULT account_pins id
+pg_restore: dropping DEFAULT account_notes id
+pg_restore: dropping DEFAULT account_moderation_notes id
+pg_restore: dropping DEFAULT account_migrations id
+pg_restore: dropping DEFAULT account_domain_blocks id
+pg_restore: dropping DEFAULT account_deletion_requests id
+pg_restore: dropping DEFAULT account_conversations id
+pg_restore: dropping DEFAULT account_aliases id
+pg_restore: dropping SEQUENCE OWNED BY webhooks_id_seq
+pg_restore: dropping SEQUENCE webhooks_id_seq
+pg_restore: dropping TABLE webhooks
+pg_restore: dropping SEQUENCE OWNED BY webauthn_credentials_id_seq
+pg_restore: dropping SEQUENCE webauthn_credentials_id_seq
+pg_restore: dropping TABLE webauthn_credentials
+pg_restore: dropping SEQUENCE OWNED BY web_settings_id_seq
+pg_restore: dropping SEQUENCE web_settings_id_seq
+pg_restore: dropping TABLE web_settings
+pg_restore: dropping SEQUENCE OWNED BY web_push_subscriptions_id_seq
+pg_restore: dropping SEQUENCE web_push_subscriptions_id_seq
+pg_restore: dropping TABLE web_push_subscriptions
+pg_restore: dropping SEQUENCE OWNED BY users_id_seq
+pg_restore: dropping SEQUENCE users_id_seq
+pg_restore: dropping SEQUENCE OWNED BY user_roles_id_seq
+pg_restore: dropping SEQUENCE user_roles_id_seq
+pg_restore: dropping TABLE user_roles
+pg_restore: dropping VIEW user_ips
+pg_restore: dropping SEQUENCE OWNED BY user_invite_requests_id_seq
+pg_restore: dropping SEQUENCE user_invite_requests_id_seq
+pg_restore: dropping TABLE user_invite_requests
+pg_restore: dropping SEQUENCE OWNED BY unavailable_domains_id_seq
+pg_restore: dropping SEQUENCE unavailable_domains_id_seq
+pg_restore: dropping TABLE unavailable_domains
+pg_restore: dropping SEQUENCE OWNED BY tombstones_id_seq
+pg_restore: dropping SEQUENCE tombstones_id_seq
+pg_restore: dropping TABLE tombstones
+pg_restore: dropping SEQUENCE OWNED BY tags_id_seq
+pg_restore: dropping SEQUENCE tags_id_seq
+pg_restore: dropping TABLE tags
+pg_restore: dropping SEQUENCE OWNED BY tag_follows_id_seq
+pg_restore: dropping SEQUENCE tag_follows_id_seq
+pg_restore: dropping TABLE tag_follows
+pg_restore: dropping SEQUENCE OWNED BY system_keys_id_seq
+pg_restore: dropping SEQUENCE system_keys_id_seq
+pg_restore: dropping TABLE system_keys
+pg_restore: dropping TABLE statuses_tags
+pg_restore: dropping SEQUENCE statuses_id_seq
+pg_restore: dropping SEQUENCE OWNED BY status_trends_id_seq
+pg_restore: dropping SEQUENCE status_trends_id_seq
+pg_restore: dropping TABLE status_trends
+pg_restore: dropping SEQUENCE OWNED BY status_stats_id_seq
+pg_restore: dropping SEQUENCE status_stats_id_seq
+pg_restore: dropping SEQUENCE OWNED BY status_pins_id_seq
+pg_restore: dropping SEQUENCE status_pins_id_seq
+pg_restore: dropping TABLE status_pins
+pg_restore: dropping SEQUENCE OWNED BY status_edits_id_seq
+pg_restore: dropping SEQUENCE status_edits_id_seq
+pg_restore: dropping TABLE status_edits
+pg_restore: dropping SEQUENCE OWNED BY site_uploads_id_seq
+pg_restore: dropping SEQUENCE site_uploads_id_seq
+pg_restore: dropping TABLE site_uploads
+pg_restore: dropping SEQUENCE OWNED BY settings_id_seq
+pg_restore: dropping SEQUENCE settings_id_seq
+pg_restore: dropping TABLE settings
+pg_restore: dropping SEQUENCE OWNED BY session_activations_id_seq
+pg_restore: dropping SEQUENCE session_activations_id_seq
+pg_restore: dropping TABLE session_activations
+pg_restore: dropping TABLE schema_migrations
+pg_restore: dropping SEQUENCE OWNED BY scheduled_statuses_id_seq
+pg_restore: dropping SEQUENCE scheduled_statuses_id_seq
+pg_restore: dropping TABLE scheduled_statuses
+pg_restore: dropping SEQUENCE OWNED BY rules_id_seq
+pg_restore: dropping SEQUENCE rules_id_seq
+pg_restore: dropping TABLE rules
+pg_restore: dropping SEQUENCE OWNED BY reports_id_seq
+pg_restore: dropping SEQUENCE reports_id_seq
+pg_restore: dropping TABLE reports
+pg_restore: dropping SEQUENCE OWNED BY report_notes_id_seq
+pg_restore: dropping SEQUENCE report_notes_id_seq
+pg_restore: dropping TABLE report_notes
+pg_restore: dropping SEQUENCE OWNED BY relays_id_seq
+pg_restore: dropping SEQUENCE relays_id_seq
+pg_restore: dropping TABLE relays
+pg_restore: dropping TABLE preview_cards_statuses
+pg_restore: dropping SEQUENCE OWNED BY preview_cards_id_seq
+pg_restore: dropping SEQUENCE preview_cards_id_seq
+pg_restore: dropping TABLE preview_cards
+pg_restore: dropping SEQUENCE OWNED BY preview_card_trends_id_seq
+pg_restore: dropping SEQUENCE preview_card_trends_id_seq
+pg_restore: dropping TABLE preview_card_trends
+pg_restore: dropping SEQUENCE OWNED BY preview_card_providers_id_seq
+pg_restore: dropping SEQUENCE preview_card_providers_id_seq
+pg_restore: dropping TABLE preview_card_providers
+pg_restore: dropping SEQUENCE OWNED BY polls_id_seq
+pg_restore: dropping SEQUENCE polls_id_seq
+pg_restore: dropping TABLE polls
+pg_restore: dropping SEQUENCE OWNED BY poll_votes_id_seq
+pg_restore: dropping SEQUENCE poll_votes_id_seq
+pg_restore: dropping TABLE poll_votes
+pg_restore: dropping SEQUENCE OWNED BY pghero_space_stats_id_seq
+pg_restore: dropping SEQUENCE pghero_space_stats_id_seq
+pg_restore: dropping TABLE pghero_space_stats
+pg_restore: dropping SEQUENCE OWNED BY one_time_keys_id_seq
+pg_restore: dropping SEQUENCE one_time_keys_id_seq
+pg_restore: dropping TABLE one_time_keys
+pg_restore: dropping SEQUENCE OWNED BY oauth_applications_id_seq
+pg_restore: dropping SEQUENCE oauth_applications_id_seq
+pg_restore: dropping TABLE oauth_applications
+pg_restore: dropping SEQUENCE OWNED BY oauth_access_tokens_id_seq
+pg_restore: dropping SEQUENCE oauth_access_tokens_id_seq
+pg_restore: dropping TABLE oauth_access_tokens
+pg_restore: dropping SEQUENCE OWNED BY oauth_access_grants_id_seq
+pg_restore: dropping SEQUENCE oauth_access_grants_id_seq
+pg_restore: dropping TABLE oauth_access_grants
+pg_restore: dropping SEQUENCE OWNED BY notifications_id_seq
+pg_restore: dropping SEQUENCE notifications_id_seq
+pg_restore: dropping TABLE notifications
+pg_restore: dropping SEQUENCE OWNED BY mutes_id_seq
+pg_restore: dropping SEQUENCE mutes_id_seq
+pg_restore: dropping TABLE mutes
+pg_restore: dropping SEQUENCE OWNED BY mentions_id_seq
+pg_restore: dropping SEQUENCE mentions_id_seq
+pg_restore: dropping TABLE mentions
+pg_restore: dropping SEQUENCE OWNED BY media_attachments_id_seq
+pg_restore: dropping SEQUENCE media_attachments_id_seq
+pg_restore: dropping TABLE media_attachments
+pg_restore: dropping SEQUENCE OWNED BY markers_id_seq
+pg_restore: dropping SEQUENCE markers_id_seq
+pg_restore: dropping TABLE markers
+pg_restore: dropping SEQUENCE OWNED BY login_activities_id_seq
+pg_restore: dropping SEQUENCE login_activities_id_seq
+pg_restore: dropping TABLE login_activities
+pg_restore: dropping SEQUENCE OWNED BY lists_id_seq
+pg_restore: dropping SEQUENCE lists_id_seq
+pg_restore: dropping TABLE lists
+pg_restore: dropping SEQUENCE OWNED BY list_accounts_id_seq
+pg_restore: dropping SEQUENCE list_accounts_id_seq
+pg_restore: dropping TABLE list_accounts
+pg_restore: dropping SEQUENCE OWNED BY ip_blocks_id_seq
+pg_restore: dropping SEQUENCE ip_blocks_id_seq
+pg_restore: dropping TABLE ip_blocks
+pg_restore: dropping SEQUENCE OWNED BY invites_id_seq
+pg_restore: dropping SEQUENCE invites_id_seq
+pg_restore: dropping TABLE invites
+pg_restore: dropping MATERIALIZED VIEW instances
+pg_restore: dropping SEQUENCE OWNED BY imports_id_seq
+pg_restore: dropping SEQUENCE imports_id_seq
+pg_restore: dropping TABLE imports
+pg_restore: dropping SEQUENCE OWNED BY identities_id_seq
+pg_restore: dropping SEQUENCE identities_id_seq
+pg_restore: dropping TABLE identities
+pg_restore: dropping SEQUENCE OWNED BY follows_id_seq
+pg_restore: dropping SEQUENCE follows_id_seq
+pg_restore: dropping SEQUENCE OWNED BY follow_requests_id_seq
+pg_restore: dropping SEQUENCE follow_requests_id_seq
+pg_restore: dropping TABLE follow_requests
+pg_restore: dropping MATERIALIZED VIEW follow_recommendations
+pg_restore: dropping TABLE users
+pg_restore: dropping TABLE status_stats
+pg_restore: dropping TABLE follows
+pg_restore: dropping SEQUENCE OWNED BY follow_recommendation_suppressions_id_seq
+pg_restore: dropping SEQUENCE follow_recommendation_suppressions_id_seq
+pg_restore: dropping TABLE follow_recommendation_suppressions
+pg_restore: dropping SEQUENCE OWNED BY featured_tags_id_seq
+pg_restore: dropping SEQUENCE featured_tags_id_seq
+pg_restore: dropping TABLE featured_tags
+pg_restore: dropping SEQUENCE OWNED BY favourites_id_seq
+pg_restore: dropping SEQUENCE favourites_id_seq
+pg_restore: dropping TABLE favourites
+pg_restore: dropping SEQUENCE OWNED BY encrypted_messages_id_seq
+pg_restore: dropping SEQUENCE encrypted_messages_id_seq
+pg_restore: dropping TABLE encrypted_messages
+pg_restore: dropping SEQUENCE OWNED BY email_domain_blocks_id_seq
+pg_restore: dropping SEQUENCE email_domain_blocks_id_seq
+pg_restore: dropping TABLE email_domain_blocks
+pg_restore: dropping SEQUENCE OWNED BY domain_blocks_id_seq
+pg_restore: dropping SEQUENCE domain_blocks_id_seq
+pg_restore: dropping TABLE domain_blocks
+pg_restore: dropping SEQUENCE OWNED BY domain_allows_id_seq
+pg_restore: dropping SEQUENCE domain_allows_id_seq
+pg_restore: dropping TABLE domain_allows
+pg_restore: dropping SEQUENCE OWNED BY devices_id_seq
+pg_restore: dropping SEQUENCE devices_id_seq
+pg_restore: dropping TABLE devices
+pg_restore: dropping SEQUENCE OWNED BY custom_filters_id_seq
+pg_restore: dropping SEQUENCE custom_filters_id_seq
+pg_restore: dropping TABLE custom_filters
+pg_restore: dropping SEQUENCE OWNED BY custom_filter_statuses_id_seq
+pg_restore: dropping SEQUENCE custom_filter_statuses_id_seq
+pg_restore: dropping TABLE custom_filter_statuses
+pg_restore: dropping SEQUENCE OWNED BY custom_filter_keywords_id_seq
+pg_restore: dropping SEQUENCE custom_filter_keywords_id_seq
+pg_restore: dropping TABLE custom_filter_keywords
+pg_restore: dropping SEQUENCE OWNED BY custom_emojis_id_seq
+pg_restore: dropping SEQUENCE custom_emojis_id_seq
+pg_restore: dropping TABLE custom_emojis
+pg_restore: dropping SEQUENCE OWNED BY custom_emoji_categories_id_seq
+pg_restore: dropping SEQUENCE custom_emoji_categories_id_seq
+pg_restore: dropping TABLE custom_emoji_categories
+pg_restore: dropping SEQUENCE OWNED BY conversations_id_seq
+pg_restore: dropping SEQUENCE conversations_id_seq
+pg_restore: dropping TABLE conversations
+pg_restore: dropping SEQUENCE OWNED BY conversation_mutes_id_seq
+pg_restore: dropping SEQUENCE conversation_mutes_id_seq
+pg_restore: dropping TABLE conversation_mutes
+pg_restore: dropping SEQUENCE OWNED BY canonical_email_blocks_id_seq
+pg_restore: dropping SEQUENCE canonical_email_blocks_id_seq
+pg_restore: dropping TABLE canonical_email_blocks
+pg_restore: dropping SEQUENCE OWNED BY bookmarks_id_seq
+pg_restore: dropping SEQUENCE bookmarks_id_seq
+pg_restore: dropping TABLE bookmarks
+pg_restore: dropping SEQUENCE OWNED BY blocks_id_seq
+pg_restore: dropping SEQUENCE blocks_id_seq
+pg_restore: dropping TABLE blocks
+pg_restore: dropping SEQUENCE OWNED BY backups_id_seq
+pg_restore: dropping SEQUENCE backups_id_seq
+pg_restore: dropping TABLE backups
+pg_restore: dropping TABLE ar_internal_metadata
+pg_restore: dropping SEQUENCE OWNED BY appeals_id_seq
+pg_restore: dropping SEQUENCE appeals_id_seq
+pg_restore: dropping TABLE appeals
+pg_restore: dropping SEQUENCE OWNED BY announcements_id_seq
+pg_restore: dropping SEQUENCE announcements_id_seq
+pg_restore: dropping TABLE announcements
+pg_restore: dropping SEQUENCE OWNED BY announcement_reactions_id_seq
+pg_restore: dropping SEQUENCE announcement_reactions_id_seq
+pg_restore: dropping TABLE announcement_reactions
+pg_restore: dropping SEQUENCE OWNED BY announcement_mutes_id_seq
+pg_restore: dropping SEQUENCE announcement_mutes_id_seq
+pg_restore: dropping TABLE announcement_mutes
+pg_restore: dropping SEQUENCE OWNED BY admin_action_logs_id_seq
+pg_restore: dropping SEQUENCE admin_action_logs_id_seq
+pg_restore: dropping TABLE admin_action_logs
+pg_restore: dropping TABLE accounts_tags
+pg_restore: dropping SEQUENCE OWNED BY accounts_id_seq
+pg_restore: dropping SEQUENCE accounts_id_seq
+pg_restore: dropping SEQUENCE OWNED BY account_warnings_id_seq
+pg_restore: dropping SEQUENCE account_warnings_id_seq
+pg_restore: dropping TABLE account_warnings
+pg_restore: dropping SEQUENCE OWNED BY account_warning_presets_id_seq
+pg_restore: dropping SEQUENCE account_warning_presets_id_seq
+pg_restore: dropping TABLE account_warning_presets
+pg_restore: dropping MATERIALIZED VIEW account_summaries
+pg_restore: dropping TABLE statuses
+pg_restore: dropping TABLE accounts
+pg_restore: dropping SEQUENCE OWNED BY account_statuses_cleanup_policies_id_seq
+pg_restore: dropping SEQUENCE account_statuses_cleanup_policies_id_seq
+pg_restore: dropping TABLE account_statuses_cleanup_policies
+pg_restore: dropping SEQUENCE OWNED BY account_stats_id_seq
+pg_restore: dropping SEQUENCE account_stats_id_seq
+pg_restore: dropping TABLE account_stats
+pg_restore: dropping SEQUENCE OWNED BY account_pins_id_seq
+pg_restore: dropping SEQUENCE account_pins_id_seq
+pg_restore: dropping TABLE account_pins
+pg_restore: dropping SEQUENCE OWNED BY account_notes_id_seq
+pg_restore: dropping SEQUENCE account_notes_id_seq
+pg_restore: dropping TABLE account_notes
+pg_restore: dropping SEQUENCE OWNED BY account_moderation_notes_id_seq
+pg_restore: dropping SEQUENCE account_moderation_notes_id_seq
+pg_restore: dropping TABLE account_moderation_notes
+pg_restore: dropping SEQUENCE OWNED BY account_migrations_id_seq
+pg_restore: dropping SEQUENCE account_migrations_id_seq
+pg_restore: dropping TABLE account_migrations
+pg_restore: dropping SEQUENCE OWNED BY account_domain_blocks_id_seq
+pg_restore: dropping SEQUENCE account_domain_blocks_id_seq
+pg_restore: dropping TABLE account_domain_blocks
+pg_restore: dropping SEQUENCE OWNED BY account_deletion_requests_id_seq
+pg_restore: dropping SEQUENCE account_deletion_requests_id_seq
+pg_restore: dropping TABLE account_deletion_requests
+pg_restore: dropping SEQUENCE OWNED BY account_conversations_id_seq
+pg_restore: dropping SEQUENCE account_conversations_id_seq
+pg_restore: dropping TABLE account_conversations
+pg_restore: dropping SEQUENCE OWNED BY account_aliases_id_seq
+pg_restore: dropping SEQUENCE account_aliases_id_seq
+pg_restore: dropping TABLE account_aliases
+pg_restore: dropping FUNCTION timestamp_id(text)
+pg_restore: creating FUNCTION "public.timestamp_id(text)"
+pg_restore: creating TABLE "public.account_aliases"
+pg_restore: creating SEQUENCE "public.account_aliases_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_aliases_id_seq"
+pg_restore: creating TABLE "public.account_conversations"
+pg_restore: creating SEQUENCE "public.account_conversations_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_conversations_id_seq"
+pg_restore: creating TABLE "public.account_deletion_requests"
+pg_restore: creating SEQUENCE "public.account_deletion_requests_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_deletion_requests_id_seq"
+pg_restore: creating TABLE "public.account_domain_blocks"
+pg_restore: creating SEQUENCE "public.account_domain_blocks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_domain_blocks_id_seq"
+pg_restore: creating TABLE "public.account_migrations"
+pg_restore: creating SEQUENCE "public.account_migrations_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_migrations_id_seq"
+pg_restore: creating TABLE "public.account_moderation_notes"
+pg_restore: creating SEQUENCE "public.account_moderation_notes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_moderation_notes_id_seq"
+pg_restore: creating TABLE "public.account_notes"
+pg_restore: creating SEQUENCE "public.account_notes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_notes_id_seq"
+pg_restore: creating TABLE "public.account_pins"
+pg_restore: creating SEQUENCE "public.account_pins_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_pins_id_seq"
+pg_restore: creating TABLE "public.account_stats"
+pg_restore: creating SEQUENCE "public.account_stats_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_stats_id_seq"
+pg_restore: creating TABLE "public.account_statuses_cleanup_policies"
+pg_restore: creating SEQUENCE "public.account_statuses_cleanup_policies_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_statuses_cleanup_policies_id_seq"
+pg_restore: creating TABLE "public.accounts"
+pg_restore: creating TABLE "public.statuses"
+pg_restore: creating MATERIALIZED VIEW "public.account_summaries"
+pg_restore: creating TABLE "public.account_warning_presets"
+pg_restore: creating SEQUENCE "public.account_warning_presets_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_warning_presets_id_seq"
+pg_restore: creating TABLE "public.account_warnings"
+pg_restore: creating SEQUENCE "public.account_warnings_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.account_warnings_id_seq"
+pg_restore: creating SEQUENCE "public.accounts_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.accounts_id_seq"
+pg_restore: creating TABLE "public.accounts_tags"
+pg_restore: creating TABLE "public.admin_action_logs"
+pg_restore: creating SEQUENCE "public.admin_action_logs_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.admin_action_logs_id_seq"
+pg_restore: creating TABLE "public.announcement_mutes"
+pg_restore: creating SEQUENCE "public.announcement_mutes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.announcement_mutes_id_seq"
+pg_restore: creating TABLE "public.announcement_reactions"
+pg_restore: creating SEQUENCE "public.announcement_reactions_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.announcement_reactions_id_seq"
+pg_restore: creating TABLE "public.announcements"
+pg_restore: creating SEQUENCE "public.announcements_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.announcements_id_seq"
+pg_restore: creating TABLE "public.appeals"
+pg_restore: creating SEQUENCE "public.appeals_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.appeals_id_seq"
+pg_restore: creating TABLE "public.ar_internal_metadata"
+pg_restore: creating TABLE "public.backups"
+pg_restore: creating SEQUENCE "public.backups_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.backups_id_seq"
+pg_restore: creating TABLE "public.blocks"
+pg_restore: creating SEQUENCE "public.blocks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.blocks_id_seq"
+pg_restore: creating TABLE "public.bookmarks"
+pg_restore: creating SEQUENCE "public.bookmarks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.bookmarks_id_seq"
+pg_restore: creating TABLE "public.canonical_email_blocks"
+pg_restore: creating SEQUENCE "public.canonical_email_blocks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.canonical_email_blocks_id_seq"
+pg_restore: creating TABLE "public.conversation_mutes"
+pg_restore: creating SEQUENCE "public.conversation_mutes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.conversation_mutes_id_seq"
+pg_restore: creating TABLE "public.conversations"
+pg_restore: creating SEQUENCE "public.conversations_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.conversations_id_seq"
+pg_restore: creating TABLE "public.custom_emoji_categories"
+pg_restore: creating SEQUENCE "public.custom_emoji_categories_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.custom_emoji_categories_id_seq"
+pg_restore: creating TABLE "public.custom_emojis"
+pg_restore: creating SEQUENCE "public.custom_emojis_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.custom_emojis_id_seq"
+pg_restore: creating TABLE "public.custom_filter_keywords"
+pg_restore: creating SEQUENCE "public.custom_filter_keywords_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.custom_filter_keywords_id_seq"
+pg_restore: creating TABLE "public.custom_filter_statuses"
+pg_restore: creating SEQUENCE "public.custom_filter_statuses_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.custom_filter_statuses_id_seq"
+pg_restore: creating TABLE "public.custom_filters"
+pg_restore: creating SEQUENCE "public.custom_filters_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.custom_filters_id_seq"
+pg_restore: creating TABLE "public.devices"
+pg_restore: creating SEQUENCE "public.devices_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.devices_id_seq"
+pg_restore: creating TABLE "public.domain_allows"
+pg_restore: creating SEQUENCE "public.domain_allows_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.domain_allows_id_seq"
+pg_restore: creating TABLE "public.domain_blocks"
+pg_restore: creating SEQUENCE "public.domain_blocks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.domain_blocks_id_seq"
+pg_restore: creating TABLE "public.email_domain_blocks"
+pg_restore: creating SEQUENCE "public.email_domain_blocks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.email_domain_blocks_id_seq"
+pg_restore: creating TABLE "public.encrypted_messages"
+pg_restore: creating SEQUENCE "public.encrypted_messages_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.encrypted_messages_id_seq"
+pg_restore: creating TABLE "public.favourites"
+pg_restore: creating SEQUENCE "public.favourites_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.favourites_id_seq"
+pg_restore: creating TABLE "public.featured_tags"
+pg_restore: creating SEQUENCE "public.featured_tags_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.featured_tags_id_seq"
+pg_restore: creating TABLE "public.follow_recommendation_suppressions"
+pg_restore: creating SEQUENCE "public.follow_recommendation_suppressions_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.follow_recommendation_suppressions_id_seq"
+pg_restore: creating TABLE "public.follows"
+pg_restore: creating TABLE "public.status_stats"
+pg_restore: creating TABLE "public.users"
+pg_restore: creating MATERIALIZED VIEW "public.follow_recommendations"
+pg_restore: creating TABLE "public.follow_requests"
+pg_restore: creating SEQUENCE "public.follow_requests_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.follow_requests_id_seq"
+pg_restore: creating SEQUENCE "public.follows_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.follows_id_seq"
+pg_restore: creating TABLE "public.identities"
+pg_restore: creating SEQUENCE "public.identities_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.identities_id_seq"
+pg_restore: creating TABLE "public.imports"
+pg_restore: creating SEQUENCE "public.imports_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.imports_id_seq"
+pg_restore: creating MATERIALIZED VIEW "public.instances"
+pg_restore: creating TABLE "public.invites"
+pg_restore: creating SEQUENCE "public.invites_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.invites_id_seq"
+pg_restore: creating TABLE "public.ip_blocks"
+pg_restore: creating SEQUENCE "public.ip_blocks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.ip_blocks_id_seq"
+pg_restore: creating TABLE "public.list_accounts"
+pg_restore: creating SEQUENCE "public.list_accounts_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.list_accounts_id_seq"
+pg_restore: creating TABLE "public.lists"
+pg_restore: creating SEQUENCE "public.lists_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.lists_id_seq"
+pg_restore: creating TABLE "public.login_activities"
+pg_restore: creating SEQUENCE "public.login_activities_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.login_activities_id_seq"
+pg_restore: creating TABLE "public.markers"
+pg_restore: creating SEQUENCE "public.markers_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.markers_id_seq"
+pg_restore: creating TABLE "public.media_attachments"
+pg_restore: creating SEQUENCE "public.media_attachments_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.media_attachments_id_seq"
+pg_restore: creating TABLE "public.mentions"
+pg_restore: creating SEQUENCE "public.mentions_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.mentions_id_seq"
+pg_restore: creating TABLE "public.mutes"
+pg_restore: creating SEQUENCE "public.mutes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.mutes_id_seq"
+pg_restore: creating TABLE "public.notifications"
+pg_restore: creating SEQUENCE "public.notifications_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.notifications_id_seq"
+pg_restore: creating TABLE "public.oauth_access_grants"
+pg_restore: creating SEQUENCE "public.oauth_access_grants_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.oauth_access_grants_id_seq"
+pg_restore: creating TABLE "public.oauth_access_tokens"
+pg_restore: creating SEQUENCE "public.oauth_access_tokens_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.oauth_access_tokens_id_seq"
+pg_restore: creating TABLE "public.oauth_applications"
+pg_restore: creating SEQUENCE "public.oauth_applications_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.oauth_applications_id_seq"
+pg_restore: creating TABLE "public.one_time_keys"
+pg_restore: creating SEQUENCE "public.one_time_keys_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.one_time_keys_id_seq"
+pg_restore: creating TABLE "public.pghero_space_stats"
+pg_restore: creating SEQUENCE "public.pghero_space_stats_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.pghero_space_stats_id_seq"
+pg_restore: creating TABLE "public.poll_votes"
+pg_restore: creating SEQUENCE "public.poll_votes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.poll_votes_id_seq"
+pg_restore: creating TABLE "public.polls"
+pg_restore: creating SEQUENCE "public.polls_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.polls_id_seq"
+pg_restore: creating TABLE "public.preview_card_providers"
+pg_restore: creating SEQUENCE "public.preview_card_providers_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.preview_card_providers_id_seq"
+pg_restore: creating TABLE "public.preview_card_trends"
+pg_restore: creating SEQUENCE "public.preview_card_trends_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.preview_card_trends_id_seq"
+pg_restore: creating TABLE "public.preview_cards"
+pg_restore: creating SEQUENCE "public.preview_cards_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.preview_cards_id_seq"
+pg_restore: creating TABLE "public.preview_cards_statuses"
+pg_restore: creating TABLE "public.relays"
+pg_restore: creating SEQUENCE "public.relays_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.relays_id_seq"
+pg_restore: creating TABLE "public.report_notes"
+pg_restore: creating SEQUENCE "public.report_notes_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.report_notes_id_seq"
+pg_restore: creating TABLE "public.reports"
+pg_restore: creating SEQUENCE "public.reports_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.reports_id_seq"
+pg_restore: creating TABLE "public.rules"
+pg_restore: creating SEQUENCE "public.rules_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.rules_id_seq"
+pg_restore: creating TABLE "public.scheduled_statuses"
+pg_restore: creating SEQUENCE "public.scheduled_statuses_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.scheduled_statuses_id_seq"
+pg_restore: creating TABLE "public.schema_migrations"
+pg_restore: creating TABLE "public.session_activations"
+pg_restore: creating SEQUENCE "public.session_activations_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.session_activations_id_seq"
+pg_restore: creating TABLE "public.settings"
+pg_restore: creating SEQUENCE "public.settings_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.settings_id_seq"
+pg_restore: creating TABLE "public.site_uploads"
+pg_restore: creating SEQUENCE "public.site_uploads_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.site_uploads_id_seq"
+pg_restore: creating TABLE "public.status_edits"
+pg_restore: creating SEQUENCE "public.status_edits_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.status_edits_id_seq"
+pg_restore: creating TABLE "public.status_pins"
+pg_restore: creating SEQUENCE "public.status_pins_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.status_pins_id_seq"
+pg_restore: creating SEQUENCE "public.status_stats_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.status_stats_id_seq"
+pg_restore: creating TABLE "public.status_trends"
+pg_restore: creating SEQUENCE "public.status_trends_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.status_trends_id_seq"
+pg_restore: creating SEQUENCE "public.statuses_id_seq"
+pg_restore: creating TABLE "public.statuses_tags"
+pg_restore: creating TABLE "public.system_keys"
+pg_restore: creating SEQUENCE "public.system_keys_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.system_keys_id_seq"
+pg_restore: creating TABLE "public.tag_follows"
+pg_restore: creating SEQUENCE "public.tag_follows_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.tag_follows_id_seq"
+pg_restore: creating TABLE "public.tags"
+pg_restore: creating SEQUENCE "public.tags_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.tags_id_seq"
+pg_restore: creating TABLE "public.tombstones"
+pg_restore: creating SEQUENCE "public.tombstones_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.tombstones_id_seq"
+pg_restore: creating TABLE "public.unavailable_domains"
+pg_restore: creating SEQUENCE "public.unavailable_domains_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.unavailable_domains_id_seq"
+pg_restore: creating TABLE "public.user_invite_requests"
+pg_restore: creating SEQUENCE "public.user_invite_requests_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.user_invite_requests_id_seq"
+pg_restore: creating VIEW "public.user_ips"
+pg_restore: creating TABLE "public.user_roles"
+pg_restore: creating SEQUENCE "public.user_roles_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.user_roles_id_seq"
+pg_restore: creating SEQUENCE "public.users_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.users_id_seq"
+pg_restore: creating TABLE "public.web_push_subscriptions"
+pg_restore: creating SEQUENCE "public.web_push_subscriptions_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.web_push_subscriptions_id_seq"
+pg_restore: creating TABLE "public.web_settings"
+pg_restore: creating SEQUENCE "public.web_settings_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.web_settings_id_seq"
+pg_restore: creating TABLE "public.webauthn_credentials"
+pg_restore: creating SEQUENCE "public.webauthn_credentials_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.webauthn_credentials_id_seq"
+pg_restore: creating TABLE "public.webhooks"
+pg_restore: creating SEQUENCE "public.webhooks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.webhooks_id_seq"
+pg_restore: creating DEFAULT "public.account_aliases id"
+pg_restore: creating DEFAULT "public.account_conversations id"
+pg_restore: creating DEFAULT "public.account_deletion_requests id"
+pg_restore: creating DEFAULT "public.account_domain_blocks id"
+pg_restore: creating DEFAULT "public.account_migrations id"
+pg_restore: creating DEFAULT "public.account_moderation_notes id"
+pg_restore: creating DEFAULT "public.account_notes id"
+pg_restore: creating DEFAULT "public.account_pins id"
+pg_restore: creating DEFAULT "public.account_stats id"
+pg_restore: creating DEFAULT "public.account_statuses_cleanup_policies id"
+pg_restore: creating DEFAULT "public.account_warning_presets id"
+pg_restore: creating DEFAULT "public.account_warnings id"
+pg_restore: creating DEFAULT "public.admin_action_logs id"
+pg_restore: creating DEFAULT "public.announcement_mutes id"
+pg_restore: creating DEFAULT "public.announcement_reactions id"
+pg_restore: creating DEFAULT "public.announcements id"
+pg_restore: creating DEFAULT "public.appeals id"
+pg_restore: creating DEFAULT "public.backups id"
+pg_restore: creating DEFAULT "public.blocks id"
+pg_restore: creating DEFAULT "public.bookmarks id"
+pg_restore: creating DEFAULT "public.canonical_email_blocks id"
+pg_restore: creating DEFAULT "public.conversation_mutes id"
+pg_restore: creating DEFAULT "public.conversations id"
+pg_restore: creating DEFAULT "public.custom_emoji_categories id"
+pg_restore: creating DEFAULT "public.custom_emojis id"
+pg_restore: creating DEFAULT "public.custom_filter_keywords id"
+pg_restore: creating DEFAULT "public.custom_filter_statuses id"
+pg_restore: creating DEFAULT "public.custom_filters id"
+pg_restore: creating DEFAULT "public.devices id"
+pg_restore: creating DEFAULT "public.domain_allows id"
+pg_restore: creating DEFAULT "public.domain_blocks id"
+pg_restore: creating DEFAULT "public.email_domain_blocks id"
+pg_restore: creating DEFAULT "public.favourites id"
+pg_restore: creating DEFAULT "public.featured_tags id"
+pg_restore: creating DEFAULT "public.follow_recommendation_suppressions id"
+pg_restore: creating DEFAULT "public.follow_requests id"
+pg_restore: creating DEFAULT "public.follows id"
+pg_restore: creating DEFAULT "public.identities id"
+pg_restore: creating DEFAULT "public.imports id"
+pg_restore: creating DEFAULT "public.invites id"
+pg_restore: creating DEFAULT "public.ip_blocks id"
+pg_restore: creating DEFAULT "public.list_accounts id"
+pg_restore: creating DEFAULT "public.lists id"
+pg_restore: creating DEFAULT "public.login_activities id"
+pg_restore: creating DEFAULT "public.markers id"
+pg_restore: creating DEFAULT "public.mentions id"
+pg_restore: creating DEFAULT "public.mutes id"
+pg_restore: creating DEFAULT "public.notifications id"
+pg_restore: creating DEFAULT "public.oauth_access_grants id"
+pg_restore: creating DEFAULT "public.oauth_access_tokens id"
+pg_restore: creating DEFAULT "public.oauth_applications id"
+pg_restore: creating DEFAULT "public.one_time_keys id"
+pg_restore: creating DEFAULT "public.pghero_space_stats id"
+pg_restore: creating DEFAULT "public.poll_votes id"
+pg_restore: creating DEFAULT "public.polls id"
+pg_restore: creating DEFAULT "public.preview_card_providers id"
+pg_restore: creating DEFAULT "public.preview_card_trends id"
+pg_restore: creating DEFAULT "public.preview_cards id"
+pg_restore: creating DEFAULT "public.relays id"
+pg_restore: creating DEFAULT "public.report_notes id"
+pg_restore: creating DEFAULT "public.reports id"
+pg_restore: creating DEFAULT "public.rules id"
+pg_restore: creating DEFAULT "public.scheduled_statuses id"
+pg_restore: creating DEFAULT "public.session_activations id"
+pg_restore: creating DEFAULT "public.settings id"
+pg_restore: creating DEFAULT "public.site_uploads id"
+pg_restore: creating DEFAULT "public.status_edits id"
+pg_restore: creating DEFAULT "public.status_pins id"
+pg_restore: creating DEFAULT "public.status_stats id"
+pg_restore: creating DEFAULT "public.status_trends id"
+pg_restore: creating DEFAULT "public.system_keys id"
+pg_restore: creating DEFAULT "public.tag_follows id"
+pg_restore: creating DEFAULT "public.tags id"
+pg_restore: creating DEFAULT "public.tombstones id"
+pg_restore: creating DEFAULT "public.unavailable_domains id"
+pg_restore: creating DEFAULT "public.user_invite_requests id"
+pg_restore: creating DEFAULT "public.user_roles id"
+pg_restore: creating DEFAULT "public.users id"
+pg_restore: creating DEFAULT "public.web_push_subscriptions id"
+pg_restore: creating DEFAULT "public.web_settings id"
+pg_restore: creating DEFAULT "public.webauthn_credentials id"
+pg_restore: creating DEFAULT "public.webhooks id"
+pg_restore: creating CONSTRAINT "public.account_aliases account_aliases_pkey"
+pg_restore: creating CONSTRAINT "public.account_conversations account_conversations_pkey"
+pg_restore: creating CONSTRAINT "public.account_deletion_requests account_deletion_requests_pkey"
+pg_restore: creating CONSTRAINT "public.account_domain_blocks account_domain_blocks_pkey"
+pg_restore: creating CONSTRAINT "public.account_migrations account_migrations_pkey"
+pg_restore: creating CONSTRAINT "public.account_moderation_notes account_moderation_notes_pkey"
+pg_restore: creating CONSTRAINT "public.account_notes account_notes_pkey"
+pg_restore: creating CONSTRAINT "public.account_pins account_pins_pkey"
+pg_restore: creating CONSTRAINT "public.account_stats account_stats_pkey"
+pg_restore: creating CONSTRAINT "public.account_statuses_cleanup_policies account_statuses_cleanup_policies_pkey"
+pg_restore: creating CONSTRAINT "public.account_warning_presets account_warning_presets_pkey"
+pg_restore: creating CONSTRAINT "public.account_warnings account_warnings_pkey"
+pg_restore: creating CONSTRAINT "public.accounts accounts_pkey"
+pg_restore: creating CONSTRAINT "public.admin_action_logs admin_action_logs_pkey"
+pg_restore: creating CONSTRAINT "public.announcement_mutes announcement_mutes_pkey"
+pg_restore: creating CONSTRAINT "public.announcement_reactions announcement_reactions_pkey"
+pg_restore: creating CONSTRAINT "public.announcements announcements_pkey"
+pg_restore: creating CONSTRAINT "public.appeals appeals_pkey"
+pg_restore: creating CONSTRAINT "public.ar_internal_metadata ar_internal_metadata_pkey"
+pg_restore: creating CONSTRAINT "public.backups backups_pkey"
+pg_restore: creating CONSTRAINT "public.blocks blocks_pkey"
+pg_restore: creating CONSTRAINT "public.bookmarks bookmarks_pkey"
+pg_restore: creating CONSTRAINT "public.canonical_email_blocks canonical_email_blocks_pkey"
+pg_restore: creating CONSTRAINT "public.conversation_mutes conversation_mutes_pkey"
+pg_restore: creating CONSTRAINT "public.conversations conversations_pkey"
+pg_restore: creating CONSTRAINT "public.custom_emoji_categories custom_emoji_categories_pkey"
+pg_restore: creating CONSTRAINT "public.custom_emojis custom_emojis_pkey"
+pg_restore: creating CONSTRAINT "public.custom_filter_keywords custom_filter_keywords_pkey"
+pg_restore: creating CONSTRAINT "public.custom_filter_statuses custom_filter_statuses_pkey"
+pg_restore: creating CONSTRAINT "public.custom_filters custom_filters_pkey"
+pg_restore: creating CONSTRAINT "public.devices devices_pkey"
+pg_restore: creating CONSTRAINT "public.domain_allows domain_allows_pkey"
+pg_restore: creating CONSTRAINT "public.domain_blocks domain_blocks_pkey"
+pg_restore: creating CONSTRAINT "public.email_domain_blocks email_domain_blocks_pkey"
+pg_restore: creating CONSTRAINT "public.encrypted_messages encrypted_messages_pkey"
+pg_restore: creating CONSTRAINT "public.favourites favourites_pkey"
+pg_restore: creating CONSTRAINT "public.featured_tags featured_tags_pkey"
+pg_restore: creating CONSTRAINT "public.follow_recommendation_suppressions follow_recommendation_suppressions_pkey"
+pg_restore: creating CONSTRAINT "public.follow_requests follow_requests_pkey"
+pg_restore: creating CONSTRAINT "public.follows follows_pkey"
+pg_restore: creating CONSTRAINT "public.imports imports_pkey"
+pg_restore: creating CONSTRAINT "public.identities index_identities_on_id"
+pg_restore: creating CONSTRAINT "public.invites invites_pkey"
+pg_restore: creating CONSTRAINT "public.ip_blocks ip_blocks_pkey"
+pg_restore: creating CONSTRAINT "public.list_accounts list_accounts_pkey"
+pg_restore: creating CONSTRAINT "public.lists lists_pkey"
+pg_restore: creating CONSTRAINT "public.login_activities login_activities_pkey"
+pg_restore: creating CONSTRAINT "public.markers markers_pkey"
+pg_restore: creating CONSTRAINT "public.media_attachments media_attachments_pkey"
+pg_restore: creating CONSTRAINT "public.mentions mentions_pkey"
+pg_restore: creating CONSTRAINT "public.mutes mutes_pkey"
+pg_restore: creating CONSTRAINT "public.notifications notifications_pkey"
+pg_restore: creating CONSTRAINT "public.oauth_access_grants oauth_access_grants_pkey"
+pg_restore: creating CONSTRAINT "public.oauth_access_tokens oauth_access_tokens_pkey"
+pg_restore: creating CONSTRAINT "public.oauth_applications oauth_applications_pkey"
+pg_restore: creating CONSTRAINT "public.one_time_keys one_time_keys_pkey"
+pg_restore: creating CONSTRAINT "public.pghero_space_stats pghero_space_stats_pkey"
+pg_restore: creating CONSTRAINT "public.poll_votes poll_votes_pkey"
+pg_restore: creating CONSTRAINT "public.polls polls_pkey"
+pg_restore: creating CONSTRAINT "public.preview_card_providers preview_card_providers_pkey"
+pg_restore: creating CONSTRAINT "public.preview_card_trends preview_card_trends_pkey"
+pg_restore: creating CONSTRAINT "public.preview_cards preview_cards_pkey"
+pg_restore: creating CONSTRAINT "public.relays relays_pkey"
+pg_restore: creating CONSTRAINT "public.report_notes report_notes_pkey"
+pg_restore: creating CONSTRAINT "public.reports reports_pkey"
+pg_restore: creating CONSTRAINT "public.rules rules_pkey"
+pg_restore: creating CONSTRAINT "public.scheduled_statuses scheduled_statuses_pkey"
+pg_restore: creating CONSTRAINT "public.schema_migrations schema_migrations_pkey"
+pg_restore: creating CONSTRAINT "public.session_activations session_activations_pkey"
+pg_restore: creating CONSTRAINT "public.settings settings_pkey"
+pg_restore: creating CONSTRAINT "public.site_uploads site_uploads_pkey"
+pg_restore: creating CONSTRAINT "public.status_edits status_edits_pkey"
+pg_restore: creating CONSTRAINT "public.status_pins status_pins_pkey"
+pg_restore: creating CONSTRAINT "public.status_stats status_stats_pkey"
+pg_restore: creating CONSTRAINT "public.status_trends status_trends_pkey"
+pg_restore: creating CONSTRAINT "public.statuses statuses_pkey"
+pg_restore: creating CONSTRAINT "public.system_keys system_keys_pkey"
+pg_restore: creating CONSTRAINT "public.tag_follows tag_follows_pkey"
+pg_restore: creating CONSTRAINT "public.tags tags_pkey"
+pg_restore: creating CONSTRAINT "public.tombstones tombstones_pkey"
+pg_restore: creating CONSTRAINT "public.unavailable_domains unavailable_domains_pkey"
+pg_restore: creating CONSTRAINT "public.user_invite_requests user_invite_requests_pkey"
+pg_restore: creating CONSTRAINT "public.user_roles user_roles_pkey"
+pg_restore: creating CONSTRAINT "public.users users_pkey"
+pg_restore: creating CONSTRAINT "public.web_push_subscriptions web_push_subscriptions_pkey"
+pg_restore: creating CONSTRAINT "public.web_settings web_settings_pkey"
+pg_restore: creating CONSTRAINT "public.webauthn_credentials webauthn_credentials_pkey"
+pg_restore: creating CONSTRAINT "public.webhooks webhooks_pkey"
+pg_restore: creating INDEX "public.index_account_aliases_on_account_id"
+pg_restore: creating INDEX "public.index_account_conversations_on_conversation_id"
+pg_restore: creating INDEX "public.index_account_deletion_requests_on_account_id"
+pg_restore: creating INDEX "public.index_account_domain_blocks_on_account_id_and_domain"
+pg_restore: creating INDEX "public.index_account_migrations_on_account_id"
+pg_restore: creating INDEX "public.index_account_migrations_on_target_account_id"
+pg_restore: creating INDEX "public.index_account_notes_on_account_id_and_target_account_id"
+pg_restore: creating INDEX "public.index_account_pins_on_account_id_and_target_account_id"
+pg_restore: creating INDEX "public.index_account_stats_on_account_id"
+pg_restore: creating INDEX "public.index_account_statuses_cleanup_policies_on_account_id"
+pg_restore: creating INDEX "public.index_account_summaries_on_account_id"
+pg_restore: creating INDEX "public.index_accounts_on_moved_to_account_id"
+pg_restore: creating INDEX "public.index_accounts_on_uri"
+pg_restore: creating INDEX "public.index_accounts_on_url"
+pg_restore: creating INDEX "public.index_accounts_on_username_and_domain_lower"
+pg_restore: creating INDEX "public.index_accounts_tags_on_account_id_and_tag_id"
+pg_restore: creating INDEX "public.index_accounts_tags_on_tag_id_and_account_id"
+pg_restore: creating INDEX "public.index_admin_action_logs_on_account_id"
+pg_restore: creating INDEX "public.index_admin_action_logs_on_target_type_and_target_id"
+pg_restore: creating INDEX "public.index_announcement_mutes_on_account_id_and_announcement_id"
+pg_restore: creating INDEX "public.index_announcement_mutes_on_announcement_id"
+pg_restore: creating INDEX "public.index_announcement_reactions_on_account_id_and_announcement_id"
+pg_restore: creating INDEX "public.index_announcement_reactions_on_announcement_id"
+pg_restore: creating INDEX "public.index_announcement_reactions_on_custom_emoji_id"
+pg_restore: creating INDEX "public.index_appeals_on_account_id"
+pg_restore: creating INDEX "public.index_appeals_on_account_warning_id"
+pg_restore: creating INDEX "public.index_appeals_on_approved_by_account_id"
+pg_restore: creating INDEX "public.index_appeals_on_rejected_by_account_id"
+pg_restore: creating INDEX "public.index_blocks_on_account_id_and_target_account_id"
+pg_restore: creating INDEX "public.index_blocks_on_target_account_id"
+pg_restore: creating INDEX "public.index_bookmarks_on_account_id_and_status_id"
+pg_restore: creating INDEX "public.index_bookmarks_on_status_id"
+pg_restore: creating INDEX "public.index_canonical_email_blocks_on_canonical_email_hash"
+pg_restore: creating INDEX "public.index_canonical_email_blocks_on_reference_account_id"
+pg_restore: creating INDEX "public.index_conversation_mutes_on_account_id_and_conversation_id"
+pg_restore: creating INDEX "public.index_conversations_on_uri"
+pg_restore: creating INDEX "public.index_custom_emoji_categories_on_name"
+pg_restore: creating INDEX "public.index_custom_emojis_on_shortcode_and_domain"
+pg_restore: creating INDEX "public.index_custom_filter_keywords_on_custom_filter_id"
+pg_restore: creating INDEX "public.index_custom_filter_statuses_on_custom_filter_id"
+pg_restore: creating INDEX "public.index_custom_filter_statuses_on_status_id"
+pg_restore: creating INDEX "public.index_devices_on_access_token_id"
+pg_restore: creating INDEX "public.index_domain_allows_on_domain"
+pg_restore: creating INDEX "public.index_domain_blocks_on_domain"
+pg_restore: creating INDEX "public.index_email_domain_blocks_on_domain"
+pg_restore: creating INDEX "public.index_favourites_on_account_id_and_id"
+pg_restore: creating INDEX "public.index_favourites_on_account_id_and_status_id"
+pg_restore: creating INDEX "public.index_favourites_on_status_id"
+pg_restore: creating INDEX "public.index_featured_tags_on_account_id_and_tag_id"
+pg_restore: creating INDEX "public.index_follow_recommendation_suppressions_on_account_id"
+pg_restore: creating INDEX "public.index_follow_recommendations_on_account_id"
+pg_restore: creating INDEX "public.index_follow_requests_on_account_id_and_target_account_id"
+pg_restore: creating INDEX "public.index_follows_on_account_id_and_target_account_id"
+pg_restore: creating INDEX "public.index_follows_on_target_account_id"
+pg_restore: creating INDEX "public.index_identities_on_user_id"
+pg_restore: creating INDEX "public.index_instances_on_domain"
+pg_restore: creating INDEX "public.index_invites_on_code"
+pg_restore: creating INDEX "public.index_ip_blocks_on_ip"
+pg_restore: creating INDEX "public.index_list_accounts_on_account_id_and_list_id"
+pg_restore: creating INDEX "public.index_list_accounts_on_follow_id"
+pg_restore: creating INDEX "public.index_list_accounts_on_list_id_and_account_id"
+pg_restore: creating INDEX "public.index_lists_on_account_id"
+pg_restore: creating INDEX "public.index_login_activities_on_user_id"
+pg_restore: creating INDEX "public.index_markers_on_user_id_and_timeline"
+pg_restore: creating INDEX "public.index_media_attachments_on_account_id_and_status_id"
+pg_restore: creating INDEX "public.index_media_attachments_on_scheduled_status_id"
+pg_restore: creating INDEX "public.index_media_attachments_on_shortcode"
+pg_restore: creating INDEX "public.index_media_attachments_on_status_id"
+pg_restore: creating INDEX "public.index_mentions_on_account_id_and_status_id"
+pg_restore: creating INDEX "public.index_mentions_on_status_id"
+pg_restore: creating INDEX "public.index_mutes_on_account_id_and_target_account_id"
+pg_restore: creating INDEX "public.index_mutes_on_target_account_id"
+pg_restore: creating INDEX "public.index_notifications_on_account_id_and_id_and_type"
+pg_restore: creating INDEX "public.index_notifications_on_activity_id_and_activity_type"
+pg_restore: creating INDEX "public.index_notifications_on_from_account_id"
+pg_restore: creating INDEX "public.index_oauth_access_grants_on_resource_owner_id"
+pg_restore: creating INDEX "public.index_oauth_access_grants_on_token"
+pg_restore: creating INDEX "public.index_oauth_access_tokens_on_refresh_token"
+pg_restore: creating INDEX "public.index_oauth_access_tokens_on_resource_owner_id"
+pg_restore: creating INDEX "public.index_oauth_access_tokens_on_token"
+pg_restore: creating INDEX "public.index_oauth_applications_on_owner_id_and_owner_type"
+pg_restore: creating INDEX "public.index_oauth_applications_on_uid"
+pg_restore: creating INDEX "public.index_pghero_space_stats_on_database_and_captured_at"
+pg_restore: creating INDEX "public.index_poll_votes_on_account_id"
+pg_restore: creating INDEX "public.index_poll_votes_on_poll_id"
+pg_restore: creating INDEX "public.index_polls_on_account_id"
+pg_restore: creating INDEX "public.index_polls_on_status_id"
+pg_restore: creating INDEX "public.index_preview_card_providers_on_domain"
+pg_restore: creating INDEX "public.index_preview_card_trends_on_preview_card_id"
+pg_restore: creating INDEX "public.index_preview_cards_on_url"
+pg_restore: creating INDEX "public.index_preview_cards_statuses_on_status_id_and_preview_card_id"
+pg_restore: creating INDEX "public.index_reports_on_action_taken_by_account_id"
+pg_restore: creating INDEX "public.index_reports_on_assigned_account_id"
+pg_restore: creating INDEX "public.index_reports_on_target_account_id"
+pg_restore: creating INDEX "public.index_scheduled_statuses_on_account_id"
+pg_restore: creating INDEX "public.index_session_activations_on_access_token_id"
+pg_restore: creating INDEX "public.index_session_activations_on_session_id"
+pg_restore: creating INDEX "public.index_session_activations_on_user_id"
+pg_restore: creating INDEX "public.index_settings_on_thing_type_and_thing_id_and_var"
+pg_restore: creating INDEX "public.index_site_uploads_on_var"
+pg_restore: creating INDEX "public.index_status_edits_on_account_id"
+pg_restore: creating INDEX "public.index_status_edits_on_status_id"
+pg_restore: creating INDEX "public.index_status_pins_on_account_id_and_status_id"
+pg_restore: creating INDEX "public.index_status_pins_on_status_id"
+pg_restore: creating INDEX "public.index_status_stats_on_status_id"
+pg_restore: creating INDEX "public.index_status_trends_on_account_id"
+pg_restore: creating INDEX "public.index_status_trends_on_status_id"
+pg_restore: creating INDEX "public.index_statuses_20190820"
+pg_restore: creating INDEX "public.index_statuses_local_20190824"
+pg_restore: creating INDEX "public.index_statuses_on_account_id"
+pg_restore: creating INDEX "public.index_statuses_on_deleted_at"
+pg_restore: creating INDEX "public.index_statuses_on_in_reply_to_account_id"
+pg_restore: creating INDEX "public.index_statuses_on_in_reply_to_id"
+pg_restore: creating INDEX "public.index_statuses_on_reblog_of_id_and_account_id"
+pg_restore: creating INDEX "public.index_statuses_on_uri"
+pg_restore: creating INDEX "public.index_statuses_public_20200119"
+pg_restore: creating INDEX "public.index_statuses_tags_on_status_id"
+pg_restore: creating INDEX "public.index_statuses_tags_on_tag_id_and_status_id"
+pg_restore: creating INDEX "public.index_tag_follows_on_account_id_and_tag_id"
+pg_restore: creating INDEX "public.index_tag_follows_on_tag_id"
+pg_restore: creating INDEX "public.index_tags_on_name_lower_btree"
+pg_restore: creating INDEX "public.index_tombstones_on_account_id"
+pg_restore: creating INDEX "public.index_tombstones_on_uri"
+pg_restore: creating INDEX "public.index_unavailable_domains_on_domain"
+pg_restore: creating INDEX "public.index_unique_conversations"
+pg_restore: creating INDEX "public.index_user_invite_requests_on_user_id"
+pg_restore: creating INDEX "public.index_users_on_account_id"
+pg_restore: creating INDEX "public.index_users_on_confirmation_token"
+pg_restore: creating INDEX "public.index_users_on_created_by_application_id"
+pg_restore: creating INDEX "public.index_users_on_email"
+pg_restore: creating INDEX "public.index_users_on_reset_password_token"
+pg_restore: creating INDEX "public.index_users_on_role_id"
+pg_restore: creating INDEX "public.index_web_push_subscriptions_on_access_token_id"
+pg_restore: creating INDEX "public.index_web_push_subscriptions_on_user_id"
+pg_restore: creating INDEX "public.index_web_settings_on_user_id"
+pg_restore: creating INDEX "public.index_webauthn_credentials_on_external_id"
+pg_restore: creating INDEX "public.index_webauthn_credentials_on_user_id"
+pg_restore: creating INDEX "public.index_webhooks_on_url"
+pg_restore: creating INDEX "public.search_index"
+pg_restore: creating FK CONSTRAINT "public.web_settings fk_11910667b2"
+pg_restore: creating FK CONSTRAINT "public.account_domain_blocks fk_206c6029bd"
+pg_restore: creating FK CONSTRAINT "public.conversation_mutes fk_225b4212bb"
+pg_restore: creating FK CONSTRAINT "public.statuses_tags fk_3081861e21"
+pg_restore: creating FK CONSTRAINT "public.follows fk_32ed1b5560"
+pg_restore: creating FK CONSTRAINT "public.oauth_access_grants fk_34d54b0a33"
+pg_restore: creating FK CONSTRAINT "public.blocks fk_4269e03e65"
+pg_restore: creating FK CONSTRAINT "public.reports fk_4b81f7522c"
+pg_restore: creating FK CONSTRAINT "public.users fk_50500f500d"
+pg_restore: creating FK CONSTRAINT "public.favourites fk_5eb6c2b873"
+pg_restore: creating FK CONSTRAINT "public.oauth_access_grants fk_63b044929b"
+pg_restore: creating FK CONSTRAINT "public.imports fk_6db1b6e408"
+pg_restore: creating FK CONSTRAINT "public.follows fk_745ca29eac"
+pg_restore: creating FK CONSTRAINT "public.follow_requests fk_76d644b0e7"
+pg_restore: creating FK CONSTRAINT "public.follow_requests fk_9291ec025d"
+pg_restore: creating FK CONSTRAINT "public.blocks fk_9571bfabc1"
+pg_restore: creating FK CONSTRAINT "public.session_activations fk_957e5bda89"
+pg_restore: creating FK CONSTRAINT "public.media_attachments fk_96dd81e81b"
+pg_restore: creating FK CONSTRAINT "public.mentions fk_970d43f9d1"
+pg_restore: creating FK CONSTRAINT "public.statuses fk_9bda1543f7"
+pg_restore: creating FK CONSTRAINT "public.oauth_applications fk_b0988c7c0a"
+pg_restore: creating FK CONSTRAINT "public.favourites fk_b0e856845e"
+pg_restore: creating FK CONSTRAINT "public.mutes fk_b8d8daf315"
+pg_restore: creating FK CONSTRAINT "public.reports fk_bca45b75fd"
+pg_restore: creating FK CONSTRAINT "public.identities fk_bea040f377"
+pg_restore: creating FK CONSTRAINT "public.notifications fk_c141c8ee55"
+pg_restore: creating FK CONSTRAINT "public.statuses fk_c7fa917661"
+pg_restore: creating FK CONSTRAINT "public.status_pins fk_d4cb435b62"
+pg_restore: creating FK CONSTRAINT "public.session_activations fk_e5fda67334"
+pg_restore: creating FK CONSTRAINT "public.oauth_access_tokens fk_e84df68546"
+pg_restore: creating FK CONSTRAINT "public.reports fk_eb37af34f0"
+pg_restore: creating FK CONSTRAINT "public.mutes fk_eecff219ea"
+pg_restore: creating FK CONSTRAINT "public.oauth_access_tokens fk_f5fc4c1ee3"
+pg_restore: creating FK CONSTRAINT "public.notifications fk_fbd6b0bf9e"
+pg_restore: creating FK CONSTRAINT "public.tag_follows fk_rails_091e831473"
+pg_restore: creating FK CONSTRAINT "public.backups fk_rails_096669d221"
+pg_restore: creating FK CONSTRAINT "public.tag_follows fk_rails_0deefe597f"
+pg_restore: creating FK CONSTRAINT "public.bookmarks fk_rails_11207ffcfd"
+pg_restore: creating FK CONSTRAINT "public.account_conversations fk_rails_1491654f9f"
+pg_restore: creating FK CONSTRAINT "public.featured_tags fk_rails_174efcf15f"
+pg_restore: creating FK CONSTRAINT "public.canonical_email_blocks fk_rails_1ecb262096"
+pg_restore: creating FK CONSTRAINT "public.account_stats fk_rails_215bb31ff1"
+pg_restore: creating FK CONSTRAINT "public.accounts fk_rails_2320833084"
+pg_restore: creating FK CONSTRAINT "public.featured_tags fk_rails_23a9055c7c"
+pg_restore: creating FK CONSTRAINT "public.scheduled_statuses fk_rails_23bd9018f9"
+pg_restore: creating FK CONSTRAINT "public.account_statuses_cleanup_policies fk_rails_23d5f73cfe"
+pg_restore: creating FK CONSTRAINT "public.statuses fk_rails_256483a9ab"
+pg_restore: creating FK CONSTRAINT "public.account_notes fk_rails_2801b48f1a"
+pg_restore: creating FK CONSTRAINT "public.custom_filter_statuses fk_rails_2f6d20c0cf"
+pg_restore: creating FK CONSTRAINT "public.media_attachments fk_rails_31fc5aeef1"
+pg_restore: creating FK CONSTRAINT "public.preview_card_trends fk_rails_371593db34"
+pg_restore: creating FK CONSTRAINT "public.user_invite_requests fk_rails_3773f15361"
+pg_restore: creating FK CONSTRAINT "public.lists fk_rails_3853b78dac"
+pg_restore: creating FK CONSTRAINT "public.devices fk_rails_393f74df68"
+pg_restore: creating FK CONSTRAINT "public.polls fk_rails_3e0d9f1115"
+pg_restore: creating FK CONSTRAINT "public.media_attachments fk_rails_3ec0cfdd70"
+pg_restore: creating FK CONSTRAINT "public.account_moderation_notes fk_rails_3f8b75089b"
+pg_restore: creating FK CONSTRAINT "public.email_domain_blocks fk_rails_408efe0a15"
+pg_restore: creating FK CONSTRAINT "public.list_accounts fk_rails_40f9cc29f1"
+pg_restore: creating FK CONSTRAINT "public.account_deletion_requests fk_rails_45bf2626b9"
+pg_restore: creating FK CONSTRAINT "public.status_stats fk_rails_4a247aac42"
+pg_restore: creating FK CONSTRAINT "public.reports fk_rails_4e7a498fb4"
+pg_restore: creating FK CONSTRAINT "public.account_notes fk_rails_4ee4503c69"
+pg_restore: creating FK CONSTRAINT "public.appeals fk_rails_501c3a6e13"
+pg_restore: creating FK CONSTRAINT "public.mentions fk_rails_59edbe2887"
+pg_restore: creating FK CONSTRAINT "public.custom_filter_keywords fk_rails_5a49a74012"
+pg_restore: creating FK CONSTRAINT "public.conversation_mutes fk_rails_5ab139311f"
+pg_restore: creating FK CONSTRAINT "public.polls fk_rails_5b19a0c011"
+pg_restore: creating FK CONSTRAINT "public.users fk_rails_642f17018b"
+pg_restore: creating FK CONSTRAINT "public.status_pins fk_rails_65c05552f1"
+pg_restore: creating FK CONSTRAINT "public.status_trends fk_rails_68c610dc1a"
+pg_restore: creating FK CONSTRAINT "public.account_conversations fk_rails_6f5278b6e9"
+pg_restore: creating FK CONSTRAINT "public.announcement_reactions fk_rails_7444ad831f"
+pg_restore: creating FK CONSTRAINT "public.web_push_subscriptions fk_rails_751a9f390b"
+pg_restore: creating FK CONSTRAINT "public.report_notes fk_rails_7fa83a61eb"
+pg_restore: creating FK CONSTRAINT "public.list_accounts fk_rails_85fee9d6ab"
+pg_restore: creating FK CONSTRAINT "public.custom_filters fk_rails_8b8d786993"
+pg_restore: creating FK CONSTRAINT "public.account_warnings fk_rails_8f2bab4b16"
+pg_restore: creating FK CONSTRAINT "public.users fk_rails_8fb2a43e88"
+pg_restore: creating FK CONSTRAINT "public.statuses fk_rails_94a6f70399"
+pg_restore: creating FK CONSTRAINT "public.announcement_mutes fk_rails_9c99f8e835"
+pg_restore: creating FK CONSTRAINT "public.appeals fk_rails_9deb2f63ad"
+pg_restore: creating FK CONSTRAINT "public.bookmarks fk_rails_9f6ac182a6"
+pg_restore: creating FK CONSTRAINT "public.announcement_reactions fk_rails_a1226eaa5c"
+pg_restore: creating FK CONSTRAINT "public.account_pins fk_rails_a176e26c37"
+pg_restore: creating FK CONSTRAINT "public.encrypted_messages fk_rails_a42ad0f8d5"
+pg_restore: creating FK CONSTRAINT "public.webauthn_credentials fk_rails_a4355aef77"
+pg_restore: creating FK CONSTRAINT "public.account_warnings fk_rails_a65a1bf71b"
+pg_restore: creating FK CONSTRAINT "public.status_trends fk_rails_a6b527ea49"
+pg_restore: creating FK CONSTRAINT "public.poll_votes fk_rails_a6e6974b7e"
+pg_restore: creating FK CONSTRAINT "public.markers fk_rails_a7009bc2b6"
+pg_restore: creating FK CONSTRAINT "public.admin_action_logs fk_rails_a7667297fa"
+pg_restore: creating FK CONSTRAINT "public.devices fk_rails_a796b75798"
+pg_restore: creating FK CONSTRAINT "public.account_warnings fk_rails_a7ebbb1e37"
+pg_restore: creating FK CONSTRAINT "public.encrypted_messages fk_rails_a83e4df7ae"
+pg_restore: creating FK CONSTRAINT "public.status_edits fk_rails_a960f234a0"
+pg_restore: creating FK CONSTRAINT "public.appeals fk_rails_a99f14546e"
+pg_restore: creating FK CONSTRAINT "public.web_push_subscriptions fk_rails_b006f28dac"
+pg_restore: creating FK CONSTRAINT "public.poll_votes fk_rails_b6c18cf44a"
+pg_restore: creating FK CONSTRAINT "public.announcement_reactions fk_rails_b742c91c0e"
+pg_restore: creating FK CONSTRAINT "public.account_migrations fk_rails_c9f701caaf"
+pg_restore: creating FK CONSTRAINT "public.report_notes fk_rails_cae66353f3"
+pg_restore: creating FK CONSTRAINT "public.one_time_keys fk_rails_d3edd8c878"
+pg_restore: creating FK CONSTRAINT "public.account_pins fk_rails_d44979e5dd"
+pg_restore: creating FK CONSTRAINT "public.account_migrations fk_rails_d9a8dad070"
+pg_restore: creating FK CONSTRAINT "public.status_edits fk_rails_dc8988c545"
+pg_restore: creating FK CONSTRAINT "public.account_moderation_notes fk_rails_dd62ed5ac3"
+pg_restore: creating FK CONSTRAINT "public.statuses_tags fk_rails_df0fe11427"
+pg_restore: creating FK CONSTRAINT "public.follow_recommendation_suppressions fk_rails_dfb9a1dbe2"
+pg_restore: creating FK CONSTRAINT "public.custom_filter_statuses fk_rails_e2ddaf5b14"
+pg_restore: creating FK CONSTRAINT "public.announcement_mutes fk_rails_e35401adf1"
+pg_restore: creating FK CONSTRAINT "public.login_activities fk_rails_e4b6396b41"
+pg_restore: creating FK CONSTRAINT "public.list_accounts fk_rails_e54e356c88"
+pg_restore: creating FK CONSTRAINT "public.appeals fk_rails_ea84881569"
+pg_restore: creating FK CONSTRAINT "public.users fk_rails_ecc9536e7c"
+pg_restore: creating FK CONSTRAINT "public.tombstones fk_rails_f95b861449"
+pg_restore: creating FK CONSTRAINT "public.account_aliases fk_rails_fc91575d08"
+pg_restore: creating FK CONSTRAINT "public.invites fk_rails_ff69dbb2ac"
+pg_restore: creating MATERIALIZED VIEW DATA "public.account_summaries"
+pg_restore: creating MATERIALIZED VIEW DATA "public.follow_recommendations"
+pg_restore: creating MATERIALIZED VIEW DATA "public.instances"
+pg_restore: warning: errors ignored on restore: 5

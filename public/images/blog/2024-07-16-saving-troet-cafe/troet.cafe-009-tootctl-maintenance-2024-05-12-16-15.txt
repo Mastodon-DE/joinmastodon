@@ -1,0 +1,37 @@
+/live$ SKIP_POST_DEPLOYMENT_MIGRATIONS=true RAILS_ENV=production bundle exec rails db:migrate
+rails aborted!
+ActiveRecord::DuplicateMigrationNameError: 
+
+Multiple migrations have the name RemoveUnusedIndexes.
+
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/migration.rb:1433:in `validate'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/migration.rb:1306:in `initialize'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/migration.rb:1166:in `new'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/migration.rb:1166:in `up'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/migration.rb:1141:in `migrate'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/tasks/database_tasks.rb:262:in `migrate'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/strong_migrations-0.8.0/lib/strong_migrations/database_tasks.rb:5:in `migrate'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/activerecord-7.0.8/lib/active_record/railties/databases.rake:92:in `block (2 levels) in <main>'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `block in execute'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `each'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:281:in `execute'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:219:in `block in invoke_with_call_chain'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `synchronize'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:199:in `invoke_with_call_chain'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/task.rb:188:in `invoke'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:160:in `invoke_task'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block (2 levels) in top_level'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `each'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:116:in `block in top_level'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:125:in `run_with_threads'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:110:in `top_level'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/railties-7.0.8/lib/rails/commands/rake/rake_command.rb:24:in `block (2 levels) in perform'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/application.rb:186:in `standard_exception_handling'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/railties-7.0.8/lib/rails/commands/rake/rake_command.rb:24:in `block in perform'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/rake-13.0.6/lib/rake/rake_module.rb:59:in `with_application'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/railties-7.0.8/lib/rails/commands/rake/rake_command.rb:18:in `perform'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/railties-7.0.8/lib/rails/command.rb:51:in `invoke'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/railties-7.0.8/lib/rails/commands.rb:18:in `<main>'
+/home/mastodon/live/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)

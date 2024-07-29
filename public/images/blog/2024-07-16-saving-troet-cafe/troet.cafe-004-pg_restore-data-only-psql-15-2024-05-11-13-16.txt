@@ -1,0 +1,1130 @@
+root@pg:/backup# pg_restore -p 5432 -j 16 -Fc -v -a  -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
+pg_restore: connecting to database for restore
+Password: 
+pg_restore: processing item 4707 ENCODING ENCODING
+pg_restore: processing item 4708 STDSTRINGS STDSTRINGS
+pg_restore: processing item 4709 SEARCHPATH SEARCHPATH
+pg_restore: processing item 4710 DATABASE mastodon_production
+pg_restore: processing item 12 SCHEMA public
+pg_restore: processing item 4711 COMMENT SCHEMA public
+pg_restore: processing item 2 EXTENSION pg_repack
+pg_restore: processing item 4712 COMMENT EXTENSION pg_repack
+pg_restore: processing item 1 EXTENSION plpgsql
+pg_restore: processing item 4713 COMMENT EXTENSION plpgsql
+pg_restore: processing item 709 FUNCTION timestamp_id(text)
+pg_restore: processing item 624 TABLE account_aliases
+pg_restore: processing item 623 SEQUENCE account_aliases_id_seq
+pg_restore: processing item 4714 SEQUENCE OWNED BY account_aliases_id_seq
+pg_restore: processing item 593 TABLE account_conversations
+pg_restore: processing item 592 SEQUENCE account_conversations_id_seq
+pg_restore: processing item 4715 SEQUENCE OWNED BY account_conversations_id_seq
+pg_restore: processing item 648 TABLE account_deletion_requests
+pg_restore: processing item 647 SEQUENCE account_deletion_requests_id_seq
+pg_restore: processing item 4716 SEQUENCE OWNED BY account_deletion_requests_id_seq
+pg_restore: processing item 504 TABLE account_domain_blocks
+pg_restore: processing item 505 SEQUENCE account_domain_blocks_id_seq
+pg_restore: processing item 4717 SEQUENCE OWNED BY account_domain_blocks_id_seq
+pg_restore: processing item 622 TABLE account_migrations
+pg_restore: processing item 621 SEQUENCE account_migrations_id_seq
+pg_restore: processing item 4718 SEQUENCE OWNED BY account_migrations_id_seq
+pg_restore: processing item 506 TABLE account_moderation_notes
+pg_restore: processing item 507 SEQUENCE account_moderation_notes_id_seq
+pg_restore: processing item 4719 SEQUENCE OWNED BY account_moderation_notes_id_seq
+pg_restore: processing item 644 TABLE account_notes
+pg_restore: processing item 643 SEQUENCE account_notes_id_seq
+pg_restore: processing item 4720 SEQUENCE OWNED BY account_notes_id_seq
+pg_restore: processing item 589 TABLE account_pins
+pg_restore: processing item 588 SEQUENCE account_pins_id_seq
+pg_restore: processing item 4721 SEQUENCE OWNED BY account_pins_id_seq
+pg_restore: processing item 597 TABLE account_stats
+pg_restore: processing item 596 SEQUENCE account_stats_id_seq
+pg_restore: processing item 4722 SEQUENCE OWNED BY account_stats_id_seq
+pg_restore: processing item 662 TABLE account_statuses_cleanup_policies
+pg_restore: processing item 661 SEQUENCE account_statuses_cleanup_policies_id_seq
+pg_restore: processing item 4723 SEQUENCE OWNED BY account_statuses_cleanup_policies_id_seq
+pg_restore: processing item 508 TABLE accounts
+pg_restore: processing item 573 TABLE statuses
+pg_restore: processing item 667 MATERIALIZED VIEW account_summaries
+pg_restore: processing item 602 TABLE account_warning_presets
+pg_restore: processing item 601 SEQUENCE account_warning_presets_id_seq
+pg_restore: processing item 4724 SEQUENCE OWNED BY account_warning_presets_id_seq
+pg_restore: processing item 600 TABLE account_warnings
+pg_restore: processing item 599 SEQUENCE account_warnings_id_seq
+pg_restore: processing item 4725 SEQUENCE OWNED BY account_warnings_id_seq
+pg_restore: processing item 509 SEQUENCE accounts_id_seq
+pg_restore: processing item 4726 SEQUENCE OWNED BY accounts_id_seq
+pg_restore: processing item 598 TABLE accounts_tags
+pg_restore: processing item 510 TABLE admin_action_logs
+pg_restore: processing item 511 SEQUENCE admin_action_logs_id_seq
+pg_restore: processing item 4727 SEQUENCE OWNED BY admin_action_logs_id_seq
+pg_restore: processing item 630 TABLE announcement_mutes
+pg_restore: processing item 629 SEQUENCE announcement_mutes_id_seq
+pg_restore: processing item 4728 SEQUENCE OWNED BY announcement_mutes_id_seq
+pg_restore: processing item 632 TABLE announcement_reactions
+pg_restore: processing item 631 SEQUENCE announcement_reactions_id_seq
+pg_restore: processing item 4729 SEQUENCE OWNED BY announcement_reactions_id_seq
+pg_restore: processing item 628 TABLE announcements
+pg_restore: processing item 627 SEQUENCE announcements_id_seq
+pg_restore: processing item 4730 SEQUENCE OWNED BY announcements_id_seq
+pg_restore: processing item 670 TABLE appeals
+pg_restore: processing item 669 SEQUENCE appeals_id_seq
+pg_restore: processing item 4731 SEQUENCE OWNED BY appeals_id_seq
+pg_restore: processing item 512 TABLE ar_internal_metadata
+pg_restore: processing item 513 TABLE backups
+pg_restore: processing item 514 SEQUENCE backups_id_seq
+pg_restore: processing item 4732 SEQUENCE OWNED BY backups_id_seq
+pg_restore: processing item 515 TABLE blocks
+pg_restore: processing item 516 SEQUENCE blocks_id_seq
+pg_restore: processing item 4733 SEQUENCE OWNED BY blocks_id_seq
+pg_restore: processing item 626 TABLE bookmarks
+pg_restore: processing item 625 SEQUENCE bookmarks_id_seq
+pg_restore: processing item 4734 SEQUENCE OWNED BY bookmarks_id_seq
+pg_restore: processing item 657 TABLE canonical_email_blocks
+pg_restore: processing item 656 SEQUENCE canonical_email_blocks_id_seq
+pg_restore: processing item 4735 SEQUENCE OWNED BY canonical_email_blocks_id_seq
+pg_restore: processing item 517 TABLE conversation_mutes
+pg_restore: processing item 518 SEQUENCE conversation_mutes_id_seq
+pg_restore: processing item 4736 SEQUENCE OWNED BY conversation_mutes_id_seq
+pg_restore: processing item 519 TABLE conversations
+pg_restore: processing item 520 SEQUENCE conversations_id_seq
+pg_restore: processing item 4737 SEQUENCE OWNED BY conversations_id_seq
+pg_restore: processing item 616 TABLE custom_emoji_categories
+pg_restore: processing item 615 SEQUENCE custom_emoji_categories_id_seq
+pg_restore: processing item 4738 SEQUENCE OWNED BY custom_emoji_categories_id_seq
+pg_restore: processing item 521 TABLE custom_emojis
+pg_restore: processing item 522 SEQUENCE custom_emojis_id_seq
+pg_restore: processing item 4739 SEQUENCE OWNED BY custom_emojis_id_seq
+pg_restore: processing item 676 TABLE custom_filter_keywords
+pg_restore: processing item 675 SEQUENCE custom_filter_keywords_id_seq
+pg_restore: processing item 4740 SEQUENCE OWNED BY custom_filter_keywords_id_seq
+pg_restore: processing item 680 TABLE custom_filter_statuses
+pg_restore: processing item 679 SEQUENCE custom_filter_statuses_id_seq
+pg_restore: processing item 4741 SEQUENCE OWNED BY custom_filter_statuses_id_seq
+pg_restore: processing item 585 TABLE custom_filters
+pg_restore: processing item 584 SEQUENCE custom_filters_id_seq
+pg_restore: processing item 4742 SEQUENCE OWNED BY custom_filters_id_seq
+pg_restore: processing item 636 TABLE devices
+pg_restore: processing item 635 SEQUENCE devices_id_seq
+pg_restore: processing item 4743 SEQUENCE OWNED BY devices_id_seq
+pg_restore: processing item 618 TABLE domain_allows
+pg_restore: processing item 617 SEQUENCE domain_allows_id_seq
+pg_restore: processing item 4744 SEQUENCE OWNED BY domain_allows_id_seq
+pg_restore: processing item 523 TABLE domain_blocks
+pg_restore: processing item 524 SEQUENCE domain_blocks_id_seq
+pg_restore: processing item 4745 SEQUENCE OWNED BY domain_blocks_id_seq
+pg_restore: processing item 525 TABLE email_domain_blocks
+pg_restore: processing item 526 SEQUENCE email_domain_blocks_id_seq
+pg_restore: processing item 4746 SEQUENCE OWNED BY email_domain_blocks_id_seq
+pg_restore: processing item 640 TABLE encrypted_messages
+pg_restore: processing item 639 SEQUENCE encrypted_messages_id_seq
+pg_restore: processing item 4747 SEQUENCE OWNED BY encrypted_messages_id_seq
+pg_restore: processing item 527 TABLE favourites
+pg_restore: processing item 528 SEQUENCE favourites_id_seq
+pg_restore: processing item 4748 SEQUENCE OWNED BY favourites_id_seq
+pg_restore: processing item 608 TABLE featured_tags
+pg_restore: processing item 607 SEQUENCE featured_tags_id_seq
+pg_restore: processing item 4749 SEQUENCE OWNED BY featured_tags_id_seq
+pg_restore: processing item 655 TABLE follow_recommendation_suppressions
+pg_restore: processing item 654 SEQUENCE follow_recommendation_suppressions_id_seq
+pg_restore: processing item 4750 SEQUENCE OWNED BY follow_recommendation_suppressions_id_seq
+pg_restore: processing item 531 TABLE follows
+pg_restore: processing item 591 TABLE status_stats
+pg_restore: processing item 578 TABLE users
+pg_restore: processing item 668 MATERIALIZED VIEW follow_recommendations
+pg_restore: processing item 529 TABLE follow_requests
+pg_restore: processing item 530 SEQUENCE follow_requests_id_seq
+pg_restore: processing item 4751 SEQUENCE OWNED BY follow_requests_id_seq
+pg_restore: processing item 532 SEQUENCE follows_id_seq
+pg_restore: processing item 4752 SEQUENCE OWNED BY follows_id_seq
+pg_restore: processing item 533 TABLE identities
+pg_restore: processing item 534 SEQUENCE identities_id_seq
+pg_restore: processing item 4753 SEQUENCE OWNED BY identities_id_seq
+pg_restore: processing item 535 TABLE imports
+pg_restore: processing item 536 SEQUENCE imports_id_seq
+pg_restore: processing item 4754 SEQUENCE OWNED BY imports_id_seq
+pg_restore: processing item 651 MATERIALIZED VIEW instances
+pg_restore: processing item 537 TABLE invites
+pg_restore: processing item 538 SEQUENCE invites_id_seq
+pg_restore: processing item 4755 SEQUENCE OWNED BY invites_id_seq
+pg_restore: processing item 650 TABLE ip_blocks
+pg_restore: processing item 649 SEQUENCE ip_blocks_id_seq
+pg_restore: processing item 4756 SEQUENCE OWNED BY ip_blocks_id_seq
+pg_restore: processing item 539 TABLE list_accounts
+pg_restore: processing item 540 SEQUENCE list_accounts_id_seq
+pg_restore: processing item 4757 SEQUENCE OWNED BY list_accounts_id_seq
+pg_restore: processing item 541 TABLE lists
+pg_restore: processing item 542 SEQUENCE lists_id_seq
+pg_restore: processing item 4758 SEQUENCE OWNED BY lists_id_seq
+pg_restore: processing item 659 TABLE login_activities
+pg_restore: processing item 658 SEQUENCE login_activities_id_seq
+pg_restore: processing item 4759 SEQUENCE OWNED BY login_activities_id_seq
+pg_restore: processing item 620 TABLE markers
+pg_restore: processing item 619 SEQUENCE markers_id_seq
+pg_restore: processing item 4760 SEQUENCE OWNED BY markers_id_seq
+pg_restore: processing item 543 TABLE media_attachments
+pg_restore: processing item 544 SEQUENCE media_attachments_id_seq
+pg_restore: processing item 4761 SEQUENCE OWNED BY media_attachments_id_seq
+pg_restore: processing item 545 TABLE mentions
+pg_restore: processing item 546 SEQUENCE mentions_id_seq
+pg_restore: processing item 4762 SEQUENCE OWNED BY mentions_id_seq
+pg_restore: processing item 547 TABLE mutes
+pg_restore: processing item 548 SEQUENCE mutes_id_seq
+pg_restore: processing item 4763 SEQUENCE OWNED BY mutes_id_seq
+pg_restore: processing item 549 TABLE notifications
+pg_restore: processing item 550 SEQUENCE notifications_id_seq
+pg_restore: processing item 4764 SEQUENCE OWNED BY notifications_id_seq
+pg_restore: processing item 551 TABLE oauth_access_grants
+pg_restore: processing item 552 SEQUENCE oauth_access_grants_id_seq
+pg_restore: processing item 4765 SEQUENCE OWNED BY oauth_access_grants_id_seq
+pg_restore: processing item 553 TABLE oauth_access_tokens
+pg_restore: processing item 554 SEQUENCE oauth_access_tokens_id_seq
+pg_restore: processing item 4766 SEQUENCE OWNED BY oauth_access_tokens_id_seq
+pg_restore: processing item 555 TABLE oauth_applications
+pg_restore: processing item 556 SEQUENCE oauth_applications_id_seq
+pg_restore: processing item 4767 SEQUENCE OWNED BY oauth_applications_id_seq
+pg_restore: processing item 638 TABLE one_time_keys
+pg_restore: processing item 637 SEQUENCE one_time_keys_id_seq
+pg_restore: processing item 4768 SEQUENCE OWNED BY one_time_keys_id_seq
+pg_restore: processing item 595 TABLE pghero_space_stats
+pg_restore: processing item 594 SEQUENCE pghero_space_stats_id_seq
+pg_restore: processing item 4769 SEQUENCE OWNED BY pghero_space_stats_id_seq
+pg_restore: processing item 612 TABLE poll_votes
+pg_restore: processing item 611 SEQUENCE poll_votes_id_seq
+pg_restore: processing item 4770 SEQUENCE OWNED BY poll_votes_id_seq
+pg_restore: processing item 610 TABLE polls
+pg_restore: processing item 609 SEQUENCE polls_id_seq
+pg_restore: processing item 4771 SEQUENCE OWNED BY polls_id_seq
+pg_restore: processing item 666 TABLE preview_card_providers
+pg_restore: processing item 665 SEQUENCE preview_card_providers_id_seq
+pg_restore: processing item 4772 SEQUENCE OWNED BY preview_card_providers_id_seq
+pg_restore: processing item 684 TABLE preview_card_trends
+pg_restore: processing item 683 SEQUENCE preview_card_trends_id_seq
+pg_restore: processing item 4773 SEQUENCE OWNED BY preview_card_trends_id_seq
+pg_restore: processing item 557 TABLE preview_cards
+pg_restore: processing item 558 SEQUENCE preview_cards_id_seq
+pg_restore: processing item 4774 SEQUENCE OWNED BY preview_cards_id_seq
+pg_restore: processing item 559 TABLE preview_cards_statuses
+pg_restore: processing item 587 TABLE relays
+pg_restore: processing item 586 SEQUENCE relays_id_seq
+pg_restore: processing item 4775 SEQUENCE OWNED BY relays_id_seq
+pg_restore: processing item 560 TABLE report_notes
+pg_restore: processing item 561 SEQUENCE report_notes_id_seq
+pg_restore: processing item 4776 SEQUENCE OWNED BY report_notes_id_seq
+pg_restore: processing item 562 TABLE reports
+pg_restore: processing item 563 SEQUENCE reports_id_seq
+pg_restore: processing item 4777 SEQUENCE OWNED BY reports_id_seq
+pg_restore: processing item 653 TABLE rules
+pg_restore: processing item 652 SEQUENCE rules_id_seq
+pg_restore: processing item 4778 SEQUENCE OWNED BY rules_id_seq
+pg_restore: processing item 604 TABLE scheduled_statuses
+pg_restore: processing item 603 SEQUENCE scheduled_statuses_id_seq
+pg_restore: processing item 4779 SEQUENCE OWNED BY scheduled_statuses_id_seq
+pg_restore: processing item 564 TABLE schema_migrations
+pg_restore: processing item 565 TABLE session_activations
+pg_restore: processing item 566 SEQUENCE session_activations_id_seq
+pg_restore: processing item 4780 SEQUENCE OWNED BY session_activations_id_seq
+pg_restore: processing item 567 TABLE settings
+pg_restore: processing item 568 SEQUENCE settings_id_seq
+pg_restore: processing item 4781 SEQUENCE OWNED BY settings_id_seq
+pg_restore: processing item 569 TABLE site_uploads
+pg_restore: processing item 570 SEQUENCE site_uploads_id_seq
+pg_restore: processing item 4782 SEQUENCE OWNED BY site_uploads_id_seq
+pg_restore: processing item 664 TABLE status_edits
+pg_restore: processing item 663 SEQUENCE status_edits_id_seq
+pg_restore: processing item 4783 SEQUENCE OWNED BY status_edits_id_seq
+pg_restore: processing item 571 TABLE status_pins
+pg_restore: processing item 572 SEQUENCE status_pins_id_seq
+pg_restore: processing item 4784 SEQUENCE OWNED BY status_pins_id_seq
+pg_restore: processing item 590 SEQUENCE status_stats_id_seq
+pg_restore: processing item 4785 SEQUENCE OWNED BY status_stats_id_seq
+pg_restore: processing item 682 TABLE status_trends
+pg_restore: processing item 681 SEQUENCE status_trends_id_seq
+pg_restore: processing item 4786 SEQUENCE OWNED BY status_trends_id_seq
+pg_restore: processing item 574 SEQUENCE statuses_id_seq
+pg_restore: processing item 575 TABLE statuses_tags
+pg_restore: processing item 642 TABLE system_keys
+pg_restore: processing item 641 SEQUENCE system_keys_id_seq
+pg_restore: processing item 4787 SEQUENCE OWNED BY system_keys_id_seq
+pg_restore: processing item 678 TABLE tag_follows
+pg_restore: processing item 677 SEQUENCE tag_follows_id_seq
+pg_restore: processing item 4788 SEQUENCE OWNED BY tag_follows_id_seq
+pg_restore: processing item 576 TABLE tags
+pg_restore: processing item 577 SEQUENCE tags_id_seq
+pg_restore: processing item 4789 SEQUENCE OWNED BY tags_id_seq
+pg_restore: processing item 606 TABLE tombstones
+pg_restore: processing item 605 SEQUENCE tombstones_id_seq
+pg_restore: processing item 4790 SEQUENCE OWNED BY tombstones_id_seq
+pg_restore: processing item 634 TABLE unavailable_domains
+pg_restore: processing item 633 SEQUENCE unavailable_domains_id_seq
+pg_restore: processing item 4791 SEQUENCE OWNED BY unavailable_domains_id_seq
+pg_restore: processing item 614 TABLE user_invite_requests
+pg_restore: processing item 613 SEQUENCE user_invite_requests_id_seq
+pg_restore: processing item 4792 SEQUENCE OWNED BY user_invite_requests_id_seq
+pg_restore: processing item 660 VIEW user_ips
+pg_restore: processing item 674 TABLE user_roles
+pg_restore: processing item 673 SEQUENCE user_roles_id_seq
+pg_restore: processing item 4793 SEQUENCE OWNED BY user_roles_id_seq
+pg_restore: processing item 579 SEQUENCE users_id_seq
+pg_restore: processing item 4794 SEQUENCE OWNED BY users_id_seq
+pg_restore: processing item 580 TABLE web_push_subscriptions
+pg_restore: processing item 581 SEQUENCE web_push_subscriptions_id_seq
+pg_restore: processing item 4795 SEQUENCE OWNED BY web_push_subscriptions_id_seq
+pg_restore: processing item 582 TABLE web_settings
+pg_restore: processing item 583 SEQUENCE web_settings_id_seq
+pg_restore: processing item 4796 SEQUENCE OWNED BY web_settings_id_seq
+pg_restore: processing item 646 TABLE webauthn_credentials
+pg_restore: processing item 645 SEQUENCE webauthn_credentials_id_seq
+pg_restore: processing item 4797 SEQUENCE OWNED BY webauthn_credentials_id_seq
+pg_restore: processing item 672 TABLE webhooks
+pg_restore: processing item 671 SEQUENCE webhooks_id_seq
+pg_restore: processing item 4798 SEQUENCE OWNED BY webhooks_id_seq
+pg_restore: processing item 3884 DEFAULT account_aliases id
+pg_restore: processing item 3846 DEFAULT account_conversations id
+pg_restore: processing item 3914 DEFAULT account_deletion_requests id
+pg_restore: processing item 3715 DEFAULT account_domain_blocks id
+pg_restore: processing item 3881 DEFAULT account_migrations id
+pg_restore: processing item 3716 DEFAULT account_moderation_notes id
+pg_restore: processing item 3911 DEFAULT account_notes id
+pg_restore: processing item 3837 DEFAULT account_pins id
+pg_restore: processing item 3851 DEFAULT account_stats id
+pg_restore: processing item 3934 DEFAULT account_statuses_cleanup_policies id
+pg_restore: processing item 3857 DEFAULT account_warning_presets id
+pg_restore: processing item 3854 DEFAULT account_warnings id
+pg_restore: processing item 3731 DEFAULT admin_action_logs id
+pg_restore: processing item 3890 DEFAULT announcement_mutes id
+pg_restore: processing item 3891 DEFAULT announcement_reactions id
+pg_restore: processing item 3889 DEFAULT announcements id
+pg_restore: processing item 3940 DEFAULT appeals id
+pg_restore: processing item 3733 DEFAULT backups id
+pg_restore: processing item 3735 DEFAULT blocks id
+pg_restore: processing item 3885 DEFAULT bookmarks id
+pg_restore: processing item 3923 DEFAULT canonical_email_blocks id
+pg_restore: processing item 3736 DEFAULT conversation_mutes id
+pg_restore: processing item 3737 DEFAULT conversations id
+pg_restore: processing item 3872 DEFAULT custom_emoji_categories id
+pg_restore: processing item 3741 DEFAULT custom_emojis id
+pg_restore: processing item 3954 DEFAULT custom_filter_keywords id
+pg_restore: processing item 3956 DEFAULT custom_filter_statuses id
+pg_restore: processing item 3833 DEFAULT custom_filters id
+pg_restore: processing item 3899 DEFAULT devices id
+pg_restore: processing item 3873 DEFAULT domain_allows id
+pg_restore: processing item 3747 DEFAULT domain_blocks id
+pg_restore: processing item 3748 DEFAULT email_domain_blocks id
+pg_restore: processing item 3750 DEFAULT favourites id
+pg_restore: processing item 3860 DEFAULT featured_tags id
+pg_restore: processing item 3922 DEFAULT follow_recommendation_suppressions id
+pg_restore: processing item 3753 DEFAULT follow_requests id
+pg_restore: processing item 3756 DEFAULT follows id
+pg_restore: processing item 3759 DEFAULT identities id
+pg_restore: processing item 3762 DEFAULT imports id
+pg_restore: processing item 3766 DEFAULT invites id
+pg_restore: processing item 3918 DEFAULT ip_blocks id
+pg_restore: processing item 3767 DEFAULT list_accounts id
+pg_restore: processing item 3770 DEFAULT lists id
+pg_restore: processing item 3925 DEFAULT login_activities id
+pg_restore: processing item 3878 DEFAULT markers id
+pg_restore: processing item 3774 DEFAULT mentions id
+pg_restore: processing item 3776 DEFAULT mutes id
+pg_restore: processing item 3778 DEFAULT notifications id
+pg_restore: processing item 3779 DEFAULT oauth_access_grants id
+pg_restore: processing item 3780 DEFAULT oauth_access_tokens id
+pg_restore: processing item 3784 DEFAULT oauth_applications id
+pg_restore: processing item 3903 DEFAULT one_time_keys id
+pg_restore: processing item 3847 DEFAULT pghero_space_stats id
+pg_restore: processing item 3869 DEFAULT poll_votes id
+pg_restore: processing item 3868 DEFAULT polls id
+pg_restore: processing item 3938 DEFAULT preview_card_providers id
+pg_restore: processing item 3964 DEFAULT preview_card_trends id
+pg_restore: processing item 3797 DEFAULT preview_cards id
+pg_restore: processing item 3836 DEFAULT relays id
+pg_restore: processing item 3798 DEFAULT report_notes id
+pg_restore: processing item 3802 DEFAULT reports id
+pg_restore: processing item 3921 DEFAULT rules id
+pg_restore: processing item 3858 DEFAULT scheduled_statuses id
+pg_restore: processing item 3803 DEFAULT session_activations id
+pg_restore: processing item 3805 DEFAULT settings id
+pg_restore: processing item 3806 DEFAULT site_uploads id
+pg_restore: processing item 3937 DEFAULT status_edits id
+pg_restore: processing item 3810 DEFAULT status_pins id
+pg_restore: processing item 3841 DEFAULT status_stats id
+pg_restore: processing item 3960 DEFAULT status_trends id
+pg_restore: processing item 3910 DEFAULT system_keys id
+pg_restore: processing item 3955 DEFAULT tag_follows id
+pg_restore: processing item 3817 DEFAULT tags id
+pg_restore: processing item 3859 DEFAULT tombstones id
+pg_restore: processing item 3893 DEFAULT unavailable_domains id
+pg_restore: processing item 3871 DEFAULT user_invite_requests id
+pg_restore: processing item 3951 DEFAULT user_roles id
+pg_restore: processing item 3827 DEFAULT users id
+pg_restore: processing item 3828 DEFAULT web_push_subscriptions id
+pg_restore: processing item 3829 DEFAULT web_settings id
+pg_restore: processing item 3912 DEFAULT webauthn_credentials id
+pg_restore: processing item 3945 DEFAULT webhooks id
+pg_restore: entering main parallel loop
+pg_restore: launching item 4578 TABLE DATA preview_cards
+pg_restore: launching item 4594 TABLE DATA statuses
+pg_restore: launching item 4627 TABLE DATA tombstones
+pg_restore: launching item 4529 TABLE DATA accounts
+pg_restore: launching item 4564 TABLE DATA media_attachments
+pg_restore: launching item 4570 TABLE DATA notifications
+pg_restore: launching item 4580 TABLE DATA preview_cards_statuses
+pg_restore: launching item 4548 TABLE DATA favourites
+pg_restore: launching item 4540 TABLE DATA conversations
+pg_restore: launching item 4566 TABLE DATA mentions
+pg_restore: launching item 4597 TABLE DATA tags
+pg_restore: launching item 4612 TABLE DATA status_stats
+pg_restore: launching item 4552 TABLE DATA follows
+pg_restore: launching item 4684 TABLE DATA status_edits
+pg_restore: launching item 4576 TABLE DATA oauth_applications
+pg_restore: launching item 4574 TABLE DATA oauth_access_tokens
+pg_restore: processing data for table "public.preview_cards_statuses"
+pg_restore: processing data for table "public.statuses"
+pg_restore: processing data for table "public.media_attachments"
+pg_restore: processing data for table "public.preview_cards"
+pg_restore: processing data for table "public.tombstones"
+pg_restore:pg_restore:  processing data for table "public.accounts"
+processing data for table "public.status_stats"
+pg_restore: processing data for table "public.notifications"
+pg_restore: processing data for table "public.mentions"
+pg_restore: processing data for table "public.status_edits"
+pg_restore: processing data for table "public.follows"
+pg_restore: processing data for table "public.favourites"
+pg_restore: processing data for table "public.conversations"
+pg_restore:pg_restore:  processing data for table "public.oauth_access_tokens"
+processing data for table "public.oauth_applications"
+pg_restore: processing data for table "public.tags"
+pg_restore: while PROCESSING TOC:
+pg_restore: from TOC entry 4684; 0 191797 TABLE DATA status_edits mastodon
+pg_restore: error: COPY failed for table "status_edits": ERROR:  insert or update on table "status_edits" violates foreign key constraint "fk_rails_a960f234a0"
+DETAIL:  Key (status_id)=(111957646574822800) is not present in table "statuses".
+pg_restore: finished item 4684 TABLE DATA status_edits
+pg_restore: skipping item 4242 INDEX index_status_edits_on_account_id
+pg_restore: skipping item 4243 INDEX index_status_edits_on_status_id
+pg_restore: skipping item 4245 CONSTRAINT status_edits status_edits_pkey
+pg_restore: launching item 4618 TABLE DATA account_stats
+pg_restore: processing data for table "public.account_stats"
+pg_restore: while PROCESSING TOC:
+pg_restore: from TOC entry 4574; 0 16613 TABLE DATA oauth_access_tokens mastodon
+pg_restore: error: COPY failed for table "oauth_access_tokens": ERROR:  insert or update on table "oauth_access_tokens" violates foreign key constraint "fk_f5fc4c1ee3"
+DETAIL:  Key (application_id)=(9534) is not present in table "oauth_applications".
+pg_restore: finished item 4574 TABLE DATA oauth_access_tokens
+pg_restore: skipping item 4055 INDEX index_oauth_access_tokens_on_refresh_token
+pg_restore: skipping item 4056 INDEX index_oauth_access_tokens_on_resource_owner_id
+pg_restore: skipping item 4057 INDEX index_oauth_access_tokens_on_token
+pg_restore: skipping item 4059 CONSTRAINT oauth_access_tokens oauth_access_tokens_pkey
+pg_restore: launching item 4596 TABLE DATA statuses_tags
+pg_restore: processing data for table "public.statuses_tags"
+pg_restore: while PROCESSING TOC:
+pg_restore: from TOC entry 4576; 0 16621 TABLE DATA oauth_applications mastodon
+pg_restore: error: COPY failed for table "oauth_applications": ERROR:  insert or update on table "oauth_applications" violates foreign key constraint "fk_b0988c7c0a"
+DETAIL:  Key (owner_id)=(793) is not present in table "users".
+pg_restore: finished item 4576 TABLE DATA oauth_applications
+pg_restore: skipping item 4060 INDEX index_oauth_applications_on_owner_id_and_owner_type
+pg_restore: skipping item 4061 INDEX index_oauth_applications_on_uid
+pg_restore: skipping item 4063 CONSTRAINT oauth_applications oauth_applications_pkey
+pg_restore: skipping item 4316 FK CONSTRAINT oauth_access_tokens fk_f5fc4c1ee3
+pg_restore: launching item 4542 TABLE DATA custom_emojis
+pg_restore: processing data for table "public.custom_emojis"
+pg_restore: finished item 4542 TABLE DATA custom_emojis
+pg_restore: skipping item 3996 CONSTRAINT custom_emojis custom_emojis_pkey
+pg_restore: skipping item 3997 INDEX index_custom_emojis_on_shortcode_and_domain
+pg_restore: launching item 4601 TABLE DATA web_push_subscriptions
+pg_restore: processing data for table "public.web_push_subscriptions"
+pg_restore: from TOC entry 4601; 0 16775 TABLE DATA web_push_subscriptions mastodon
+pg_restore: error: COPY failed for table "web_push_subscriptions": ERROR:  insert or update on table "web_push_subscriptions" violates foreign key constraint "fk_rails_751a9f390b"
+DETAIL:  Key (access_token_id)=(2748) is not present in table "oauth_access_tokens".
+pg_restore: finished item 4601 TABLE DATA web_push_subscriptions
+pg_restore: skipping item 4338 FK CONSTRAINT web_push_subscriptions fk_rails_751a9f390b
+pg_restore: skipping item 4116 INDEX index_web_push_subscriptions_on_access_token_id
+pg_restore: skipping item 4117 INDEX index_web_push_subscriptions_on_user_id
+pg_restore: skipping item 4119 CONSTRAINT web_push_subscriptions web_push_subscriptions_pkey
+pg_restore: launching item 4599 TABLE DATA users
+pg_restore: processing data for table "public.users"
+pg_restore: from TOC entry 4599; 0 16759 TABLE DATA users mastodon
+pg_restore: error: COPY failed for table "users": ERROR:  insert or update on table "users" violates foreign key constraint "fk_50500f500d"
+DETAIL:  Key (account_id)=(3) is not present in table "accounts".
+pg_restore: finished item 4599 TABLE DATA users
+pg_restore: skipping item 4337 FK CONSTRAINT users fk_rails_ecc9536e7c
+pg_restore: skipping item 4108 INDEX index_users_on_account_id
+pg_restore: skipping item 4109 INDEX index_users_on_confirmation_token
+pg_restore: skipping item 4110 INDEX index_users_on_created_by_application_id
+pg_restore: skipping item 4111 INDEX index_users_on_email
+pg_restore: skipping item 4112 INDEX index_users_on_reset_password_token
+pg_restore: skipping item 4113 INDEX index_users_on_role_id
+pg_restore: skipping item 4115 CONSTRAINT users users_pkey
+pg_restore: skipping item 4317 FK CONSTRAINT oauth_applications fk_b0988c7c0a
+pg_restore: skipping item 4315 FK CONSTRAINT oauth_access_tokens fk_e84df68546
+pg_restore: skipping item 4339 FK CONSTRAINT web_push_subscriptions fk_rails_b006f28dac
+pg_restore: launching item 4629 TABLE DATA featured_tags
+pg_restore: processing data for table "public.featured_tags"
+pg_restore: from TOC entry 4618; 0 44436 TABLE DATA account_stats mastodon
+pg_restore: error: COPY failed for table "account_stats": ERROR:  insert or update on table "account_stats" violates foreign key constraint "fk_rails_215bb31ff1"
+DETAIL:  Key (account_id)=(64908) is not present in table "accounts".
+pg_restore: finished item 4618 TABLE DATA account_stats
+pg_restore: skipping item 4141 CONSTRAINT account_stats account_stats_pkey
+pg_restore: skipping item 4142 INDEX index_account_stats_on_account_id
+pg_restore: launching item 4633 TABLE DATA poll_votes
+pg_restore: processing data for table "public.poll_votes"
+pg_restore: from TOC entry 4629; 0 46551 TABLE DATA featured_tags mastodon
+pg_restore: error: COPY failed for table "featured_tags": ERROR:  insert or update on table "featured_tags" violates foreign key constraint "fk_rails_174efcf15f"
+DETAIL:  Key (account_id)=(42529) is not present in table "accounts".
+pg_restore: finished item 4629 TABLE DATA featured_tags
+pg_restore: skipping item 4157 CONSTRAINT featured_tags featured_tags_pkey
+pg_restore: skipping item 4158 INDEX index_featured_tags_on_account_id_and_tag_id
+pg_restore: launching item 4614 TABLE DATA account_conversations
+pg_restore: processing data for table "public.account_conversations"
+pg_restore: from TOC entry 4633; 0 46600 TABLE DATA poll_votes mastodon
+pg_restore: error: COPY failed for table "poll_votes": ERROR:  insert or update on table "poll_votes" violates foreign key constraint "fk_rails_a6e6974b7e"
+DETAIL:  Key (poll_id)=(191630) is not present in table "polls".
+pg_restore: finished item 4633 TABLE DATA poll_votes
+pg_restore: skipping item 4163 INDEX index_poll_votes_on_account_id
+pg_restore: skipping item 4164 INDEX index_poll_votes_on_poll_id
+pg_restore: skipping item 4166 CONSTRAINT poll_votes poll_votes_pkey
+pg_restore: launching item 4616 TABLE DATA pghero_space_stats
+pg_restore: processing data for table "public.pghero_space_stats"
+pg_restore: from TOC entry 4614; 0 37568 TABLE DATA account_conversations mastodon
+pg_restore: error: COPY failed for table "account_conversations": ERROR:  insert or update on table "account_conversations" violates foreign key constraint "fk_rails_1491654f9f"
+DETAIL:  Key (conversation_id)=(33648) is not present in table "conversations".
+pg_restore: finished item 4614 TABLE DATA account_conversations
+pg_restore: skipping item 4134 CONSTRAINT account_conversations account_conversations_pkey
+pg_restore: skipping item 4135 INDEX index_account_conversations_on_conversation_id
+pg_restore: skipping item 4136 INDEX index_unique_conversations
+pg_restore: launching item 4536 TABLE DATA blocks
+pg_restore: processing data for table "public.blocks"
+pg_restore: from TOC entry 4536; 0 16458 TABLE DATA blocks mastodon
+pg_restore: error: COPY failed for table "blocks": ERROR:  insert or update on table "blocks" violates foreign key constraint "fk_4269e03e65"
+DETAIL:  Key (account_id)=(3356) is not present in table "accounts".
+pg_restore: finished item 4536 TABLE DATA blocks
+pg_restore: skipping item 3986 CONSTRAINT blocks blocks_pkey
+pg_restore: skipping item 3987 INDEX index_blocks_on_account_id_and_target_account_id
+pg_restore: skipping item 3988 INDEX index_blocks_on_target_account_id
+pg_restore: launching item 4603 TABLE DATA web_settings
+pg_restore: processing data for table "public.web_settings"
+pg_restore: from TOC entry 4603; 0 16783 TABLE DATA web_settings mastodon
+pg_restore: error: COPY failed for table "web_settings": ERROR:  insert or update on table "web_settings" violates foreign key constraint "fk_11910667b2"
+DETAIL:  Key (user_id)=(1814) is not present in table "users".
+pg_restore: finished item 4603 TABLE DATA web_settings
+pg_restore: skipping item 4340 FK CONSTRAINT web_settings fk_11910667b2
+pg_restore: skipping item 4120 INDEX index_web_settings_on_user_id
+pg_restore: skipping item 4122 CONSTRAINT web_settings web_settings_pkey
+pg_restore: launching item 4588 TABLE DATA settings
+pg_restore: processing data for table "public.settings"
+pg_restore: finished item 4616 TABLE DATA pghero_space_stats
+pg_restore: skipping item 4137 INDEX index_pghero_space_stats_on_database_and_captured_at
+pg_restore: skipping item 4139 CONSTRAINT pghero_space_stats pghero_space_stats_pkey
+pg_restore: launching item 4680 TABLE DATA login_activities
+pg_restore: processing data for table "public.login_activities"
+pg_restore: from TOC entry 4680; 0 191753 TABLE DATA login_activities mastodon
+pg_restore: error: COPY failed for table "login_activities": ERROR:  insert or update on table "login_activities" violates foreign key constraint "fk_rails_e4b6396b41"
+DETAIL:  Key (user_id)=(49650) is not present in table "users".
+pg_restore: finished item 4680 TABLE DATA login_activities
+pg_restore: skipping item 4382 FK CONSTRAINT login_activities fk_rails_e4b6396b41
+pg_restore: skipping item 4236 INDEX index_login_activities_on_user_id
+pg_restore: skipping item 4238 CONSTRAINT login_activities login_activities_pkey
+pg_restore: launching item 4586 TABLE DATA session_activations
+pg_restore: processing data for table "public.session_activations"
+pg_restore: finished item 4588 TABLE DATA settings
+pg_restore: skipping item 4082 INDEX index_settings_on_thing_type_and_thing_id_and_var
+pg_restore: skipping item 4084 CONSTRAINT settings settings_pkey
+pg_restore: launching item 4631 TABLE DATA polls
+pg_restore: processing data for table "public.polls"
+pg_restore: from TOC entry 4586; 0 16679 TABLE DATA session_activations mastodon
+pg_restore: error: COPY failed for table "session_activations": ERROR:  insert or update on table "session_activations" violates foreign key constraint "fk_957e5bda89"
+DETAIL:  Key (access_token_id)=(937582) is not present in table "oauth_access_tokens".
+pg_restore: finished item 4586 TABLE DATA session_activations
+pg_restore: skipping item 4324 FK CONSTRAINT session_activations fk_957e5bda89
+pg_restore: skipping item 4325 FK CONSTRAINT session_activations fk_e5fda67334
+pg_restore: skipping item 4077 INDEX index_session_activations_on_access_token_id
+pg_restore: skipping item 4078 INDEX index_session_activations_on_session_id
+pg_restore: skipping item 4079 INDEX index_session_activations_on_user_id
+pg_restore: skipping item 4081 CONSTRAINT session_activations session_activations_pkey
+pg_restore: launching item 4568 TABLE DATA mutes
+pg_restore: processing data for table "public.mutes"
+pg_restore: from TOC entry 4631; 0 46572 TABLE DATA polls mastodon
+pg_restore: error: COPY failed for table "polls": ERROR:  insert or update on table "polls" violates foreign key constraint "fk_rails_3e0d9f1115"
+DETAIL:  Key (status_id)=(112246066326329706) is not present in table "statuses".
+pg_restore: finished item 4631 TABLE DATA polls
+pg_restore: skipping item 4159 INDEX index_polls_on_account_id
+pg_restore: skipping item 4160 INDEX index_polls_on_status_id
+pg_restore: skipping item 4162 CONSTRAINT polls polls_pkey
+pg_restore: skipping item 4357 FK CONSTRAINT poll_votes fk_rails_a6e6974b7e
+pg_restore: launching item 4641 TABLE DATA markers
+pg_restore: processing data for table "public.markers"
+pg_restore: from TOC entry 4641; 0 52349 TABLE DATA markers mastodon
+pg_restore: error: COPY failed for table "markers": ERROR:  insert or update on table "markers" violates foreign key constraint "fk_rails_a7009bc2b6"
+DETAIL:  Key (user_id)=(14237) is not present in table "users".
+pg_restore: finished item 4641 TABLE DATA markers
+pg_restore: skipping item 4360 FK CONSTRAINT markers fk_rails_a7009bc2b6
+pg_restore: skipping item 4176 INDEX index_markers_on_user_id_and_timeline
+pg_restore: skipping item 4178 CONSTRAINT markers markers_pkey
+pg_restore: launching item 4647 TABLE DATA bookmarks
+pg_restore: processing data for table "public.bookmarks"
+pg_restore: from TOC entry 4568; 0 16591 TABLE DATA mutes mastodon
+pg_restore: error: COPY failed for table "mutes": ERROR:  insert or update on table "mutes" violates foreign key constraint "fk_b8d8daf315"
+DETAIL:  Key (account_id)=(196310) is not present in table "accounts".
+pg_restore: finished item 4568 TABLE DATA mutes
+pg_restore: skipping item 4042 INDEX index_mutes_on_account_id_and_target_account_id
+pg_restore: skipping item 4043 INDEX index_mutes_on_target_account_id
+pg_restore: skipping item 4045 CONSTRAINT mutes mutes_pkey
+pg_restore: launching item 4550 TABLE DATA follow_requests
+pg_restore: processing data for table "public.follow_requests"
+pg_restore: from TOC entry 4550; 0 16515 TABLE DATA follow_requests mastodon
+pg_restore: error: COPY failed for table "follow_requests": ERROR:  insert or update on table "follow_requests" violates foreign key constraint "fk_76d644b0e7"
+DETAIL:  Key (account_id)=(113225) is not present in table "accounts".
+pg_restore: finished item 4550 TABLE DATA follow_requests
+pg_restore: skipping item 4010 CONSTRAINT follow_requests follow_requests_pkey
+pg_restore: skipping item 4011 INDEX index_follow_requests_on_account_id_and_target_account_id
+pg_restore: launching item 4592 TABLE DATA status_pins
+pg_restore: processing data for table "public.status_pins"
+pg_restore: from TOC entry 4647; 0 65758 TABLE DATA bookmarks mastodon
+pg_restore: error: COPY failed for table "bookmarks": ERROR:  insert or update on table "bookmarks" violates foreign key constraint "fk_rails_11207ffcfd"
+DETAIL:  Key (status_id)=(110124843407778488) is not present in table "statuses".
+pg_restore: finished item 4647 TABLE DATA bookmarks
+pg_restore: skipping item 4187 CONSTRAINT bookmarks bookmarks_pkey
+pg_restore: skipping item 4188 INDEX index_bookmarks_on_account_id_and_status_id
+pg_restore: skipping item 4189 INDEX index_bookmarks_on_status_id
+pg_restore: launching item 4698 TABLE DATA tag_follows
+pg_restore: processing data for table "public.tag_follows"
+pg_restore: from TOC entry 4592; 0 16705 TABLE DATA status_pins mastodon
+pg_restore: error: COPY failed for table "status_pins": ERROR:  insert or update on table "status_pins" violates foreign key constraint "fk_d4cb435b62"
+DETAIL:  Key (account_id)=(1) is not present in table "accounts".
+pg_restore: finished item 4592 TABLE DATA status_pins
+pg_restore: skipping item 4088 INDEX index_status_pins_on_account_id_and_status_id
+pg_restore: skipping item 4089 INDEX index_status_pins_on_status_id
+pg_restore: skipping item 4091 CONSTRAINT status_pins status_pins_pkey
+pg_restore: launching item 4655 TABLE DATA unavailable_domains
+pg_restore: processing data for table "public.unavailable_domains"
+pg_restore: from TOC entry 4698; 0 444703 TABLE DATA tag_follows mastodon
+pg_restore: error: COPY failed for table "tag_follows": ERROR:  insert or update on table "tag_follows" violates foreign key constraint "fk_rails_091e831473"
+DETAIL:  Key (account_id)=(109332165390751843) is not present in table "accounts".
+pg_restore: finished item 4698 TABLE DATA tag_follows
+pg_restore: skipping item 4265 INDEX index_tag_follows_on_account_id_and_tag_id
+pg_restore: skipping item 4266 INDEX index_tag_follows_on_tag_id
+pg_restore: skipping item 4268 CONSTRAINT tag_follows tag_follows_pkey
+pg_restore: launching item 4583 TABLE DATA reports
+pg_restore: processing data for table "public.reports"
+pg_restore: finished item 4655 TABLE DATA unavailable_domains
+pg_restore: skipping item 4201 INDEX index_unavailable_domains_on_domain
+pg_restore: skipping item 4203 CONSTRAINT unavailable_domains unavailable_domains_pkey
+pg_restore: launching item 4651 TABLE DATA announcement_mutes
+pg_restore: processing data for table "public.announcement_mutes"
+pg_restore: from TOC entry 4583; 0 16662 TABLE DATA reports mastodon
+pg_restore: error: COPY failed for table "reports": ERROR:  insert or update on table "reports" violates foreign key constraint "fk_4b81f7522c"
+DETAIL:  Key (account_id)=(108194180177193552) is not present in table "accounts".
+pg_restore: finished item 4583 TABLE DATA reports
+pg_restore: skipping item 4070 INDEX index_reports_on_action_taken_by_account_id
+pg_restore: skipping item 4071 INDEX index_reports_on_assigned_account_id
+pg_restore: skipping item 4072 INDEX index_reports_on_target_account_id
+pg_restore: skipping item 4074 CONSTRAINT reports reports_pkey
+pg_restore: launching item 4531 TABLE DATA admin_action_logs
+pg_restore: processing data for table "public.admin_action_logs"
+pg_restore: from TOC entry 4531; 0 16433 TABLE DATA admin_action_logs mastodon
+pg_restore: error: COPY failed for table "admin_action_logs": ERROR:  insert or update on table "admin_action_logs" violates foreign key constraint "fk_rails_a7667297fa"
+DETAIL:  Key (account_id)=(1) is not present in table "accounts".
+pg_restore: finished item 4531 TABLE DATA admin_action_logs
+pg_restore: skipping item 3978 CONSTRAINT admin_action_logs admin_action_logs_pkey
+pg_restore: skipping item 3979 INDEX index_admin_action_logs_on_account_id
+pg_restore: skipping item 3980 INDEX index_admin_action_logs_on_target_type_and_target_id
+pg_restore: launching item 4665 TABLE DATA account_notes
+pg_restore: processing data for table "public.account_notes"
+pg_restore: from TOC entry 4651; 0 65795 TABLE DATA announcement_mutes mastodon
+pg_restore: error: COPY failed for table "announcement_mutes": ERROR:  insert or update on table "announcement_mutes" violates foreign key constraint "fk_rails_9c99f8e835"
+DETAIL:  Key (account_id)=(108204732347159365) is not present in table "accounts".
+pg_restore: finished item 4651 TABLE DATA announcement_mutes
+pg_restore: skipping item 4193 CONSTRAINT announcement_mutes announcement_mutes_pkey
+pg_restore: skipping item 4194 INDEX index_announcement_mutes_on_account_id_and_announcement_id
+pg_restore: skipping item 4195 INDEX index_announcement_mutes_on_announcement_id
+pg_restore: launching item 4560 TABLE DATA list_accounts
+pg_restore: processing data for table "public.list_accounts"
+pg_restore: from TOC entry 4665; 0 79943 TABLE DATA account_notes mastodon
+pg_restore: error: COPY failed for table "account_notes": ERROR:  insert or update on table "account_notes" violates foreign key constraint "fk_rails_2801b48f1a"
+DETAIL:  Key (target_account_id)=(10492) is not present in table "accounts".
+pg_restore: finished item 4665 TABLE DATA account_notes
+pg_restore: skipping item 4214 CONSTRAINT account_notes account_notes_pkey
+pg_restore: skipping item 4215 INDEX index_account_notes_on_account_id_and_target_account_id
+pg_restore: launching item 4696 TABLE DATA custom_filter_keywords
+pg_restore: processing data for table "public.custom_filter_keywords"
+pg_restore: from TOC entry 4696; 0 444683 TABLE DATA custom_filter_keywords mastodon
+pg_restore: error: COPY failed for table "custom_filter_keywords": ERROR:  insert or update on table "custom_filter_keywords" violates foreign key constraint "fk_rails_5a49a74012"
+DETAIL:  Key (custom_filter_id)=(990) is not present in table "custom_filters".
+pg_restore: finished item 4696 TABLE DATA custom_filter_keywords
+pg_restore: skipping item 4263 CONSTRAINT custom_filter_keywords custom_filter_keywords_pkey
+pg_restore: skipping item 4264 INDEX index_custom_filter_keywords_on_custom_filter_id
+pg_restore: launching item 4606 TABLE DATA custom_filters
+pg_restore: processing data for table "public.custom_filters"
+pg_restore: from TOC entry 4606; 0 18955 TABLE DATA custom_filters mastodon
+pg_restore: error: COPY failed for table "custom_filters": ERROR:  insert or update on table "custom_filters" violates foreign key constraint "fk_rails_8b8d786993"
+DETAIL:  Key (account_id)=(110164438246045313) is not present in table "accounts".
+pg_restore: finished item 4606 TABLE DATA custom_filters
+pg_restore: skipping item 4124 CONSTRAINT custom_filters custom_filters_pkey
+pg_restore: skipping item 4390 FK CONSTRAINT custom_filter_keywords fk_rails_5a49a74012
+pg_restore: launching item 4653 TABLE DATA announcement_reactions
+pg_restore: processing data for table "public.announcement_reactions"
+pg_restore: from TOC entry 4653; 0 65816 TABLE DATA announcement_reactions mastodon
+pg_restore: error: COPY failed for table "announcement_reactions": ERROR:  insert or update on table "announcement_reactions" violates foreign key constraint "fk_rails_7444ad831f"
+DETAIL:  Key (account_id)=(75640) is not present in table "accounts".
+pg_restore: finished item 4653 TABLE DATA announcement_reactions
+pg_restore: skipping item 4370 FK CONSTRAINT announcement_reactions fk_rails_b742c91c0e
+pg_restore: skipping item 4197 CONSTRAINT announcement_reactions announcement_reactions_pkey
+pg_restore: skipping item 4198 INDEX index_announcement_reactions_on_account_id_and_announcement_id
+pg_restore: skipping item 4199 INDEX index_announcement_reactions_on_announcement_id
+pg_restore: skipping item 4200 INDEX index_announcement_reactions_on_custom_emoji_id
+pg_restore: launching item 4562 TABLE DATA lists
+pg_restore: processing data for table "public.lists"
+pg_restore: from TOC entry 4562; 0 16567 TABLE DATA lists mastodon
+pg_restore: error: COPY failed for table "lists": ERROR:  insert or update on table "lists" violates foreign key constraint "fk_rails_3853b78dac"
+DETAIL:  Key (account_id)=(168610) is not present in table "accounts".
+pg_restore: finished item 4562 TABLE DATA lists
+pg_restore: skipping item 4029 INDEX index_lists_on_account_id
+pg_restore: skipping item 4031 CONSTRAINT lists lists_pkey
+pg_restore: launching item 4619 TABLE DATA accounts_tags
+pg_restore: processing data for table "public.accounts_tags"
+pg_restore: while PROCESSING TOC:
+pg_restore: from TOC entry 4552; 0 16524 TABLE DATA follows mastodon
+pg_restore: error: COPY failed for table "follows": ERROR:  insert or update on table "follows" violates foreign key constraint "fk_32ed1b5560"
+DETAIL:  Key (account_id)=(10254) is not present in table "accounts".
+pg_restore: finished item 4552 TABLE DATA follows
+pg_restore: skipping item 4013 CONSTRAINT follows follows_pkey
+pg_restore: skipping item 4014 INDEX index_follows_on_account_id_and_target_account_id
+pg_restore: skipping item 4015 INDEX index_follows_on_target_account_id
+pg_restore: launching item 4621 TABLE DATA account_warnings
+pg_restore: processing data for table "public.account_warnings"
+pg_restore: from TOC entry 4621; 0 44487 TABLE DATA account_warnings mastodon
+pg_restore: error: COPY failed for table "account_warnings": ERROR:  insert or update on table "account_warnings" violates foreign key constraint "fk_rails_a65a1bf71b"
+DETAIL:  Key (account_id)=(1) is not present in table "accounts".
+pg_restore: finished item 4621 TABLE DATA account_warnings
+pg_restore: skipping item 4348 FK CONSTRAINT account_warnings fk_rails_8f2bab4b16
+pg_restore: skipping item 4146 CONSTRAINT account_warnings account_warnings_pkey
+pg_restore: launching item 4702 TABLE DATA status_trends
+pg_restore: processing data for table "public.status_trends"
+pg_restore: from TOC entry 4702; 0 444743 TABLE DATA status_trends mastodon
+pg_restore: error: COPY failed for table "status_trends": ERROR:  insert or update on table "status_trends" violates foreign key constraint "fk_rails_68c610dc1a"
+DETAIL:  Key (status_id)=(112418017588404018) is not present in table "statuses".
+pg_restore: finished item 4702 TABLE DATA status_trends
+pg_restore: skipping item 4273 INDEX index_status_trends_on_account_id
+pg_restore: skipping item 4274 INDEX index_status_trends_on_status_id
+pg_restore: skipping item 4276 CONSTRAINT status_trends status_trends_pkey
+pg_restore: launching item 4525 TABLE DATA account_domain_blocks
+pg_restore: processing data for table "public.account_domain_blocks"
+pg_restore: finished item 4619 TABLE DATA accounts_tags
+pg_restore: skipping item 4143 INDEX index_accounts_tags_on_account_id_and_tag_id
+pg_restore: skipping item 4144 INDEX index_accounts_tags_on_tag_id_and_account_id
+pg_restore: launching item 4678 TABLE DATA canonical_email_blocks
+pg_restore: processing data for table "public.canonical_email_blocks"
+pg_restore: from TOC entry 4525; 0 16387 TABLE DATA account_domain_blocks mastodon
+pg_restore: error: COPY failed for table "account_domain_blocks": ERROR:  insert or update on table "account_domain_blocks" violates foreign key constraint "fk_206c6029bd"
+DETAIL:  Key (account_id)=(159794) is not present in table "accounts".
+pg_restore: finished item 4525 TABLE DATA account_domain_blocks
+pg_restore: skipping item 3966 CONSTRAINT account_domain_blocks account_domain_blocks_pkey
+pg_restore: skipping item 3967 INDEX index_account_domain_blocks_on_account_id_and_domain
+pg_restore: launching item 4643 TABLE DATA account_migrations
+pg_restore: processing data for table "public.account_migrations"
+pg_restore: from TOC entry 4643; 0 52370 TABLE DATA account_migrations mastodon
+pg_restore: error: COPY failed for table "account_migrations": ERROR:  insert or update on table "account_migrations" violates foreign key constraint "fk_rails_c9f701caaf"
+DETAIL:  Key (account_id)=(85256) is not present in table "accounts".
+pg_restore: finished item 4643 TABLE DATA account_migrations
+pg_restore: skipping item 4180 CONSTRAINT account_migrations account_migrations_pkey
+pg_restore: skipping item 4181 INDEX index_account_migrations_on_account_id
+pg_restore: skipping item 4182 INDEX index_account_migrations_on_target_account_id
+pg_restore: launching item 4558 TABLE DATA invites
+pg_restore: processing data for table "public.invites"
+pg_restore: from TOC entry 4678; 0 176187 TABLE DATA canonical_email_blocks mastodon
+pg_restore: error: COPY failed for table "canonical_email_blocks": ERROR:  insert or update on table "canonical_email_blocks" violates foreign key constraint "fk_rails_1ecb262096"
+DETAIL:  Key (reference_account_id)=(200810) is not present in table "accounts".
+pg_restore: finished item 4678 TABLE DATA canonical_email_blocks
+pg_restore: skipping item 4233 CONSTRAINT canonical_email_blocks canonical_email_blocks_pkey
+pg_restore: skipping item 4234 INDEX index_canonical_email_blocks_on_canonical_email_hash
+pg_restore: skipping item 4235 INDEX index_canonical_email_blocks_on_reference_account_id
+pg_restore: launching item 4645 TABLE DATA account_aliases
+pg_restore: processing data for table "public.account_aliases"
+pg_restore: from TOC entry 4645; 0 52395 TABLE DATA account_aliases mastodon
+pg_restore: error: COPY failed for table "account_aliases": ERROR:  insert or update on table "account_aliases" violates foreign key constraint "fk_rails_fc91575d08"
+DETAIL:  Key (account_id)=(109261742683346324) is not present in table "accounts".
+pg_restore: from TOC entry 4558; 0 16552 TABLE DATA invites mastodon
+pg_restore: error: COPY failed for table "invites": ERROR:  insert or update on table "invites" violates foreign key constraint "fk_rails_ff69dbb2ac"
+DETAIL:  Key (user_id)=(10334) is not present in table "users".
+pg_restore: finished item 4645 TABLE DATA account_aliases
+pg_restore: skipping item 4184 CONSTRAINT account_aliases account_aliases_pkey
+pg_restore: skipping item 4185 INDEX index_account_aliases_on_account_id
+pg_restore: launching item 4682 TABLE DATA account_statuses_cleanup_policies
+pg_restore: finished item 4558 TABLE DATA invites
+pg_restore: skipping item 4299 FK CONSTRAINT invites fk_rails_ff69dbb2ac
+pg_restore:pg_restore:  skipping item 4021 INDEX index_invites_on_code
+processing data for table "public.account_statuses_cleanup_policies"
+pg_restore: skipping item 4023 CONSTRAINT invites invites_pkey
+pg_restore: skipping item 4336 FK CONSTRAINT users fk_rails_8fb2a43e88
+pg_restore: launching item 4704 TABLE DATA preview_card_trends
+pg_restore: processing data for table "public.preview_card_trends"
+pg_restore: from TOC entry 4682; 0 191775 TABLE DATA account_statuses_cleanup_policies mastodon
+pg_restore: error: COPY failed for table "account_statuses_cleanup_policies": ERROR:  insert or update on table "account_statuses_cleanup_policies" violates foreign key constraint "fk_rails_23d5f73cfe"
+DETAIL:  Key (account_id)=(108203366327824091) is not present in table "accounts".
+pg_restore: finished item 4682 TABLE DATA account_statuses_cleanup_policies
+pg_restore: skipping item 4240 CONSTRAINT account_statuses_cleanup_policies account_statuses_cleanup_policies_pkey
+pg_restore: skipping item 4241 INDEX index_account_statuses_cleanup_policies_on_account_id
+pg_restore: launching item 4527 TABLE DATA account_moderation_notes
+pg_restore: processing data for table "public.account_moderation_notes"
+pg_restore: from TOC entry 4560; 0 16562 TABLE DATA list_accounts mastodon
+pg_restore: error: COPY failed for table "list_accounts": ERROR:  insert or update on table "list_accounts" violates foreign key constraint "fk_rails_40f9cc29f1"
+DETAIL:  Key (follow_id)=(352) is not present in table "follows".
+pg_restore: finished item 4560 TABLE DATA list_accounts
+pg_restore: skipping item 4300 FK CONSTRAINT list_accounts fk_rails_40f9cc29f1
+pg_restore: skipping item 4024 INDEX index_list_accounts_on_account_id_and_list_id
+pg_restore: skipping item 4025 INDEX index_list_accounts_on_follow_id
+pg_restore: skipping item 4026 INDEX index_list_accounts_on_list_id_and_account_id
+pg_restore: skipping item 4028 CONSTRAINT list_accounts list_accounts_pkey
+pg_restore: skipping item 4302 FK CONSTRAINT list_accounts fk_rails_e54e356c88
+pg_restore: launching item 4625 TABLE DATA scheduled_statuses
+pg_restore: processing data for table "public.scheduled_statuses"
+pg_restore: from TOC entry 4704; 0 444775 TABLE DATA preview_card_trends mastodon
+pg_restore: error: COPY failed for table "preview_card_trends": ERROR:  insert or update on table "preview_card_trends" violates foreign key constraint "fk_rails_371593db34"
+DETAIL:  Key (preview_card_id)=(19277669) is not present in table "preview_cards".
+pg_restore: finished item 4704 TABLE DATA preview_card_trends
+pg_restore: skipping item 4277 INDEX index_preview_card_trends_on_preview_card_id
+pg_restore: skipping item 4279 CONSTRAINT preview_card_trends preview_card_trends_pkey
+pg_restore: launching item 4690 TABLE DATA appeals
+pg_restore: from TOC entry 4625; 0 44530 TABLE DATA scheduled_statuses mastodon
+pg_restore: error: COPY failed for table "scheduled_statuses": ERROR:  insert or update on table "scheduled_statuses" violates foreign key constraint "fk_rails_23bd9018f9"
+DETAIL:  Key (account_id)=(108194595712959888) is not present in table "accounts".
+pg_restore: finished item 4625 TABLE DATA scheduled_statuses
+pg_restore: skipping item 4149 INDEX index_scheduled_statuses_on_account_id
+pg_restore: skipping item 4151 CONSTRAINT scheduled_statuses scheduled_statuses_pkey
+pg_restore: launching item 4686 TABLE DATA preview_card_providers
+pg_restore: processing data for table "public.preview_card_providers"
+pg_restore: processing data for table "public.appeals"
+pg_restore: from TOC entry 4527; 0 16395 TABLE DATA account_moderation_notes mastodon
+pg_restore: error: COPY failed for table "account_moderation_notes": ERROR:  insert or update on table "account_moderation_notes" violates foreign key constraint "fk_rails_3f8b75089b"
+DETAIL:  Key (account_id)=(1) is not present in table "accounts".
+pg_restore: finished item 4527 TABLE DATA account_moderation_notes
+pg_restore: skipping item 3969 CONSTRAINT account_moderation_notes account_moderation_notes_pkey
+pg_restore: launching item 4667 TABLE DATA webauthn_credentials
+pg_restore: processing data for table "public.webauthn_credentials"
+pg_restore: from TOC entry 4690; 0 191865 TABLE DATA appeals mastodon
+pg_restore: error: COPY failed for table "appeals": ERROR:  insert or update on table "appeals" violates foreign key constraint "fk_rails_501c3a6e13"
+DETAIL:  Key (rejected_by_account_id)=(1) is not present in table "accounts".
+pg_restore: finished item 4690 TABLE DATA appeals
+pg_restore: skipping item 4388 FK CONSTRAINT appeals fk_rails_a99f14546e
+pg_restore: skipping item 4252 CONSTRAINT appeals appeals_pkey
+pg_restore: skipping item 4253 INDEX index_appeals_on_account_id
+pg_restore: skipping item 4254 INDEX index_appeals_on_account_warning_id
+pg_restore: skipping item 4255 INDEX index_appeals_on_approved_by_account_id
+pg_restore: skipping item 4256 INDEX index_appeals_on_rejected_by_account_id
+pg_restore: launching item 4544 TABLE DATA domain_blocks
+pg_restore: processing data for table "public.domain_blocks"
+pg_restore: from TOC entry 4667; 0 94725 TABLE DATA webauthn_credentials mastodon
+pg_restore: error: COPY failed for table "webauthn_credentials": ERROR:  insert or update on table "webauthn_credentials" violates foreign key constraint "fk_rails_a4355aef77"
+DETAIL:  Key (user_id)=(5439) is not present in table "users".
+pg_restore: finished item 4667 TABLE DATA webauthn_credentials
+pg_restore: skipping item 4378 FK CONSTRAINT webauthn_credentials fk_rails_a4355aef77
+pg_restore: skipping item 4216 INDEX index_webauthn_credentials_on_external_id
+pg_restore: skipping item 4217 INDEX index_webauthn_credentials_on_user_id
+pg_restore: skipping item 4219 CONSTRAINT webauthn_credentials webauthn_credentials_pkey
+pg_restore: launching item 4538 TABLE DATA conversation_mutes
+pg_restore: processing data for table "public.conversation_mutes"
+pg_restore: finished item 4686 TABLE DATA preview_card_providers
+pg_restore: skipping item 4246 INDEX index_preview_card_providers_on_domain
+pg_restore: skipping item 4248 CONSTRAINT preview_card_providers preview_card_providers_pkey
+pg_restore: launching item 4649 TABLE DATA announcements
+pg_restore: processing data for table "public.announcements"
+pg_restore: from TOC entry 4538; 0 16466 TABLE DATA conversation_mutes mastodon
+pg_restore: error: COPY failed for table "conversation_mutes": ERROR:  insert or update on table "conversation_mutes" violates foreign key constraint "fk_225b4212bb"
+DETAIL:  Key (account_id)=(108199323116443518) is not present in table "accounts".
+pg_restore: finished item 4538 TABLE DATA conversation_mutes
+pg_restore: skipping item 3990 CONSTRAINT conversation_mutes conversation_mutes_pkey
+pg_restore: skipping item 3991 INDEX index_conversation_mutes_on_account_id_and_conversation_id
+pg_restore: launching item 4581 TABLE DATA report_notes
+pg_restore: processing data for table "public.report_notes"
+pg_restore: finished item 4544 TABLE DATA domain_blocks
+pg_restore: skipping item 3999 CONSTRAINT domain_blocks domain_blocks_pkey
+pg_restore: skipping item 4000 INDEX index_domain_blocks_on_domain
+pg_restore: launching item 4700 TABLE DATA custom_filter_statuses
+pg_restore: processing data for table "public.custom_filter_statuses"
+pg_restore: from TOC entry 4581; 0 16654 TABLE DATA report_notes mastodon
+pg_restore: error: COPY failed for table "report_notes": ERROR:  insert or update on table "report_notes" violates foreign key constraint "fk_rails_7fa83a61eb"
+DETAIL:  Key (report_id)=(7) is not present in table "reports".
+pg_restore: finished item 4581 TABLE DATA report_notes
+pg_restore: skipping item 4318 FK CONSTRAINT report_notes fk_rails_7fa83a61eb
+pg_restore: skipping item 4069 CONSTRAINT report_notes report_notes_pkey
+pg_restore: launching item 4610 TABLE DATA account_pins
+pg_restore: processing data for table "public.account_pins"
+pg_restore: from TOC entry 4700; 0 444723 TABLE DATA custom_filter_statuses mastodon
+pg_restore: error: COPY failed for table "custom_filter_statuses": ERROR:  insert or update on table "custom_filter_statuses" violates foreign key constraint "fk_rails_2f6d20c0cf"
+DETAIL:  Key (status_id)=(110102159030679032) is not present in table "statuses".
+pg_restore: finished item 4700 TABLE DATA custom_filter_statuses
+pg_restore: skipping item 4394 FK CONSTRAINT custom_filter_statuses fk_rails_e2ddaf5b14
+pg_restore: skipping item 4270 CONSTRAINT custom_filter_statuses custom_filter_statuses_pkey
+pg_restore: skipping item 4271 INDEX index_custom_filter_statuses_on_custom_filter_id
+pg_restore: skipping item 4272 INDEX index_custom_filter_statuses_on_status_id
+pg_restore: launching item 4669 TABLE DATA account_deletion_requests
+pg_restore: processing data for table "public.account_deletion_requests"
+pg_restore: finished item 4649 TABLE DATA announcements
+pg_restore: skipping item 4191 CONSTRAINT announcements announcements_pkey
+pg_restore: skipping item 4367 FK CONSTRAINT announcement_mutes fk_rails_e35401adf1
+pg_restore: skipping item 4369 FK CONSTRAINT announcement_reactions fk_rails_a1226eaa5c
+pg_restore: launching item 4585 TABLE DATA schema_migrations
+pg_restore: processing data for table "public.schema_migrations"
+pg_restore: from TOC entry 4610; 0 23470 TABLE DATA account_pins mastodon
+pg_restore: error: COPY failed for table "account_pins": ERROR:  insert or update on table "account_pins" violates foreign key constraint "fk_rails_a176e26c37"
+DETAIL:  Key (target_account_id)=(109354596755673880) is not present in table "accounts".
+pg_restore: finished item 4610 TABLE DATA account_pins
+pg_restore: skipping item 4128 CONSTRAINT account_pins account_pins_pkey
+pg_restore: skipping item 4129 INDEX index_account_pins_on_account_id_and_target_account_id
+pg_restore: launching item 4674 TABLE DATA rules
+pg_restore: processing data for table "public.rules"
+pg_restore: from TOC entry 4669; 0 94744 TABLE DATA account_deletion_requests mastodon
+pg_restore: error: COPY failed for table "account_deletion_requests": ERROR:  insert or update on table "account_deletion_requests" violates foreign key constraint "fk_rails_45bf2626b9"
+DETAIL:  Key (account_id)=(112336695394030650) is not present in table "accounts".
+pg_restore: finished item 4669 TABLE DATA account_deletion_requests
+pg_restore: skipping item 4221 CONSTRAINT account_deletion_requests account_deletion_requests_pkey
+pg_restore: skipping item 4222 INDEX index_account_deletion_requests_on_account_id
+pg_restore: launching item 4546 TABLE DATA email_domain_blocks
+pg_restore: processing data for table "public.email_domain_blocks"
+pg_restore: finished item 4546 TABLE DATA email_domain_blocks
+pg_restore: skipping item 4002 CONSTRAINT email_domain_blocks email_domain_blocks_pkey
+pg_restore: skipping item 4003 INDEX index_email_domain_blocks_on_domain
+pg_restore: skipping item 4290 FK CONSTRAINT email_domain_blocks fk_rails_408efe0a15
+pg_restore: launching item 4572 TABLE DATA oauth_access_grants
+pg_restore: processing data for table "public.oauth_access_grants"
+pg_restore: from TOC entry 4572; 0 16605 TABLE DATA oauth_access_grants mastodon
+pg_restore: error: COPY failed for table "oauth_access_grants": ERROR:  insert or update on table "oauth_access_grants" violates foreign key constraint "fk_34d54b0a33"
+DETAIL:  Key (application_id)=(725877) is not present in table "oauth_applications".
+pg_restore: finished item 4572 TABLE DATA oauth_access_grants
+pg_restore: skipping item 4313 FK CONSTRAINT oauth_access_grants fk_34d54b0a33
+pg_restore: skipping item 4314 FK CONSTRAINT oauth_access_grants fk_63b044929b
+pg_restore: skipping item 4051 INDEX index_oauth_access_grants_on_resource_owner_id
+pg_restore: skipping item 4052 INDEX index_oauth_access_grants_on_token
+pg_restore: skipping item 4054 CONSTRAINT oauth_access_grants oauth_access_grants_pkey
+pg_restore: launching item 4623 TABLE DATA account_warning_presets
+pg_restore: processing data for table "public.account_warning_presets"
+pg_restore: finished item 4674 TABLE DATA rules
+pg_restore: skipping item 4228 CONSTRAINT rules rules_pkey
+pg_restore: launching item 4671 TABLE DATA ip_blocks
+pg_restore: processing data for table "public.ip_blocks"
+pg_restore: finished item 4585 TABLE DATA schema_migrations
+pg_restore: skipping item 4076 CONSTRAINT schema_migrations schema_migrations_pkey
+pg_restore: launching item 4556 TABLE DATA imports
+pg_restore: processing data for table "public.imports"
+pg_restore: from TOC entry 4556; 0 16543 TABLE DATA imports mastodon
+pg_restore: error: COPY failed for table "imports": ERROR:  insert or update on table "imports" violates foreign key constraint "fk_6db1b6e408"
+DETAIL:  Key (account_id)=(110674317413994555) is not present in table "accounts".
+pg_restore: finished item 4556 TABLE DATA imports
+pg_restore: skipping item 4020 CONSTRAINT imports imports_pkey
+pg_restore: launching item 4637 TABLE DATA custom_emoji_categories
+pg_restore: processing data for table "public.custom_emoji_categories"
+pg_restore: finished item 4623 TABLE DATA account_warning_presets
+pg_restore: skipping item 4148 CONSTRAINT account_warning_presets account_warning_presets_pkey
+pg_restore: launching item 4694 TABLE DATA user_roles
+pg_restore: processing data for table "public.user_roles"
+pg_restore: finished item 4671 TABLE DATA ip_blocks
+pg_restore: skipping item 4223 INDEX index_ip_blocks_on_ip
+pg_restore: skipping item 4225 CONSTRAINT ip_blocks ip_blocks_pkey
+pg_restore: launching item 4533 TABLE DATA ar_internal_metadata
+pg_restore: finished item 4694 TABLE DATA user_roles
+pg_restore: skipping item 4261 CONSTRAINT user_roles user_roles_pkey
+pg_restore: skipping item 4335 FK CONSTRAINT users fk_rails_642f17018b
+pg_restore: launching item 4534 TABLE DATA backups
+pg_restore:pg_restore:  processing data for table "public.ar_internal_metadata"
+processing data for table "public.backups"
+pg_restore: finished item 4534 TABLE DATA backups
+pg_restore: skipping item 4285 FK CONSTRAINT backups fk_rails_096669d221
+pg_restore: skipping item 3984 CONSTRAINT backups backups_pkey
+pg_restore: launching item 4554 TABLE DATA identities
+pg_restore: processing data for table "public.identities"
+pg_restore: finished item 4554 TABLE DATA identities
+pg_restore: skipping item 4297 FK CONSTRAINT identities fk_bea040f377
+pg_restore: skipping item 4017 CONSTRAINT identities index_identities_on_id
+pg_restore: skipping item 4018 INDEX index_identities_on_user_id
+pg_restore: launching item 4590 TABLE DATA site_uploads
+pg_restore: processing data for table "public.site_uploads"
+pg_restore: finished item 4590 TABLE DATA site_uploads
+pg_restore: skipping item 4085 INDEX index_site_uploads_on_var
+pg_restore: skipping item 4087 CONSTRAINT site_uploads site_uploads_pkey
+pg_restore: launching item 4608 TABLE DATA relays
+pg_restore: processing data for table "public.relays"
+pg_restore: finished item 4608 TABLE DATA relays
+pg_restore: skipping item 4126 CONSTRAINT relays relays_pkey
+pg_restore: launching item 4635 TABLE DATA user_invite_requests
+pg_restore: processing data for table "public.user_invite_requests"
+pg_restore: finished item 4637 TABLE DATA custom_emoji_categories
+pg_restore: skipping item 4171 CONSTRAINT custom_emoji_categories custom_emoji_categories_pkey
+pg_restore: skipping item 4172 INDEX index_custom_emoji_categories_on_name
+pg_restore: launching item 4639 TABLE DATA domain_allows
+pg_restore: finished item 4533 TABLE DATA ar_internal_metadata
+pg_restore: skipping item 3982 CONSTRAINT ar_internal_metadata ar_internal_metadata_pkey
+pg_restore: launching item 4657 TABLE DATA devices
+pg_restore: processing data for table "public.devices"
+pg_restore: processing data for table "public.domain_allows"
+pg_restore: finished item 4635 TABLE DATA user_invite_requests
+pg_restore: skipping item 4359 FK CONSTRAINT user_invite_requests fk_rails_3773f15361
+pg_restore: skipping item 4167 INDEX index_user_invite_requests_on_user_id
+pg_restore: skipping item 4169 CONSTRAINT user_invite_requests user_invite_requests_pkey
+pg_restore: launching item 4659 TABLE DATA one_time_keys
+pg_restore: finished item 4657 TABLE DATA devices
+pg_restore: skipping item 4371 FK CONSTRAINT devices fk_rails_393f74df68
+pg_restore: skipping item 4205 CONSTRAINT devices devices_pkey
+pg_restore: skipping item 4206 INDEX index_devices_on_access_token_id
+pg_restore: launching item 4661 TABLE DATA encrypted_messages
+pg_restore: processing data for table "public.encrypted_messages"
+pg_restore: finished item 4639 TABLE DATA domain_allows
+pg_restore: skipping item 4174 CONSTRAINT domain_allows domain_allows_pkey
+pg_restore: skipping item 4175 INDEX index_domain_allows_on_domain
+pg_restore: launching item 4663 TABLE DATA system_keys
+pg_restore: processing data for table "public.system_keys"
+pg_restore: processing data for table "public.one_time_keys"
+pg_restore: finished item 4661 TABLE DATA encrypted_messages
+pg_restore: skipping item 4210 CONSTRAINT encrypted_messages encrypted_messages_pkey
+pg_restore: skipping item 4375 FK CONSTRAINT encrypted_messages fk_rails_a83e4df7ae
+pg_restore: launching item 4676 TABLE DATA follow_recommendation_suppressions
+pg_restore: processing data for table "public.follow_recommendation_suppressions"
+pg_restore: finished item 4663 TABLE DATA system_keys
+pg_restore: skipping item 4212 CONSTRAINT system_keys system_keys_pkey
+pg_restore: launching item 4692 TABLE DATA webhooks
+pg_restore: processing data for table "public.webhooks"
+pg_restore: finished item 4692 TABLE DATA webhooks
+pg_restore: skipping item 4257 INDEX index_webhooks_on_url
+pg_restore: skipping item 4259 CONSTRAINT webhooks webhooks_pkey
+pg_restore: skipping item 4226 INDEX index_instances_on_domain
+pg_restore: skipping item 4249 INDEX index_account_summaries_on_account_id
+pg_restore: skipping item 4250 INDEX index_follow_recommendations_on_account_id
+pg_restore: launching item 4799 SEQUENCE SET account_aliases_id_seq
+pg_restore: executing SEQUENCE SET account_aliases_id_seq
+pg_restore: finished item 4676 TABLE DATA follow_recommendation_suppressions
+pg_restore: skipping item 4230 CONSTRAINT follow_recommendation_suppressions follow_recommendation_suppressions_pkey
+pg_restore: skipping item 4231 INDEX index_follow_recommendation_suppressions_on_account_id
+pg_restore: launching item 4800 SEQUENCE SET account_conversations_id_seq
+pg_restore: executing SEQUENCE SET account_conversations_id_seq
+pg_restore: finished item 4659 TABLE DATA one_time_keys
+pg_restore: skipping item 4208 CONSTRAINT one_time_keys one_time_keys_pkey
+pg_restore: skipping item 4373 FK CONSTRAINT one_time_keys fk_rails_d3edd8c878
+pg_restore: launching item 4801 SEQUENCE SET account_deletion_requests_id_seq
+pg_restore: executing SEQUENCE SET account_deletion_requests_id_seq
+pg_restore: finished item 4799 SEQUENCE SET account_aliases_id_seq
+pg_restore: launching item 4802 SEQUENCE SET account_domain_blocks_id_seq
+pg_restore: executing SEQUENCE SET account_domain_blocks_id_seq
+pg_restore: finished item 4801 SEQUENCE SET account_deletion_requests_id_seq
+pg_restore: launching item 4803 SEQUENCE SET account_migrations_id_seq
+pg_restore: finished item 4800 SEQUENCE SET account_conversations_id_seq
+pg_restore: launching item 4804 SEQUENCE SET account_moderation_notes_id_seq
+pg_restore: executing SEQUENCE SET account_moderation_notes_id_seq
+pg_restore: executing SEQUENCE SET account_migrations_id_seq
+pg_restore: finished item 4802 SEQUENCE SET account_domain_blocks_id_seq
+pg_restore: launching item 4805 SEQUENCE SET account_notes_id_seq
+pg_restore: finished item 4803 SEQUENCE SET account_migrations_id_seq
+pg_restore: launching item 4806 SEQUENCE SET account_pins_id_seq
+pg_restore: executing SEQUENCE SET account_pins_id_seq
+pg_restore: executing SEQUENCE SET account_notes_id_seq
+pg_restore: finished item 4804 SEQUENCE SET account_moderation_notes_id_seq
+pg_restore: launching item 4807 SEQUENCE SET account_stats_id_seq
+pg_restore: executing SEQUENCE SET account_stats_id_seq
+pg_restore: finished item 4806 SEQUENCE SET account_pins_id_seq
+pg_restore: launching item 4808 SEQUENCE SET account_statuses_cleanup_policies_id_seq
+pg_restore: executing SEQUENCE SET account_statuses_cleanup_policies_id_seq
+pg_restore: finished item 4805 SEQUENCE SET account_notes_id_seq
+pg_restore: launching item 4809 SEQUENCE SET account_warning_presets_id_seq
+pg_restore: finished item 4807 SEQUENCE SET account_stats_id_seq
+pg_restore: launching item 4810 SEQUENCE SET account_warnings_id_seq
+pg_restore: executing SEQUENCE SET account_warning_presets_id_seq
+pg_restore: executing SEQUENCE SET account_warnings_id_seq
+pg_restore: finished item 4808 SEQUENCE SET account_statuses_cleanup_policies_id_seq
+pg_restore: launching item 4811 SEQUENCE SET accounts_id_seq
+pg_restore: executing SEQUENCE SET accounts_id_seq
+pg_restore: finished item 4810 SEQUENCE SET account_warnings_id_seq
+pg_restore: launching item 4812 SEQUENCE SET admin_action_logs_id_seq
+pg_restore: executing SEQUENCE SET admin_action_logs_id_seq
+pg_restore: finished item 4809 SEQUENCE SET account_warning_presets_id_seq
+pg_restore: launching item 4813 SEQUENCE SET announcement_mutes_id_seq
+pg_restore: executing SEQUENCE SET announcement_mutes_id_seq
+pg_restore: finished item 4811 SEQUENCE SET accounts_id_seq
+pg_restore: launching item 4814 SEQUENCE SET announcement_reactions_id_seq
+pg_restore: executing SEQUENCE SET announcement_reactions_id_seq
+pg_restore: finished item 4812 SEQUENCE SET admin_action_logs_id_seq
+pg_restore: launching item 4815 SEQUENCE SET announcements_id_seq
+pg_restore: finished item 4813 SEQUENCE SET announcement_mutes_id_seq
+pg_restore: launching item 4816 SEQUENCE SET appeals_id_seq
+pg_restore: executing SEQUENCE SET appeals_id_seq
+pg_restore: executing SEQUENCE SET announcements_id_seq
+pg_restore: finished item 4814 SEQUENCE SET announcement_reactions_id_seq
+pg_restore: launching item 4817 SEQUENCE SET backups_id_seq
+pg_restore: executing SEQUENCE SET backups_id_seq
+pg_restore: finished item 4815 SEQUENCE SET announcements_id_seq
+pg_restore: launching item 4818 SEQUENCE SET blocks_id_seq
+pg_restore: executing SEQUENCE SET blocks_id_seq
+pg_restore: finished item 4816 SEQUENCE SET appeals_id_seq
+pg_restore: launching item 4819 SEQUENCE SET bookmarks_id_seq
+pg_restore: executing SEQUENCE SET bookmarks_id_seq
+pg_restore: finished item 4818 SEQUENCE SET blocks_id_seq
+pg_restore: launching item 4820 SEQUENCE SET canonical_email_blocks_id_seq
+pg_restore: executing SEQUENCE SET canonical_email_blocks_id_seq
+pg_restore: finished item 4817 SEQUENCE SET backups_id_seq
+pg_restore: launching item 4821 SEQUENCE SET conversation_mutes_id_seq
+pg_restore: executing SEQUENCE SET conversation_mutes_id_seq
+pg_restore: finished item 4819 SEQUENCE SET bookmarks_id_seq
+pg_restore: launching item 4822 SEQUENCE SET conversations_id_seq
+pg_restore: executing SEQUENCE SET conversations_id_seq
+pg_restore: finished item 4820 SEQUENCE SET canonical_email_blocks_id_seq
+pg_restore: launching item 4823 SEQUENCE SET custom_emoji_categories_id_seq
+pg_restore: executing SEQUENCE SET custom_emoji_categories_id_seq
+pg_restore: finished item 4821 SEQUENCE SET conversation_mutes_id_seq
+pg_restore: launching item 4824 SEQUENCE SET custom_emojis_id_seq
+pg_restore: executing SEQUENCE SET custom_emojis_id_seq
+pg_restore: finished item 4822 SEQUENCE SET conversations_id_seq
+pg_restore: launching item 4825 SEQUENCE SET custom_filter_keywords_id_seq
+pg_restore: executing SEQUENCE SET custom_filter_keywords_id_seq
+pg_restore: finished item 4824 SEQUENCE SET custom_emojis_id_seq
+pg_restore: launching item 4826 SEQUENCE SET custom_filter_statuses_id_seq
+pg_restore: finished item 4823 SEQUENCE SET custom_emoji_categories_id_seq
+pg_restore: launching item 4827 SEQUENCE SET custom_filters_id_seq
+pg_restore:pg_restore: executing SEQUENCE SET custom_filters_id_seq
+ executing SEQUENCE SET custom_filter_statuses_id_seq
+pg_restore: finished item 4825 SEQUENCE SET custom_filter_keywords_id_seq
+pg_restore: launching item 4828 SEQUENCE SET devices_id_seq
+pg_restore: executing SEQUENCE SET devices_id_seq
+pg_restore: finished item 4826 SEQUENCE SET custom_filter_statuses_id_seq
+pg_restore: launching item 4829 SEQUENCE SET domain_allows_id_seq
+pg_restore: executing SEQUENCE SET domain_allows_id_seq
+pg_restore: finished item 4827 SEQUENCE SET custom_filters_id_seq
+pg_restore: launching item 4830 SEQUENCE SET domain_blocks_id_seq
+pg_restore: executing SEQUENCE SET domain_blocks_id_seq
+pg_restore: finished item 4828 SEQUENCE SET devices_id_seq
+pg_restore: launching item 4831 SEQUENCE SET email_domain_blocks_id_seq
+pg_restore: executing SEQUENCE SET email_domain_blocks_id_seq
+pg_restore: finished item 4829 SEQUENCE SET domain_allows_id_seq
+pg_restore: launching item 4832 SEQUENCE SET encrypted_messages_id_seq
+pg_restore: executing SEQUENCE SET encrypted_messages_id_seq
+pg_restore: finished item 4830 SEQUENCE SET domain_blocks_id_seq
+pg_restore: launching item 4833 SEQUENCE SET favourites_id_seq
+pg_restore: executing SEQUENCE SET favourites_id_seq
+pg_restore: finished item 4831 SEQUENCE SET email_domain_blocks_id_seq
+pg_restore: launching item 4834 SEQUENCE SET featured_tags_id_seq
+pg_restore: executing SEQUENCE SET featured_tags_id_seq
+pg_restore: finished item 4833 SEQUENCE SET favourites_id_seq
+pg_restore: launching item 4835 SEQUENCE SET follow_recommendation_suppressions_id_seq
+pg_restore: executing SEQUENCE SET follow_recommendation_suppressions_id_seq
+pg_restore: finished item 4834 SEQUENCE SET featured_tags_id_seq
+pg_restore: launching item 4836 SEQUENCE SET follow_requests_id_seq
+pg_restore: executing SEQUENCE SET follow_requests_id_seq
+pg_restore: finished item 4835 SEQUENCE SET follow_recommendation_suppressions_id_seq
+pg_restore: launching item 4837 SEQUENCE SET follows_id_seq
+pg_restore: executing SEQUENCE SET follows_id_seq
+pg_restore: finished item 4836 SEQUENCE SET follow_requests_id_seq
+pg_restore: launching item 4838 SEQUENCE SET identities_id_seq
+pg_restore: finished item 4832 SEQUENCE SET encrypted_messages_id_seq
+pg_restore: launching item 4839 SEQUENCE SET imports_id_seq
+pg_restore: executing SEQUENCE SET identities_id_seq
+pg_restore: executing SEQUENCE SET imports_id_seq
+pg_restore: finished item 4837 SEQUENCE SET follows_id_seq
+pg_restore: launching item 4840 SEQUENCE SET invites_id_seq
+pg_restore: executing SEQUENCE SET invites_id_seq
+pg_restore: finished item 4838 SEQUENCE SET identities_id_seq
+pg_restore: launching item 4841 SEQUENCE SET ip_blocks_id_seq
+pg_restore: executing SEQUENCE SET ip_blocks_id_seq
+pg_restore: finished item 4839 SEQUENCE SET imports_id_seq
+pg_restore: launching item 4842 SEQUENCE SET list_accounts_id_seq
+pg_restore: finished item 4840 SEQUENCE SET invites_id_seq
+pg_restore: launching item 4843 SEQUENCE SET lists_id_seq
+pg_restore: pg_restore: finished item 4841 SEQUENCE SET ip_blocks_id_seq
+pg_restore: launching item 4844 SEQUENCE SET login_activities_id_seq
+pg_restore: executing SEQUENCE SET login_activities_id_seq
+executing SEQUENCE SET lists_id_seq
+pg_restore: finished item 4844 SEQUENCE SET login_activities_id_seq
+pg_restore: launching item 4845 SEQUENCE SET markers_id_seq
+pg_restore: executing SEQUENCE SET markers_id_seq

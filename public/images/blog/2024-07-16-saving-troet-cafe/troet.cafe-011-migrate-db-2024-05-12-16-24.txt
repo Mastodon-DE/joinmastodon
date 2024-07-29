@@ -1,0 +1,151 @@
+mastodon@work3:~/live$ SKIP_POST_DEPLOYMENT_MIGRATIONS=true RAILS_ENV=production bundle exec rails db:migrate
+I, [2024-05-12T16:23:59.726105 #74221]  INFO -- : Migrating to CreateBulkImports (20230330135507)
+== 20230330135507 CreateBulkImports: migrating ================================
+[strong_migrations] DANGER: No lock timeout set
+-- create_table(:bulk_imports)
+   -> 0.0255s
+-- add_index(:bulk_imports, [:id], {:name=>:index_bulk_imports_unconfirmed, :where=>"state = 0"})
+   -> 0.0018s
+== 20230330135507 CreateBulkImports: migrated (0.0290s) =======================
+
+I, [2024-05-12T16:23:59.761512 #74221]  INFO -- : Migrating to CreateBulkImportRows (20230330140036)
+== 20230330140036 CreateBulkImportRows: migrating =============================
+[strong_migrations] DANGER: No lock timeout set
+-- create_table(:bulk_import_rows)
+   -> 0.0093s
+== 20230330140036 CreateBulkImportRows: migrated (0.0103s) ====================
+
+I, [2024-05-12T16:23:59.775032 #74221]  INFO -- : Migrating to AddFollowRequestIdToListAccounts (20230330155710)
+== 20230330155710 AddFollowRequestIdToListAccounts: migrating =================
+[strong_migrations] DANGER: No lock timeout set
+-- add_reference(:list_accounts, :follow_request, {:foreign_key=>{:on_delete=>:cascade}, :index=>false})
+   -> 0.0138s
+-- add_index(:list_accounts, :follow_request_id, {:algorithm=>:concurrently, :where=>"follow_request_id IS NOT NULL"})
+   -> 0.0071s
+== 20230330155710 AddFollowRequestIdToListAccounts: migrated (0.0217s) ========
+
+I, [2024-05-12T16:23:59.799898 #74221]  INFO -- : Migrating to AddIndexAccountsOnDomainAndId (20230524190515)
+== 20230524190515 AddIndexAccountsOnDomainAndId: migrating ====================
+[strong_migrations] DANGER: No lock timeout set
+-- add_index(:accounts, [:domain, :id], {:name=>:index_accounts_on_domain_and_id, :algorithm=>:concurrently})
+   -> 1.5814s
+== 20230524190515 AddIndexAccountsOnDomainAndId: migrated (1.5820s) ===========
+
+I, [2024-05-12T16:24:01.385859 #74221]  INFO -- : Migrating to FixAccountDomainCasing (20230524192812)
+== 20230524192812 FixAccountDomainCasing: migrating ===========================
+[strong_migrations] DANGER: No lock timeout set
+-- execute("UPDATE accounts SET domain = lower(domain) WHERE domain IS NOT NULL AND domain != lower(domain)")
+   -> 0.6623s
+== 20230524192812 FixAccountDomainCasing: migrated (0.6630s) ==================
+
+I, [2024-05-12T16:24:02.053983 #74221]  INFO -- : Migrating to AddIndexInstancesOnReverseDomain (20230524194155)
+== 20230524194155 AddIndexInstancesOnReverseDomain: migrating =================
+[strong_migrations] DANGER: No lock timeout set
+-- add_index(:instances, "reverse('.' || domain), domain", {:name=>:index_instances_on_reverse_domain, :algorithm=>:concurrently})
+   -> 0.0091s
+== 20230524194155 AddIndexInstancesOnReverseDomain: migrated (0.0101s) ========
+
+I, [2024-05-12T16:24:02.068641 #74221]  INFO -- : Migrating to AddPrimaryKeyToAccountsTagsJoinTable (20230531153942)
+== 20230531153942 AddPrimaryKeyToAccountsTagsJoinTable: migrating =============
+[strong_migrations] DANGER: No lock timeout set
+-- execute("ALTER TABLE accounts_tags ADD PRIMARY KEY USING INDEX index_accounts_tags_on_tag_id_and_account_id")
+   -> 0.0021s
+-- execute("ALTER INDEX index_accounts_tags_on_tag_id_and_account_id RENAME TO accounts_tags_pkey")
+   -> 0.0011s
+== 20230531153942 AddPrimaryKeyToAccountsTagsJoinTable: migrated (0.0058s) ====
+
+I, [2024-05-12T16:24:02.078596 #74221]  INFO -- : Migrating to AddPrimaryKeyToStatusesTagsJoinTable (20230531154811)
+== 20230531154811 AddPrimaryKeyToStatusesTagsJoinTable: migrating =============
+[strong_migrations] DANGER: No lock timeout set
+-- execute("ALTER TABLE statuses_tags ADD PRIMARY KEY USING INDEX index_statuses_tags_on_tag_id_and_status_id")
+   -> 0.0014s
+-- execute("ALTER INDEX index_statuses_tags_on_tag_id_and_status_id RENAME TO statuses_tags_pkey")
+   -> 0.0006s
+== 20230531154811 AddPrimaryKeyToStatusesTagsJoinTable: migrated (0.0046s) ====
+
+I, [2024-05-12T16:24:02.087150 #74221]  INFO -- : Migrating to AddExclusiveToLists (20230605085710)
+== 20230605085710 AddExclusiveToLists: migrating ==============================
+[strong_migrations] DANGER: No lock timeout set
+-- select_one("SELECT current_setting('server_version_num') AS v")
+   -> 0.0006s
+-- add_column(:lists, :exclusive, :boolean, {:default=>false, :limit=>nil, :null=>false})
+   -> 0.0024s
+== 20230605085710 AddExclusiveToLists: migrated (0.0040s) =====================
+
+I, [2024-05-12T16:24:02.103837 #74221]  INFO -- : Migrating to AddTimeZoneToUsers (20230605085711)
+== 20230605085711 AddTimeZoneToUsers: migrating ===============================
+[strong_migrations] DANGER: No lock timeout set
+-- add_column(:users, :time_zone, :string)
+   -> 0.0009s
+== 20230605085711 AddTimeZoneToUsers: migrated (0.0022s) ======================
+
+I, [2024-05-12T16:24:02.110144 #74221]  INFO -- : Migrating to AddIndexBackupsOnUserId (20230630145300)
+== 20230630145300 AddIndexBackupsOnUserId: migrating ==========================
+[strong_migrations] DANGER: No lock timeout set
+-- add_index(:backups, :user_id, {:algorithm=>:concurrently})
+   -> 0.0056s
+== 20230630145300 AddIndexBackupsOnUserId: migrated (0.0065s) =================
+
+I, [2024-05-12T16:24:02.120898 #74221]  INFO -- : Migrating to AddSuperappIndexToApplications (20230702131023)
+== 20230702131023 AddSuperappIndexToApplications: migrating ===================
+[strong_migrations] DANGER: No lock timeout set
+-- add_index(:oauth_applications, :superapp, {:where=>"superapp = true", :algorithm=>:concurrently})
+   -> 0.2235s
+== 20230702131023 AddSuperappIndexToApplications: migrated (0.2246s) ==========
+
+I, [2024-05-12T16:24:02.349537 #74221]  INFO -- : Migrating to AddIndexUserOnUnconfirmedEmail (20230702151753)
+== 20230702151753 AddIndexUserOnUnconfirmedEmail: migrating ===================
+[strong_migrations] DANGER: No lock timeout set
+-- add_index(:users, :unconfirmed_email, {:where=>"unconfirmed_email IS NOT NULL", :algorithm=>:concurrently})
+   -> 0.0515s
+== 20230702151753 AddIndexUserOnUnconfirmedEmail: migrated (0.0522s) ==========
+
+I, [2024-05-12T16:24:02.407706 #74221]  INFO -- : Migrating to AddPublishedAtToPreviewCards (20230724160715)
+== 20230724160715 AddPublishedAtToPreviewCards: migrating =====================
+[strong_migrations] DANGER: No lock timeout set
+-- add_column(:preview_cards, :published_at, :datetime)
+   -> 0.0017s
+== 20230724160715 AddPublishedAtToPreviewCards: migrated (0.0029s) ============
+
+I, [2024-05-12T16:24:02.414382 #74221]  INFO -- : Migrating to AddImageDescriptionToPreviewCards (20230725213448)
+== 20230725213448 AddImageDescriptionToPreviewCards: migrating ================
+[strong_migrations] DANGER: No lock timeout set
+-- select_one("SELECT current_setting('server_version_num') AS v")
+   -> 0.0006s
+-- add_column(:preview_cards, :image_description, :string, {:default=>"", :limit=>nil, :null=>false})
+   -> 0.0023s
+== 20230725213448 AddImageDescriptionToPreviewCards: migrated (0.0036s) =======
+
+I, [2024-05-12T16:24:02.421588 #74221]  INFO -- : Migrating to AddIndexableToAccounts (20230814223300)
+== 20230814223300 AddIndexableToAccounts: migrating ===========================
+[strong_migrations] DANGER: No lock timeout set
+-- select_one("SELECT current_setting('server_version_num') AS v")
+   -> 0.0007s
+-- add_column(:accounts, :indexable, :boolean, {:default=>false, :limit=>nil, :null=>false})
+   -> 0.0027s
+== 20230814223300 AddIndexableToAccounts: migrated (0.0041s) ==================
+
+I, [2024-05-12T16:24:02.429595 #74221]  INFO -- : Migrating to CreateGlobalFollowRecommendations (20230818141056)
+== 20230818141056 CreateGlobalFollowRecommendations: migrating ================
+[strong_migrations] DANGER: No lock timeout set
+-- create_view(:global_follow_recommendations, {:materialized=>{:no_data=>true}})
+   -> 0.0118s
+-- add_index(:global_follow_recommendations, :account_id, {:unique=>true})
+   -> 0.0028s
+== 20230818141056 CreateGlobalFollowRecommendations: migrated (0.0159s) =======
+
+I, [2024-05-12T16:24:02.449709 #74221]  INFO -- : Migrating to CreateSoftwareUpdates (20230822081029)
+== 20230822081029 CreateSoftwareUpdates: migrating ============================
+[strong_migrations] DANGER: No lock timeout set
+-- create_table(:software_updates)
+   -> 0.0078s
+-- add_index(:software_updates, :version, {:unique=>true})
+   -> 0.0022s
+== 20230822081029 CreateSoftwareUpdates: migrated (0.0114s) ===================
+
+I, [2024-05-12T16:24:02.465210 #74221]  INFO -- : Migrating to AddIndexAccountStatsOnLastStatusAtAndAccountId (20230907150100)
+== 20230907150100 AddIndexAccountStatsOnLastStatusAtAndAccountId: migrating ===
+[strong_migrations] DANGER: No lock timeout set
+-- add_index(:account_stats, [:last_status_at, :account_id], {:order=>{:last_status_at=>"DESC NULLS LAST"}, :algorithm=>:concurrently})
+   -> 0.9589s
+== 20230907150100 AddIndexAccountStatsOnLastStatusAtAndAccountId: migrated (0.9598s) 

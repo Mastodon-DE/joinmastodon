@@ -43,7 +43,7 @@ Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee 
 
 <br/>
 
-[[Jeder Log für diesen Blogeintrag zum Durchlesen](https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt)]
+<a style="text-decoration: none;" href="https://troet.cafe" target="_blank" rel="noopener noreferrer">troet.cafe</a> und <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag zum Durchlesen</a> 
 
 <br/>
 

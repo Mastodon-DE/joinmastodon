@@ -40,15 +40,7 @@ node .output/server/index.mjs
 
 ## Server Deployment
 
-Go to `/home/jessew/docker/joinmastodon`
-
-To update the server, run the following commands:
-
-```
-sudo docker compose pull
-sudo docker compose down
-sudo docker compose up -d
-```
+*Now done automatically and via GitHub pages*
 
 
 ## Development

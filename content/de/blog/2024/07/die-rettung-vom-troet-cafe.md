@@ -96,14 +96,10 @@ In der Nacht vom 11.05.2024 hat Martin ein pg_dump von der troet.cafe Datenbank 
 ## Fehler beim Importieren
 
 Auf dem neuen Datenbank-Server hat Martin die Datenbank "mastodon_production" gelöscht um Platz für den import / pg_restore zu machen, welcher die Exportierte Datenbank mit dem gleichen Namen importieren würde. 
-```
-drop database mastodon_production;
-```
+`drop database mastodon_production;` </br>
 *Löscht die Datenbank „mastodon_production“*
 </br></br>
-```
-pg_restore -Fc -v -c -j 16 -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
-```
+`pg_restore -Fc -v -c -j 16 -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql` </br>
 *Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*
 <br/><br/>
 

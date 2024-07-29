@@ -179,7 +179,7 @@ root@pg:/etc/postgresql/15/main# pg_restore -p 5432 -Fc -v -c -s -U mastodon -n 
 *Importiert das Schema (-s) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*
 <br/><br/>
 
-Dieser Befehl erstellte den 003 Log (``) (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23.txt`</a>) welchen Ich mir seither nicht mehr angesehen habe. 
+Dieser Befehl erstellte den 003 Log (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23.txt`</a>) welchen Ich mir seither nicht mehr angesehen habe. 
 
 ##### Import von Schema aus spezifischen Schema-Dump (Erfolgreich)
 
@@ -203,9 +203,13 @@ pg_restore -p 5432 -j 16 -Fc -v -a  -U mastodon -n public --no-owner --role=mast
 *Importiert die Daten (-a) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).* 
 <br/><br/>
 
-Dieser resultierte in den Log 003 (`troet.cafe_004_pg_restore_data-only_psql-15_2024-05-11-13-16`). 
+Dieser resultierte in den Log 004 (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-004-pg_restore-data-only-psql-15-2024-05-11-13-16.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_004_pg_restore_data-only_psql-15_2024-05-11-13-16.txt`</a>).
 
-Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting für eine Mittagspause beendeten und um ~15:30 wieder anfangen wollten. Martin nahm sich jedoch keine Mittagspause, denn zur gleichen Zeit berichtete er mir über diesen Import und mit wie vielen Fehlermeldungen er wieder fehlgeschlagen ist. Ich nahm mir auch keine Mittagspause sondern nahm die Zeit einen Beitrag auf Mastodon zu verfassen und mit Interessierten zu kollaborieren um mit den bisher aufgezeichneten Fehlern öffentlich um Hilfe zu bitten. Er verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus, Die Datenbanksoftware Postgresql schätzt lediglich wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte. 
+Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting für eine Mittagspause beendeten und um ~15:30 wieder anfangen wollten. Martin nahm sich jedoch keine Mittagspause, denn zur gleichen Zeit berichtete er mir über diesen Import und mit wie vielen Fehlermeldungen er wieder fehlgeschlagen ist. Ich nahm mir auch keine Mittagspause sondern nahm die Zeit einen Beitrag auf Mastodon zu verfassen und mit Interessierten zu kollaborieren um mit den bisher aufgezeichneten Fehlern öffentlich um Hilfe zu bitten. 
+
+<img title="Die unterschiedlichen Größen der beiden Datenbanken" alt="Ein Screenshot von zwei Terminal-Fenstern auf MacOS. Beide zeigen die Ergebnisse eines Checks der Größe einer jeden Tabelle in der Datenbank. Die IP Adressen der einzelnen Fenster sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-005-comparison-of-database-size-2024-05-11-13-58.jpeg">
+
+Er verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus. Das hier gezeigte Bild ist der jeweilige Output der Datenbanksoftware Postgresql, welche lediglich schätzt wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. **Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte.**
 
 #### Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger
 
@@ -296,13 +300,13 @@ Das Skript: https://wiki.postgresql.org/wiki/Show_database_bloat
 
 Dadurch stellte sich für uns heraus, dass die Datenbank wirklich nur 30GB klein ist, der Rest ist der Index dieser Datenbank sowie einfach übergebliebener Müll. 
 
-Jain schrieb das Skript zudem so um, dass es von einem User ausgeführt und in eine Datei ge-piped werden konnte. Beide Dateien, sowohl vom neuen als auch vom alten Server existieren, Martin muss sie mir nur lediglich zusenden.
+Jain schrieb das Skript zudem so um, dass es von einem User ausgeführt und in eine Datei ge-piped werden konnte. Beide Dateien, sowohl vom neuen als auch vom alten Server existieren.
 
-https://pastebin.com/n0jD4EGM
+Dieses umgeschriebene Skript wurde von Jain original in [diesem Pastebin](https://pastebin.com/n0jD4EGM) uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a>) nachschlagen. 
 
 Die Erklärung der Diskrepanz erklärte sich somit für uns zu einem Teil, doch das nicht-Erstellen eines Indexes bereitete uns Probleme und der Fakt, dass wir bisher nur eines der zwei (2) Probleme gelöst haben machte uns auch Sorgen!
 
-ENDE VON LÖSUNG DES ERSTEN PROBLEMS
+**ENDE VON LÖSUNG DES ERSTEN PROBLEMS**
 
 ### Fehler 2: index_preview_cards_on_url
 

@@ -52,7 +52,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 
 *Wir versuchen die Datenbank auf einen neuen Server zu übertragen und sie dort einzuspielen.*
 
-01. Exakt gleichen Datenbank Cloud-Server bestellen wie für troet.cafe und muenchen.social. (CPX31 | x86 | 160 GB | eu-central)
+01. Exakt gleichen Datenbank Cloud-Server bestellen wie für troet.cafe und muenchen.social. (`CPX31 | x86 | 160 GB | eu-central`)
 02. Alle muenchen.social Server herunterfahren. 
 03. Die Datenbank vom muenchen.social Datenbankserver exportieren und zum neuen Cloud-Server übertragen.
 04. Alle muenchen.social Server wieder hochfahren.
@@ -131,7 +131,7 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 
 Es ist 08:30 (*morgens*). Ich (Erik Uden) bin mit Martin in einem Jitsi Meeting, Nick ist nicht aufzufinden. Martin ist am 01. Tag noch die einzige Person die tatsächlich etwas einstellt und mit Kommandozeile etwas tut, alle anderen (*Anfangs nur Ich, doch ab ~15:40 auch Panda und Jain*) beraten nur. Wir haben recherchiert, Fakten herausgesucht, Skripte geschrieben und diktiert. Martin hat jedoch den relevanten Teil der Arbeit alleine gemacht. 
 
-Martin hatte vor vier (4) Monaten ein Image eines potenziellen DB-Servers erstellt mit v15.7 (Ubuntu 15.7-1.pgdg22.04+1) von Postgresql. Dieses hat er neu aufgesetzt auf einem Cloud-Server der identisch war wie der auf dem die jetzige Datenbank läuft (CPX31 | x86 | 160 GB | eu-central). 
+Martin hatte vor vier (4) Monaten ein Image eines potenziellen DB-Servers erstellt mit v15.7 (`Ubuntu 15.7-1.pgdg22.04+1`) von Postgresql. Dieses hat er neu aufgesetzt auf einem Cloud-Server der identisch war wie der auf dem die jetzige Datenbank läuft (`CPX31 | x86 | 160 GB | eu-central`). 
 
 In der Nacht vom 11.05.2024 hat Martin ein pg_dump von der troet.cafe Datenbank (mastodon_production) als ein komprimiertes Dateiformat erstellt und auf diesen neuen Server übertragen. Die komprimierte Datenbank-Datei war lediglich ~10GB groß, die troet.cafe Datenbank, inklusive Indexierung und Überbleibsel/Bloat, war auf der Live-Instanz 99GB groß. An diesem gesamten Tag haben wir nur mit diesen Datensatz gearbeitet. Wir haben zwischenzeitlich eine komprimierte und einen clear-text Export des Datenbank-Schemas gemacht, doch für den gesamten Zeitraum des heutigen Tages war dieser Datensatz der einzige Datensatz mit dem wir gearbeitet haben. 
 
@@ -357,6 +357,10 @@ Dadurch stellte sich für uns heraus, dass die Datenbank wirklich nur 30GB klein
 Jain schrieb das Skript zudem so um, dass es von einem User ausgeführt und in eine Datei ge-piped werden konnte. Beide Dateien, sowohl vom neuen als auch vom alten Server existieren.
 
 Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebin.com/n0jD4EGM" target="_blank" rel="noopener noreferrer">diesem Pastebin</a>) uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a>) nachschlagen. 
+
+Da das ergebnis eine Auflistung für jede Tabelle in der Datenbank hat (*290 Tabellen x 2 DBs*) findet sich dieser Output nicht direkt hier im Blogeintrag, jedoch hier (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md" target="_blank" rel="noopener noreferrer">`troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md`</a>) nachlesbar.
+
+
 
 Die Erklärung der Diskrepanz erklärte sich somit für uns zu einem Teil, doch das nicht-Erstellen eines Indexes bereitete uns Probleme und der Fakt, dass wir bisher nur eines der zwei (2) Probleme gelöst haben machte uns auch Sorgen!
 

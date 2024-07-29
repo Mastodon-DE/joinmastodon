@@ -32,12 +32,12 @@ Eigentlich bräuchte diese Geschichte, wie Martin, Nick und Ich nun eigentlich z
 Da viele die Situation zur Rettung vom troet.cafe und muenchen.social durch die Spamwelle, sowie allen möglichen kleinen Updates, verfolgten, gab es viele Menschen die sofort bereit waren zu helfen und ihre Unterstützung angeboten haben! Ich notierte mir alle Personen die helfen könnten und wollte diese vor dem Wochenende anschreiben um bereits im Voraus ein Team an Expert:Innen zu haben mit denen wir die Updates und Fehler gemeinsam angehen. Leider wurde aus dem Plan nichts und Ich erstellte spontan eine Gruppe als wir bereits angefangen haben und verzweifelten, die Vorarbeit mit der Liste erstellte sich jedoch als unfassbar hilfreich heraus! 
 
 Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https://mastodon.de/@freestyle/), [Rodirik](https://mastodon.de/@Rodirik) und [mir](https://mastodon.de/@ErikUden) haben folgende Personen uns massiv bei der Rettung vom troet.cafe geholfen:
-- Patrick Fedick [@patrickf@mastodon.de](https://mastodon.de/@patrickf)
-- Panda [@panda@pandas.social](https://pandas.social/@panda)
-- André Jaenisch [@andre@fedi.jaenis.ch](https://fedi.jaenis.ch/@andre)
-- osmodia [@osmodia@chaos.social](https://chaos.social/@osmodia)
-- Jain [@Jain@blob.cat](https://blob.cat/users/Jain)
-- crymond [@crymond@procial.tchncs.de](https://procial.tchncs.de/@crymond)
+- Patrick Fedick <a style="text-decoration: none;" href="https://mastodon.de/@patrickf" target="_blank" rel="noopener noreferrer">@patrickf@mastodon.de</a>
+- Panda <a style="text-decoration: none;" href="https://pandas.social/@panda" target="_blank" rel="noopener noreferrer">@panda@pandas.social</a>
+- André Jaenisch <a style="text-decoration: none;" href="https://fedi.jaenis.ch/@andre" target="_blank" rel="noopener noreferrer">@andre@fedi.jaenis.ch</a>
+- osmodia <a style="text-decoration: none;" href="https://chaos.social/@osmodia" target="_blank" rel="noopener noreferrer">@osmodia@chaos.social</a>
+- Jain <a style="text-decoration: none;" href="https://blob.cat/users/Jain" target="_blank" rel="noopener noreferrer">@Jain@blob.cat</a>
+- crymond <a style="text-decoration: none;" href="https://procial.tchncs.de/@crymond" target="_blank" rel="noopener noreferrer">@crymond@procial.tchncs.de</a>
 
 Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee gebracht hat und wo geholfen hat, doch zum Schluss findet ihr noch eine ganz klare Danksagung!
 
@@ -82,6 +82,9 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 <br/><br/>
 
 
+<img title="Die Infrastruktur vom Troet.Cafe" alt="Ein Bild welches die drei Web-Server sowie die zwei Worker-Server verbunden mit der Datenbank und dem Load-Balancer zeigt und somit den Aufbau vom troet.cafe darstellt. Die IP Adressen der einzelnen Server sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-network-infrastructure-2024-05-12-09-24.png">
+
+
 # Tag 1 der Rettung
 **Total:** 10:20 Stunden an Arbeit für und am Tag 1.
 
@@ -111,7 +114,7 @@ Als dieser Befehl ausgeführt wurde haben wir das erste (1) Meeting beendet und 
 
 Die resultierende Datenbank war nach dem Import nur 33GB groß. Verglichen zu der 99GB Datenbank auf troet.cafe, so dachten wir, mussten viele Daten verloren gegangen sein. Wir hatten zu diesem Zeitpunkt nicht unrecht, jedoch aus anderen Gründen.
 
-Dies hat den 01. Log erzeugt (`troet.cafe_001.0_pg_restore_psql-15_2024-05-11-10-48.log`) und wurde in 1.5 analysiert (`troet.cafe_001.5_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
+Dies hat den 01. Log erzeugt (`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`) und wurde in 1.5 analysiert (`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
 
 Es waren zwei (2) unterschiedliche Fehler zu erkennen:
 - „foreign key constraints“ Probleme (vier Mal)
@@ -151,6 +154,7 @@ Als wir die Datenbank nun versuchten bei der gleichen Version (10.23) zu importi
 pg_restore -p 5433 -Fc -v -c -j 16 -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
 ```
 *Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 10.23 (-p 5433) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*
+<br/><br/>
 
 Sehr viele der Fehler sollen jedoch "table does not exist" beinhaltet haben was uns zu diesem Zeitpunkt nicht schlüssig erschien da diese Tables nicht existieren sollten da wir die Datenbank vor dem Import gelöscht hatten. 
 
@@ -170,8 +174,9 @@ Der Befehl war der folgende:
 root@pg:/etc/postgresql/15/main# pg_restore -p 5432 -Fc -v -c -s -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
 ```
 *Importiert das Schema (-s) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*
+<br/><br/>
 
-Dieser Befehl erstellte den 002 Log (`troet.cafe_002.0_pg_restore_schema_psql-15_2024-05-11-12-23`) welchen Ich mir seither nicht mehr angesehen habe. 
+Dieser Befehl erstellte den 002 Log (`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23`) welchen Ich mir seither nicht mehr angesehen habe. 
 
 ##### Import von Schema aus spezifischen Schema-Dump (Erfolgreich)
 
@@ -182,6 +187,7 @@ Der Befehl zum Importieren des Datenbank-Schemas ohne Daten ist der folgende:
 pg_restore -p 5432 -Fc -v -c --if-exists  -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production-schema.sql
 ```
 *Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production-schema.sql“ welche ausschließlich ein Datenbank-Schema beinhaltet, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).* 
+<br/><br/>
 
 #### Import von Datenbank auf funktionierendes Datenbank-Schema
 
@@ -192,8 +198,9 @@ Der Befehl uum Importieren der Datenbank-Daten ohne Schema ist der folgende:
 pg_restore -p 5432 -j 16 -Fc -v -a  -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
 ```
 *Importiert die Daten (-a) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).* 
+<br/><br/>
 
-Dieser resultierte in den Log 003 (`troet.cafe_003.0_pg_restore_data-only_psql-15_2024-05-11-13-16`). 
+Dieser resultierte in den Log 003 (`troet.cafe_004_pg_restore_data-only_psql-15_2024-05-11-13-16`). 
 
 Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting für eine Mittagspause beendeten und um ~15:30 wieder anfangen wollten. Martin nahm sich jedoch keine Mittagspause, denn zur gleichen Zeit berichtete er mir über diesen Import und mit wie vielen Fehlermeldungen er wieder fehlgeschlagen ist. Ich nahm mir auch keine Mittagspause sondern nahm die Zeit einen Beitrag auf Mastodon zu verfassen und mit Interessierten zu kollaborieren um mit den bisher aufgezeichneten Fehlern öffentlich um Hilfe zu bitten. Er verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus, Die Datenbanksoftware Postgresql schätzt lediglich wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte. 
 
@@ -224,6 +231,7 @@ Der Befehl zum Importieren des Datenbank-Schemas bleibt der folgende:
 pg_restore -p 5432 -Fc -v -c --if-exists -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production-schema.sql
 ```
 *Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production-schema.sql“ welche ausschließlich ein Datenbank-Schema beinhaltet, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*
+<br/><br/>
 
 Es ist anzumerken das man hier nicht ausschließlich das Schema importieren muss da wir mit einem Dump agierten der ausschließlich das Schema beinhaltete. 
 
@@ -234,6 +242,7 @@ Daraufhin führten wir den gleichen Befehl, zum ausschließlichen Importieren de
 pg_restore -p 5432 -j 16 -Fc -a -v -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production_2024-05-11.sql
 ```
 *Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, erzeugt dabei keinen Index und beachtet keine Foreign-Key Constraints (--disable-triggers), löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*
+<br/><br/>
 
 Dieser Import gab viele Fehlermeldungen aus und hat nicht funktioniert. Es resultierte in eine Datenbank mit der Größe von 36GB. Die Fehlermeldungen haben wir nicht aufgezeichnet doch sie bezogen sich vor allem auf Rechte und das es uns nicht befugt sei gewisse Trigger zu überspringen.
 
@@ -331,36 +340,40 @@ Ich schaute in die neu erstellte „schema.sql“ mit Nano indem Ich nach „ind
 
 Nachdem Ich diesen Schema-Dump auf den neuen Datenbank-Server übertragen hatte, ging Ich auf diesen, machte mich selbst zum postgres user, öffnete postgresql, löschte die bisher fehlerhaft importierte Mastodon-Datenbank, erstellte eine neue, leere Datenbank mit gleichen Namen, hab Postgresql verlassen und zu guter letzt importierte Ich das clear-Text Schema und darauf die Daten innerhalb des Datenbank-Dumps. 
 
-```su - postgres``` </br>
+`su - postgres` </br>
 *Macht mich zum postgres user*
 
-```psql``` </br>
+`psql` </br>
 *Öffnet die Postgresql Software*
 
-```drop database mastodon_production;``` </br>
+`drop database mastodon_production;` </br>
 *Löscht die mastodon_production Datenbank*
 
-```CREATE DATABASE mastodon_production;``` </br>
+`CREATE DATABASE mastodon_production;` </br>
 *Erstellt eine leere mastodon_production Datenbank*
 
-```\q``` </br>
+`\q` </br>
 *Verlässt die Postgresql Software*
 
-```cat /backup/schema.sql | psql -d mastodon_production -U mastodon -``` </br>
+`cat /backup/schema.sql | psql -d mastodon_production -U mastodon -` </br>
 *Importiert das Datenbank-Schema-Dump in die mastodon_production Datenbank als User mastodon*
-=> Hier ungefähr ist ein Fehler für den 02. Tag aufgekommen. Wir wussten zwar nun das wir durch das Importieren eines clear-Text Schemas nicht die Indexierungsmethode ändern, dieser Weg also nicht Helfen würde, doch beinhaltete die Lösung eine ähnliche Herangehensweise welche ein clear-Text Schema welches mit genau diesem Befehl importiert wird benötigt. Was wir beim kopieren dieses Befehls jedoch missachteten war, dass wir ihn als postgres User ausführten. Auch wenn wir im Befehl eindeutig den Postgresql-User mastodon als Auszuführenden dieses Imports definieren macht dies den User mastodon lediglich zum Besitzenden der Tabellen **innerhalb** der Datenbank, nicht aber zum Besitzenden der Datenbank selbst! Somit war als *Owner* der Datenbank der User postgres angegeben, was später massiv Probleme und auch mehrere Stunden an Recherche sowie Trugschlüssen auslöste. 
 
-```psql``` </br>
+<sub>**Notiz:** Hier ungefähr ist ein Fehler für den 02. Tag aufgekommen. Wir wussten zwar nun das wir durch das Importieren eines clear-Text Schemas nicht die Indexierungsmethode ändern, dieser Weg also nicht Helfen würde, doch beinhaltete die Lösung eine ähnliche Herangehensweise welche ein clear-Text Schema welches mit genau diesem Befehl importiert wird benötigt. Was wir beim kopieren dieses Befehls jedoch missachteten war, dass wir ihn als postgres User ausführten. Auch wenn wir im Befehl eindeutig den Postgresql-User mastodon als Auszuführenden dieses Imports definieren macht dies den User mastodon lediglich zum Besitzenden der Tabellen **innerhalb** der Datenbank, nicht aber zum Besitzenden der Datenbank selbst! Somit war als *Owner* der Datenbank der User postgres angegeben, was später massiv Probleme und auch mehrere Stunden an Recherche sowie Trugschlüssen auslöste.</sub>
+
+`psql` </br>
 *Öffnet die Postgresql Software*
 
-```\dt``` </br>
+`\dt` </br>
 *Zeigt alle Tabellen im jetzigen Schema*
 
-```\q``` </br>
+`\q` </br>
 *Verlässt die Postgresql Software*
 
-```pg_restore -p 5432 -j 16 -Fc -a -v -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production_2024-05-11.sql``` </br>
+```
+pg_restore -p 5432 -j 16 -Fc -a -v -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production_2024-05-11.sql
+```
 *Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, erzeugt dabei keinen Index und beachtet keine Foreign-Key Constraints (--disable-triggers), löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*
+<br/><br/>
 
 Daraufhin bekamen wir die gleiche Fehlermeldung:
 
@@ -421,7 +434,9 @@ Die Datenbank war nach dem Re-Index nur noch 40GB (*-4GB*) groß, das lag daran 
 
 Nun versuchten wir den auskommentierten *preview_cards_on_url* Index wieder einzubauen!
 
-`mastodon_production=# CREATE UNIQUE INDEX index_preview_cards_on_url ON public.preview_cards USING btree (url);` 
+```
+mastodon_production=# CREATE UNIQUE INDEX index_preview_cards_on_url ON public.preview_cards USING btree (url);
+```
 
 Folgendes war die Fehlermeldung:
 
@@ -529,7 +544,9 @@ Wegen mir gerade nicht mehr bekannten Komplikationen bei dem Export des Dumps (*
 
 Um 09:30 war das finale dump der alten troet.cafe Datenbank mit den folgenden Befehl in Auftrag gegeben worden:
 
-`su mastodon --c "pg_dump --quote-all-identifiers -Fc mastodon_production > /backup/mastodon_production-manuelles-backup.sql"` 
+```
+su mastodon --c "pg_dump --quote-all-identifiers -Fc mastodon_production > /backup/mastodon_production-manuelles-backup.sql"
+``` 
 
 Dies sollte nur 20 Minuten dauern. Es hat letztendlich 38 Minuten bis 10:08 gedauert den pg_dump zu erstellen.  
 Doch zurück zu 09:35.
@@ -568,13 +585,13 @@ Beim ersten Import des Schemas kam eine Fehlermeldung auf, dies lag daran das wi
 
 Wir droppten erneut alle existierenden Datenbanken auf dem neuen Datenbank-Server. 
 
-```su - postgres``` </br>
+`su - postgres` </br>
 *Macht mich zum postgres user*
 
-```psql``` </br>
+`psql` </br>
 *Öffnet die Postgresql Software*
 
-```drop database mastodon_production;``` </br>
+`drop database mastodon_production;` </br>
 *Löscht die mastodon_production Datenbank*
 
 
@@ -583,28 +600,30 @@ Wir erstellten die Datenbank namentlich und führten den richtigen Schema-only I
 
 
 
-```CREATE DATABASE mastodon_production;``` </br>
+`CREATE DATABASE mastodon_production;` </br>
 *Erstellt eine leere mastodon_production Datenbank*
 
-```\q``` </br>
+`\q` </br>
 *Verlässt die Postgresql Software*
 
 Daraufhin nahmen wir den richtigen Befehl und das modifizierte Schema war um 10:24 angelegt. Dieses modifizierte Schema würde keinen Index für `preview_cards_on_url` beim Importieren der Daten erstellen und somit nicht daran scheitern. 
 
-`cat /backup/schema.sql | psql -d mastodon_production -U mastodon -` </br>
+```cat /backup/schema.sql | psql -d mastodon_production -U mastodon -```
 *Importiert das Datenbank-Schema-Dump in die mastodon_production Datenbank als User mastodon*
+<br/><br/>
 
-**Notiz:** Hier haben wir einen signifikanten Fehler gemacht, nämlich das die Tabellen der Datenbank zwar als 
-User Mastodon importiert wurden, die Datenbank selbst jedoch erstellt wurde als User „postgres“ oder SuperUser.
- Der *Owner* der Datenbank war somit ein nicht-Mastodon User, was später große Probleme auslöste. 
+<sub>**Notiz:** Hier haben wir einen signifikanten Fehler gemacht, nämlich das die Tabellen der Datenbank zwar als User Mastodon importiert wurden, die Datenbank selbst jedoch erstellt wurde als User „postgres“ oder SuperUser. Der *Owner* der Datenbank war somit ein nicht-Mastodon User, was später große Probleme auslöste.</sub>
 
 Nun können wir die Daten überhaupt importieren, dann modifizieren, ggf. auch löschen, ohne sie an der Live-Datenbank verändern zu müssen. Hätten wir an der originalen Datenbank die Daten verändert und irgendwas falsch gemacht, dann wären diese Datensätze, sowie troet.cafe selbst, irreversibel zerstört. So kompliziert dieser Prozess war, er war absolut notwendig um nichts falsch zu machen, denn um überhaupt herauszufinden wo der Fehler liegt müssen wir an den Daten experimentieren können, das geht nur in einer exakten Kopie der Datenbank welche wir jetzt das erste Mal geschaffen haben. 
 
 Martin sendete mir das Passwort für die Datenbank und den Mastodon-User. Wir sollten dieses Passwort dringend ändern da es in vielen Chat-Logs sowie einigen unverschlüsselten Datentransfers benutzt wurde. Der Befehl zur Datenbankimportierung (pg_restore) mit ausschließlich den Daten wurde erfolgreich gestartet um 10:27. 
 
 Der Befehl muss ungefähr so ausgesehen haben:
-```pg_restore -p 5432 -j 16 -Fc -a  -v  -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production-2024-05-12.sql``` </br>
+```
+pg_restore -p 5432 -j 16 -Fc -a  -v  -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production-2024-05-12.sql
+``` 
 *Importiert ausschließlich die Daten (-a) innerhalb der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-12.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, erzeugt dabei keinen Index und beachtet keine Foreign-Key Constraints (--disable-triggers), löscht davor alle vorherigen Einträge (-c) und gibt den Text verbös aus (-v).*
+<br/><br/>
 
 Es war notwendig das aus dem kompletten Datenbank-Backup ausschließlich die Daten, nicht auch das Schema, importiert wurden, da wir das Schema extra separat modifiziert und dann importiert haben, somit ist der „-a“ Tag notwendig.  
 
@@ -673,17 +692,6 @@ Wir bekamen folgende Fehlermeldung:
 
 Martin schaut daraufhin nach und stellt viel um und erkennt am *pgbouncer* des neuen Datenbank-Servers noch ein falsches Setup. 
 
-
-INSERT WHERE NECESSARY
-```
-
-Dies war jedoch in Wahrheit das Problem des Erstellens der *mastodon_production* Datenbank auf dem neuen Datenbank-Server als postgres-User. Wie vorher im Protokoll erwähnt besitzt der User welcher über pgbouncer versucht die mastodon_production Datenbank zu editieren diese gar nicht sondern der postgres User da der diese erstellt hat. 
-
-Vielleicht war das Setup tatsächlich falsch, doch das eigentliche Problem war der falsche Besitzer der Datenbank. 
-
-
-```
-
 Wir mussten dem Mastodon-User auf dem Datenbank-Server wegen einem vorherigen Befehl die SuperUser Rechte geben, wir haben ihm nun die SuperUser Rechte wieder entzogen, da wir dachten das dies vielleicht der Grund für die `authentication failure` war. Folgender Befehl wurde genutzt:
 
 `ALTER USER mastodon WITH NOSUPERUSER;` (um 11:38) 
@@ -705,17 +713,13 @@ Um 11:46 vermuteten wir, dass der pgbouncer vielleicht nicht die Rechte hat um d
 
 Daraufhin haben wir nachgedacht das es eventuell an der Userlist liegen könnte, also die Liste an Usern über welche der pgbouncer verwalten kann mit Beifügung des gehashten md5 Passwort des jeweiligen Users. Wir kopierten also die Userlist mit den gehashten md5 Passwörtern vom alten Datenbank-Server zum neuen. 
  
-Die `pgbouncer.ini` Datei wurde editiert und die Einstellungen angepasst. 
+Wir schauten also in der offiziellen [Mastodon-Dokumentation über PgBouncer Userlists](https://github.com/felx/mastodon-documentation/blob/master/Running-Mastodon/PgBouncer-guide.md#configuring-pgbouncer-1) nach.
 
-(nicht sicher was das ist)
-```
-https://github.com/felx/mastodon-documentation/blob/master/Running-Mastodon/PgBouncer-guide.md
-https://github.com/felx/mastodon-documentation/blob/master/Running-Mastodon/PgBouncer-guide.md#configuring-pgbouncer-1
-```
+Die `pgbouncer.ini` Datei wurde editiert und die Einstellungen angepasst. 
  
 Wir verifizierten um 12:03 anhand von journalctl (*der Logs der Datenbank*) das es funktioniert. Der worker3-Server konnte nun mit dem Datenbank-Server kommunizieren!
 
-Weil die Userlist nicht vorhanden war konnte pgbouncer das Passwort nicht verifizeren und somit galt unsere Aktion und unser User als unauthentifiziert, deshalb `authentication failure`.
+Wir dachten, dass weil die Userlist nicht vorhanden war konnte pgbouncer das Passwort nicht verifizeren und somit galt unsere Aktion und unser User als unauthentifiziert, deshalb `authentication failure`.
 
 Da jetzt die tootctl Software vom worker3-Server die Datenbank des neuen Datenbank-Servers editieren konnte schien uns eigentlich nichts mehr im Weg zu sein. Das Mastodon-Fix Skript (*maintenance task*) um alle unsere Probleme zu lösen und eine Kopie der Datenbank welche alle diese Probleme hatte. So leicht war es dann leider auch nicht...
  
@@ -729,7 +733,7 @@ Daraufhin bekamen wir eine Antwort welche die komplette Zeit des restlichen Tage
 
 > "Your version of the database schema is more recent than this script, this may cause unexpected errors."
 
-- Vom alten Worker-Server. 
+— Vom alten Worker-Server. 
 
 *Was bedeutet das?* Naja, das Skript von tootctl welches unsere Datenbank-Probleme lösen sollte war veraltet, denn das Datenbank-Schema wies sich als eine zu neue Version aus. Da sich das Schema von Datenbanken oftmals verändern kann wird in jeder Datenbank eine Versionsnummer gespeichert, so können Skripte welche gewisse Probleme lösen sollen gucken ob sie überhaupt dieser Datenbank helfen würden, oder vielleicht ausversehen Dinge verändern welche die Datenbank weiter kaputtmachen. Wenn eine Datenbank eine neue Tabelle mit neuen Daten hinzugefügt bekommt weil Mastodon ein neues Feature hat, zum Beispiel, dann könnte ein Skript welches gewisse Daten nach einem gewissen Schema löscht vielleicht mit diesen neuen Daten gar nicht umgehen. Deshalb, wenn gravierende Veränderungen an einer Datenbank und dessen Aufbau (Schema) gemacht werden, dann wird die Versionsnummer geändert. Jedes Fix-Skript / jede *maintenance task* hat ein Spektrum an Versionen von Datenbank-Schemen mit denen es arbeiten kann, doch ab einer gewissen Version wird ein neues Skript benötigt. Im Normalfall wird das Skript ge-updated wenn sich auch die Datenbank updated. Im Normalfall sollten diese Versionsnummern niemals inkompatibel miteinander sein. **Troet.Cafe ist kein Normalfall.** 
 
@@ -1170,7 +1174,9 @@ Wir merkten nur, dass wir kurz davor waren das ganze tatsächlich, hoffentlich o
 Wenn wir nun Hetzner's Loadbalancer anschalten würden, welcher die erste Anlaufstelle für die DNS Einträge der troet.cafe Domain sind und jegliches Traffic zwischen den web1, web2, und web3 Server aufteilt, dann würde troet.cafe tatsächlich auch wieder online gehen. 
 
 Um 19:59 führten wir folgende Befehle auf allen Worker-Servern aus:
-`systemctl restart mastodon-sk-pull.service mastodon-sk-push.service mastodon-sidekiq mastodon-sidekiq-schedulers.service`
+```
+systemctl restart mastodon-sk-pull.service mastodon-sk-push.service mastodon-sidekiq mastodon-sidekiq-schedulers.service
+```
 Dies würde jeden dortigen relevanten Mastodon-Service neustarten. 
 
 Gleichzeitig starteten wir alle Web-Server neu um den gleichen Effekt zu erzielen. 
@@ -1213,7 +1219,7 @@ Mit einer gesamten Zeit von 13 Stunden, 10 Minuten und 21 Sekunden innerhalb der
 
 Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenchen.social?***
 
-# Zeitaufwendung
+# Zeitaufzeichnung
 
 **Termine für den ersten Tag:**
 - `08:30 - 09:55 (01:25h) Meeting mit Martin und Erik Uden`
@@ -1240,10 +1246,11 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.20 | 17:20 - 18:42 (01:22h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.20 | 19:34 - 23:51 (04:17h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.29 | 17:34 - 18:22 (00:48h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.07.29 | 19:14 - 22:00 (02:46h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 
-**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski. 
+<sub>**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski.</sub>
 
 
 # Danksagungen

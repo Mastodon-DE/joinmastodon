@@ -41,6 +41,8 @@ Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https
 
 Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee gebracht hat und wo geholfen hat, doch zum Schluss findet ihr noch eine ganz klare Danksagung!
 
+[[Jeder Log für diesen Blogeintrag zum Durchlesen](https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt)]
+
 <br/>
 
 Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung des troet.cafes*) uns notierten:
@@ -115,7 +117,7 @@ Als dieser Befehl ausgeführt wurde haben wir das erste (1) Meeting beendet und 
 
 Die resultierende Datenbank war nach dem Import nur 33GB groß. Verglichen zu der 99GB Datenbank auf troet.cafe, so dachten wir, mussten viele Daten verloren gegangen sein. Wir hatten zu diesem Zeitpunkt nicht unrecht, jedoch aus anderen Gründen.
 
-Dies hat den 01. Log erzeugt (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`</a>) und wurde in 1.5 analysiert (`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
+Dies hat den 01. Log erzeugt (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`</a>) und wurde in 1.5 analysiert (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md" target="_blank" rel="noopener noreferrer">`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`</a>). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
 
 Es waren zwei (2) unterschiedliche Fehler zu erkennen:
 - „foreign key constraints“ Probleme (vier Mal)
@@ -177,7 +179,7 @@ root@pg:/etc/postgresql/15/main# pg_restore -p 5432 -Fc -v -c -s -U mastodon -n 
 *Importiert das Schema (-s) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*
 <br/><br/>
 
-Dieser Befehl erstellte den 002 Log (`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23`) welchen Ich mir seither nicht mehr angesehen habe. 
+Dieser Befehl erstellte den 003 Log (``) (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23.txt`</a>) welchen Ich mir seither nicht mehr angesehen habe. 
 
 ##### Import von Schema aus spezifischen Schema-Dump (Erfolgreich)
 

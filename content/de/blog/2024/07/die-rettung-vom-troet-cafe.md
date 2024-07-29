@@ -213,11 +213,12 @@ Er verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit de
 
 #### Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger
 
-Während dieses Zeitraums hatte Jain auf Mastodon ein paar Tipps wie wir unsere Probleme lösen könnten, vor allem kam die Idee auf, das man am Anfang und ans Ende der Datenbank einen Text schreiben könnte, welcher Foreign-Key Checks überspringen würde, und somit die Fehlermeldungen bei uns vorbei wären. Dies wurde der Konsens und wurde unabhängig auch von (https://chaos.social/@leyrer) wiederholt, sowie drei weiteren Personen mir als Direktnachricht auf Matrix geschrieben.
+Während dieses Zeitraums hatte Jain auf Mastodon ein paar Tipps wie wir unsere Probleme lösen könnten, vor allem kam die Idee auf, das man am Anfang und ans Ende der Datenbank einen Text schreiben könnte, welcher Foreign-Key Checks überspringen würde, und somit die Fehlermeldungen bei uns vorbei wären. Dies wurde der Konsens und wurde unabhängig auch von Leyrer <a style="text-decoration: none;" href="https://chaos.social/@leyrer" target="_blank" rel="noopener noreferrer">@leyrer@chaos.social</a> <a href="https://chaos.social/@leyrer/112422531565158064" target="_blank" rel="noopener noreferrer">hier</a> wiederholt, sowie drei weiteren Personen mir als Direktnachricht auf Matrix geschrieben.
 
-Die dabei genannten StackOverflow Artikel waren die Folgenden:
-- https://stackoverflow.com/questions/5359968/restore-postgresql-db-from-backup-without-foreign-key-constraint-issue
-- https://dba.stackexchange.com/questions/118117/restoring-from-pg-dump-with-foreign-key-constraints
+Die dabei genannten StackOverflow und StackExchange Artikel waren die Folgenden:
+
+- <a href="https://stackoverflow.com/questions/5359968/restore-postgresql-db-from-backup-without-foreign-key-constraint-issue" target="_blank" rel="noopener noreferrer">Restore PostgreSQL db from backup without foreign key constraint issue</a>
+- <a href="https://dba.stackexchange.com/questions/118117/restoring-from-pg-dump-with-foreign-key-constraints" target="_blank" rel="noopener noreferrer">Restoring from pg_dump with foreign key constraints</a>
 
 Der Text wäre:
 
@@ -226,7 +227,6 @@ Anfang: `SET session_replication_role = replica;`
 Ende: `SET session_replication_role = origin;` 
 
 Diese Lösung haben wir letztendlich nicht genommen, doch sie führte uns in die richtige Richtung. Zuerst haben wir zu diesem Zeitpunkt mit keinem clear-text Datendump gearbeitet, sondern mit einer komprimierten SQL-Datei (*zu diesem Zeitpunkt praktisch eine Binary*), somit wäre das Einfügen von Text am Anfang sowie am Ende nicht möglich gewesen, außer wir hätten ein weiteres clear-text Backup der troet.cafe Datenbank angefertigt, was bei 99GB einfach von der größe nicht mehr möglich gewesen wäre. Selbst wenn wäre es schwierig eine Text-Datei von der größe zu bearbeiten. 
-
 
 
 ##### Importieren der Daten über die --disable-triggers Flag (Erfolgreich)

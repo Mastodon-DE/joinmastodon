@@ -1239,6 +1239,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.20 | 09:47 - 15:00 (05:13h) Reparatur der Webseite join-mastodon.de`
 - `2024.07.20 | 17:20 - 18:42 (01:22h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.20 | 19:34 - 23:51 (04:17h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.07.29 | 17:34 - 18:22 (00:48h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

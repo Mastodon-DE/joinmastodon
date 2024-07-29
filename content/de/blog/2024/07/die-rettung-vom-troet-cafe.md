@@ -101,6 +101,8 @@ Martin hatte vor vier (4) Monaten ein Image eines potenziellen DB-Servers erstel
 
 In der Nacht vom 11.05.2024 hat Martin ein pg_dump von der troet.cafe Datenbank (mastodon_production) als ein komprimiertes Dateiformat erstellt und auf diesen neuen Server übertragen. Die komprimierte Datenbank-Datei war lediglich ~10GB groß, die troet.cafe Datenbank, inklusive Indexierung und Überbleibsel/Bloat, war auf der Live-Instanz 99GB groß. An diesem gesamten Tag haben wir nur mit diesen Datensatz gearbeitet. Wir haben zwischenzeitlich eine komprimierte und einen clear-text Export des Datenbank-Schemas gemacht, doch für den gesamten Zeitraum des heutigen Tages war dieser Datensatz der einzige Datensatz mit dem wir gearbeitet haben. 
 
+</br>
+
 ## Fehler beim Importieren
 
 Auf dem neuen Datenbank-Server hat Martin die Datenbank "mastodon_production" gelöscht um Platz für den import / pg_restore zu machen, welcher die Exportierte Datenbank mit dem gleichen Namen importieren würde. 
@@ -131,6 +133,8 @@ Das *index_preview_cards_on_url* Problem war uns zu diesem Zeitpunkt auch nicht 
 
 Insgesamt gab es also fünf (5) Fehlermeldungen, diese wurden jedoch als fünfzehn (15) angezeigt, da jeder Fehler einen anderen Bedingte, welcher genau so oft ausschlug, jedoch doppelt gezählt wurde. 
 
+</br>
+
 ### Fehler 1: Foreign Key Constraints
 
 Wir haben die Fehler herausgesucht und auf Mastodon um Hilfe gebeten. Die Menschen die uns helfen wollten/konnten in eine Matrix-Gruppe hinzugefügt und mit den sensiblen Dateien hatten sie die Möglichkeit zu helfen. Die in dieser Gruppe genannten Vorschläge würden erst später relevant werden, zum Anfang der dritten (3) Session des Tages um 15:30. 
@@ -151,6 +155,8 @@ Wenn der Anfang eines Befehls „-p 5433“ sagt, dann versuchen wir die Datenba
 
 Da wir uns unsicher waren ob die Foreign-Key Constraints (*FK-Constraints*) ausgelöst wurden durch das nicht in der richtigen Reihenfolge durchgeführte Importieren der Daten, hatten wir den gesamten Prozess auch nur mit einem CPU-Kern (*single-threaded*) durchgeführt, nicht mit mehreren wo viele Aufgaben parallel laufen. Das Resultat war jedoch das gleiche, somit hatte es damit nichts zu tun. 
 
+</br>
+
 #### Import bei gleicher Datenbankversion (Fehlgeschlagen)
 
 Als wir die Datenbank nun versuchten bei der gleichen Version (10.23) zu importieren kamen 617 weitere Fehler bei raus. Diesen Log haben wir nicht aufgezeichnet. 
@@ -163,11 +169,15 @@ pg_restore -p 5433 -Fc -v -c -j 16 -U mastodon -n public --no-owner --role=masto
 
 Sehr viele der Fehler sollen jedoch "table does not exist" beinhaltet haben was uns zu diesem Zeitpunkt nicht schlüssig erschien da diese Tables nicht existieren sollten da wir die Datenbank vor dem Import gelöscht hatten. 
 
+</br>
+
 #### Import bei neuer Datenbankversion (Fehlgeschlagen)
 
 Wir gingen also zurück zum vorherigen Problem auf dem v15.7 Datenbank-Server, da wir dachten, dass dort nur fünf (5) Fehler zu beheben waren, was viel einfacher wäre als die 617 Fehler auf dem v10.23 Datenbank-Server. Wir lernten später das dies ein Trugschluss war, denn vier (4) dieser fünf (5) Fehlermeldungen bezogen sich ausschließlich auf Probleme mit gesamten Tables, währenddessen sich die 617 Fehlermeldungen beim Importieren der Datenbank auf dem 10.23 Server sich auf einzelne Einträge bezug. Als wir die Probleme mit den Tables in der v15.7-Datenbank später lösten bekamen wir ähnlich viele Fehlermeldungen. So oder so musste ein Upgrade auf eine höhere Datenbank passieren, deswegen war die Entscheidung nicht falsch, in dem Moment nur Fehlgeleitet. 
 
 Wir verfolgten nun die Idee das Schema der Datenbank zuerst zu importieren und daraufhin die Daten, da wir im Internet gesehen haben das dieses getrennte Importieren wohlmöglich FK-Probleme lösen kann.
+
+</br>
 
 #### Import von Datenbank-Schema
 
@@ -182,6 +192,8 @@ root@pg:/etc/postgresql/15/main# pg_restore -p 5432 -Fc -v -c -s -U mastodon -n 
 <br/><br/>
 
 Dieser Befehl erstellte den 003 Log (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23.txt`</a>) welchen Ich mir seither nicht mehr angesehen habe. 
+
+</br>
 
 ##### Import von Schema aus spezifischen Schema-Dump (Erfolgreich)
 
@@ -212,6 +224,8 @@ Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting 
 <img title="Die unterschiedlichen Größen der beiden Datenbanken" alt="Ein Screenshot von zwei Terminal-Fenstern auf MacOS. Beide zeigen die Ergebnisse eines Checks der Größe einer jeden Tabelle in der Datenbank. Die IP Adressen der einzelnen Fenster sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-005-comparison-of-database-size-2024-05-11-13-58.jpeg">
 
 Martin verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus. Das hier gezeigte Bild ist der jeweilige Output der Datenbanksoftware Postgresql, welche lediglich schätzt wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. **Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte.**
+
+</br>
 
 #### Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger
 
@@ -268,6 +282,8 @@ Als wir den Import der Datenbank-Daten mit der Flag "*--disable-triggers*" ausf�
 
 Die Datenbank hatte letztendlich wieder eine Größe von 33GB. 
 
+</br>
+
 #### Vergleich der Datenbank-Größe
 
 ##### Vergleich über das Zählen der Einträge in einer Tabelle
@@ -287,6 +303,7 @@ Das wichtigste ist jedoch das wir nun wissen das alle Beiträge, und bei mehrere
 
 Wir haben es endlich geschafft und dieses große Problem gelöst! Uns fiel natürlich ein Stein vom Herzen, doch wir wussten noch nicht wie schwierig das zweite Problem zu lösen sein mag.
 
+</br>
 
 ##### Vergleich über Database-Bloat
 
@@ -311,6 +328,8 @@ Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebi
 Die Erklärung der Diskrepanz erklärte sich somit für uns zu einem Teil, doch das nicht-Erstellen eines Indexes bereitete uns Probleme und der Fakt, dass wir bisher nur eines der zwei (2) Probleme gelöst haben machte uns auch Sorgen!
 
 **ENDE VON LÖSUNG DES ERSTEN PROBLEMS**
+
+</br>
 
 ### Fehler 2: index_preview_cards_on_url
 
@@ -338,6 +357,8 @@ Wir guckten erstmal ob die Tabelle index_preview_cards_on_url bei beiden Datenba
 - 19.255.796 (*Datenbank-dump von dieser Nacht*)
 
 Es sind also fast 20 Millionen Einträge in dieser Tabelle welche alle nicht übertragen wurden! Wir müssen sie importieren ohne das beim Import sofortig ein Index aufgebaut wird, denn das scheitert und dann werden die Daten verworfen. Es gibt die Möglichkeit in einem clear-text Dump des Schemas die Erstellung eines Indexes auszukommentieren um somit als erstes die Daten zu importieren und sich dann später über den Index Sorgen zu machen, z.B. über das Editieren oder Löschen einiger Daten innerhalb der zu großen Tabelle. Anfangs hatten wir noch die Idee lediglich die Index-Methode zu ändern, da dies ja von der Fehlermeldung empfohlen wird. Im folgenden versuchen wir genau dies über das ledigliche Exportieren eines clear-text Dumps da diese nicht so detailliert ist wie ein custom-format dump. Nach mehreren Stunden Arbeit am 02. Tag wird sich jedoch herausstellen das die Daten innerhalb dieser Tabelle Fehlerhaft waren und nie bereinigt wurden, dennoch ist das Importieren der Daten durch auskommentieren der Erstellung des Indexes im clear-text Schema der notwendige Schritt dafür gewesen. 
+
+</br>
 
 ##### Das Editieren der Index-Methode dank Clear-Text Datenbank-Schema (Fehlgeschlagen)
 
@@ -400,6 +421,8 @@ CONTEXT:  COPY preview_cards, line 3910668
 Demnach war die Theorie, dass clear-text Dumps des Datenbank-Schemas durch das Nicht-definieren der Indexierungsmethode einfach die Indexierungsmethode nehmen welche funktioniert, falsch. Es wurde wieder eine andere Hashfunktion verwendet auch wenn md5 empfohlen. 
 
 Als wir weiter versuchten gegen diese Windmühle zu kämpfen fanden wir folgende Information: In der Dokumentation von Postgresql steht drin, dass in Version 12 dieser Software die maximale binary-tree länge um 8 Byte verkürzt wurde, somit funktioniert die Datenbank auf Version 15.7 nicht mehr. Zur Erinnerung: wir importieren gerade eine Datenbank erstellt in Postgresql-10.23 auf eine Datenbank mit der Postgresql-15.7 Version. Diese Änderung in Version 12 verhindert also das einfache importieren und weitermachen da nun die Art und Weise wie Indexes funktionieren sich änderte. 
+
+</br>
 
 ##### Das Auskommentieren der Erstellung eines Indexes im Clear-Text Dump (Erfolgreich)
 
@@ -466,6 +489,7 @@ Nach dem durchlesen des Quellcodes kamen wir zum entschluss, dass die Wartungsau
 
 Wie vorhin bereits erwähnt stellte sich im Nachhinein heraus, dass das Problem bei den Daten lag und wir lediglich spezifische URLs aus der *preview_cards* Tabelle heraussuchen und löschen mussten. Wir hingen uns jedoch später an der gesamten *maintenance task* Aufgabe auf, dass wir unfassbare Arbeit vollrichteten um die Datenbank-Schema-Version anzupassen, sodass das Skript der Wartungsaufgabe überhaupt funktioniert, was uns mehrere Stunden kostete. Das wir gleichzeitig auch die alten Web-/Worker-Server mit der neuen Datenbank verbinden mussten war eine wichtige Aufgabe, da wir diese dann später nicht vollrichten mussten, jedoch war dieses Tappen im Dunkeln und immer wieder in Sackgassen geraten manchmal sehr demoralisierend. Umso größer war dann das Geschrei vor Freude als es letztendlich am zweiten Tag nach einer 12-Stunden Videokonferenz funktionierte!
 
+</br>
 
 ## Die (gedachte) Lösung aller Probleme (Fehlgeschlagen)
 
@@ -506,6 +530,8 @@ Das genaue Übertragen und Updaten der troet.cafe Datenbank auf einen neuen Serv
 So war die Idee, welche letztendlich daran scheiterte, dass wir dachten wir wären kurz davor das Problem zu lösen doch auf viele Probleme einfach noch nicht gestoßen sind weil wir diese nicht erdenken konnten! Zudem haben wir uns an der *maintenance task* Aufgehangen, welche unser Problem leider nicht löste. 
 
 ENDE VON TAG 1
+
+</br></br>
 
 # Tag 2 der Rettung
 
@@ -740,6 +766,8 @@ Wir führten den gleichen Befehl wieder um 12:05 aus.
 
 Daraufhin bekamen wir eine Antwort welche die komplette Zeit des restlichen Tages einnehmen sollte...
 
+</br>
+
 ## Das Ändern der Datenbank-Schema-Version
 
 > "Your version of the database schema is more recent than this script, this may cause unexpected errors."
@@ -817,6 +845,8 @@ Um 12:47 stellten wir eine unerklärte Diskrepanz in der Datenbank verglichen zu
 
 Für den Moment sollten wir keine weitere Lösung für dieses Problem finden. 
 
+</br>
+
 ## Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)
 
 Wir fügten die gleichen UFW (*Universal Firewall*) Regeln auf dem neuen Datenbank-Server ein wie auf dem Alten. Wir verbindeten den worker3-Server direkt mit dem neuen Datenbank-Server und überbrückten so pgbouncer, sodass dieses uns nicht mehr im Problem stehen sollte für den Fall, dass das Berechtigungsproblem von pgbouncer aus kommt. 
@@ -852,6 +882,7 @@ Als mastodon User innerhalb von Postgresql ausgeführt:
 
 Dieser scheint auch in irgendeiner Form gescheitert zu sein. 
 
+</br>
 
 ### Missing-Link (Erfolgreich)
 
@@ -1023,6 +1054,8 @@ mastodon_production=> `BEGIN; DELETE FROM preview_cards WHERE length(url)>2730;`
 
 Mit dem Ergebnis das 15 Links welche unsere Datenbank plagten natürlich gelöscht wurden. Wir wussten es in diesem Moment zwar noch nicht, wollten auch nicht zu früh feiern, doch dies war der Moment an dem die Datenbank von troet.cafe vollständig funktionsfähig war.  
 
+</br>
+
 ### Tatsächlich die Datenbank Updaten (Erfolgreich)
 
 Da nun die Datenbank *pico bello* war, alle vorherigen Probleme gelöst, jetzt auch das Mega-Problem der zu großen Links in der *preview_cards* Tabelle (*nach 07:27 Stunden*) behoben war, konnten wir endlich mit dem eigentlichen Prozess fortfahren: Um 17:44 führten wir das standardmäßige Update eines Mastodon-Servers zu der [v4.2.0 von einer v4.1.X Instanz](https://github.com/mastodon/mastodon/releases/tag/v4.2.0) auf dem worker3-Server durch, und ließen so die Migrations-Skripte, die bei einem jeden Mastodon-Update dabei sind, über die troet.cafe Datenbank laufen. In der Vergangenheit sind diese immer Fehlgeschlagen aufgrunddessen das die Datenbank eine **falsche Schema-Version** hatte, die **Foreign-Key-Constraints** oder der Fakt das kein Index aufgebaut werden konnte wegen **Links** die selbst länger waren als jeder Beitrag auf der Plattform. Heute, in diesem Moment aber, hat das Update funktioniert. Es war wirklich ein Heureka-Moment, auch wenn wir ihn in diesem Moment nach diesem Wochenende wenig würdigten und lediglich hofften, das nichts *weiteres* auf diesem holprigen Weg schief läuft. Wir updateten den worker3-Server auf die Version 4.2.8, was weitaus leichter und mit weniger Veränderungen der Dependencies kam als das große Update von 4.1.X auf 4.2.X!
@@ -1127,6 +1160,8 @@ Das scheint bei irgendwas geholfen zu haben.
 
 Um 18:25 führten wir den Maintenance-Skript Befehl ein letztes Mal aus und dieser hat 100% funktioniert! Nachlesen lässt sich dies im Log [troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.log](). Das Problem lag anscheinend nicht bei den Webhooks (*diese waren ja auch nichtexistent*), sondern bei dem „Finished“ welches zum Schluss kommen sollte. Dieses führt noch einige generelle Systemchecks durch welche aufgrund von der *materialized view* gescheitert sind. Durch das *refreshen* dieser lief das Maintenance-Skript nun ohne Probleme durch, 07:11 Stunden nachdem wir es das erste Mal heute versucht haben. 
 
+</br>
+
 ### Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)
 
 Um 18:30 haben wir die Firewall-Regeln des neuen Datenbank-Servers nochmal mit UFW (*Universal Firewall*) umgeschrieben und verhärtet:
@@ -1192,6 +1227,8 @@ Dies würde jeden dortigen relevanten Mastodon-Service neustarten.
 
 Gleichzeitig starteten wir alle Web-Server neu um den gleichen Effekt zu erzielen. 
 
+</br>
+
 ### Der letzte Schritt und Smoke Test (Erfolgreich)
 
 Um 20:02 kam der Moment der Wahrheit, wir würden nun endlich den Loadbalancer hochfahren und somit troet.cafe auf neuer Hardware mit neuen Servern und funktionierender Datenbank hochfahren. Es war meine Aufgabe den Loadbalancer anzuschalten. Zuerst nahm Ich jedoch einen Schritt zurück und verinnerlichte was das bedeuten würde. Wenn irgendwas, auch nur irgendwas an dieser Datenbank dennoch kaputt war, etwas das man anhand von Statistiken nicht sehen könnte, etwas das wir übersehen haben, dann müssten wir troet.cafe wieder herunterfahren, alle Web- und Worker-Server wieder auf die alte Datenbank lenken und Dinge so weiterführen wie bisher. Doch das würde bedeuten, dass alle Beiträge während des *smoke test* gelöscht werden. Jeder neue Account, jedes Bild, alles über Nacht weg. Wir stellten natürlich neue Registrationen bereits im Voraus aus und würden diese auch nicht wieder anstellen bis der *smoke test* vorbei ist. Ich informierte natürlich im [Voraus](https://mastodon.de/@ErikUden/112426891286057054) sowie [währenddessen](https://mastodon.de/@ErikUden/112429444523028870) troet.cafe wieder online ging das dies ein Test ist und was das überhaupt bedeutet. Dennoch hatte Ich bedenken. 
@@ -1230,6 +1267,8 @@ Mit einer gesamten Zeit von 13 Stunden, 10 Minuten und 21 Sekunden innerhalb der
 
 Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenchen.social?***
 
+</br></br>
+
 # Zeitaufzeichnung
 
 **Termine für den ersten Tag:**
@@ -1263,6 +1302,7 @@ Insgesamt: (muss noch ausgerechnet werden)
 
 <sub>**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski.</sub>
 
+</br>
 
 # Danksagungen
 

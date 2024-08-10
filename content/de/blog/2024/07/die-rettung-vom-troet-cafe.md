@@ -640,7 +640,7 @@ Um 10:08, ungefähr 38 Minuten nachdem wir den Export gestartet haben, war der D
 
 Daraufhin erstellten wir einen clear-text Dump vom Schema der troet.cafe Datenbank. Das Schema hat sich zum Vortag nicht geändert, dennoch wollte Ich auf Nummer sicher gehen und keine alte Datei verwenden. 
 
-`pg_dumo -s -d mastodon_production >schema-2024-05-12.sql` 
+`pg_dump -s -d mastodon_production >schema-2024-05-12.sql` 
 
 Wir stoppten den Postgresql v10 Server auf dem alten Datenbank-Server ein letztes Mal um 10:09. Da nun der Dump erstellt war benötigten wir pg_dump Dienste oder andere Befehle nicht mehr. 
 

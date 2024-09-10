@@ -119,14 +119,14 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 
 <br/><br/>
 
-<center>Aufbau von Troet.Cafe</center>
+<center><h2>Aufbau von Troet.Cafe</h2></center>
 
 <img title="Die Infrastruktur vom Troet.Cafe" alt="Ein Bild welches die drei Web-Server sowie die zwei Worker-Server verbunden mit der Datenbank und dem Load-Balancer zeigt und somit den Aufbau vom troet.cafe darstellt. Die IP Adressen der einzelnen Server sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-network-infrastructure-2024-05-12-09-24.png">
 
 <br/><br/>
 
 # Tag 1 der Rettung
-**Total:** 10:20 Stunden an Arbeit für und am Tag 1.
+**Meeting-Dauer:** 10:20 Stunden Tag 1.
 
 ## Einführung
 
@@ -573,7 +573,7 @@ ENDE VON TAG 1
 
 # Tag 2 der Rettung
 
-**Total:** 21:32h für Tag 2. 
+**Meeting-Dauer:** 13:10 am Tag 2.  
 
 Ich habe ab 08:05 mit Nick geschrieben, es geht im besser und er möchte gerne an diesem Meeting teilnehmen. Ab 08:15 betrete Ich das Meeting mit Nick, ab 08:35 tritt Martin bei. Heute mache fast ausschließlich Ich alles an der Kommandozeile, Martin berät und Ich gebe ein. Manchmal kommen mir auch eigene Ideen, doch bevor Ich große Befehle ausführe (*vor allem an der Datenbank und nach großen Änderungen an der Herangehensweise*) frage Ich drei bis vier Mal nach ob Ich es wirklich ausführen soll.
 
@@ -1340,6 +1340,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.20 | 19:34 - 23:51 (04:17h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.29 | 17:34 - 18:22 (00:48h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.29 | 19:14 - 21:52 (02:38h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.09.10 | 12:20 - 13:05 (00:25h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

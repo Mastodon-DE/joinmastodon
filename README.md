@@ -84,7 +84,6 @@ To edit the way the blog posts look (*CSS, JS, Template*) you need to edit the f
 ## To Do
 
 - Fix navbar ALWAYS bringing you to the English version of a page, not the version of the page you're using it on (*most likely it is bringing you to the version of the page of your locale, disregarding settings*)
-- Fix MastodonDE Logo (SVG font does not work, so use PNG or do something so it stops using the font)
 - Add a headline over the account grid
 - Add English translations for the FAQ
 - Fix everything written in English

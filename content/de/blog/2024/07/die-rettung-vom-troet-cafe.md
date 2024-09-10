@@ -119,6 +119,7 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 
 <br/><br/>
 
+<center>Aufbau von Troet.Cafe</center>
 
 <img title="Die Infrastruktur vom Troet.Cafe" alt="Ein Bild welches die drei Web-Server sowie die zwei Worker-Server verbunden mit der Datenbank und dem Load-Balancer zeigt und somit den Aufbau vom troet.cafe darstellt. Die IP Adressen der einzelnen Server sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-network-infrastructure-2024-05-12-09-24.png">
 

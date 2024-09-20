@@ -116,6 +116,7 @@ img {
     overflow-y: auto;
     padding: 10px;
     border: 1px solid #ccc; /* Optional: Adds a border around the TOC */
-    width: 300px; /* Adjust the width if needed */
+    width: 100%; /* Makes the TOC as wide as the webpage */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
   }
 </style>

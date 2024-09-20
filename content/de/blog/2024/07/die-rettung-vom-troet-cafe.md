@@ -126,7 +126,6 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
     <li><a href="#danksagungen">Danksagungen</a></li>
   </ul>
 </div>
-
 </br></br>
 
 # Glossar

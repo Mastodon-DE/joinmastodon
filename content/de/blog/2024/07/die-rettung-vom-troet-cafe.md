@@ -51,7 +51,8 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 
 *Wir versuchen die Datenbank auf einen neuen Server zu übertragen und sie dort einzuspielen.*
 
-01. Exakt gleichen Datenbank Cloud-Server bestellen wie für troet.cafe und muenchen.social. (`CPX31 | x86 | 160 GB | eu-central`)
+01. Exakt gleichen Datenbank Cloud-Server bestellen wie für troet.cafe und muenchen.social. 
+(`CPX31 | x86 | 160 GB | eu-central`)
 02. Alle muenchen.social Server herunterfahren. 
 03. Die Datenbank vom muenchen.social Datenbankserver exportieren und zum neuen Cloud-Server übertragen.
 04. Alle muenchen.social Server wieder hochfahren.
@@ -240,23 +241,25 @@ Wir verfolgten nun die Idee das Schema der Datenbank zuerst zu importieren und d
 
 #### Import von Datenbank-Schema
 
-##### Import von Schema aus existierender Datenbank (Fehlgeschlagen)
+#### Import von Schema aus existierender Datenbank (Fehlgeschlagen)
 
 Als wir jedoch (um 12:23 Uhr) versuchten single-core ausschließlich das Schema des bereits existierenden Dumps zu importieren, gab es wieder Fehlermeldungen. Den Grund dafür verstehe Ich bis heute nicht, doch ein spezifischer Dump mit nur dem Schema löste das Problem. 
 Der Befehl war der folgende:
+
 `root@pg:/etc/postgresql/15/main# pg_restore -p 5432 -Fc -v -c -s -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql`</br>
 <sup>*Importiert das Schema (-s) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*</sup>
 <br/><br/>
 
 Dieser Befehl erstellte den 003 Log (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_003_pg_restore_schema_psql-15_2024-05-11-12-23.txt`</a>) welchen Ich mir seither nicht mehr angesehen habe. 
 
-</br>
+</br></br>
 
-##### Import von Schema aus spezifischen Schema-Dump (Erfolgreich)
+#### Import von Schema aus spezifischen Schema-Dump (Erfolgreich)
 
 Daraufhin erstellten wir einen Dump des Schemas der troet.cafe Datenbank und erhofften uns, dass der Import damit besser funktionieren würde. Der Import vom Schema-Dump der troet.cafe Datenbank wurde ohne Probleme oder Fehler importiert. Bei jeden dieser Befehle haben wir vorher immer wieder die Datenbank gedropped oder über den -c Attribute dies automatisch getan.
 
 Der Befehl zum Importieren des Datenbank-Schemas ohne Daten ist der folgende:
+
 `pg_restore -p 5432 -Fc -v -c --if-exists  -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production-schema.sql`</br>
 <sup>*Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production-schema.sql“ welche ausschließlich ein Datenbank-Schema beinhaltet, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*</sup>
 <br/><br/>
@@ -266,6 +269,7 @@ Der Befehl zum Importieren des Datenbank-Schemas ohne Daten ist der folgende:
 Als wir daraufhin den gleichen Datenbank-Dump wie vorher auch versuchten mit data-only (-a) auf das perfekt aufgebaute Schema zu importieren kamen 112 Fehlermeldungen (*fast ausschließlich FK-Fehler*) und die Datenbank war wieder nur 33GB groß. Als wir dem Import noch live zugeschaut haben sahen wir das viele Tabellen beim Importieren übersprungen worden, was uns zu diesem Zeitpunkt Angst gemacht hat. Im Nachhinein stellte sich heraus, dass diese Tabellen beim Import übersprungen wurden da sie ja als Teil des Schemas bereits importiert worden. Wir dachten die Tabellen-Einträge (*der Inhalt*) würde auch übersprungen werden, dabei war es nur die Tabelle selbst, da diese bereits existierte und wir ausschließlich anforderten die Daten zu importieren, nicht das bereits importierte Schema. 
 
 Der Befehl uum Importieren der Datenbank-Daten ohne Schema ist der folgende:
+
 `pg_restore -p 5432 -j 16 -Fc -v -a  -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql`</br>
 <sup>*Importiert die Daten (-a) der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*</sup>
 <br/><br/>
@@ -1384,7 +1388,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.29 | 17:34 - 18:22 (00:48h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.29 | 19:14 - 21:52 (02:38h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.09.10 | 12:20 - 13:05 (00:25h) Aufarbeitung des Protokolls von Erik Uden`
-- `2024.09.20 | 18:04 - 21:30 (01:26h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.09.20 | 18:04 - 23:30 (05:26h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

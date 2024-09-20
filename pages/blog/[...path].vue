@@ -105,7 +105,17 @@ const formatDate = (date?: string) => {
 </template>
 
 <style>
+/*Give images round corners*/
 img {
   border-radius: 25px;
 }
+
+/*Give make the table of content smaller*/
+  .toc-container {
+    max-height: 300px; /* Adjust this height as necessary */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Adds a border around the TOC */
+    width: 300px; /* Adjust the width if needed */
+  }
 </style>

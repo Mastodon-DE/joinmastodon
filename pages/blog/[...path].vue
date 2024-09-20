@@ -123,7 +123,7 @@ img {
 
   .toc-container a {
     text-decoration: none; /* Removes underline from links */
-    color: #000; /* Set a default color for the links */
+    color: #EF4444; /* Set a default color for the links */
   }
 
   .toc-container a:hover {

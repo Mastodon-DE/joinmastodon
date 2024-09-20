@@ -114,12 +114,33 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
     </li>
     <li><a href="#tag-2-der-rettung">Tag 2 der Rettung</a>
       <ul>
-        <li><a href="#das-%C3%A4ndern-der-datenbank-schema-version">Das Ändern der Datenbank-Schema-Version (Fehlgeschlagen)</a></li>
-        <li><a href="#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich)">Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)</a></li>
-        <li><a href="#missing-link-(erfolgreich)">Missing-Link (Erfolgreich)</a></li>
-        <li><a href="#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich)">Tatsächlich die Datenbank Updaten (Erfolgreich)</a></li>
-        <li><a href="#kleine-aufgaben-zur-vorbereitung-auf-das-hochfahren-(erfolgreich)">Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)</a></li>
-        <li><a href="#der-letzte-schritt-und-smoke-test-(erfolgreich)">Der letzte Schritt und Smoke Test (Erfolgreich)</a></li>
+        <li><a href="#einf%C3%BChrung-1">Einführung</a></li>
+		<li><a href="#ausf%C3%BChrung-des-gestrigen-plans-(fehlgeschlagen)">Ausführung des Gestrigen Plans (Fehlgeschlagen)</a></li>
+		<ul>
+		  <li><a href="#abschaltung-des-load-balancers">Abschaltung des Load Balancers</a></li>
+		  <li><a href="#export-der-troet.cafe-datenbank-und-redis">Export der Troet.Cafe Datenbank und Redis</a></li>
+		  <li><a href="#vergleich-der-neuen-und-alten-datenbank">Vergleich der Neuen und Alten Datenbank</a></li>
+		</ul>
+		<li><a href="#alte-web--und-worker-server-auf-neuen-datenbank-server-umstellen">Alte Web- und Worker Server auf neuen Datenbank-Server Umstellen</a></li>
+		<ul>
+		  <li><a href="#probleme-mit-pgbouncer">Probleme mit PgBouncer</a></li>
+		  <li><a href="#(1.)-ausf%C3%BChrung-vom-maintenance-skript-(fehlgeschlagen)">(1.) Ausführung vom Maintenance-Skript</a></li>
+		  <li><a href="#das-%C3%A4ndern-der-datenbank-schema-version-(fehlgeschlagen)">Das Ändern der Datenbank-Schema Version (</a></li>
+		  <li><a href="#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich)">Fortführung der Suche nach einer Lösung zum PgBouncer Problem (Erfolgreich)</a></li>
+		  <li><a href="#(2.)-ausf%C3%BChrung-vom-maintenance-skript-(gescheitert)">(2.) Ausführung vom Maintenance-Skript</a></li>
+		  <li><a href="#missing-link-(erfolgreich)">Missing Link (Erfolgreich)</a></li>
+		  <li><a href="#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich)">Tatsächlich die Datenbank Updaten</a></li>
+		  <li><a href="#(3.)-ausf%C3%BChrung-vom-maintenance-skript-(fehlgeschlagen)">(3.) Ausführung vom Maintenance-Skript (Fehlgeschlagen)</a></li>
+		  <li><a href="#manuelles-l%C3%B6schen-der-preview_cards-eintr%C3%A4ge-(erfolgreich)">Manuelles Löschen der preview_cards Einträge</a></li>
+		  <li><a href="#materialized_view-fix-(erfolgreich)">Materialized_View Fix</a></li>
+		  <li><a href="#(4.)-ausf%C3%BChrung-vom-maintenance-skript-(erfolgreich)">(4.) Ausführung vom Maintenance-Skript (Erfolgreich)</a></li>
+		</ul>
+		<li><a href="#kleine-aufgaben-zur-vorbereitung-auf-das-hochfahren-(erfolgreich)">Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)</a></li>
+		<li><a href="#alles-wieder-online-stellen-(erfolgreich)">Alles Wieder Online Stellen (Erfolgreich)</a></li>
+		<ul>
+		  <li><a href="#es-hei%C3%9Ft-tr%C3%B6t!">Es Heißt Tröt!</a></li>
+		</ul>
+		<li><a href="#die-letzten-minuten">Die letzten Minuten</a></li>
       </ul>
     </li>
     <li><a href="#zeitaufzeichnung">Zeitaufzeichnung</a></li>
@@ -805,7 +826,7 @@ Wir schauten also in der offiziellen [Mastodon-Dokumentation über PgBouncer Use
 
 Die `pgbouncer.ini` Datei wurde editiert und die Einstellungen angepasst. Wir verifizierten um 12:03 anhand von journalctl (*der Logs der Datenbank*) das es funktioniert. Der worker3-Server konnte nun mit dem Datenbank-Server kommunizieren! Wir dachten, dass weil die Userlist nicht vorhanden war konnte PgBouncer das Passwort nicht verifizeren und somit galt unsere Aktion und unser User als unauthentifiziert, deshalb `authentication failure`.
 
-### (1.) Ausführen vom Maintenance-Skript (Gescheitert)
+### (1.) Ausführung vom Maintenance-Skript (Fehlgeschlagen)
 
 Da jetzt die tootctl Software vom worker3-Server die Datenbank des neuen Datenbank-Servers editieren konnte schien uns eigentlich nichts mehr im Weg zu sein. Das Maintenance-Skript um alle unsere Probleme zu lösen und eine Kopie der Datenbank welche alle diese Probleme hatte. So leicht war es dann leider auch nicht...
  
@@ -817,7 +838,7 @@ Daraufhin bekamen wir eine Antwort welche die komplette Zeit des restlichen Tage
 
 </br>
 
-### Das Ändern der Datenbank-Schema-Version (Gescheitert)
+### Das Ändern der Datenbank-Schema-Version (Fehlgeschlagen)
 
 > "Your version of the database schema is more recent than this script, this may cause unexpected errors."
 
@@ -923,7 +944,7 @@ Nick hatte mit allem Recht. Als Ich damals anwies das wir die neu aufgesetzte Da
 Ich loggte mich also als postgres User (*SuperUser*) in der Postgresql Datenbank auf dem neuen Datenbank-Server ein und führte folgenden Befehl aus:
 `ALTER DATABASE mastodon_production OWNER TO "mastodon";` 
 
-### (2.) Ausführung vom Maintenance-Skript (Gescheitert)
+### (2.) Ausführung vom Maintenance-Skript (Fehlgeschlagen)
 
 Nun konnte der PgBouncer oder externe worker3-Server überhaupt die Datenbank editieren. Daraufhin versuchten wir es erneut mit dem Maintenance-Skript, was in den Log 012 <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt`</a>) resultierte. 
 

@@ -13,7 +13,7 @@ author_handle: @ErikUden@mastodon.de
 
 <br>
 
-<center style="margin-top: -20px;">von</center>
+<center style="margin-top: -30px;">von</center>
 
 <center>
   <a class="bordered-link" href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer">Erik Uden</a>

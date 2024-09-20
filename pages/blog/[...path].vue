@@ -103,3 +103,9 @@ const formatDate = (date?: string) => {
 	</div>
 	<Errors404 v-else />
 </template>
+
+<style>
+img {
+  border-radius: 25px;
+}
+</style>

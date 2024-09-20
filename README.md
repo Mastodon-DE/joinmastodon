@@ -73,6 +73,10 @@ To edit the way the blog posts look (*CSS, JS, Template*) you need to edit the f
 
 `joinmastodon\pages\blog\[...path].vue`
 
+just add a <style> tag at the end of it!
+
+
+
 
 ## Troubleshoot / Find Anything In This Code
 

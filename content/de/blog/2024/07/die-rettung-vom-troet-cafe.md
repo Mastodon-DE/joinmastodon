@@ -283,7 +283,9 @@ Dieser resultierte in den Log 004 (<a style="text-decoration: none;" href="/imag
 
 Während der Import lief war es gerade ~13:11 geworden, weshalb wir das Meeting für eine Mittagspause beendeten und um ~15:30 wieder anfangen wollten. Martin nahm sich jedoch keine Mittagspause, denn zur gleichen Zeit berichtete er mir über diesen Import und mit wie vielen Fehlermeldungen er wieder fehlgeschlagen ist. Ich nahm mir auch keine Mittagspause sondern nahm die Zeit einen zu verfassen (<a href="https://mastodon.de/@ErikUden/112422312099854395" target="_blank" rel="noopener noreferrer">Beitrag auf Mastodon</a>) und mit Interessierten zu kollaborieren um mit den bisher aufgezeichneten Fehlern öffentlich um Hilfe zu bitten. 
 
+<center>
 <img title="Die unterschiedlichen Größen der beiden Datenbanken" alt="Ein Screenshot von zwei Terminal-Fenstern auf MacOS. Beide zeigen die Ergebnisse eines Checks der Größe einer jeden Tabelle in der Datenbank. Die IP Adressen der einzelnen Fenster sind zensiert." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-005-comparison-of-database-size-2024-05-11-13-58.jpeg">
+</center>
 
 Martin verglich zudem die Statistiken der alten Datenbank live auf troet.cafe mit der neuen importierten und stellte fest, dass um die ~6.000.000 Beiträge fehlten, was die Diskrepanz von 99GB zu 33GB untermauerte. Dies stellte sich im Nachhinein als Unsinn heraus. Das hier gezeigte Bild ist der jeweilige Output der Datenbanksoftware Postgresql, welche lediglich schätzt wie viele Einträge in einer gewissen Tabelle sind und trägt dies in den Statistiken ein, da das troet.cafe seit über 6 Jahren auf diesem Server läuft hat es sich massiv überschätzt. **Diese Fehleinschätzung seitens der Software führte jedoch weiter dazu das wir einem Fehler hinterherjagten der nicht existierte.**
 
@@ -636,8 +638,10 @@ Der alte Datenbank-Server muss online bleiben um die Datenbank und Redis umzuzie
 ### Abschaltung des Load Balancers
 Wir fingen damit an den *Load Balancer*, ein von Hetzner bereitgestelltes Tool zum Verteilen aller Anfragen von Usern, aka der „Load“, herunterzufahren. Eher mussten wir jeden einzelnen Web-Server aus dem Load-Balancer entfernen damit dieser nicht mehr auf einen Server verwies wenn eine Anfrage an troet.cafe gemacht wurde. In der Zukunft sollten wir uns überlegen einen Maintenance-Server aus genau diesem Grund zu haben, dieser sollte lediglich eine statische Seite bereitstellen welche besagt, dass wir momentan Wartungsarbeiten haben. Es wäre zumindest besser als das die Leute welche versuchen auf troet.cafe zu sehen einfach eine Fehlermeldung bekommen, doch wir dachten uns nachdem wir es seit Monaten ankündigen und weil wir ja nur „ein paar Stunden“ (*letztendlich waren es ~11*) offline wären, bräuchten wir es für diese Operation nicht. Wie sich später herausstellt wäre so ein Server sehr gut gewesen. 
 
+<center>
 <img title="User verlassen das Café" alt="Ein Screenshot aus dem Administrations-Menü von einem anderen Mastodon-Server. Es wird ein User gezeigt der als Begründung zur Eröffnung eines neuen Accounts 'schließung troet.cafe' angibt." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-015-user-verlassen-das-cafe-2024-05-12-18-43.png">
 <sup>Dieses Beispiel ist uns nur zufällig zugekommen. Währenddessen troet.cafe offline war, trotz vieler Ankündigungen, haben Menschen denken müssen, dass unser Server für immer offline geht. Es müssen viele, Schätzungen nach hunderte Menschen einen Account woanders eröffnet haben, weswegen sich eine ledigliche statische Seite, welche alle informiert, dass wir bald wieder online sind, das nächste Mal sehr lohnt!</sup>
+</center>
 
 Der Load-Balancer wurde also Handlungsunfähig gemacht, ungefähr um 09:20 (*ab genau diesem Punkt war das troet.cafe nicht mehr zu erreichen*), daraufhin haben wir alle Web- und Worker-Server über den Befehl „halt“ heruntergefahren / angehalten. 
 
@@ -663,7 +667,9 @@ Doch zurück zu 09:35.
 
 Auf den neuen Datenbank-Server deinstallierte Ich nun die alte v10 von Postgresql welche wegen Tests am Vortag noch installiert war. 
 
+<center>
 <img title="Möchten Sie PostgreSQL v10 Löschen?" alt="Ein Screenshot eines Pop-Up Fensters innerhalb des Terminals. Dieses schreibt auf Englisch Configuring postgresql-10. Removing the PostgreSQL server package will leave existing database clusters intact, i.e. their configuration, data, and log directories will not be removed. On purging the package, the directories can optionally be removed. Remove PostgreSQL directories when package is purged? Yes (mit roter, ausgewählter Färbung) No." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-007-2024-05-12-09-43.png">
+</center>
 
 Auf den neuen Datenbank-Server habe Ich Redis auf der neusten Version installiert. Daraufhin habe Ich den Redis-Server auf dem alten Datenbank-Server heruntergefahren wodurch sich die finale dump.rdb erstellte und nicht weiterhin verändert wurde. Diese dump.rdb habe Ich zum neuen Server via SCP kopiert und dort abgelegt wo diese Datei vom neuen Redis-Server gesucht werden würde (`/var/lib/redis`). Ich änderte die Datei-Berechtigungen welche vom SCP Transfer verfälscht wurden, sodass auch Redis diese Datei besitzt und sie editieren kann. Daraufhin startete Ich den Redis-Server auf dem neuen Datenbank-Server neu. 
 
@@ -1360,7 +1366,9 @@ Dies setzte Ich auf allen drei Web-Servern um, woraufhin jede Person wieder das 
 
 Wir beobachteten die Lage spannend, nach so einem langen Tag waren 30 Minuten, eine weitere Stunde, nicht wirklich irgendwas nennenswertes. Wir redeten, gratulierten einander. Sahen nach und nach viele Helfende die Videokonferenz verlassen, bis nur noch das Kernteam von Rodirik, Nick, Martin und meiner Wenigkeit übrig blieb. Als wirklich nichts fragwürdiges aufkam erklärten wir post-factum: **Das troet.cafe wurde gerettet!**
 
+<center>
 <img title="Das Längste Meeting für Mastodon" alt="Ein Screenshot des Zeit-Zählers des Jitsi-Meet Meetings auf meet.mastodon.de. Dieser zeigt 13 Stunden, 10 Minuten und 21 Sekunden zum Zeitpunkt des Screenshots an." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-016-laenge-des-meetings-am-zweiten-tag-2024-05-12-21-26.png">
+</center>
 
 Mit einer gesamten Zeit von 13 Stunden, 10 Minuten und 21 Sekunden innerhalb der Videokonferenz beendeten wir das Meeting ein für Alle Mal am 12.05.2024 um 21:25. Wir haben heute Morgen um 08:15 Uhr angefangen und es soeben um 21:25 Uhr beendet. 
 

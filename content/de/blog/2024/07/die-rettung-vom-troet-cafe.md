@@ -75,11 +75,11 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
     - [Fehler 1: Foreign Key Constraints](#fehler-1%3A-foreign-key-constraints)
       - [Import bei gleicher Datenbankversion (Fehlgeschlagen)](#import-bei-gleicher-datenbankversion-(fehlgeschlagen))
       - [Import bei neuer Datenbankversion (Fehlgeschlagen)](#import-bei-neuer-datenbankversion-(fehlgeschlagen))
-      - [Import von Datenbank-Schema](#import-von-datenbank-schema)
+      - [Import von Datenbank-Schema (Erfolgreich)](#import-von-datenbank-schema)
         - [Import von Schema aus existierender Datenbank (Fehlgeschlagen)](#import-von-schema-aus-existierender-datenbank-(fehlgeschlagen))
-      - [Import von Schema aus spezifischen Schema-Dump (Erfolgreich)](#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich))
-        - [Import von Datenbank auf funktionierendes Datenbank-Schema](#import-von-datenbank-auf-funktionierendes-datenbank-schema)
-        - [Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger](#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger)
+        - [Import von Schema aus spezifischen Schema-Dump (Erfolgreich)](#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich))
+      - [Import von Datenbank auf funktionierendes Datenbank-Schema (Erfolgreich)](#import-von-datenbank-auf-funktionierendes-datenbank-schema)
+        - [Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger (Fehlgeschlagen)](#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger)
         - [Importieren der Daten über die --disable-triggers Flag (Erfolgreich)](#importieren-der-daten-%C3%BCber-die---disable-triggers-flag-(erfolgreich))
         - [Elevated Privileges (Erfolgreich)](#elevated-privileges-(erfolgreich))
       - [Vergleich der Datenbank-Größe](#vergleich-der-datenbank-gr%C3%B6%C3%9Fe)
@@ -1341,6 +1341,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.29 | 17:34 - 18:22 (00:48h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.29 | 19:14 - 21:52 (02:38h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.09.10 | 12:20 - 13:05 (00:25h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.09.20 | 18:04 - 19:30 (01:26h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

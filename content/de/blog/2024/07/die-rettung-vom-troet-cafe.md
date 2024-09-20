@@ -68,38 +68,56 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 </br></br>
 
 # Übersicht
-<sup><sub>
-- [Glossar](#glossar)
-- [Tag 1 der Rettung](#tag-1-der-rettung)
-  - [Einführung](#einführung)
-  - [Fehler beim Importieren](#fehler-beim-importieren)
-    - [Fehler 1: Foreign Key Constraints](#fehler-1%3A-foreign-key-constraints)
-      - [Import bei gleicher Datenbankversion (Fehlgeschlagen)](#import-bei-gleicher-datenbankversion-(fehlgeschlagen))
-      - [Import bei neuer Datenbankversion (Fehlgeschlagen)](#import-bei-neuer-datenbankversion-(fehlgeschlagen))
-      - [Import von Datenbank-Schema (Erfolgreich)](#import-von-datenbank-schema)
-        - [Import von Schema aus existierender Datenbank (Fehlgeschlagen)](#import-von-schema-aus-existierender-datenbank-(fehlgeschlagen))
-        - [Import von Schema aus spezifischen Schema-Dump (Erfolgreich)](#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich))
-      - [Import von Datenbank auf funktionierendes Datenbank-Schema (Erfolgreich)](#import-von-datenbank-auf-funktionierendes-datenbank-schema)
-        - [Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger (Fehlgeschlagen)](#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger)
-        - [Importieren der Daten über die --disable-triggers Flag (Erfolgreich)](#importieren-der-daten-%C3%BCber-die---disable-triggers-flag-(erfolgreich))
-        - [Elevated Privileges (Erfolgreich)](#elevated-privileges-(erfolgreich))
-      - [Vergleich der Datenbank-Größe](#vergleich-der-datenbank-gr%C3%B6%C3%9Fe)
-        - [Vergleich über das Zählen der Einträge in einer Tabelle](#vergleich-%C3%BCber-das-z%C3%A4hlen-der-eintr%C3%A4ge-in-einer-tabelle)
-        - [Vergleich über Database-Bloat](#vergleich-%C3%BCber-database-bloat)
-    - [Fehler 2: index_preview_cards_on_url](#fehler-2%3A-index_preview_cards_on_url)
-        - [Das Editieren der Index-Methode dank Clear-Text Datenbank-Schema (Fehlgeschlagen)](#das-editieren-der-index-methode-dank-clear-text-datenbank-schema-(fehlgeschlagen))
-        - [Das Auskommentieren der Erstellung eines Indexes im Clear-Text Dump (Erfolgreich)](#das-auskommentieren-der-erstellung-eines-indexes-im-clear-text-dump-(erfolgreich))
-  - [Die (gedachte) Lösung aller Probleme (Fehlgeschlagen)](#die-(gedachte)-l%C3%B6sung-aller-probleme-(fehlgeschlagen))
-- [Tag 2 der Rettung](#tag-2-der-rettung)
-  - [Das Ändern der Datenbank-Schema-Version (Fehlgeschlagen)](#das-%C3%A4ndern-der-datenbank-schema-version)
-  - [Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)](#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich))
-  - [Missing-Link (Erfolgreich)](#missing-link-(erfolgreich))
-  - [Tatsächlich die Datenbank Updaten (Erfolgreich)](#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich))
-  - [Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)](#kleine-aufgaben-zur-vorbereitung-auf-das-hochfahren-(erfolgreich))
-  - [Der letzte Schritt und Smoke Test (Erfolgreich)](#der-letzte-schritt-und-smoke-test-(erfolgreich))
-- [Zeitaufzeichnung](#zeitaufzeichnung)
-- [Danksagungen](#danksagungen)
-</sub></sup>
+<sup>
+<ul>
+<li><a href="#glossar">Glossar</a></li>
+<li><a href="#tag-1-der-rettung">Tag 1 der Rettung</a><ul>
+<li><a href="#einführung">Einführung</a></li>
+<li><a href="#fehler-beim-importieren">Fehler beim Importieren</a><ul>
+<li><a href="#fehler-1%3A-foreign-key-constraints">Fehler 1: Foreign Key Constraints</a><ul>
+<li><a href="#import-bei-gleicher-datenbankversion-(fehlgeschlagen">Import bei gleicher Datenbankversion (Fehlgeschlagen)</a>)</li>
+<li><a href="#import-bei-neuer-datenbankversion-(fehlgeschlagen">Import bei neuer Datenbankversion (Fehlgeschlagen)</a>)</li>
+<li><a href="#import-von-datenbank-schema">Import von Datenbank-Schema (Erfolgreich)</a><ul>
+<li><a href="#import-von-schema-aus-existierender-datenbank-(fehlgeschlagen">Import von Schema aus existierender Datenbank (Fehlgeschlagen)</a>)</li>
+<li><a href="#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich">Import von Schema aus spezifischen Schema-Dump (Erfolgreich)</a>)</li>
+</ul>
+</li>
+<li><a href="#import-von-datenbank-auf-funktionierendes-datenbank-schema">Import von Datenbank auf funktionierendes Datenbank-Schema (Erfolgreich)</a><ul>
+<li><a href="#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger">Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger (Fehlgeschlagen)</a></li>
+<li><a href="#importieren-der-daten-%C3%BCber-die---disable-triggers-flag-(erfolgreich">Importieren der Daten über die --disable-triggers Flag (Erfolgreich)</a>)</li>
+<li><a href="#elevated-privileges-(erfolgreich">Elevated Privileges (Erfolgreich)</a>)</li>
+</ul>
+</li>
+<li><a href="#vergleich-der-datenbank-gr%C3%B6%C3%9Fe">Vergleich der Datenbank-Größe</a><ul>
+<li><a href="#vergleich-%C3%BCber-das-z%C3%A4hlen-der-eintr%C3%A4ge-in-einer-tabelle">Vergleich über das Zählen der Einträge in einer Tabelle</a></li>
+<li><a href="#vergleich-%C3%BCber-database-bloat">Vergleich über Database-Bloat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#fehler-2%3A-index_preview_cards_on_url">Fehler 2: index_preview_cards_on_url</a><ul>
+<li><a href="#das-editieren-der-index-methode-dank-clear-text-datenbank-schema-(fehlgeschlagen">Das Editieren der Index-Methode dank Clear-Text Datenbank-Schema (Fehlgeschlagen)</a>)</li>
+<li><a href="#das-auskommentieren-der-erstellung-eines-indexes-im-clear-text-dump-(erfolgreich">Das Auskommentieren der Erstellung eines Indexes im Clear-Text Dump (Erfolgreich)</a>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#die-(gedachte">Die (gedachte) Lösung aller Probleme (Fehlgeschlagen)</a>-l%C3%B6sung-aller-probleme-(fehlgeschlagen))</li>
+</ul>
+</li>
+<li><a href="#tag-2-der-rettung">Tag 2 der Rettung</a><ul>
+<li><a href="#das-%C3%A4ndern-der-datenbank-schema-version">Das Ändern der Datenbank-Schema-Version (Fehlgeschlagen)</a></li>
+<li><a href="#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich">Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)</a>)</li>
+<li><a href="#missing-link-(erfolgreich">Missing-Link (Erfolgreich)</a>)</li>
+<li><a href="#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich">Tatsächlich die Datenbank Updaten (Erfolgreich)</a>)</li>
+<li><a href="#kleine-aufgaben-zur-vorbereitung-auf-das-hochfahren-(erfolgreich">Kleine Aufgaben zur Vorbereitung auf das Hochfahren (Erfolgreich)</a>)</li>
+<li><a href="#der-letzte-schritt-und-smoke-test-(erfolgreich">Der letzte Schritt und Smoke Test (Erfolgreich)</a>)</li>
+</ul>
+</li>
+<li><a href="#zeitaufzeichnung">Zeitaufzeichnung</a></li>
+<li><a href="#danksagungen">Danksagungen</a></li>
+</ul>
+</sup>
 </br></br>
 
 # Glossar

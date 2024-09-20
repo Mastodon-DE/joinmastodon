@@ -125,11 +125,13 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 		<ul>
 		  <li><a href="#probleme-mit-pgbouncer">Probleme mit PgBouncer</a></li>
 		  <li><a href="#(1.)-ausf%C3%BChrung-vom-maintenance-skript-(fehlgeschlagen)">(1.) Ausführung vom Maintenance-Skript</a></li>
-		  <li><a href="#das-%C3%A4ndern-der-datenbank-schema-version-(fehlgeschlagen)">Das Ändern der Datenbank-Schema Version (</a></li>
+		  <li><a href="#das-%C3%A4ndern-der-datenbank-schema-version-(fehlgeschlagen)">Das Ändern der Datenbank-Schema Version</a></li>
 		  <li><a href="#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich)">Fortführung der Suche nach einer Lösung zum PgBouncer Problem (Erfolgreich)</a></li>
 		  <li><a href="#(2.)-ausf%C3%BChrung-vom-maintenance-skript-(gescheitert)">(2.) Ausführung vom Maintenance-Skript</a></li>
 		  <li><a href="#missing-link-(erfolgreich)">Missing Link (Erfolgreich)</a></li>
-		  <li><a href="#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich)">Tatsächlich die Datenbank Updaten</a></li>
+		</ul>
+		<li><a href="#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich)">Tatsächlich die Datenbank Updaten</a></li>
+		<ul>
 		  <li><a href="#(3.)-ausf%C3%BChrung-vom-maintenance-skript-(fehlgeschlagen)">(3.) Ausführung vom Maintenance-Skript (Fehlgeschlagen)</a></li>
 		  <li><a href="#manuelles-l%C3%B6schen-der-preview_cards-eintr%C3%A4ge-(erfolgreich)">Manuelles Löschen der preview_cards Einträge</a></li>
 		  <li><a href="#materialized_view-fix-(erfolgreich)">Materialized_View Fix</a></li>
@@ -739,7 +741,7 @@ Folgende Befehle wurden als postgres User in psql um 10:45 ausgeführt:
 
 `REINDEX (verbose) database mastodon_production;` 
 
-#### Vergleich der Neuen und Alten Datenbank
+### Vergleich der Neuen und Alten Datenbank
 
 Nachdem der REINDEX ohne Fehlermeldungen ausgeführt wurde mussten wir beide Datenbanken vergleichen um Sicherzustellen das alle Daten erfolgreich importiert wurden. Folgende Befehle wurden sowohl auf dem alten und neuen troet.cafe Datenbankserver innerhalb der psql-Software als postgres User ausgeführt. 
 

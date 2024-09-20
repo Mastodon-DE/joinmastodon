@@ -9,7 +9,7 @@ author_handle: @ErikUden@mastodon.de
 
 ---
 
-<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.07.20 um 23:51</center>
+<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.20 um 19:05</center>
 
 <br>
 
@@ -73,13 +73,13 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
   - [Einführung](#einführung)
   - [Fehler beim Importieren](#fehler-beim-importieren)
     - [Fehler 1: Foreign Key Constraints](#fehler-1%3A-foreign-key-constraints)
-      - [Import bei gleicher Datenbankversion (fehlgeschlagen)](#import-bei-gleicher-datenbankversion-(fehlgeschlagen))
+      - [Import bei gleicher Datenbankversion (Fehlgeschlagen)](#import-bei-gleicher-datenbankversion-(fehlgeschlagen))
       - [Import bei neuer Datenbankversion (Fehlgeschlagen)](#import-bei-neuer-datenbankversion-(fehlgeschlagen))
       - [Import von Datenbank-Schema](#import-von-datenbank-schema)
         - [Import von Schema aus existierender Datenbank (Fehlgeschlagen)](#import-von-schema-aus-existierender-datenbank-(fehlgeschlagen))
-        - [Import von Schema aus spezifischen Schema-Dump (Erfolgreich)](#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich))
+      - [Import von Schema aus spezifischen Schema-Dump (Erfolgreich)](#import-von-schema-aus-spezifischen-schema-dump-(erfolgreich))
         - [Import von Datenbank auf funktionierendes Datenbank-Schema](#import-von-datenbank-auf-funktionierendes-datenbank-schema)
-      - [Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger](#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger)
+        - [Import von Datenbank auf funktionierendes Datenbank-Schema ohne Trigger](#import-von-datenbank-auf-funktionierendes-datenbank-schema-ohne-trigger)
         - [Importieren der Daten über die --disable-triggers Flag (Erfolgreich)](#importieren-der-daten-%C3%BCber-die---disable-triggers-flag-(erfolgreich))
         - [Elevated Privileges (Erfolgreich)](#elevated-privileges-(erfolgreich))
       - [Vergleich der Datenbank-Größe](#vergleich-der-datenbank-gr%C3%B6%C3%9Fe)

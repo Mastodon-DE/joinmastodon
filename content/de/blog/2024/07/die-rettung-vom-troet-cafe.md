@@ -68,7 +68,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 </br></br>
 
 # Übersicht
-<sup>
+<sup><sub>
 - [Glossar](#glossar)
 - [Tag 1 der Rettung](#tag-1-der-rettung)
   - [Einführung](#einführung)
@@ -99,7 +99,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
   - [Der letzte Schritt und Smoke Test (Erfolgreich)](#der-letzte-schritt-und-smoke-test-(erfolgreich))
 - [Zeitaufzeichnung](#zeitaufzeichnung)
 - [Danksagungen](#danksagungen)
-</sup>
+</sub></sup>
 </br></br>
 
 # Glossar
@@ -127,7 +127,7 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 <br/><br/>
 
 # Tag 1 der Rettung
-**Meeting-Dauer:** 10:20 Stunden Tag 1.
+**Meeting-Dauer:** 10:20 Stunden. 
 
 ## Einführung
 
@@ -574,7 +574,7 @@ ENDE VON TAG 1
 
 # Tag 2 der Rettung
 
-**Meeting-Dauer:** 13:10 am Tag 2.  
+**Meeting-Dauer:** 13:10 Stunden  
 
 Ich habe ab 08:05 mit Nick geschrieben, es geht im besser und er möchte gerne an diesem Meeting teilnehmen. Ab 08:15 betrete Ich das Meeting mit Nick, ab 08:35 tritt Martin bei. Heute mache fast ausschließlich Ich alles an der Kommandozeile, Martin berät und Ich gebe ein. Manchmal kommen mir auch eigene Ideen, doch bevor Ich große Befehle ausführe (*vor allem an der Datenbank und nach großen Änderungen an der Herangehensweise*) frage Ich drei bis vier Mal nach ob Ich es wirklich ausführen soll.
 

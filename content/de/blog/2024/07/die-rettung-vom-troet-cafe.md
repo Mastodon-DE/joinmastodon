@@ -90,7 +90,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
         - [Das Auskommentieren der Erstellung eines Indexes im Clear-Text Dump (Erfolgreich)](#das-auskommentieren-der-erstellung-eines-indexes-im-clear-text-dump-(erfolgreich))
   - [Die (gedachte) Lösung aller Probleme (Fehlgeschlagen)](#die-(gedachte)-l%C3%B6sung-aller-probleme-(fehlgeschlagen))
 - [Tag 2 der Rettung](#tag-2-der-rettung)
-  - [Das Ändern der Datenbank-Schema-Version](#das-%C3%A4ndern-der-datenbank-schema-version)
+  - [Das Ändern der Datenbank-Schema-Version (Fehlgeschlagen)](#das-%C3%A4ndern-der-datenbank-schema-version)
   - [Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)](#fortf%C3%BChrung-der-suche-nach-einer-l%C3%B6sung-zum-pgbouncer-problem-(erfolgreich))
   - [Missing-Link (Erfolgreich)](#missing-link-(erfolgreich))
   - [Tatsächlich die Datenbank Updaten (Erfolgreich)](#tats%C3%A4chlich-die-datenbank-updaten-(erfolgreich))

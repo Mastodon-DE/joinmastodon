@@ -378,13 +378,13 @@ Diese Datenbank läuft nun seit über sechs (6) Jahren! Dabei passieren Mal Fehl
 
 Panda schlug also ein Skript aus dem Postgresql Wiki vor welches die sogenannten „wasted bytes“ der einzelnen Tabellen in der Datenbank zeigt, also die Anzahl an Bytes welche praktisch nur Müll sind. Dies sind noch nichteinmal die Wasted Bytes des Index, heißt die gesamte Diskrepanz kann und muss sich nicht hiermit erklären. 
 
-Das Skript lässt sich im <a href="https://wiki.postgresql.org/wiki/Show_database_bloat" target="_blank" rel="noopener noreferrer">PostgreSQL-Wiki</a>)  finden. 
+Das Skript lässt sich im <a href="https://wiki.postgresql.org/wiki/Show_database_bloat" target="_blank" rel="noopener noreferrer">PostgreSQL-Wiki</a>  finden. 
 
 Dadurch stellte sich für uns heraus, dass die Datenbank wirklich nur 30GB klein ist, der Rest ist der Index dieser Datenbank sowie einfach übergebliebener Müll. 
 
 Jain schrieb das Skript zudem so um, dass es von einem User ausgeführt und in eine Datei ge-piped werden konnte. Beide Dateien, sowohl vom neuen als auch vom alten Server existieren.
 
-Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebin.com/n0jD4EGM" target="_blank" rel="noopener noreferrer">diesem Pastebin</a>) uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a>) nachschlagen. 
+Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebin.com/n0jD4EGM" target="_blank" rel="noopener noreferrer">diesem Pastebin</a> uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a> nachschlagen. 
 
 Da das ergebnis eine Auflistung für jede Tabelle in der Datenbank hat (*290 Tabellen x 2 DBs*) findet sich dieser Output nicht direkt hier im Blogeintrag, jedoch hier (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md" target="_blank" rel="noopener noreferrer">`troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md`</a>) nachlesbar.
 
@@ -636,6 +636,9 @@ Der alte Datenbank-Server muss online bleiben um die Datenbank und Redis umzuzie
 ### Abschaltung des Load Balancers
 Wir fingen damit an den *Load Balancer*, ein von Hetzner bereitgestelltes Tool zum Verteilen aller Anfragen von Usern, aka der „Load“, herunterzufahren. Eher mussten wir jeden einzelnen Web-Server aus dem Load-Balancer entfernen damit dieser nicht mehr auf einen Server verwies wenn eine Anfrage an troet.cafe gemacht wurde. In der Zukunft sollten wir uns überlegen einen Maintenance-Server aus genau diesem Grund zu haben, dieser sollte lediglich eine statische Seite bereitstellen welche besagt, dass wir momentan Wartungsarbeiten haben. Es wäre zumindest besser als das die Leute welche versuchen auf troet.cafe zu sehen einfach eine Fehlermeldung bekommen, doch wir dachten uns nachdem wir es seit Monaten ankündigen und weil wir ja nur „ein paar Stunden“ (*letztendlich waren es ~11*) offline wären, bräuchten wir es für diese Operation nicht. Wie sich später herausstellt wäre so ein Server sehr gut gewesen. 
 
+<img title="User verlassen das Café" alt="Ein Screenshot aus dem Administrations-Menü von einem anderen Mastodon-Server. Es wird ein User gezeigt der als Begründung zur Eröffnung eines neuen Accounts 'schließung troet.cafe' angibt." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-015-user-verlassen-das-cafe-2024-05-12-18-43.png">
+<sup>Dieses Beispiel ist uns nur zufällig zugekommen. Währenddessen troet.cafe offline war, trotz vieler Ankündigungen, haben Menschen denken müssen, dass unser Server für immer offline geht. Es müssen viele, Schätzungen nach hunderte Menschen einen Account woanders eröffnet haben, weswegen sich eine ledigliche statische Seite, welche alle informiert, dass wir bald wieder online sind, das nächste Mal sehr lohnt!</sup>
+
 Der Load-Balancer wurde also Handlungsunfähig gemacht, ungefähr um 09:20 (*ab genau diesem Punkt war das troet.cafe nicht mehr zu erreichen*), daraufhin haben wir alle Web- und Worker-Server über den Befehl „halt“ heruntergefahren / angehalten. 
 
 ### Export der Troet.Cafe Datenbank und Redis
@@ -659,6 +662,8 @@ Dies sollte nur 20 Minuten dauern. Es hat letztendlich 38 Minuten bis 10:08 geda
 Doch zurück zu 09:35.
 
 Auf den neuen Datenbank-Server deinstallierte Ich nun die alte v10 von Postgresql welche wegen Tests am Vortag noch installiert war. 
+
+<img title="Möchten Sie PostgreSQL v10 Löschen?" alt="Ein Screenshot eines Pop-Up Fensters innerhalb des Terminals. Dieses schreibt auf Englisch Configuring postgresql-10. Removing the PostgreSQL server package will leave existing database clusters intact, i.e. their configuration, data, and log directories will not be removed. On purging the package, the directories can optionally be removed. Remove PostgreSQL directories when package is purged? Yes (mit roter, ausgewählter Färbung) No." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-007-2024-05-12-09-43.png">
 
 Auf den neuen Datenbank-Server habe Ich Redis auf der neusten Version installiert. Daraufhin habe Ich den Redis-Server auf dem alten Datenbank-Server heruntergefahren wodurch sich die finale dump.rdb erstellte und nicht weiterhin verändert wurde. Diese dump.rdb habe Ich zum neuen Server via SCP kopiert und dort abgelegt wo diese Datei vom neuen Redis-Server gesucht werden würde (`/var/lib/redis`). Ich änderte die Datei-Berechtigungen welche vom SCP Transfer verfälscht wurden, sodass auch Redis diese Datei besitzt und sie editieren kann. Daraufhin startete Ich den Redis-Server auf dem neuen Datenbank-Server neu. 
 
@@ -1354,6 +1359,8 @@ Dies setzte Ich auf allen drei Web-Servern um, woraufhin jede Person wieder das 
 ## Die Letzten Minuten
 
 Wir beobachteten die Lage spannend, nach so einem langen Tag waren 30 Minuten, eine weitere Stunde, nicht wirklich irgendwas nennenswertes. Wir redeten, gratulierten einander. Sahen nach und nach viele Helfende die Videokonferenz verlassen, bis nur noch das Kernteam von Rodirik, Nick, Martin und meiner Wenigkeit übrig blieb. Als wirklich nichts fragwürdiges aufkam erklärten wir post-factum: **Das troet.cafe wurde gerettet!**
+
+<img title="Das Längste Meeting für Mastodon" alt="Ein Screenshot des Zeit-Zählers des Jitsi-Meet Meetings auf meet.mastodon.de. Dieser zeigt 13 Stunden, 10 Minuten und 21 Sekunden zum Zeitpunkt des Screenshots an." src="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-016-laenge-des-meetings-am-zweiten-tag-2024-05-12-21-26.png">
 
 Mit einer gesamten Zeit von 13 Stunden, 10 Minuten und 21 Sekunden innerhalb der Videokonferenz beendeten wir das Meeting ein für Alle Mal am 12.05.2024 um 21:25. Wir haben heute Morgen um 08:15 Uhr angefangen und es soeben um 21:25 Uhr beendet. 
 

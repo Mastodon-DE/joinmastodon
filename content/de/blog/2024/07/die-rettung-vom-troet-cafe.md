@@ -1388,7 +1388,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.09.20 | 18:04 - 23:59 (05:55h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.09.21 | 00:00 - 00:45 (00:45h) Finalisierung des Protokolls` 
 
-Insgesamt: 58 Stunden und 01 Minute
+Insgesamt: **58 Stunden und 01 Minute** haben diese zwei Tage sowie dessen Aufarbeitung gebraucht. 
 
 <sup>**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski.</sup>
 

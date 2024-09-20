@@ -115,8 +115,7 @@ img {
     max-height: 300px; /* Adjust this height as necessary */
     overflow-y: auto;
     padding: 10px;
-    border: 1px solid #ccc; /* Adds a white border around the TOC */
-    background-color: #fff; /* Ensure a white background */
+    border: 1px solid #EF4444; /* Adds a red border around the TOC */
     width: 100%; /* Makes the TOC as wide as the webpage */
     box-sizing: border-box; /* Includes padding and border in element's total width */
     border-radius: 15px; /* Adds rounded corners to the border */

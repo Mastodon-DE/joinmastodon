@@ -309,7 +309,7 @@ Diese Lösung haben wir letztendlich nicht genommen, doch sie führte uns in die
 
 Es hat uns vielleicht bis 15:30 gedauert um hier ohne funktionierenden Lösungsweg für unsere Probleme anzukommen, jedoch ging diese Lösung in die richtige Richtung. Foreign Key Constraints sind nichts essenzielles für eine Datenbank, man kann sie (*unter anderem*) einfach deaktivieren über das Argument "--disable-triggers" am Ende vom Befehl. Wir hatten also das gleiche Vorgehen wie sonst auch: Die jetzige Datenbank droppen (*löschen*), daraufhin nur das Schema importieren, welches ja immer ohne Fehler stattfand, mit dem Unterschied das wir daraufhin ausschließlich die Daten vom Dump importieren ohne Trigger. 
 
-Der Befehl zum Importieren des Datenbank-Schemas bleibt der folgende:
+Der Befehl zum Importieren des Datenbank-Schemas bleibt der folgende:</br>
 `pg_restore -p 5432 -Fc -v -c --if-exists -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production-schema.sql`</br>
 <sup>*Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production-schema.sql“ welche ausschließlich ein Datenbank-Schema beinhaltet, in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c), falls diese existieren (--if-exists), und gibt verbose Text aus (-v).*</sup>
 <br/><br/>
@@ -377,7 +377,7 @@ Dadurch stellte sich für uns heraus, dass die Datenbank wirklich nur 30GB klein
 
 Jain schrieb das Skript zudem so um, dass es von einem User ausgeführt und in eine Datei ge-piped werden konnte. Beide Dateien, sowohl vom neuen als auch vom alten Server existieren.
 
-Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebin.com/n0jD4EGM" target="_blank" rel="noopener noreferrer">diesem Pastebin</a> uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a> nachschlagen. 
+Dieses umgeschriebene Skript wurde von Jain original in <a href="https://pastebin.com/n0jD4EGM" target="_blank" rel="noopener noreferrer">diesem Pastebin</a> uns zugesendet, doch es lässt sich auch <a href="/images/blog/2024-07-16-saving-troet-cafe/https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt" target="_blank" rel="noopener noreferrer">hier</a> nachschlagen. 
 
 Da das ergebnis eine Auflistung für jede Tabelle in der Datenbank hat (*290 Tabellen x 2 DBs*) findet sich dieser Output nicht direkt hier im Blogeintrag, jedoch hier (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md" target="_blank" rel="noopener noreferrer">`troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md`</a>) nachlesbar.
 
@@ -922,7 +922,7 @@ Für den Moment sollten wir keine weitere Lösung für dieses Problem finden.
 
 Wir fügten die gleichen UFW (*Universal Firewall*) Regeln auf dem neuen Datenbank-Server ein wie auf dem Alten. Wir verbindeten den worker3-Server direkt mit dem neuen Datenbank-Server und überbrückten so pgbouncer, sodass dieses uns nicht mehr im Problem stehen sollte für den Fall, dass das Berechtigungsproblem von pgbouncer aus kommt. 
 
-Es war nun 13:39 und wir hatten weiterhin keine Lösungen für das Problem gefunden sowie tausende Fehlermeldungen durchforstet. Im *tootctl-maintenance-2024-05-12-13-30.log* lassen sich genau diese Fehlermeldungen durchlesen. Das Hauptproblem war weiterhin der *permission denied* Error, den wir bis jetzt nicht verstehen konnten. Jedes Programm hatte die richtigen Berechtigungen, jeder Ordner auch. Wir konnten nicht verstehen warum der worker3-Server nicht in der lage war auf den neuen Datenbank-Server, trotz identischer Konfiguration zugreifen konnte. 
+Es war nun 13:39 und wir hatten weiterhin keine Lösungen für das Problem gefunden sowie tausende Fehlermeldungen durchforstet. Im <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-008-tootctl-maintenance-2024-05-12-13-30.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-008-tootctl-maintenance-2024-05-12-13-30.txt`</a> lassen sich genau diese Fehlermeldungen durchlesen. Das Hauptproblem war weiterhin der *permission denied* Error, den wir bis jetzt nicht verstehen konnten. Jedes Programm hatte die richtigen Berechtigungen, jeder Ordner auch. Wir konnten nicht verstehen warum der worker3-Server nicht in der lage war auf den neuen Datenbank-Server, trotz identischer Konfiguration zugreifen konnte. 
 
 Das Problem der Datenbank war in einem undefinierbaren Zustand. Das beste was wir bisher erreicht haben war eine „bessere“ Fehlermeldung der Migrations-Skripts beim Updaten des worker3-Servers auf die Version 4.2.1.  
 
@@ -936,6 +936,7 @@ Wir versuchten nun das Fix-Skript zu updaten und mussten somit die worker3-Serve
 Nachdem wir die Mastodon-Version des worker3-Servers geupdated hatten führten wir die Migration der Datenbank um 16:18 manuell durch:
 
 `SKIP_POST_DEPLOYMENT_MIGRATIONS=true RAILS_ENV=production bundle exec rails db:migrate` 
+Dieser Befehl Erstellte Log 009, 010, und 011 (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-009-migrate-db-2024-05-12-16-15.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-009-migrate-db-2024-05-12-16-15.txt`</a>, <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-010-migrate-db-2024-05-12-16-20.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-010-migrate-db-2024-05-12-16-20.txt`</a>, <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-011-migrate-db-2024-05-12-16-24.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-011-migrate-db-2024-05-12-16-24.txt`</a>). 
 
 Daraufhin bekamen wir eine Fehlermeldung die alles erklären sollte. Ich habe sie nicht notiert, doch uns wurde nun klar *wo* der Authentification-Error lag!
 
@@ -944,11 +945,11 @@ Nick hatte mit allem Recht. Als Ich damals anwies das wir die neu aufgesetzte Da
 Ich loggte mich also als postgres User (*SuperUser*) in der Postgresql Datenbank auf dem neuen Datenbank-Server ein und führte folgenden Befehl aus:
 `ALTER DATABASE mastodon_production OWNER TO "mastodon";` 
 
-Nun konnte der pgbouncer oder externe worker3-Server überhaupt die Datenbank editieren 
+Nun konnte der pgbouncer oder externe worker3-Server überhaupt die Datenbank editieren. Daraufhin versuchten wir es erneut mit dem Maintenance-Skript, was in den Log 012 <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt`</a>) resultierte. 
 
 Um 17:05 löschten wir den gesamten Index der neuen Datenbank um sie daraufhin mit md5 (*anstelle von btree*) über einen psql Befehl aufzubauen. 
 
-Als mastodon User innerhalb von Postgresql ausgeführt:
+Als mastodon User innerhalb von Postgresql ausgeführt:</br>
 `CREATE INDEX index_preview_cards_on_url ON public.preview_cards USING hash (url)` 
 
 Dieser scheint auch in irgendeiner Form gescheitert zu sein. 
@@ -1137,7 +1138,7 @@ Mit dem Ergebnis das 15 Links welche unsere Datenbank plagten natürlich gelösc
 Da nun die Datenbank *pico bello* war, alle vorherigen Probleme gelöst, jetzt auch das Mega-Problem der zu großen Links in der *preview_cards* Tabelle (*nach 07:27 Stunden*) behoben war, konnten wir endlich mit dem eigentlichen Prozess fortfahren: Um 17:44 führten wir das standardmäßige Update eines Mastodon-Servers zu der [v4.2.0 von einer v4.1.X Instanz](https://github.com/mastodon/mastodon/releases/tag/v4.2.0) auf dem worker3-Server durch, und ließen so die Migrations-Skripte, die bei einem jeden Mastodon-Update dabei sind, über die troet.cafe Datenbank laufen. In der Vergangenheit sind diese immer Fehlgeschlagen aufgrunddessen das die Datenbank eine **falsche Schema-Version** hatte, die **Foreign-Key-Constraints** oder der Fakt das kein Index aufgebaut werden konnte wegen **Links** die selbst länger waren als jeder Beitrag auf der Plattform. Heute, in diesem Moment aber, hat das Update funktioniert. Es war wirklich ein Heureka-Moment, auch wenn wir ihn in diesem Moment nach diesem Wochenende wenig würdigten und lediglich hofften, das nichts *weiteres* auf diesem holprigen Weg schief läuft. Wir updateten den worker3-Server auf die Version 4.2.8, was weitaus leichter und mit weniger Veränderungen der Dependencies kam als das große Update von 4.1.X auf 4.2.X!
 
 ### Ausführung vom Maintenance-Skript (Fehlgeschlagen)
-Daraufhin haben wir nun ein vorletztes Mal das tootctl Maintenance-Skript ausgeführt, es lief wahrscheinlich das erste Mal so erfolgreich durch, dass es bis zum Punkt `Deduplicating preview_cards…` erreichte, doch löschte (*oder deduplizierte*) keinen Eintrag in der Datenbank. Nachlesbar ist der gesamte Log unter [troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.log](https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.txt). Uns wurde also klar: um die vielen Einträge der *preview_cards* Tabelle zu beseitigen müssen wir diese manuell löschen. Langfristig sollte dies natürlich ein cronjob tun! Auch wichtig war, dass das Skript dennoch scheiterte mit einer anderen Fehlermeldung *scheinbar* nachdem es versuchte die Webhooks zu deduplizieren. Wir waren dadurch verwirrt und versuchten deshalb das Skript später erneut auszuführen und entschieden uns, nachdem wir die *preview_cards* eigenständig deduplizierten, uns das ganze genauer anzusehen. 
+Daraufhin haben wir nun ein vorletztes Mal das tootctl Maintenance-Skript um 17:54 ausgeführt, es lief wahrscheinlich das erste Mal so erfolgreich durch, dass es bis zum Punkt `Deduplicating preview_cards…` erreichte, doch löschte (*oder deduplizierte*) **keinen Eintrag in der Datenbank**. Nachlesbar ist der gesamte Log 013 unter <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.txt`</a>). Uns wurde also klar: um die vielen Einträge der *preview_cards* Tabelle zu beseitigen müssen wir diese manuell löschen. Langfristig sollte dies natürlich ein cronjob tun! Auch wichtig war, dass das Skript dennoch scheiterte mit einer anderen Fehlermeldung *scheinbar* nachdem es versuchte die Webhooks zu deduplizieren. Wir waren dadurch verwirrt und versuchten deshalb das Skript später erneut auszuführen und entschieden uns, nachdem wir die *preview_cards* eigenständig deduplizierten, uns das ganze genauer anzusehen. 
 
 ### Manuelles Löschen der Preview_Cards Einträge (Erfolgreich)
 
@@ -1240,7 +1241,7 @@ Das scheint das Problem irgendwie behoben zu haben.
 
 ### Ausführung vom Maintenance-Skript (Erfolgreich)
 
-Um 18:25 führten wir den Maintenance-Skript Befehl ein letztes Mal aus und dieser hat 100% funktioniert! Nachlesen lässt sich dies im Log [troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.log](). Das Problem lag anscheinend nicht bei den Webhooks (*diese waren ja auch nichtexistent*), sondern bei dem „Finished“ welches zum Schluss kommen sollte. Dieses führt noch einige generelle Systemchecks durch welche aufgrund von der *materialized view* gescheitert sind. Durch das *refresh* dieser lief das Maintenance-Skript nun ohne Probleme durch, 07:11 Stunden nachdem wir es das erste Mal heute versucht haben. 
+Um 18:25 führten wir den Maintenance-Skript Befehl ein letztes Mal aus und dieser hat 100% funktioniert! Nachlesen lässt sich dies im Log 014 <a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.txt" target="_blank" rel="noopener noreferrer">`troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.txt`</a>). Das Problem lag anscheinend nicht bei den Webhooks (*diese waren ja auch nichtexistent*), sondern bei dem „Finished“ welches zum Schluss kommen sollte. Dieses führt noch einige generelle Systemchecks durch welche aufgrund von der *materialized view* gescheitert sind. Durch das *refresh* dieser lief das Maintenance-Skript nun ohne Probleme durch, 07:11 Stunden nachdem wir es das erste Mal heute versucht haben. 
 
 </br>
 
@@ -1450,7 +1451,7 @@ Natürlich... aber NATÜRLICH auch ein Dankeschön an euch, die das hier lesen. 
 	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md">troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md</a></li>
 	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-007-2024-05-12-09-43.png">troet.cafe-007-2024-05-12-09-43.png</a></li>
 	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-008-tootctl-maintenance-2024-05-12-13-30.txt">troet.cafe-008-tootctl-maintenance-2024-05-12-13-30.txt</a></li>
-	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-009-tootctl-maintenance-2024-05-12-16-15.txt">troet.cafe-009-tootctl-maintenance-2024-05-12-16-15.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-009-migrate-db-2024-05-12-16-15.txt">troet.cafe-009-migrate-db-2024-05-12-16-15.txt</a></li>
 	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-010-migrate-db-2024-05-12-16-20.txt">troet.cafe-010-migrate-db-2024-05-12-16-20.txt</a></li>
 	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-011-migrate-db-2024-05-12-16-24.txt">troet.cafe-011-migrate-db-2024-05-12-16-24.txt</a></li>
 	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt">troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt</a></li>

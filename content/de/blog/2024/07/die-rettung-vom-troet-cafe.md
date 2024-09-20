@@ -9,7 +9,7 @@ author_handle: @ErikUden@mastodon.de
 
 ---
 
-<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.20 um 22:49</center>
+<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.20 um 22:50</center>
 
 <br>
 
@@ -17,7 +17,7 @@ author_handle: @ErikUden@mastodon.de
 
 <center>
   <a class="bordered-link" href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer">
-    <h1>Erik Uden</h1>
+    <p>**Erik Uden**</p>
   </a>
 </center>
 

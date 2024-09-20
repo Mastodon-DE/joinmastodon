@@ -179,7 +179,7 @@ Als dieser Befehl ausgeführt wurde haben wir das erste (1) Meeting beendet und 
 
 Die resultierende Datenbank war nach dem Import nur 33GB groß. Verglichen zu der 99GB Datenbank auf troet.cafe, so dachten wir, mussten viele Daten verloren gegangen sein. Wir hatten zu diesem Zeitpunkt nicht unrecht, jedoch aus anderen Gründen.
 
-Dies hat den Log 001 erzeugt (<a style="text-decoration: none;" href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`</a>) und wurde in 002 analysiert (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md" target="_blank" rel="noopener noreferrer">`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`</a>). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
+Dies hat den Log 001 erzeugt (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">`troet.cafe_001_pg_restore_psql-15_2024-05-11-10-48.txt`</a>) und wurde in 002 analysiert (<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md" target="_blank" rel="noopener noreferrer">`troet.cafe_002_Fehlermeldung-Ausgewaehlt-2024-05-11-10-57.md`</a>). Dieser zeigt alle Fehlermeldungen inzwischen den vielen erfolgreich durchgeführten Befehlen an. 
 
 Es waren zwei (2) unterschiedliche Fehler zu erkennen:
 - „foreign key constraints“ Probleme (vier Mal)
@@ -197,7 +197,8 @@ Insgesamt gab es also fünf (5) Fehlermeldungen, diese wurden jedoch als fünfze
 
 Wir haben die Fehler herausgesucht und auf Mastodon um Hilfe gebeten. Die Menschen die uns helfen wollten/konnten in eine Matrix-Gruppe hinzugefügt und mit den sensiblen Dateien hatten sie die Möglichkeit zu helfen. Die in dieser Gruppe genannten Vorschläge würden erst später relevant werden, zum Anfang der dritten (3) Session des Tages um 15:30. 
 
-Wir stellten folgenden Plan auf: (*dieser wurde nie durchgeführt*):
+Wir stellten folgenden Plan auf:
+<sup>(*dieser wurde nie durchgeführt*)</sup>
 
 Wir downgraden postgresql auf die alte Version (10.23), und anstelle einen Dump von der Datenbank zu kopieren und zu restoren, kopieren wir den Datenbankordner (`var/lib/postgresql/10`) auf den neuen Server mit der gleichen postgresql Version, fahren diesen komplett hoch, fixen auf dem neuen Server alles mit REINDEX und REPAIR Befehelen, gucken ob es dann geht / läuft. 
 
@@ -222,7 +223,7 @@ Als wir die Datenbank nun versuchten bei der gleichen Version (10.23) zu importi
 ```
 pg_restore -p 5433 -Fc -v -c -j 16 -U mastodon -n public --no-owner --role=mastodon -d mastodon_production /backup/mastodon_production_2024-05-11.sql
 ```
-*Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 10.23 (-p 5433) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*
+<sup>*Importiert die SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-11.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 10.23 (-p 5433) als User (-U) mastodon, löscht davor alle vorherigen Einträge (-c) und gibt verbose Text aus (-v).*</sup>
 <br/><br/>
 
 Sehr viele der Fehler sollen jedoch "table does not exist" beinhaltet haben was uns zu diesem Zeitpunkt nicht schlüssig erschien da diese Tables nicht existieren sollten da wir die Datenbank vor dem Import gelöscht hatten. 
@@ -1431,6 +1432,16 @@ Zu guter letzt kommt natürlich das wichtigste: **Martin - bei dir kann man sich
 
 Natürlich... aber NATÜRLICH auch ein Dankeschön an euch, die das hier lesen. Entweder seid ihr Benutzer:Innen der Plattform troet.cafe, Tech-Interessierte, oder irgendwelche Menschen die sich über das Geschehen und die Geschichte von troet.cafe interessieren. Vielleicht habt ihr auch nur Probleme mit eurer Datenbank und dieser Blog ist das erste was auf Google auftaucht, so oder so: Danke. Wir machen das ganze für euch und Ich glaube nach diesem riesigen Text der nur die Arbeit von zwei Tagen zusammenfasst, wisst ihr wer das [#TeamTroetCafe](https://troet.cafe/tags/TeamTroetCafe) ist, denn **es kann wirklich jede Person dazugehören!**
 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 </br>
 </br>
 </br>

@@ -68,6 +68,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 </br></br>
 
 # Übersicht
+<sup>
 - [Glossar](#glossar)
 - [Tag 1 der Rettung](#tag-1-der-rettung)
   - [Einführung](#einführung)
@@ -98,7 +99,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
   - [Der letzte Schritt und Smoke Test (Erfolgreich)](#der-letzte-schritt-und-smoke-test-(erfolgreich))
 - [Zeitaufzeichnung](#zeitaufzeichnung)
 - [Danksagungen](#danksagungen)
-
+</sup>
 </br></br>
 
 # Glossar

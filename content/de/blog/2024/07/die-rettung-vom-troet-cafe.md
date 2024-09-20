@@ -43,7 +43,7 @@ Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee 
 
 <br/>
 
-<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag zum Durchlesen</a> 
+<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/tree/main/public/images/blog/2024-07-16-saving-troet-cafe" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag zum Durchlesen</a> 
 
 <br/>
 
@@ -67,7 +67,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 
 </br></br>
 
-# Übersicht 2
+# Übersicht
 <div class="toc-container">
   <ul>
     <li><a href="#glossar">Glossar</a></li>
@@ -153,7 +153,7 @@ Da mit sehr viel Jargon um sich geworfen wird empfehle Ich jeder Person einen ku
 <br/><br/>
 
 # Tag 1 der Rettung
-**Meeting-Dauer:** 10:20 Stunden. 
+<sup>**Meeting-Dauer:** 10:20 Stunden.</sup>
 
 ## Einführung
 
@@ -455,7 +455,7 @@ Nachdem Ich diesen Schema-Dump auf den neuen Datenbank-Server übertragen hatte,
 `cat /backup/schema.sql | psql -d mastodon_production -U mastodon -` </br>
 *Importiert das Datenbank-Schema-Dump in die mastodon_production Datenbank als User mastodon*
 
-<sub>**Notiz:** Hier ungefähr ist ein Fehler für den 02. Tag aufgekommen. Wir wussten zwar nun das wir durch das Importieren eines clear-Text Schemas nicht die Indexierungsmethode ändern, dieser Weg also nicht Helfen würde, doch beinhaltete die Lösung eine ähnliche Herangehensweise welche ein clear-Text Schema welches mit genau diesem Befehl importiert wird benötigt. Was wir beim kopieren dieses Befehls jedoch missachteten war, dass wir ihn als postgres User ausführten. Auch wenn wir im Befehl eindeutig den Postgresql-User mastodon als Auszuführenden dieses Imports definieren macht dies den User mastodon lediglich zum Besitzenden der Tabellen **innerhalb** der Datenbank, nicht aber zum Besitzenden der Datenbank selbst! Somit war als *Owner* der Datenbank der User postgres angegeben, was später massiv Probleme und auch mehrere Stunden an Recherche sowie Trugschlüssen auslöste.</sub>
+<sup>**Notiz:** Hier ungefähr ist ein Fehler für den 02. Tag aufgekommen. Wir wussten zwar nun das wir durch das Importieren eines clear-Text Schemas nicht die Indexierungsmethode ändern, dieser Weg also nicht Helfen würde, doch beinhaltete die Lösung eine ähnliche Herangehensweise welche ein clear-Text Schema welches mit genau diesem Befehl importiert wird benötigt. Was wir beim kopieren dieses Befehls jedoch missachteten war, dass wir ihn als postgres User ausführten. Auch wenn wir im Befehl eindeutig den Postgresql-User mastodon als Auszuführenden dieses Imports definieren macht dies den User mastodon lediglich zum Besitzenden der Tabellen **innerhalb** der Datenbank, nicht aber zum Besitzenden der Datenbank selbst! Somit war als *Owner* der Datenbank der User postgres angegeben, was später massiv Probleme und auch mehrere Stunden an Recherche sowie Trugschlüssen auslöste.</sup>
 
 `psql` </br>
 *Öffnet die Postgresql Software*
@@ -600,8 +600,9 @@ ENDE VON TAG 1
 
 # Tag 2 der Rettung
 
-**Meeting-Dauer:** 13:10 Stunden  
+<sup>**Meeting-Dauer:** 13:10 Stunden</sup>
 
+## Einführung
 Ich habe ab 08:05 mit Nick geschrieben, es geht im besser und er möchte gerne an diesem Meeting teilnehmen. Ab 08:15 betrete Ich das Meeting mit Nick, ab 08:35 tritt Martin bei. Heute mache fast ausschließlich Ich alles an der Kommandozeile, Martin berät und Ich gebe ein. Manchmal kommen mir auch eigene Ideen, doch bevor Ich große Befehle ausführe (*vor allem an der Datenbank und nach großen Änderungen an der Herangehensweise*) frage Ich drei bis vier Mal nach ob Ich es wirklich ausführen soll.
 
 Anfangs sind wir noch ekzentrisch, fröhlich und gespannt auf einen *kurzen* Arbeitstag, da wir dachten, dass wir am gestrigen Tag jedes mögliche Problem gelöst hatten und nun einen klaren Plan vor Augen haben. Leider hätte dieses Sentiment nicht weiter von der Realität entfernt sein können. 
@@ -610,14 +611,14 @@ Am Vorabend hatte Ich noch, nachdem alle Meetings endlich vorbei waren, unsere V
 
 Rodirik schrieb mir um 08:08 am Morgen das unsere Vorgehensweise gefährlich sei, da die „--disable-triggers“ Flag wichtige Einträge im Datenbank-Schema (*Trigger*) überspringen würde. Er schaute sich unsere genauen Logs, das Datenbank-Schema sowie unsere eingegebenen Befehle an und kam um 08:42 zum entschluss das doch alles okay sei. Er habe in die Datenbank geguckt, diese enthält keine Trigger. Er erklärte mir daraufhin was ein Trigger im Kontext einer Datenbank ist, Ich verstehe es immer noch nicht. 
 
-Unser Plan war es einen *smoke test* durchzuführen, was wir letztendlich auch taten, doch definitiv nicht so früh wie wir es uns erhofften! Ein *smoke test* oder Rauchtest ist eine Überprüfung nach dem Motto „wo Rauch ist, ist auch Feuer“. Da wir nie 100% sicherstellen können das bei einem übertragen der Datenbank wirklich alles richtig gelaufen ist, müssen wir den Mastodon-Server hochfahren, alle Leute den Dienst benutzen lassen und potenzielle Fehlermeldungen einrieseln lassen. Wenn Menschen nur schreiben das Videos schlecht hochladen, ihre Benachrichtigungen oder Home-Timeline langsam / veraltet ist, dann ist alles gut, denn das ist normal nachdem ein Server für mehrere Stunden ausgeschaltet ist und einen halben Tag an Arbeit aufeinmal nacharbeiten muss. Aber wenn ein User schreibt seine Beiträge/Bilder/irgendwas seien weg, oder es ist vom Admin-Interface aus eindeutig zu sehen das irgendwas fehlt, dann ist das der Rauch und irgendwo ist das Feuer. Alle Beiträge welche im Zeitraum des Rauchtests gemacht werden könnten potenziell verschwinden, da wir im Fall das irgendwas schief läuft den Server wieder herunterfahren, alles auf den vorherigen Stand umstellen, und die alte Datenbank wieder anstellen würden, somit alle Beiträge die auf der neuen Datenbank gemacht wurden für ewig verloren wären. Wir stellten die Neu-Registrationen für diesen Zeitraum auch aus, da jemand einen Account auf der neuen Datenbank erstellen würde, doch am nächsten Tag ohne Account erwachen würde für den Fall das wir es wieder zurückgestellt haben. 
+Unser Plan war es einen *smoke test* durchzuführen, was wir letztendlich auch taten, doch definitiv nicht so früh wie wir es uns erhofften! Ein *smoke test*, oder Rauchtest, ist eine Überprüfung nach dem Motto „**wo Rauch ist, ist auch Feuer**“. Da wir nie 100% sicherstellen können das bei einem übertragen der Datenbank wirklich alles richtig gelaufen ist, müssen wir den Mastodon-Server hochfahren, alle Leute den Dienst benutzen und potenzielle Fehlermeldungen einrieseln lassen. Wenn Menschen nur schreiben das Videos schlecht hochladen, ihre Benachrichtigungen oder Home-Timeline langsam / veraltet ist, dann ist alles gut, denn das ist normal nachdem ein Server für mehrere Stunden ausgeschaltet war und einen halben Tag an Arbeit aufeinmal nacharbeiten muss. Aber wenn ein User schreibt seine Beiträge/Bilder/irgendwas seien weg, oder es ist vom Admin-Interface aus eindeutig zu sehen das irgendwas fehlt, dann ist das der Rauch, und irgendwo ist dann das Feuer. Alle Beiträge welche im Zeitraum des Rauchtests gemacht werden könnten potenziell verschwinden, da wir im Fall das irgendwas schief läuft den Server wieder herunterfahren, alles auf den vorherigen Stand umstellen, und die alte Datenbank wieder anstellen würden, somit alle Beiträge die auf der neuen Datenbank gemacht wurden für ewig verloren wären. Wir stellten die Neu-Registrationen für diesen Zeitraum auch aus, da jemand einen Account auf der neuen Datenbank erstellen würde, doch am nächsten Tag ohne Account erwachen könnte für den Fall das wir es wieder zurückgestellt haben. 
 
 Letztendlich lief alles super und es gab weder Rauch noch Feuer, dennoch war es wichtig diese Sicherheitsmaßnahme zu treffen!
 
 Wir besprachen unsere genaue Strategie von Gestern, wir hatten einen exakten, von mir angefertigten, Schritt-für-Schritt Plan der jeden Erfolg unserer Vorgehensweise aus dem gestrigen Protokoll herauspickte und in eine simple Anweisung herunterbrach. Doch auch der Plan hatte seine Lücken. Hier eine bessere Ausformulierung vom tatsächlichen Plan:
 
-Es gibt genau acht (8) Server oder Dienste um die wir uns für diese Operation kümmern müssen und die perfekt im Einklang miteinander ab- oder angeschaltet, sowie einzelne Dienste darauf ab- oder ausgeschaltet, oder umgezogen werden müssen:
-
+Es gibt genau acht (8) Server oder Dienste um die wir uns für diese Operation kümmern müssen und die perfekt im Einklang miteinander aus- oder angeschaltet, sowie einzelne Dienste darauf aus-, angeschaltet, oder umgezogen werden müssen:
+**Troet.Cafe**
 - Load Balancer (*Verteilung zu allen Web-Servern*)
 - web1-Server (*Mastodon-Web*)
 - web2-Server (*Mastodon-Web*)
@@ -631,14 +632,17 @@ Der Load-Balancer sowie alle Web- und Worker-Server müssen abgeschaltet werden 
 
 Der alte Datenbank-Server muss online bleiben um die Datenbank und Redis umzuziehen, später müssen dort die beiden Dienste heruntergefahren werden, jedoch ElasticSearch muss aufrechterhalten bleiben, da der Umzug zu kompliziert fürs erste wäre. Heißt der Server der alten Datenbank muss online bleiben jedoch ohne die Datenbank bereitzustellen. 
 
-Wir fingen damit an den *Load Balancer*, ein von Hetzner bereitgestelltes Tool zum Verteilen aller Anfragen von Usern, aka der „Load“, herunterzufahren. Eher mussten wir jeden einzelnen Web-Server aus dem Load-Balancer entfernen damit dieser nicht mehr auf einen Server verwies wenn eine Anfrage an troet.cafe gemacht wurde. In der Zukunft sollten wir uns überlegen einen Maintenance-Server aus genau diesem Grund zu haben, dieser sollte lediglich eine statische Seite bereitstellen welche besagt, dass wir momentan Wartungsarbeiten haben. Es wäre zumindest besser als das die Leute welche versuchen auf troet.cafe zu sehen einfach eine Fehlermeldung bekommen, doch wir dachten uns nachdem wir es seit Monaten ankündigen und weil wir ja nur „ein paar Stunden“ (*letztendlich waren es ~11*) offline wären, bräuchten wir es für diese Operation nicht. 
+## Ausführung des Gestrigen Plans (Fehlgeschlagen)
+### Abschaltung des Load Balancers
+Wir fingen damit an den *Load Balancer*, ein von Hetzner bereitgestelltes Tool zum Verteilen aller Anfragen von Usern, aka der „Load“, herunterzufahren. Eher mussten wir jeden einzelnen Web-Server aus dem Load-Balancer entfernen damit dieser nicht mehr auf einen Server verwies wenn eine Anfrage an troet.cafe gemacht wurde. In der Zukunft sollten wir uns überlegen einen Maintenance-Server aus genau diesem Grund zu haben, dieser sollte lediglich eine statische Seite bereitstellen welche besagt, dass wir momentan Wartungsarbeiten haben. Es wäre zumindest besser als das die Leute welche versuchen auf troet.cafe zu sehen einfach eine Fehlermeldung bekommen, doch wir dachten uns nachdem wir es seit Monaten ankündigen und weil wir ja nur „ein paar Stunden“ (*letztendlich waren es ~11*) offline wären, bräuchten wir es für diese Operation nicht. Wie sich später herausstellt wäre so ein Server sehr gut gewesen. 
 
 Der Load-Balancer wurde also Handlungsunfähig gemacht, ungefähr um 09:20 (*ab genau diesem Punkt war das troet.cafe nicht mehr zu erreichen*), daraufhin haben wir alle Web- und Worker-Server über den Befehl „halt“ heruntergefahren / angehalten. 
 
-Nun wo die Datenbank nicht mehr weiter über den laufenden Dienst von troet.cafe editiert wird müssen wir sie exportieren und auf den neuen Datenbank-Server übertragen. Am Vortag hatten wir lediglich die Datenbank während des laufenden Dienstes exportiert, was ggf. für Fehler in der Datenbank sorgte. Um heute sicherzustellen, dass auch alle Daten beim pg_dump exportiert werden mussten vorher alle Web- und Worker-Dienste heruntergefahren werden. 
+### Export der Troet.Cafe Datenbank und Redis
+Nun wo die Datenbank nicht mehr weiter über den laufenden Dienst von troet.cafe editiert wird, müssen wir sie exportieren und auf den neuen Datenbank-Server übertragen. Am Vortag hatten wir lediglich die Datenbank während des laufenden Dienstes exportiert, was ggf. für Fehler in der Datenbank sorgte. Um heute sicherzustellen, dass auch alle Daten beim pg_dump exportiert werden mussten vorher alle Web- und Worker-Dienste heruntergefahren werden. 
 
 Dabei ist uns aufgefallen das der alte Datenbank-Server neben der Datenbank und ElasticSearch auch noch die Redis-Datenbank am laufen hatte, also überlegten wir uns einen schnellen Plan diese auch umzuziehen. 
-Auch wenn der alte Datenbank-Server keine laufenden Mastodon-Dienste (*Web, Worker, puma, etc.*) haben sollte haben wir diese heruntergefahren. Auch Redis und ElasticSearch wurden heruntergefahren.
+Auch wenn der alte Datenbank-Server keine laufenden Mastodon-Dienste (*Web, Worker, puma, etc.*) haben sollte, haben wir diese heruntergefahren. Auch Redis und ElasticSearch wurden heruntergefahren.
 
 Wegen mir gerade nicht mehr bekannten Komplikationen bei dem Export des Dumps (*ggf. fiel uns erst während der ersten Exports auf das noch einige Web-/Worker-Dienste laufen könnten, zudem haben wir ein paar Flags hinzugefügt*) haben wir den Prozess (*pg_dump*) drei Mal gestartet und abgebrochen, der vierte Export der troet.cafe Datenbank war dann letztendlich der Finale. 
 
@@ -651,17 +655,18 @@ su mastodon --c "pg_dump --quote-all-identifiers -Fc mastodon_production > /back
 ``` 
 
 Dies sollte nur 20 Minuten dauern. Es hat letztendlich 38 Minuten bis 10:08 gedauert den pg_dump zu erstellen.  
+ 
 Doch zurück zu 09:35.
 
-Auf den neuen Datenbank-Server deinstallierte Ich nun die alte v10 von Postgresql welche wegen Tests am Vortag noch installiert waren. 
+Auf den neuen Datenbank-Server deinstallierte Ich nun die alte v10 von Postgresql welche wegen Tests am Vortag noch installiert war. 
 
-Auf den neuen DB-Server habe Ich Redis auf der neusten Version installiert. Daraufhin habe Ich den Redis-Server auf dem alten Datenbank-Server heruntergefahren wodurch sich die finale dump.rdb erstellte und nicht weiterhin verändert wurde. Diese dump.rdb habe Ich zum neuen Server via SCP kopiert und dort abgelegt wo diese Datei vom neuen Redis-Server gesucht werden würde (*Standort Eintragen*). Ich änderte die Permissions welche vom SCP Transfer verfälscht wurden, sodass auch Redis diese Datei besitzt und diese editieren kann. Daraufhin startete Ich den Redis-Server neu. 
+Auf den neuen Datenbank-Server habe Ich Redis auf der neusten Version installiert. Daraufhin habe Ich den Redis-Server auf dem alten Datenbank-Server heruntergefahren wodurch sich die finale dump.rdb erstellte und nicht weiterhin verändert wurde. Diese dump.rdb habe Ich zum neuen Server via SCP kopiert und dort abgelegt wo diese Datei vom neuen Redis-Server gesucht werden würde (`/var/lib/redis`). Ich änderte die Datei-Berechtigungen welche vom SCP Transfer verfälscht wurden, sodass auch Redis diese Datei besitzt und sie editieren kann. Daraufhin startete Ich den Redis-Server auf dem neuen Datenbank-Server neu. 
 
 Es war nun 10:02. 
 
-Zu diesem Zeitpunkt stellten wir fest das wir die komplizierte Konfiguration von ElasticSearch nicht rüberkopieren können, oder dies den Rahmen für den heutigen Tag sprengen würde. Deswegen entschieden wir uns den alten Datenbank-Server am laufen zu lassen ausschließlich für die den ElasticSearch-Dienst, wobei die Datenbank sowie der Redis-Server abgeschaltet bleibt. Am 02.06.2024 hat Martin jedoch ElasticSearch umgezogen und den Index auf den neuen Servern neu aufgebaut. 
+Zu diesem Zeitpunkt stellten wir fest das wir die komplizierte Konfiguration von ElasticSearch nicht rüberkopieren können, oder dies den Rahmen für den heutigen Tag sprengen würde. Deswegen entschieden wir uns den alten Datenbank-Server am laufen zu lassen ausschließlich für den ElasticSearch-Dienst, wobei die Datenbank, sowie der Redis-Server, abgeschaltet bleibt. Am 02.06.2024 würde Martin jedoch ElasticSearch umzehen und den Index auf den neuen Servern neu aufbauen. 
 
-Um 10:04 war das Backup fast fertig erstellt (*wir erkannten die Vollständigkeit des Backups/Dumps dadurch an das wir guckten wie groß die resultierende komprimierte Datei war, je näher sie an dem gestrig gesehen Wert von ~9,2 GB war, desto näher dachten wir wäre der Backup-Prozess am Ende*). 
+Um 10:04 war das Backup fast fertig erstellt. Wir erkannten die Vollständigkeit des Backups/Dumps dadurch an das wir guckten wie groß die resultierende komprimierte Datei war, je näher sie an dem gestrig gesehen Wert von ~9,2 GB kam, desto näher dachten wir wäre der Backup-Prozess am Ende. 
 
 
 Um 10:08, ungefähr 38 Minuten nachdem wir den Export gestartet haben, war der Dump fertig. Die ~90GB Datenbank ist nun auf 9,2 GB (komprimiert) runtergebrochen. 
@@ -680,10 +685,10 @@ Ich ging via SSH wieder auf den neuen Datenbank-Server, fand das clear-text Sche
 
 Einer der Fehler beim Importieren des Schemas kam beim Aufbauen des Indexes einer spezifischen Tabelle (*preview_cards_on_url*), da dort zu viele Einträge drin waren, deswegen kommentierten wir die Erstellung des Indexes aus. 
 
-Mit zwei Bindestrichen haben wir die Erstellung des Indexes aus dem DB-Schema auskommentiert:
+Mit zwei Bindestrichen haben wir die Erstellung des Indexes aus dem DB-Schema auskommentiert: 
 `-- CREATE UNIQUE INDEX index_preview_cards_on_url ON public.preview_cards USING btree (url);` 
 
-Beim ersten Import des Schemas kam eine Fehlermeldung auf, dies lag daran das wir es versuchten als Postgresql User zu importieren nicht aber als Root-User. Zudem hätten wir zuvor die existierenden Datenbanken droppen sollen. Wir verwendeten zugleich den falschen Befehl aus dem Protokoll des gestrigen Tages. 
+Beim ersten Import des Schemas kam eine Fehlermeldung auf, dies lag daran das wir es versuchten als Postgresql User zu importieren nicht aber als Root-User. Zudem hätten wir zuvor die existierenden Datenbanken droppen sollen. Wir verwendeten zugleich den falschen Befehl aus dem Protokoll des gestrigen Tages. Es startete schon Mal gut. 
 
 Wir droppten erneut alle existierenden Datenbanken auf dem neuen Datenbank-Server. 
 
@@ -696,11 +701,9 @@ Wir droppten erneut alle existierenden Datenbanken auf dem neuen Datenbank-Serve
 `drop database mastodon_production;` </br>
 *Löscht die mastodon_production Datenbank*
 
-
+</br>
 
 Wir erstellten die Datenbank namentlich und führten den richtigen Schema-only Import-Befehl aus.
-
-
 
 `CREATE DATABASE mastodon_production;` </br>
 *Erstellt eine leere mastodon_production Datenbank*
@@ -710,34 +713,36 @@ Wir erstellten die Datenbank namentlich und führten den richtigen Schema-only I
 
 Daraufhin nahmen wir den richtigen Befehl und das modifizierte Schema war um 10:24 angelegt. Dieses modifizierte Schema würde keinen Index für `preview_cards_on_url` beim Importieren der Daten erstellen und somit nicht daran scheitern. 
 
-```cat /backup/schema.sql | psql -d mastodon_production -U mastodon -```
+`cat /backup/schema.sql | psql -d mastodon_production -U mastodon -` </br>
 *Importiert das Datenbank-Schema-Dump in die mastodon_production Datenbank als User mastodon*
 <br/><br/>
 
-<sub>**Notiz:** Hier haben wir einen signifikanten Fehler gemacht, nämlich das die Tabellen der Datenbank zwar als User Mastodon importiert wurden, die Datenbank selbst jedoch erstellt wurde als User „postgres“ oder SuperUser. Der *Owner* der Datenbank war somit ein nicht-Mastodon User, was später große Probleme auslöste.</sub>
+<sup>**Notiz:** Hier haben wir einen signifikanten Fehler gemacht, nämlich das die Tabellen der Datenbank zwar als User Mastodon importiert wurden, die Datenbank selbst jedoch erstellt wurde als User „postgres“ oder SuperUser. Der *Owner* der Datenbank war somit ein nicht-Mastodon User, was später große Probleme auslöste.</sup>
 
-Nun können wir die Daten überhaupt importieren, dann modifizieren, ggf. auch löschen, ohne sie an der Live-Datenbank verändern zu müssen. Hätten wir an der originalen Datenbank die Daten verändert und irgendwas falsch gemacht, dann wären diese Datensätze, sowie troet.cafe selbst, irreversibel zerstört. So kompliziert dieser Prozess war, er war absolut notwendig um nichts falsch zu machen, denn um überhaupt herauszufinden wo der Fehler liegt müssen wir an den Daten experimentieren können, das geht nur in einer exakten Kopie der Datenbank welche wir jetzt das erste Mal geschaffen haben. 
+Nun können wir die Daten überhaupt importieren, dann modifizieren, ggf. auch löschen, ohne sie an der Live-Datenbank verändern zu müssen. **Hätten wir an der originalen Datenbank die Daten verändert und irgendwas falsch gemacht, dann wären diese Datensätze, sowie troet.cafe selbst, irreversibel zerstört.** So kompliziert dieser Prozess war, er war absolut notwendig um nichts falsch zu machen, denn um überhaupt herauszufinden wo der Fehler liegt müssen wir an den Daten experimentieren können, das geht nur in einer exakten Kopie der Datenbank welche wir jetzt das erste Mal geschaffen haben. 
 
-Martin sendete mir das Passwort für die Datenbank und den Mastodon-User. Wir sollten dieses Passwort dringend ändern da es in vielen Chat-Logs sowie einigen unverschlüsselten Datentransfers benutzt wurde. Der Befehl zur Datenbankimportierung (pg_restore) mit ausschließlich den Daten wurde erfolgreich gestartet um 10:27. 
+Martin sendete mir das Passwort für die Datenbank und den Mastodon-User. ~~Wir sollten dieses Passwort dringend ändern da es in vielen Chat-Logs sowie einigen unverschlüsselten Datentransfers benutzt wurde~~ (*bereits geschehen*).  Der Befehl zur Datenbankimportierung (pg_restore) mit ausschließlich den Daten wurde erfolgreich gestartet um 10:27. 
 
 Der Befehl muss ungefähr so ausgesehen haben:
 ```
-pg_restore -p 5432 -j 16 -Fc -a  -v  -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production-2024-05-12.sql
+pg_restore -j 16 -Fc -a  -v  -U mastodon -n public --no-owner --role=mastodon --disable-triggers -d mastodon_production /backup/mastodon_production-2024-05-12.sql
 ``` 
 *Importiert ausschließlich die Daten (-a) innerhalb der SQL-Datei (-Fc | Format custom) „mastodon_production_2024-05-12.sql“ mit 16 cores (-j 16) in eine Datenbank mit dem Namen „mastodon_production“ auf einem Postgresql-Server mit der Version 15.7 (-p 5432) als User (-U) mastodon, erzeugt dabei keinen Index und beachtet keine Foreign-Key Constraints (--disable-triggers), löscht davor alle vorherigen Einträge (-c) und gibt den Text verbös aus (-v).*
 <br/><br/>
 
 Es war notwendig das aus dem kompletten Datenbank-Backup ausschließlich die Daten, nicht auch das Schema, importiert wurden, da wir das Schema extra separat modifiziert und dann importiert haben, somit ist der „-a“ Tag notwendig.  
 
-Die Datenbank war ohne Fehlermeldung um 10:40 importiert worden und hatte eine Größe von 44GB. Wir waren uns immer noch unsicher ob wirklich alle Daten erfolgreich importiert wurden und hatten ohne Index auch wenig Möglichkeiten dies zu überprüfen. Die alte/Live Troet.Cafe Datenbank war 99GB groß, deshalb entsteht leicht die Idee das irgendwas während des Imports schiefgelaufen ist. Wir erstellten den Index also manuell und verglichen danach die Anzahl der Einträge einiger Tabellen beider Datenbanken. 
+**Die Datenbank war ohne Fehlermeldung um 10:40 importiert worden** und hatte eine Größe von 44GB. Wir waren uns immer noch unsicher ob wirklich alle Daten erfolgreich importiert wurden und hatten ohne Index auch wenig Möglichkeiten dies zu überprüfen. Die alte/Live Troet.Cafe Datenbank war 99GB groß, deshalb entsteht leicht die Idee das irgendwas während des Imports schiefgelaufen ist. Wir erstellten den Index also manuell und verglichen danach die Anzahl der Einträge einiger Tabellen beider Datenbanken. 
 
 Als erstes müssen wir den Index neu aufbauen, da wir dessen vollständige Erstellung über das modifizierte Schema verhindert haben. Der REINDEX Befehl hat im Normalfall zudem den Nebeneffekt die Größe einer Datenbank zu verringern, da die Daten nun vollständig importiert sind und ein im Nachhinein erstellter Index die Daten besser sortiert vorfindet, somit der Index kleiner wird. 
 
-Folgende Befehle wurden als postgres User in psql ausgeführt:
+Folgende Befehle wurden als postgres User in psql um 10:45 ausgeführt:
 
 `\c mastodon_production` 
 
-`REINDEX (verbose) database mastodon_production;` (um 10:45 ausgeführt)
+`REINDEX (verbose) database mastodon_production;` 
+
+#### Vergleich der Neuen und Alten Datenbank
 
 Nachdem der REINDEX ohne Fehlermeldungen ausgeführt wurde mussten wir beide Datenbanken vergleichen um Sicherzustellen das alle Daten erfolgreich importiert wurden. Folgende Befehle wurden sowohl auf dem alten und neuen troet.cafe Datenbankserver innerhalb der psql-Software als postgres User ausgeführt. 
 
@@ -763,14 +768,15 @@ Wir zählten zuletzt auch die Einträge in der „preview_cards“ Tabelle da di
 - 19.268.713 (Neue troet.cafe Datenbank)
 - 19.268.713 (Alte troet.cafe Datenbank)
 
-Notiz: Der Fakt das fast 20.000.000 Einträge in dieser eher unnötigen Tabelle waren wird später relevant. 
+<sup>Notiz: Der Fakt das fast 20.000.000 Einträge in dieser eher unnötigen Tabelle waren wird später relevant.</sup>
 
-In jedem Fall exakt gleich. **Keine Fehler**. Alle importiert. Heureka!
+In jedem Fall exakt gleich. **Keine Fehler**. Alle Datensätze importiert. Heureka!
 
 Das zählen der preview_cards Tabelle dauerte unproportional lang beim alten Server. 
 
-Da wir uns nun sicher sein konnten, dass alle Daten der alten Datenbank erfolgreich rüberkopiert wurden konnten wir um 11:14 Postgresql auf dem alten Datenbank-Server herunterfahren. Die stichprobenartigen Tests waren alle Erfolgreich. Der alte Datenbank-Server selbst konnte nicht heruntergefahren werden, da dieser noch ElasticSearch installiert hatte. 
+Da wir uns nun sicher sein konnten, dass alle Daten der alten Datenbank erfolgreich rüberkopiert wurden, konnten wir um 11:14 Postgresql auf dem alten Datenbank-Server herunterfahren. Die stichprobenartigen Tests waren alle Erfolgreich. Der physische alte Datenbank-Server selbst konnte nicht heruntergefahren werden, da dieser noch ElasticSearch installiert hatte. 
 
+## Alte Web- und Worker-Server auf neuen Datenbank-Server Umstellen
 
 Nun kommt der schwere Teil: die einzelnen Worker- und Web-server sind immer noch heruntergefahren oder gestoppt (halt). Wir mussten die Datenbank so weit auf dem neuen Server vorbereiten um die alte Datenbank herunterfahren zu können. Denn wenn wir die Worker- und Web-Server wieder hochfahren dann würden sie versuchen sich mit der alten Datenbank zu verbinden, ab dem Punkt hätten wir zwei unterschiedliche Datenbanken und die ganze Arbeit bis zu diesem Punkt wäre umsonst. Deshalb mussten wir Postgresql auf dem alten Datenbankserver herunterfahren, sodass die sich aufbauenden Verbindungen der Worker- und Web-Server scheitern und keine Änderung an der alten Datenbank vornehmen. Wir müssen die Worker- und Web-Server hochfahren und daraufhin deren Mastodon-Konfiguration ändern, sodass sie sich mit dem neuen Datenbank-Server sowie dessen Postgresql und Redis verbinden und die Datenbankänderungen dort vornehmen. Das Hochfahren der Worker- und Web-Server würde zudem nicht dafür sorgen, dass troet.cafe online erscheint, da einerseits die Datenbank-Anfragen scheitern und zudem der Loadbalancer weiterhin offline ist. 
 
@@ -792,6 +798,8 @@ Da der worker3-Server nun mit dem neuen Datenbank-Server verbunden sein sollte �
 Wir bekamen folgende Fehlermeldung:
 `authentification failure` vom worker3, wir vermuteten ein falsches Passwort. 
 
+### Probleme mit pgbouncer 
+
 Martin schaut daraufhin nach und stellt viel um und erkennt am *pgbouncer* des neuen Datenbank-Servers noch ein falsches Setup. 
 
 Wir mussten dem Mastodon-User auf dem Datenbank-Server wegen einem vorherigen Befehl die SuperUser Rechte geben, wir haben ihm nun die SuperUser Rechte wieder entzogen, da wir dachten das dies vielleicht der Grund für die `authentication failure` war. Folgender Befehl wurde genutzt:
@@ -809,7 +817,9 @@ Das ist eine Auflistung aller User sowie deren Rechte im Postgresql auf dem neue
 
 Beim Analysieren der Logs der Datenbank auf dem neuen Datenbank-Server stellte sich heraus das sie es war die den User mastodon nicht drauf lässt. 
 
-(erklärung von pgbouncer einfügen)
+pgbouncer ist ein lightweight Connection Pooler für PostgreSQL-Datenbanken, der die Anzahl aktiver Verbindungen reduziert. PostgreSQL-Verbindungen belasten das System, und zu viele gleichzeitige Verbindungen können die Performance beeinträchtigen. PgBouncer verwaltet einen Pool von Verbindungen, die zwischen mehreren Clients geteilt werden, was die Last verringert.
+
+Zum Beispiel: Statt 1.000 separate Verbindungen zu öffnen, können 100 Verbindungen effizient zwischen den Benutzern geteilt werden. So verbessert pgbouncer die Stabilität und Performance von Mastodon-Servern.
 
 Um 11:46 vermuteten wir, dass der pgbouncer vielleicht nicht die Rechte hat um die Datenbank zu editieren. Wir dachten auch es sei eine IP-Beschränkung und das dabei ein Fehler stattfand, was sich nach einiger Überprüfung und dem Ausschlussverfahren aber auch als falsch herausstellte. 
 
@@ -823,6 +833,8 @@ Wir verifizierten um 12:03 anhand von journalctl (*der Logs der Datenbank*) das 
 
 Wir dachten, dass weil die Userlist nicht vorhanden war konnte pgbouncer das Passwort nicht verifizeren und somit galt unsere Aktion und unser User als unauthentifiziert, deshalb `authentication failure`.
 
+## Ausführen vom Maintenance-Skript (Gescheitert)
+
 Da jetzt die tootctl Software vom worker3-Server die Datenbank des neuen Datenbank-Servers editieren konnte schien uns eigentlich nichts mehr im Weg zu sein. Das Mastodon-Fix Skript (*maintenance task*) um alle unsere Probleme zu lösen und eine Kopie der Datenbank welche alle diese Probleme hatte. So leicht war es dann leider auch nicht...
  
 Wir führten den gleichen Befehl wieder um 12:05 aus. 
@@ -833,7 +845,7 @@ Daraufhin bekamen wir eine Antwort welche die komplette Zeit des restlichen Tage
 
 </br>
 
-## Das Ändern der Datenbank-Schema-Version
+### Das Ändern der Datenbank-Schema-Version (Gescheitert)
 
 > "Your version of the database schema is more recent than this script, this may cause unexpected errors."
 
@@ -912,7 +924,7 @@ Für den Moment sollten wir keine weitere Lösung für dieses Problem finden.
 
 </br>
 
-## Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)
+### Fortführung der Suche nach einer Lösung zum pgbouncer Problem (Erfolgreich)
 
 Wir fügten die gleichen UFW (*Universal Firewall*) Regeln auf dem neuen Datenbank-Server ein wie auf dem Alten. Wir verbindeten den worker3-Server direkt mit dem neuen Datenbank-Server und überbrückten so pgbouncer, sodass dieses uns nicht mehr im Problem stehen sollte für den Fall, dass das Berechtigungsproblem von pgbouncer aus kommt. 
 
@@ -984,7 +996,7 @@ mastodon_production=> `select max(length(url)) from preview_cards;`
 (1 row)
 ```
 
-Es war nicht zu fassen. Der längste Link der lediglich einen einzelnen Eintrag in der Tabelle *preview_cards* darstellt war **9150 Zeichen** lang, das obwohl Mastodon standardmäßig nur 500 Zeichen erlaubt! Wie konnte das sein? Einfach: Mastodon zählt jeden Link als 23 Zeichen, egal ob er kürzer oder länger als das ist. Der Grund dafür ist lediglich um das Benutzen von Link-Shortener zu verhindern da diese oftmals echt viele Daten sammeln und die Firmen dahinter für Werbezwecke nutzen. Somit wird auf Mastodon und im Fediverse jeder Link gleich lang behandelt. Einen Link zu haben der länger als das Zeichenlimit von 500 ist, ist somit einfach. Doch das bis heute in der Mastodon-Software kein Check existiert der überprüft ob der geschriebene Link länger ist als die maximale Bytegröße die ein Eintrag in der Tabelle der Mastodon-Datenbank haben kann ist *sehr* fraglich. Am Ende des Tages lief troet.cafe auf einer älteren Version von Mastodon, und das schon lange! Selbst wenn heute für dieses Problem ein Fix existieren würde, Datenbankeinträge lösen sich damit nicht von alleine und werden so *grandfathered in*, und über die Jahre bis zu Jahrzehnte übernommen. 
+Es war nicht zu fassen. Der längste Link der lediglich einen einzelnen Eintrag in der Tabelle *preview_cards* darstellt war **9150 Zeichen** lang, das obwohl Mastodon standardmäßig nur 500 Zeichen erlaubt! Wie konnte das sein? Einfach: **Mastodon zählt jeden Link als 23 Zeichen**, egal ob er kürzer oder länger als das ist. Der Grund dafür ist lediglich um das Benutzen von Link-Shortener zu verhindern da diese oftmals echt viele Daten sammeln und die Firmen dahinter für Werbezwecke nutzen. Somit wird auf Mastodon und im Fediverse jeder Link gleich lang behandelt. Einen Link zu haben der länger als das Zeichenlimit von 500 ist, ist somit einfach. Doch das bis heute in der Mastodon-Software kein Check existiert der überprüft ob der geschriebene Link länger ist als die maximale Bytegröße die ein Eintrag in der Tabelle der Mastodon-Datenbank haben kann ist *sehr* fraglich. Am Ende des Tages lief troet.cafe auf einer älteren Version von Mastodon, und das schon lange! Selbst wenn heute für dieses Problem ein Fix existieren würde, Datenbankeinträge lösen sich damit nicht von alleine und werden so *grandfathered in*, und über die Jahre bis zu Jahrzehnte übernommen. 
 
 Doch um das Ausmaß des Problems wirklich zu wissen mussten wir nicht nur den längsten Link finden, sondern alle Links die zu lang sind und sich fehlerhafterweise in die Datenbank geschlichen haben! 
 
@@ -1126,11 +1138,14 @@ Mit dem Ergebnis das 15 Links welche unsere Datenbank plagten natürlich gelösc
 
 </br>
 
-### Tatsächlich die Datenbank Updaten (Erfolgreich)
+## Tatsächlich die Datenbank Updaten (Erfolgreich)
 
 Da nun die Datenbank *pico bello* war, alle vorherigen Probleme gelöst, jetzt auch das Mega-Problem der zu großen Links in der *preview_cards* Tabelle (*nach 07:27 Stunden*) behoben war, konnten wir endlich mit dem eigentlichen Prozess fortfahren: Um 17:44 führten wir das standardmäßige Update eines Mastodon-Servers zu der [v4.2.0 von einer v4.1.X Instanz](https://github.com/mastodon/mastodon/releases/tag/v4.2.0) auf dem worker3-Server durch, und ließen so die Migrations-Skripte, die bei einem jeden Mastodon-Update dabei sind, über die troet.cafe Datenbank laufen. In der Vergangenheit sind diese immer Fehlgeschlagen aufgrunddessen das die Datenbank eine **falsche Schema-Version** hatte, die **Foreign-Key-Constraints** oder der Fakt das kein Index aufgebaut werden konnte wegen **Links** die selbst länger waren als jeder Beitrag auf der Plattform. Heute, in diesem Moment aber, hat das Update funktioniert. Es war wirklich ein Heureka-Moment, auch wenn wir ihn in diesem Moment nach diesem Wochenende wenig würdigten und lediglich hofften, das nichts *weiteres* auf diesem holprigen Weg schief läuft. Wir updateten den worker3-Server auf die Version 4.2.8, was weitaus leichter und mit weniger Veränderungen der Dependencies kam als das große Update von 4.1.X auf 4.2.X!
 
-Daraufhin haben wir nun ein vorletztes Mal das tootctl Maintenance-Skript ausgeführt, es lief wahrscheinlich das erste Mal so erfolgreich durch, dass es bis zum Punkt `Deduplicating preview_cards…` erreichte, doch löschte (*oder deduplizierte*) keinen Eintrag in der Datenbank. Nachlesbar ist der gesamte Log unter [troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.log](). Uns wurde also klar: um die vielen Einträge der *preview_cards* Tabelle zu beseitigen müssen wir diese manuell löschen. Langfristig sollte dies natürlich ein cronjob tun! Auch wichtig war, dass das Skript dennoch scheiterte mit einer anderen Fehlermeldung *scheinbar* nachdem es versuchte die Webhooks zu deduplizieren. Wir waren dadurch verwirrt und versuchten deshalb das Skript später erneut auszuführen und entschieden uns, nachdem wir die *preview_cards* eigenständig deduplizierten, uns das ganze genauer anzusehen. 
+### Ausführung vom Maintenance-Skript (Fehlgeschlagen)
+Daraufhin haben wir nun ein vorletztes Mal das tootctl Maintenance-Skript ausgeführt, es lief wahrscheinlich das erste Mal so erfolgreich durch, dass es bis zum Punkt `Deduplicating preview_cards…` erreichte, doch löschte (*oder deduplizierte*) keinen Eintrag in der Datenbank. Nachlesbar ist der gesamte Log unter [troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.log](https://github.com/Mastodon-DE/joinmastodon/blob/main/public/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.txt). Uns wurde also klar: um die vielen Einträge der *preview_cards* Tabelle zu beseitigen müssen wir diese manuell löschen. Langfristig sollte dies natürlich ein cronjob tun! Auch wichtig war, dass das Skript dennoch scheiterte mit einer anderen Fehlermeldung *scheinbar* nachdem es versuchte die Webhooks zu deduplizieren. Wir waren dadurch verwirrt und versuchten deshalb das Skript später erneut auszuführen und entschieden uns, nachdem wir die *preview_cards* eigenständig deduplizierten, uns das ganze genauer anzusehen. 
+
+### Manuelles Löschen der Preview_Cards Einträge (Erfolgreich)
 
 Nun löschten wir also alle Einträge innerhalb der Tabelle *preview_cards* die älter als 3 Monate waren:
 
@@ -1171,9 +1186,7 @@ mastodon_production=> `select * from webhooks;`
 ```
 Uns beeindruckte das scheiternde Maintenance-Skript erstmal weniger, da wir uns selbst zu Helfen wussten. Wir machten also weiter...
 
-Nick erzählte irgendwas von *materialized_view*, Ich verstehe nicht genau was das ist, aber irgendwas wichtiges hat er verändert. Ich weiß, dies ist ein super Protokoll. Wenn irgendwas ist, fragt Nick!
-
-Mir fiel in diesem Moment ein, dass wir das Passwort vom mastodon User auf dem Datenbank-Server später ändern sollten, da es nun jeder im Anruf kennt. Glücklicherweise haben wir das bereits getan!
+~~Mir fiel in diesem Moment ein, dass wir das Passwort vom mastodon User auf dem Datenbank-Server später ändern sollten, da es nun jeder im Anruf kennt~~ (*bereits geschehen*). 
 
 Um 18:12 führten wir folgenden Befehl aus um zu gucken auf welcher Version nun unsere Datenbank nach den Migrations-Skripts sind:
 
@@ -1189,6 +1202,9 @@ mastodon_production=> `select version from schema_migrations order by version de
 ```
 
 Dieser zeigte uns die jetzige Schema-Vesion der Datenbank des Datenbank-Servers. Verglichen zur vorherigen Version `2022_12_06_114142`, sind wir nun bei `2023_09_07_15_01_00`, was nach dem Update auf 4.2.0, sowie später auf 4.2.8 zu erwarten war. Das Datenbank-Update war also erfolgreich!
+
+### Materialized_View Fix (Erfolgreich)
+Nick erzählte irgendwas von *materialized_view*, Ich verstehe nicht genau was das ist, aber irgendwas wichtiges hat er verändert. Ich weiß, dies ist ein super Protokoll. Wenn irgendwas ist, fragt Nick!
 
 Nick sagte der Server „[...] versucht ein repopulate in einer nicht populated view“. Was auch immer das heißen mag. 
  
@@ -1226,9 +1242,11 @@ Okay, Ich hoffe das hat jemanden geholfen!
 
 mastodon_production=>  `REFRESH MATERIALIZED VIEW public.instances;`
 
-Das scheint bei irgendwas geholfen zu haben. 
+Das scheint das Problem irgendwie behoben zu haben. 
 
-Um 18:25 führten wir den Maintenance-Skript Befehl ein letztes Mal aus und dieser hat 100% funktioniert! Nachlesen lässt sich dies im Log [troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.log](). Das Problem lag anscheinend nicht bei den Webhooks (*diese waren ja auch nichtexistent*), sondern bei dem „Finished“ welches zum Schluss kommen sollte. Dieses führt noch einige generelle Systemchecks durch welche aufgrund von der *materialized view* gescheitert sind. Durch das *refreshen* dieser lief das Maintenance-Skript nun ohne Probleme durch, 07:11 Stunden nachdem wir es das erste Mal heute versucht haben. 
+### Ausführung vom Maintenance-Skript (Erfolgreich)
+
+Um 18:25 führten wir den Maintenance-Skript Befehl ein letztes Mal aus und dieser hat 100% funktioniert! Nachlesen lässt sich dies im Log [troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.log](). Das Problem lag anscheinend nicht bei den Webhooks (*diese waren ja auch nichtexistent*), sondern bei dem „Finished“ welches zum Schluss kommen sollte. Dieses führt noch einige generelle Systemchecks durch welche aufgrund von der *materialized view* gescheitert sind. Durch das *refresh* dieser lief das Maintenance-Skript nun ohne Probleme durch, 07:11 Stunden nachdem wir es das erste Mal heute versucht haben. 
 
 </br>
 
@@ -1285,7 +1303,7 @@ ElasticSearch hatten wir nicht verändert und ließen wir weiterhin auf den alte
 
 Um 19:40 haben wir auf dem alten Datenbank-Server eine neue Indexierung aller Beiträge gestartet. 
 
-Wir merkten nur, dass wir kurz davor waren das ganze tatsächlich, hoffentlich ohne weitere Probleme, abzuschließen. 
+Wir merkten nun, dass wir kurz davor waren das ganze tatsächlich, hoffentlich ohne weitere Probleme, abzuschließen. 
 
 Wenn wir nun Hetzner's Loadbalancer anschalten würden, welcher die erste Anlaufstelle für die DNS Einträge der troet.cafe Domain sind und jegliches Traffic zwischen den web1, web2, und web3 Server aufteilt, dann würde troet.cafe tatsächlich auch wieder online gehen. 
 
@@ -1299,7 +1317,7 @@ Gleichzeitig starteten wir alle Web-Server neu um den gleichen Effekt zu erziele
 
 </br>
 
-### Der letzte Schritt und Smoke Test (Erfolgreich)
+## Alles Wieder Online Stellen (Erfolgreich)
 
 Um 20:02 kam der Moment der Wahrheit, wir würden nun endlich den Loadbalancer hochfahren und somit troet.cafe auf neuer Hardware mit neuen Servern und funktionierender Datenbank hochfahren. Es war meine Aufgabe den Loadbalancer anzuschalten. Zuerst nahm Ich jedoch einen Schritt zurück und verinnerlichte was das bedeuten würde. Wenn irgendwas, auch nur irgendwas an dieser Datenbank dennoch kaputt war, etwas das man anhand von Statistiken nicht sehen könnte, etwas das wir übersehen haben, dann müssten wir troet.cafe wieder herunterfahren, alle Web- und Worker-Server wieder auf die alte Datenbank lenken und Dinge so weiterführen wie bisher. Doch das würde bedeuten, dass alle Beiträge während des *smoke test* gelöscht werden. Jeder neue Account, jedes Bild, alles über Nacht weg. Wir stellten natürlich neue Registrationen bereits im Voraus aus und würden diese auch nicht wieder anstellen bis der *smoke test* vorbei ist. Ich informierte natürlich im [Voraus](https://mastodon.de/@ErikUden/112426891286057054) sowie [währenddessen](https://mastodon.de/@ErikUden/112429444523028870) troet.cafe wieder online ging das dies ein Test ist und was das überhaupt bedeutet. Dennoch hatte Ich bedenken. 
 
@@ -1310,6 +1328,8 @@ Würde der Server online gehen? Würden Menschen zu uns kommen und sagen, dass i
 Da sich der ElasticSearch Index (*was die erweiterte Suchfunktion ermöglicht*) noch aufbaut, berichteten viele Personen damit ein Problem! Zudem musste gerade die Föderation der letzten ~11,5 Stunden nachgearbeitet werden, das heißt viele Posts kamen erst verlangsamt auf mastodon.de bei mir an, sowie auch bei den Menschen auf troet.cafe. Doch die Clients (*vor allem Apps auf dem Handy*) die sich in dem Moment in dem troet.cafe online ging wieder verbinden konnten und dies auch sofort getan haben, wollten natürlich sofort die neuste Timeline haben, alle Benachrichtigungen abfragen und am besten noch neue Posts schreiben! Das Nacharbeiten des fehlenden Tages und gleichzeitig neue Bereitstellen von Inhalten konnten dann auch unsere neuen Server nicht *sofort*, weswegen wir einige Meldungen einiger User darüber bekommen haben, jedoch meistens mit der Meldung dazu, dass alles andere zu gehen scheint. Solange wir nur diese Art an Fehlermeldung bekommen, dann ist alles gut! Denn dieses Problem löst sich mit der Zeit von selbst. 
 
 Langsam ließ die Angst in mir nach, dass wir alles doch noch wieder zurückfahren mussten, doch mit jeder vergehenden Minute, mit jedem neuen Post, wäre das ein Beitrag der falls doch irgendwas schief läuft gelöscht werden sollte. Auch dieses Gefühl stummte mit der Zeit ab. 
+
+### Es Heißt Tröt!
 
 Da es nun nur noch hieß das wir warten müssen um zu gucken ob irgendwas passiert, beschäftigte Ich mich mit einer eher Trivialen, dennoch unfassbar wichtigen Aufgabe! Einer der **wichtigsten** Rückmeldungen die wir bekommen haben war skandalös! Viele beschwerten sich, dass der ikonische „Tröt!“ Knopf nun mit einem langweiligen „Veröffentlichen!“ Knopf ersetzt wurde. Die Geschichte dahinter wird einigen bekannt sein: der Britische YouTuber Hbomberguy (*Harry Brewis*) sagte Eugen Rochko eines Tages er würde das Mastodon-Projekt auf ewig finanziell unterstützen, wenn diese die [Post-Funktion zu „Toot“ umbenennen](https://mastodon.social/@Hbomberguy/146524) würden. Oberflächlich mag diese Idee sinnvoll erscheinen, denn Twitter (*benannt nach einem Vogel*) hat „Tweets“ (*im englischen das Geräusch was Vögel machen, Zwitschern*), also Mastodon (*benannt nach einer Mammutartigen Spezies mit Rüssel*) hat Tröts (*Toots*)! Was Hbomberguy dabei verheimlichte war, dass im englischen das Wort „Toot“ auch umgangsprachlich für „Furzen“ ist. Das Mastodon-Team realisierte dies nach einigen Updates und ersetzte *Toot* / *Tröt* mit dem generischen „Publish“ / „Veröffentlichen“. So die einfache Geschichte, natürlich hat auch ein bisschen der Gedanke mit reingespielt, dass man Twitter nicht nachahmen möchte und eine Plattform welche sich selbst nicht in den Mittelpunkt stellt ggf. höhere Chancen hat zu wachsen. Vielleicht, das sind nur meine Spekulationen, Ich weiß es selbst nicht. 
 
@@ -1330,6 +1350,8 @@ Welche mit den folgenden Schritten erläutert wie man das „Veröffentlichen!�
 6. neu laden: "systemctl restart mastodon-web"
 
 Dies setzte Ich auf allen drei Web-Servern um, woraufhin jede Person wieder das ikonische **Tröt!** zu sehen bekam beim Veröffentlichen ihrer Beiträge!
+
+## Die Letzten Minuten
 
 Wir beobachteten die Lage spannend, nach so einem langen Tag waren 30 Minuten, eine weitere Stunde, nicht wirklich irgendwas nennenswertes. Wir redeten, gratulierten einander. Sahen nach und nach viele Helfende die Videokonferenz verlassen, bis nur noch das Kernteam von Rodirik, Nick, Martin und meiner Wenigkeit übrig blieb. Als wirklich nichts fragwürdiges aufkam erklärten wir post-factum: **Das troet.cafe wurde gerettet!**
 
@@ -1368,7 +1390,7 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.29 | 17:34 - 18:22 (00:48h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.07.29 | 19:14 - 21:52 (02:38h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.09.10 | 12:20 - 13:05 (00:25h) Aufarbeitung des Protokolls von Erik Uden`
-- `2024.09.20 | 18:04 - 19:30 (01:26h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.09.20 | 18:04 - 21:30 (01:26h) Aufarbeitung des Protokolls von Erik Uden`
 
 Insgesamt: (muss noch ausgerechnet werden)
 

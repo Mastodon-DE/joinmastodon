@@ -41,9 +41,6 @@ Neben dem Kernteam an [Martin](https://muenchen.social/@martinmuc), [Nick](https
 
 Ich werde im Laufe dieses Blogeintrags natürlich herausstellen wer welche Idee gebracht hat und wo geholfen hat, doch zum Schluss findet ihr noch eine ganz klare Danksagung!
 
-<br/>
-
-<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/tree/main/public/images/blog/2024-07-16-saving-troet-cafe" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag zum Durchlesen</a> 
 
 <br/>
 
@@ -124,6 +121,7 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
     </li>
     <li><a href="#zeitaufzeichnung">Zeitaufzeichnung</a></li>
     <li><a href="#danksagungen">Danksagungen</a></li>
+	<li><a href="#archiv">Archiv</a></li>
   </ul>
 </div>
 </br></br>
@@ -1434,3 +1432,41 @@ Ich muss mich natürlich auch bei **Nick** ([@freestyle@mastodon.de](https://mas
 Zu guter letzt kommt natürlich das wichtigste: **Martin - bei dir kann man sich eigentlich nur bedanken** ([@martinmuc@muenchen.social](https://muenchen.social/@martinmuc)), denn die offensichtlichen Dinge für die Ich dankbar bin macht dieses Protokoll hoffentlich klar, aber was Ich dieses Wochenende, und vermindert die vorherigen Monate, miterlebt habe, war ein kleiner Einblick in das was du für über sechs (6) Jahre für troet.cafe, und umso länger für andere Mastodon-Instanzen, gemacht hast. Komplett alleine. Ich hatte Nick, Rodirik, Emily und Ivan, sowie die gesamte Öffentlichkeit. Du hast alles alleine geschmissen, nicht nur die Administration, sondern vor allem auch die Moderation. Es gab Wochen, und nicht nur während der Spamwelle, wo mir das zu viel war, viel zu viel. Als Ich die Nachrichten hörte, dass du im Januar 2024 troet.cafe und muenchen.social schließen wolltest, war Ich natürlich verblüfft. Nachdem Ich auch nur eine Woche mit dir zusammengearbeitet habe und entsetzt lernen musste, dass dies wirklich eine ***one-man-show*** war, war Ich eher erstaunt, dass du es nicht viel früher beendet hast. Ich glaube das absolut stärkste wofür Ich mich bedanken kann, und das erneut neben all den anderen *offensichtlichen* Dingen, ist das du bereit warst Hilfe anzunehmen. Das diese Geschichte einen recht negativen Anfang und doch letztendlich diese unfassbare Wendung ins positive haben konnte, ist einzig und allein dein verdienst! Dafür sollten wir dir Alle danken, dafür musst du aber auch **dir selbst dankbar sein!** 
 
 Natürlich... aber NATÜRLICH auch ein Dankeschön an euch, die das hier lesen. Entweder seid ihr Benutzer:Innen der Plattform troet.cafe, Tech-Interessierte, oder irgendwelche Menschen die sich über das Geschehen und die Geschichte von troet.cafe interessieren. Vielleicht habt ihr auch nur Probleme mit eurer Datenbank und dieser Blog ist das erste was auf Google auftaucht, so oder so: Danke. Wir machen das ganze für euch und Ich glaube nach diesem riesigen Text der nur die Arbeit von zwei Tagen zusammenfasst, wisst ihr wer das [#TeamTroetCafe](https://troet.cafe/tags/TeamTroetCafe) ist, denn **es kann wirklich jede Person dazugehören!**
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+# Archiv
+
+<a style="text-decoration: none;" href="https://github.com/Mastodon-DE/joinmastodon/tree/main/public/images/blog/2024-07-16-saving-troet-cafe" target="_blank" rel="noopener noreferrer">Jeder Log für diesen Blogeintrag auf GitHub zum Durchlesen</a> 
+
+<div class="toc-container">
+  <ul>
+    <li><a href="/images/blog/2024-07-16-saving-troet-cafe/thumbnail-saving-troet-cafe.pdn">thumbnail-saving-troet-cafe.pdn</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/thumbnail-saving-troet-cafe.png">thumbnail-saving-troet-cafe.png</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt">troet.cafe-001-pg_restore-psql-15-2024-05-11-10-48.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md">troet.cafe-002-fehlermeldung-ausgewaehlt-2024-05-11-10-57.md</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt">troet.cafe-003-pg_restore-schema-psql-15-2024-05-11-12-23.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-004-pg_restore-data-only-psql-15-2024-05-11-13-16.txt">troet.cafe-004-pg_restore-data-only-psql-15-2024-05-11-13-16.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-005-comparison-of-database-size-2024-05-11-13-58.jpeg">troet.cafe-005-comparison-of-database-size-2024-05-11-13-58.jpeg</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md">troet.cafe-006-old-db-bloat-calculation-2024-05-12-08-58.md</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-007-2024-05-12-09-43.png">troet.cafe-007-2024-05-12-09-43.png</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-008-tootctl-maintenance-2024-05-12-13-30.txt">troet.cafe-008-tootctl-maintenance-2024-05-12-13-30.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-009-tootctl-maintenance-2024-05-12-16-15.txt">troet.cafe-009-tootctl-maintenance-2024-05-12-16-15.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-010-migrate-db-2024-05-12-16-20.txt">troet.cafe-010-migrate-db-2024-05-12-16-20.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-011-migrate-db-2024-05-12-16-24.txt">troet.cafe-011-migrate-db-2024-05-12-16-24.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt">troet.cafe-012-tootctl-maintenance-2024-05-12-16-48.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.txt">troet.cafe-013-tootctl-maintenance-2024-05-12-17-54.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.txt">troet.cafe-014-tootctl-maintenance-2024-05-12-18-25.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-015-user-verlassen-das-cafe-2024-05-12-18-43.png">troet.cafe-015-user-verlassen-das-cafe-2024-05-12-18-43.png</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-016-laenge-des-meetings-am-zweiten-tag-2024-05-12-21-26.png">troet.cafe-016-laenge-des-meetings-am-zweiten-tag-2024-05-12-21-26.png</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt">troet.cafe-extra-bloat-script-jain-2024-05-11-17-02.txt</a></li>
+	<li><a href="/images/blog/2024-07-16-saving-troet-cafe/troet.cafe-extra-network-infrastructure-2024-05-12-09-24.png">troet.cafe-extra-network-infrastructure-2024-05-12-09-24.png</a></li>
+  </ul>
+</div>
+
+
+

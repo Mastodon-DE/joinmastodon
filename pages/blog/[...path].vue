@@ -120,4 +120,13 @@ img {
     box-sizing: border-box; /* Includes padding and border in element's total width */
     border-radius: 15px; /* Adds rounded corners to the border */
   }
+
+  .toc-container a {
+    text-decoration: none; /* Removes underline from links */
+    color: #000; /* Set a default color for the links */
+  }
+
+  .toc-container a:hover {
+    text-decoration: underline; /* Underline only on hover */
+  }
 </style>

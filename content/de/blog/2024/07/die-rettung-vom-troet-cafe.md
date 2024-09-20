@@ -1,6 +1,6 @@
 ---
 title: Die Rettung vom Troet.Cafe
-created_at: 1721510753000
+created_at: 1726872333000
 image: /images/blog/2024-07-16-saving-troet-cafe/thumbnail-saving-troet-cafe.png
 description: Eine Aufzeichnung der zwei Tage langen Videokonferenz, resultierend aus mehreren Monaten an Recherche zum Beheben der technischen Probleme mit dem sozialen Netzwerk troet.cafe basierend auf der Mastodon Software
 author: Erik Uden
@@ -9,14 +9,14 @@ author_handle: @ErikUden@mastodon.de
 
 ---
 
-<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.20 um 22:52</center>
+<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.21 um 00:45</center>
 
 <br>
 
 <center style="margin-top: -30px;">von</center>
 
 <center>
-  <a class="bordered-link" href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer">Erik Uden</a>
+  <a class="bordered-link" href="https://mastodon.de/@ErikUden" target="_blank" rel="noopener noreferrer"><b>Erik Uden</b></a>
 </center>
 
 <br/>
@@ -1386,10 +1386,11 @@ Das Cafe war gerettet, doch oh Gott: ***wann machen wir das gleiche für muenche
 - `2024.07.29 | 19:14 - 21:52 (02:38h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.09.10 | 12:20 - 13:05 (00:25h) Aufarbeitung des Protokolls von Erik Uden`
 - `2024.09.20 | 18:04 - 23:59 (05:55h) Aufarbeitung des Protokolls von Erik Uden`
+- `2024.09.21 | 00:00 - 00:45 (00:45h) Finalisierung des Protokolls` 
 
-Insgesamt: (muss noch ausgerechnet werden)
+Insgesamt: 58 Stunden und 01 Minute
 
-<sub>**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski.</sub>
+<sup>**Notiz:** An der Reparatur und Umprogrammierung der join-mastodon.de Webseite am 19. und 20. Juli war ausschließlich [Jesse Wierzbinski](https://github.com/CPlusPatch), oder auch bekannt unter dem Pseudonym [CPlusPatch](https://mk.cpluspatch.com/@jessew) dran beteiligt. Wir arbeiteten zwar zusammen, Ich lieferte jedoch meist nur das Feedback. Die tatsächlichen Code-Änderungen (*welche einem kompletten Codebase-Rewrite ähnelten*) für diesen Blog, sowie den Aufbau der Webseite selbst, kamen nur von Jesse Wierzbinski.</sup>
 
 </br>
 
@@ -1405,13 +1406,13 @@ Ich muss mich bei **Panda** (<a style="text-decoration: none;" href="https://pan
 
 Zudem kann Ich natürlich nicht vergessen **André Jaenisch** (<a style="text-decoration: none;" href="https://fedi.jaenis.ch/@andre" target="_blank" rel="noopener noreferrer">@andre@fedi.jaenis.ch</a>) zu danken, welcher seit der ersten Sekunde dabei war um im Expert:Innenrat auszuhelfen. Ich könnte jede Sache auflisten bei der du mitgeholfen hast, Ich glaube aber zu jeder Sache die wir besprochen haben hast du eine passende Idee dazu gegeben, Logs analysiert, oder sofort einen Link gehabt zu einer Seite die alles erklärt oder löst. „Das funktioniert nicht weil diese Dependency depubliziert wurde, hier könnt ihr in der Dokumentation nachlesen wie man das und jenes macht“  - wie aus der Pistole geschossen! Immer eine Hilfe und sogar eine sehr Gute!
 
-Danke an **Patrick Fedick** (<a style="text-decoration: none;" href="https://mastodon.de/@patrickf" target="_blank" rel="noopener noreferrer">@patrickf@mastodon.de</a>) für das Aufdecken und Lösen vom letztendlichen Datenbankproblem mit den *preview_cards* URLs. Ich führte lediglich die Befehle aus die du ausformuliertest, und deine Idee für das Suchen nach zu langen URLs sowie das Entfernen dieser war der Knackpunkt der das gravierende Problem der Datenbank am zweiten Tag gelöst hat! Für das Analysieren der Schema, sowie deine Hilfe bei diversen Problemen innerhalb der mehreren Stunden die du dabei warst bedanke Ich mich natürlich auch, du hast bei so vielen Dingen geholfen das Ich sie gar nicht mehr alle akkurat weiß!
+Danke an **Patrick Fedick** (<a style="text-decoration: none;" href="https://mastodon.de/@patrickf" target="_blank" rel="noopener noreferrer">@patrickf@mastodon.de</a>) für das Aufdecken und Lösen vom letztendlichen Datenbankproblem mit den *preview_cards* URLs. Ich führte lediglich die Befehle aus die du ausformuliertest, und deine Idee für das Suchen nach zu langen URLs, sowie das Entfernen dieser, war der Knackpunkt der das gravierende Problem der Datenbank am zweiten Tag gelöst hat! Für das Analysieren der Schema, sowie deine Hilfe bei diversen Problemen innerhalb der mehreren Stunden die du dabei warst, bedanke Ich mich natürlich auch, du hast bei so vielen Dingen geholfen das Ich sie gar nicht mehr alle akkurat weiß!
 
-Ein großes Dankeschön an **Rodirik** (<a style="text-decoration: none;" href="https://norden.social/@Rodirik" target="_blank" rel="noopener noreferrer">@rodirik@norden.social</a>) welcher mit Rat und Tat gleich am Morgen des ersten sowie zweiten Tages dabei war und unsere Entscheidungen kritisch betrachten und Einordnen konnte. Selbstverständlich bin Ich auch dankbar für deine sehr aktive Zusammenarbeit am zweiten Tag wo du bis zum Schluss als troet.cafe online war mitgeholfen hast, neben der ständigen Hilfe! Der Fakt, dass deine Server überhaupt die Videokonferenz gehostet haben auf der all das hier stattgefunden hat, sollte Beleg genug sein wie buchstäblich fundamental deine Rolle in dieser Operation war!
+Ein großes Dankeschön an **Rodirik** (<a style="text-decoration: none;" href="https://norden.social/@Rodirik" target="_blank" rel="noopener noreferrer">@rodirik@norden.social</a>) welcher mit Rat und Tat gleich am Morgen des ersten sowie zweiten Tages dabei war und unsere Entscheidungen kritisch betrachten und Einordnen konnte. Selbstverständlich bin Ich auch dankbar für deine sehr aktive Zusammenarbeit am zweiten Tag wo du bis zum Schluss als troet.cafe online war mitgeholfen hast, neben der ständigen Hilfe! Der Fakt, dass deine Server überhaupt die Videokonferenz gehostet haben auf der all das hier stattgefunden hat, sollte Beleg genug sein wie fundamental deine Rolle in dieser Operation war!
 
 Ich muss mich natürlich auch bei **Nick** (<a style="text-decoration: none;" href="https://mastodon.de/@freestyle" target="_blank" rel="noopener noreferrer">@freestyle@mastodon.de</a>) bedanken, der nicht nur den zweiten Tag, sondern die 5 Monate zuvor bei mehreren Meetings und vielen Gesprächen dabei war um troet.cafe zu retten, und das während einer der stressigsten Phasen deines Lebens. Ohne den Fakt das du im Voraus das Datenbank-Schema analysiert hast, die Logs aufbereitet, bei der DENIC um Hilfe gebeten und vieles aufgearbeitet hast, wär dieses Wochenende nicht geschehen, zumindest nicht mit dem Resultat das troet.cafe jetzt noch steht!
 
-Zu guter letzt kommt natürlich das wichtigste: **Martin - bei dir kann man sich eigentlich nur bedanken** (<a style="text-decoration: none;" href="https://muenchen.social/@martinmuc" target="_blank" rel="noopener noreferrer">@martinmuc@muenchen.social</a>), denn die offensichtlichen Dinge für die Ich dankbar bin macht dieses Protokoll hoffentlich klar, aber was Ich dieses Wochenende, und vermindert die vorherigen Monate, miterlebt habe, war ein kleiner Einblick in das was du für über sechs (6) Jahre für troet.cafe, und umso länger für andere Mastodon-Instanzen, gemacht hast. Komplett alleine. Ich hatte Nick, Rodirik, Emily und Ivan, sowie die gesamte Öffentlichkeit. Du hast alles alleine geschmissen, nicht nur die Administration, sondern vor allem auch die Moderation. Es gab Wochen, und nicht nur während der Spamwelle, wo mir das zu viel war, viel zu viel. Als Ich die Nachrichten hörte, dass du im Januar 2024 troet.cafe und muenchen.social schließen wolltest, war Ich natürlich verblüfft. Nachdem Ich auch nur eine Woche mit dir zusammengearbeitet habe und entsetzt lernen musste, dass dies wirklich eine ***one-man-show*** war, war Ich eher erstaunt, dass du es nicht viel früher beendet hast. Ich glaube das absolut stärkste wofür Ich mich bedanken kann, und das erneut neben all den anderen *offensichtlichen* Dingen, ist das du bereit warst Hilfe anzunehmen. Das diese Geschichte einen recht negativen Anfang und doch letztendlich diese unfassbare Wendung ins positive haben konnte, ist einzig und allein dein verdienst! Dafür sollten wir dir Alle danken, dafür musst du aber auch **dir selbst dankbar sein!** 
+Zu guter letzt kommt natürlich das wichtigste: **Martin - bei dir kann man sich eigentlich nur bedanken** (<a style="text-decoration: none;" href="https://muenchen.social/@martinmuc" target="_blank" rel="noopener noreferrer">@martinmuc@muenchen.social</a>), denn die offensichtlichen Dinge für die Ich dankbar bin macht dieses Protokoll hoffentlich klar, aber was Ich dieses Wochenende, und vermindert die vorherigen Monate, miterlebt habe, war ein kleiner Einblick in das was du für über sechs (6) Jahre für troet.cafe, und umso länger für andere Mastodon-Instanzen, gemacht hast. Komplett alleine. Ich hatte Nick, Rodirik, Emily und Ivan, sowie die gesamte Öffentlichkeit. Du hast alles alleine geschmissen, nicht nur die Administration, sondern vor allem auch die Moderation. Es gab Wochen, und nicht nur während der Spamwelle, wo mir das zu viel war, viel zu viel. Als Ich die Nachrichten hörte, dass du im Januar 2024 troet.cafe und muenchen.social schließen wolltest, war Ich natürlich verblüfft. Nachdem Ich auch nur eine Woche mit dir zusammengearbeitet habe und entsetzt lernen musste, dass dies wirklich eine ***one-man-show*** war, war Ich eher erstaunt, dass du das nicht viel früher beendet hast. Ich glaube das absolut stärkste wofür Ich mich bedanken kann, und das erneut neben all den anderen *offensichtlichen* Dingen, ist das du bereit warst Hilfe anzunehmen. Das diese Geschichte einen recht negativen Anfang und doch letztendlich diese unfassbare Wendung ins positive haben konnte, ist einzig und allein dein verdienst! Dafür sollten wir dir Alle danken, dafür musst du aber auch **dir selbst dankbar sein!** 
 
 Natürlich... aber NATÜRLICH auch ein Dankeschön an euch, die das hier lesen. Entweder seid ihr Benutzer:Innen der Plattform troet.cafe, Tech-Interessierte, oder irgendwelche Menschen die sich über das Geschehen und die Geschichte von troet.cafe interessieren. Vielleicht habt ihr auch nur Probleme mit eurer Datenbank und dieser Blog ist das erste was auf Google auftaucht, so oder so: Danke. Wir machen das ganze für euch und Ich glaube nach diesem riesigen Text der nur die Arbeit von zwei Tagen zusammenfasst, wisst ihr wer das [#TeamTroetCafe](https://troet.cafe/tags/TeamTroetCafe) ist, denn **es kann wirklich jede Person dazugehören!**
 

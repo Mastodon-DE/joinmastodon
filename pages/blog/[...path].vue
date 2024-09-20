@@ -140,6 +140,6 @@ img {
   }
 
   .bordered-link:hover {
-    background-color: #fdd; /* Adds a slight background color change on hover (optional) */
+    background-color: #EF4444; /* Adds a slight background color change on hover (optional) */
   }
 </style>

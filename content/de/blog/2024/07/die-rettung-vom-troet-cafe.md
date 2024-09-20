@@ -9,7 +9,7 @@ author_handle: @ErikUden@mastodon.de
 
 ---
 
-<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.21 um 00:45</center>
+<center><b>Erstellt am:</b> 2024.05.10 um 15:13  |  <b>Letztes Update:</b> 2024.09.21 um 00:55</center>
 
 <br>
 
@@ -64,6 +64,8 @@ Folgendes war der ungefähre Plan den wir am 10. Mai (*einen Tag vor der Rettung
 10. muenchen.social Web- und Worker-Server umstellen um mit neuer Datenbank zu funktionieren. 
 11. muenchen.social Web- und Worker-Server auf neuste Mastodon Version updaten. 
 12. All das mit troet.cafe wiederholen. 
+
+<a href="https://mastodon.de/@ErikUden/112421018724200029" target="_blank" rel="noopener noreferrer">Auch auf Mastodon Präsentiert</a>
 
 </br></br>
 
@@ -1124,7 +1126,7 @@ Wir löschten also alle Einträge mit Links die zu groß waren. Der genaue Befeh
 
 mastodon_production=> `BEGIN; DELETE FROM preview_cards WHERE length(url)>2730;`
 
-Mit dem Ergebnis das 15 Links welche unsere Datenbank plagten natürlich gelöscht wurden. Wir wussten es in diesem Moment zwar noch nicht, wollten auch nicht zu früh feiern, doch dies war der Moment an dem die Datenbank von troet.cafe vollständig funktionsfähig war.  
+Mit dem Ergebnis das 15 Links welche unsere Datenbank plagten natürlich gelöscht wurden. Wir wussten es in diesem Moment zwar noch nicht, wollten auch nicht zu früh feiern, doch dies war der Moment an dem die Datenbank von troet.cafe vollständig funktionsfähig war. Meine Reaktion darauf <a href="https://mastodon.de/@ErikUden/112430231852288438" target="_blank" rel="noopener noreferrer">in diesem Post</a> verarbeitet.
 
 </br>
 

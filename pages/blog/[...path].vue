@@ -134,7 +134,7 @@ img {
     display: inline-block; /* Makes the border fit the text size */
     border: 2px solid #EF4444; /* Adds a red border */
     border-radius: 15px; /* Adds rounded corners to the border */
-    padding: 5px 10px 3px 10px; /* Adjusts padding: top, right, bottom, left */
+    padding: 5px 10px 0px 10px; /* Adjusts padding: top, right, bottom, left */
     text-decoration: none; /* Removes underline from the link */
     color: inherit; /* Ensures the link text inherits the color of the surrounding text */
   }

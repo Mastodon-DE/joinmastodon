@@ -129,4 +129,17 @@ img {
   .toc-container a:hover {
     text-decoration: underline; /* Underline only on hover */
   }
+  
+  .bordered-link {
+    display: inline-block; /* Makes the border fit the text size */
+    border: 2px solid #EF4444; /* Adds a red border */
+    border-radius: 15px; /* Adds rounded corners to the border */
+    padding: 10px; /* Adds some padding around the text */
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit; /* Ensures the link text inherits the color of the surrounding text */
+  }
+
+  .bordered-link:hover {
+    background-color: #fdd; /* Adds a slight background color change on hover (optional) */
+  }
 </style>

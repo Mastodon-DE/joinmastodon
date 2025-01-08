@@ -45,7 +45,7 @@ const accounts = [
 	{
 		name: "European Commission",
 		avatarUrl:
-			"https://ec.social-network.europa.eu/system/accounts/avatars/112/444/733/147/411/609/original/665e5f4bda81de5d.png",
+			"https://ec.social-network.europa.eu/system/accounts/avatars/112/444/733/147/411/609/original/323577ed1970bb89.png",
 		handle: "@EUCommission@ec.social-network.europa.eu",
 		href: "https://ec.social-network.europa.eu/@EUCommission",
 	},

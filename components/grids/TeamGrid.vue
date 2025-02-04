@@ -6,12 +6,6 @@ const people = [
 		imageUrl: "/images/people/erikuden-resized.webp",
 	},
 	{
-		name: "Rodirick",
-		role: "teamMemberRodirikPosition",
-		imageUrl:
-			"https://media.mastodon.de/accounts/avatars/110/696/726/121/965/579/original/cc48b147952beef2.png",
-	},
-	{
 		name: "Nick",
 		role: "teamMemberNickPosition",
 		imageUrl:
